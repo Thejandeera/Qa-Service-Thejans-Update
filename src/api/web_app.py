@@ -42,6 +42,7 @@ class Turn(BaseModel):
 
 class EvaluateRequest(BaseModel):
     transcript: Union[List[Turn], str]
+    criteria_data: Optional[Dict[str, Any]] = None
     channel: Optional[str] = "Call"
     agent_name: Optional[str] = "Agent"
     custom_prompt: Optional[str] = None
@@ -65,7 +66,7 @@ def list_sample_inputs():
 
 @app.post("/api/evaluate")
 def evaluate_tenant_transcript(req: EvaluateRequest):
-    criteria_data = {}
+    criteria_data = req.criteria_data or {}
 
     transcript_payload = [t.dict() for t in req.transcript] if isinstance(req.transcript, list) else req.transcript
 
@@ -98,7 +99,7 @@ def get_job_status(job_id: str):
 
 @app.post("/api/preview-prompt")
 def preview_tenant_prompt(req: EvaluateRequest):
-    criteria_data = {}
+    criteria_data = req.criteria_data or {}
     preview = preview_evaluation_prompt(
         transcript_text=req.transcript,
         criteria_data=criteria_data,
