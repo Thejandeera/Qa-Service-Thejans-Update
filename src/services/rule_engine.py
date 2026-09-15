@@ -45,6 +45,7 @@ def evaluate_branding(turns: List[Tuple[str, str]]) -> Dict[str, Any]:
             "name": "Branding and Survey Check",
             "rating": "FAIL",
             "score": 0,
+            "deduction_value": 10,
             "coaching": f"Agent missed verbatim scripts for: {', '.join(missed)}"
         }
 
@@ -78,6 +79,7 @@ def evaluate_hold_and_dead_air(turns: List[Tuple[str, str]], parsed_times: List[
             "name": "Hold time and Dead Air",
             "rating": "FAIL",
             "score": 0,
+            "deduction_value": 15,
             "coaching": f"Dead Air Breach: Agent had {dead_air_count} occurrences of >20s dead air (max gap {max_gap}s). Exceeds 2 exceptions limit."
         }
         

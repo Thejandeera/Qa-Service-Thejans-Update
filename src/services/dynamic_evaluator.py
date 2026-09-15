@@ -430,6 +430,7 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
         cat_name = cat.get("name", "Category")
         for item in cat.get("line_items", []):
             name = item.get("name", "Item")
+            deduction_value = item.get("deduction_value", 10)
             rating = "PASS"
             
             matched = False
@@ -450,6 +451,7 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
                 "name": name,
                 "rating": rating,
                 "score": score,
+                "deduction_value": deduction_value,
                 "coaching": ""
             })
     return ratings
@@ -494,17 +496,25 @@ def calculate_category_scores(
     grouped = {}
     for r in ratings:
         cat = r.get("category", "General Handling")
-        grouped.setdefault(cat, []).append(r["score"])
+        grouped.setdefault(cat, []).append(r)
 
     cat_scores = {}
-    for cat, scores in grouped.items():
-        cat_scores[cat] = round(sum(scores) / len(scores), 1)
+    for cat, items in grouped.items():
+        score = 100.0
+        for item in items:
+            if item.get("rating") in ["FAIL", "NO"]:
+                deduction = item.get("deduction_value", 10)
+                score -= deduction
+        
+        if score < 0:
+            score = 0.0
+            
+        cat_scores[cat] = float(score)
 
     total_weight = sum(category_weights.values()) or 1.0
-    blended = sum(cat_scores.get(cat, 70.0) * (category_weights.get(cat, 1.0) / total_weight) for cat in category_weights)
+    blended = sum(cat_scores.get(cat, 100.0) * (category_weights.get(cat, 1.0) / total_weight) for cat in category_weights)
     
     if not category_weights:
-        all_scores = [r["score"] for r in ratings]
-        blended = sum(all_scores) / len(all_scores) if all_scores else 80.0
+        blended = sum(cat_scores.values()) / len(cat_scores) if cat_scores else 100.0
 
     return cat_scores, round(blended, 1)
