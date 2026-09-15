@@ -16,13 +16,14 @@ class OllamaAdapter(BaseLLMAdapter):
     def generate(self, prompt: str, **kwargs) -> str:
         temperature = kwargs.get('temperature', 0.1)
         num_predict = kwargs.get('num_predict', 320)
+        num_ctx = kwargs.get('num_ctx', 32768)  # Large default to prevent truncation
         timeout = kwargs.get('timeout', 1800)
         
         payload_dict = {
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
             "stream": False,
-            "options": {"temperature": temperature, "num_predict": num_predict}
+            "options": {"temperature": temperature, "num_predict": num_predict, "num_ctx": num_ctx}
         }
         
         if kwargs.get('format') == 'json':

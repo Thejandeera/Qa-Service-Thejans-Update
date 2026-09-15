@@ -237,7 +237,12 @@ def evaluate_interaction(
         llm_reply = "\n\n".join(llm_reply_parts)
 
     ratings = parse_dynamic_ratings(llm_reply, categories)
-    # Inject Python rule-based scores (Branding & Dead Air) into the scorecard
+    # Pre-flight token estimate
+    approx_tokens = len(clean_transcript) / 4
+    if approx_tokens > 25000:
+        raise ValueError(f"Transcript is too large ({approx_tokens} estimated tokens). Maximum allowed is 25000 tokens.")
+
+    # 4. Inject Rule Engine Fixed Outcomes (Branding & Dead Air) into the scorecard
     ratings = rule_ratings + ratings
     intense_moments = []
     harsh_agent_lines = harsh_lines
@@ -275,6 +280,11 @@ def evaluate_interaction(
                 r["coaching"] = "Review transcript."
                 
     category_scores, blended_score = calculate_category_scores(ratings, category_weights, is_auto_fail)
+
+    # Check for unrated items due to LLM failure/truncation
+    for r in ratings:
+        if r.get("rating") == "NOT_RATED":
+            raise ValueError(f"Parsing failed for criterion: {r['name']}. Transcript may have been truncated or LLM failed to answer.")
 
     # 8. Dynamic Summary (Aware of failures)
     audit_context_lines = []
@@ -431,19 +441,25 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
         for item in cat.get("line_items", []):
             name = item.get("name", "Item")
             deduction_value = item.get("deduction_value", 10)
-            rating = "PASS"
+            rating = "NOT_RATED"
             
             matched = False
             for ext in extracted_ratings:
-                if name.lower() in ext["raw_line"] or name.split()[0].lower() in ext["raw_line"]:
+                if name.lower() in ext["raw_line"]:
                     rating = ext["rating"]
                     matched = True
                     extracted_ratings.remove(ext)
                     break
-            
-            if not matched and len(extracted_ratings) > 0:
-                 ext = extracted_ratings.pop(0)
-                 rating = ext["rating"]
+                    
+            if not matched:
+                name_words = set(re.findall(r'\w+', name.lower()))
+                for ext in extracted_ratings:
+                    ext_words = set(re.findall(r'\w+', ext["raw_line"]))
+                    if len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
+                        rating = ext["rating"]
+                        matched = True
+                        extracted_ratings.remove(ext)
+                        break
 
             score = RATING_SCORES.get(rating, 0)
             ratings.append({

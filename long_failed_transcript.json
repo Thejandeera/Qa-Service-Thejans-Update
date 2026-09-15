@@ -1,0 +1,665 @@
+{
+  "channel": "Call",
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "text": "Thanks for calling S-NET. What is your account number?",
+      "start_time_sec": 18,
+      "end_time_sec": 23
+    },
+    {
+      "speaker": "Caller",
+      "text": "Hi, my account number is 884-992-112.",
+      "start_time_sec": 37,
+      "end_time_sec": 41
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay. What is the issue?",
+      "start_time_sec": 51,
+      "end_time_sec": 54
+    },
+    {
+      "speaker": "Caller",
+      "text": "My internet has been dropping every 10 minutes all day. I work from home and I've missed three Zoom meetings. It's extremely frustrating.",
+      "start_time_sec": 73,
+      "end_time_sec": 76
+    },
+    {
+      "speaker": "Agent",
+      "text": "I see. What is your account number again?",
+      "start_time_sec": 91,
+      "end_time_sec": 96
+    },
+    {
+      "speaker": "Caller",
+      "text": "I just gave it to you. It's 884-992-112.",
+      "start_time_sec": 111,
+      "end_time_sec": 117
+    },
+    {
+      "speaker": "Agent",
+      "text": "Right. Let me look that up.",
+      "start_time_sec": 129,
+      "end_time_sec": 135
+    },
+    {
+      "speaker": "Caller",
+      "text": "Do you see the drops on your end?",
+      "start_time_sec": 154,
+      "end_time_sec": 162
+    },
+    {
+      "speaker": "Agent",
+      "text": "Can you verify your phone number?",
+      "start_time_sec": 178,
+      "end_time_sec": 185
+    },
+    {
+      "speaker": "Caller",
+      "text": "555-0198.",
+      "start_time_sec": 199,
+      "end_time_sec": 205
+    },
+    {
+      "speaker": "Agent",
+      "text": "I'm going to send a reset signal. It will fix it immediately.",
+      "start_time_sec": 221,
+      "end_time_sec": 229
+    },
+    {
+      "speaker": "Caller",
+      "text": "Are you sure? The last guy did that and it didn't work.",
+      "start_time_sec": 240,
+      "end_time_sec": 248
+    },
+    {
+      "speaker": "Agent",
+      "text": "Yes, just wait.",
+      "start_time_sec": 259,
+      "end_time_sec": 266
+    },
+    {
+      "speaker": "Caller",
+      "text": "Okay, I'm waiting.",
+      "start_time_sec": 279,
+      "end_time_sec": 282
+    },
+    {
+      "speaker": "Agent",
+      "text": "Is it working now?",
+      "start_time_sec": 296,
+      "end_time_sec": 300
+    },
+    {
+      "speaker": "Caller",
+      "text": "No, the router is still rebooting.",
+      "start_time_sec": 312,
+      "end_time_sec": 320
+    },
+    {
+      "speaker": "Agent",
+      "text": "Just tell me when the lights are blue.",
+      "start_time_sec": 334,
+      "end_time_sec": 341
+    },
+    {
+      "speaker": "Caller",
+      "text": "Okay, it's still flashing orange.",
+      "start_time_sec": 351,
+      "end_time_sec": 357
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 371,
+      "end_time_sec": 379
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 397,
+      "end_time_sec": 400
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 411,
+      "end_time_sec": 419
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 429,
+      "end_time_sec": 436
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 455,
+      "end_time_sec": 460
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 476,
+      "end_time_sec": 483
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 498,
+      "end_time_sec": 502
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 521,
+      "end_time_sec": 528
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 539,
+      "end_time_sec": 542
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 554,
+      "end_time_sec": 562
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 579,
+      "end_time_sec": 586
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 598,
+      "end_time_sec": 602
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 616,
+      "end_time_sec": 621
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 631,
+      "end_time_sec": 635
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 646,
+      "end_time_sec": 652
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 663,
+      "end_time_sec": 668
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 678,
+      "end_time_sec": 686
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 697,
+      "end_time_sec": 702
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 715,
+      "end_time_sec": 722
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 735,
+      "end_time_sec": 741
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 751,
+      "end_time_sec": 759
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 772,
+      "end_time_sec": 776
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 790,
+      "end_time_sec": 793
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 811,
+      "end_time_sec": 818
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 837,
+      "end_time_sec": 841
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 857,
+      "end_time_sec": 864
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 880,
+      "end_time_sec": 888
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 898,
+      "end_time_sec": 905
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 920,
+      "end_time_sec": 927
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 944,
+      "end_time_sec": 947
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 957,
+      "end_time_sec": 962
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 976,
+      "end_time_sec": 984
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1003,
+      "end_time_sec": 1009
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1023,
+      "end_time_sec": 1028
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1041,
+      "end_time_sec": 1046
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1058,
+      "end_time_sec": 1063
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1075,
+      "end_time_sec": 1082
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1092,
+      "end_time_sec": 1097
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1116,
+      "end_time_sec": 1123
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1139,
+      "end_time_sec": 1142
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1155,
+      "end_time_sec": 1159
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1170,
+      "end_time_sec": 1173
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1184,
+      "end_time_sec": 1188
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1200,
+      "end_time_sec": 1207
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1217,
+      "end_time_sec": 1220
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1239,
+      "end_time_sec": 1245
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1264,
+      "end_time_sec": 1270
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1283,
+      "end_time_sec": 1291
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1305,
+      "end_time_sec": 1308
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1323,
+      "end_time_sec": 1327
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1339,
+      "end_time_sec": 1346
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1361,
+      "end_time_sec": 1367
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1385,
+      "end_time_sec": 1392
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1406,
+      "end_time_sec": 1409
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1426,
+      "end_time_sec": 1432
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1445,
+      "end_time_sec": 1452
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1468,
+      "end_time_sec": 1475
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1488,
+      "end_time_sec": 1496
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1508,
+      "end_time_sec": 1511
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1523,
+      "end_time_sec": 1530
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1544,
+      "end_time_sec": 1547
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1558,
+      "end_time_sec": 1562
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1579,
+      "end_time_sec": 1583
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1602,
+      "end_time_sec": 1609
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1620,
+      "end_time_sec": 1627
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1640,
+      "end_time_sec": 1646
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1661,
+      "end_time_sec": 1664
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1674,
+      "end_time_sec": 1680
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1699,
+      "end_time_sec": 1707
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1726,
+      "end_time_sec": 1731
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1749,
+      "end_time_sec": 1757
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1776,
+      "end_time_sec": 1780
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1799,
+      "end_time_sec": 1804
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1819,
+      "end_time_sec": 1825
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1835,
+      "end_time_sec": 1840
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1854,
+      "end_time_sec": 1860
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1870,
+      "end_time_sec": 1878
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1889,
+      "end_time_sec": 1896
+    },
+    {
+      "speaker": "Caller",
+      "text": "Still flashing orange... wait, now it's green.",
+      "start_time_sec": 1908,
+      "end_time_sec": 1915
+    },
+    {
+      "speaker": "Agent",
+      "text": "Okay, keep waiting. Let me check the system again.",
+      "start_time_sec": 1927,
+      "end_time_sec": 1932
+    },
+    {
+      "speaker": "Caller",
+      "text": "It's been almost 30 minutes and it's still just dropping and coming back.",
+      "start_time_sec": 1943,
+      "end_time_sec": 1948
+    },
+    {
+      "speaker": "Agent",
+      "text": "Well, the signal looks fine from my screen. It must be your computer.",
+      "start_time_sec": 1967,
+      "end_time_sec": 1974
+    },
+    {
+      "speaker": "Caller",
+      "text": "It's not my computer, my phone and TV are dropping too. Can you send a technician?",
+      "start_time_sec": 1984,
+      "end_time_sec": 1991
+    },
+    {
+      "speaker": "Agent",
+      "text": "We don't send technicians for intermittent drops. You'll just have to monitor it.",
+      "start_time_sec": 2001,
+      "end_time_sec": 2007
+    },
+    {
+      "speaker": "Caller",
+      "text": "That is unacceptable. I need this fixed.",
+      "start_time_sec": 2017,
+      "end_time_sec": 2022
+    },
+    {
+      "speaker": "Agent",
+      "text": "There is nothing else I can do today. Please call back if it completely breaks.",
+      "start_time_sec": 2034,
+      "end_time_sec": 2040
+    },
+    {
+      "speaker": "Caller",
+      "text": "I want to speak to a supervisor.",
+      "start_time_sec": 2050,
+      "end_time_sec": 2056
+    },
+    {
+      "speaker": "Agent",
+      "text": "A supervisor isn't available right now.",
+      "start_time_sec": 2068,
+      "end_time_sec": 2074
+    },
+    {
+      "speaker": "Caller",
+      "text": "I need someone to look at this now.",
+      "start_time_sec": 2091,
+      "end_time_sec": 2099
+    },
+    {
+      "speaker": "Agent",
+      "text": "Let me just submit a ticket for the advanced team instead of a supervisor, they are faster.",
+      "start_time_sec": 2111,
+      "end_time_sec": 2119
+    },
+    {
+      "speaker": "Caller",
+      "text": "Fine. Put in the ticket.",
+      "start_time_sec": 2129,
+      "end_time_sec": 2133
+    },
+    {
+      "speaker": "Agent",
+      "text": "Done. Someone will call you within 48 hours. Goodbye.",
+      "start_time_sec": 2148,
+      "end_time_sec": 2156
+    }
+  ]
+}
