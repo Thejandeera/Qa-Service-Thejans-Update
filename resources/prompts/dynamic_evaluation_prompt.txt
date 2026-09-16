@@ -3,32 +3,26 @@
 </TRANSCRIPT>
 
 <INSTRUCTIONS>
-You are a STRICT Call Quality Assurance Auditor evaluating a {channel} interaction.
-Your task is to judge the AGENT against each specific evaluation line item according to company policies.
-
-COMPANY AUTO-FAIL ZERO-TOLERANCE CIRCUIT BREAKERS (Instant 0 Score):
-{auto_fail_str}
+You are a Call Quality Assurance Auditor evaluating a {channel} interaction.
+Your task is to judge the AGENT against each specific evaluation line item.
 
 RATING CRITERIA:
-- You must judge the agent strictly against the provided description for EACH individual item.
-- Do NOT rate 'PASS' just because the agent was generally polite.
-- If the required behavior described in the line item is ABSENT from the transcript, you MUST rate it 'FAIL'.
+- PASS: The transcript contains clear evidence the criterion was met.
+- FAIL: The transcript does not contain that evidence, or shows the agent doing the opposite. Absence of required evidence is a FAIL, not a PASS.
 
 OUTPUT INSTRUCTIONS:
 For each line item provided, evaluate if the agent successfully fulfilled it based on the transcript.
-You MUST reply with a valid JSON object matching this exact structure. For each item, you must write one short sentence of evidence from the transcript BEFORE providing your verdict.
+You MUST reply with a valid JSON object matching this exact structure. Do not output any conversational text or reasoning.
 
 ```json
 {{
   "evaluations": [
     {{
       "item_name": "<Copy exact item name here>",
-      "evidence_found": "<Write exactly what the agent said or failed to say here>",
       "rating": "PASS"
     }},
     {{
       "item_name": "<Copy next item name here>",
-      "evidence_found": "<Write exactly what the agent said or failed to say here>",
       "rating": "FAIL"
     }}
   ]

@@ -15,21 +15,21 @@ MOCK_DB = {
             {
                 "name": "Soft Skills",
                 "line_items": [
-                    {"name": "Personalized the call", "description": "Rate PASS ONLY if the agent explicitly used the customer's name at least once during the call. Rate FAIL if the agent completely avoided using the customer's name.", "deduction_value": 15},
-                    {"name": "Empathy & Acknowledgment", "description": "Rate PASS ONLY if the agent explicitly acknowledged the customer's frustration or inconvenience with an empathetic statement. Rate FAIL if the agent ignored the customer's emotions and moved straight to troubleshooting.", "deduction_value": 30},
-                    {"name": "Build rapport and observed professionalism", "description": "Rate PASS ONLY if the agent remained perfectly courteous, did not use overly complex technical jargon without explaining it, and maintained a helpful tone. Rate FAIL if the agent was dismissive, sarcastic, or used excessive jargon.", "deduction_value": 30}
+                    {"name": "Personalized the call", "description": "Rate PASS ONLY if the agent explicitly addressed the caller by their verified name at least once. Rate FAIL if they never used the name.", "deduction_value": 15},
+                    {"name": "Empathy & Acknowledgment", "description": "Must acknowledge customer frustration or urgency empathetically rather than being blunt or robotic.", "deduction_value": 30},
+                    {"name": "Build rapport and observed professionalism", "description": "Agent must be courteous, respectful, adapt to technical pacing, and avoid interrupting.", "deduction_value": 30}
                 ]
             },
             {
                 "name": "Technical Knowledge",
                 "line_items": [
-                    {"name": "Paraphrasing", "description": "Rate PASS ONLY if the agent explicitly repeated the customer's core issue back to them to confirm understanding early in the call. Rate FAIL if the agent did not paraphrase the issue.", "deduction_value": 10},
-                    {"name": "Verified customer", "description": "Rate PASS ONLY if the agent explicitly verified secure account details (e.g., asking for a PIN, address, or last 4 of SSN). Rate FAIL if the agent only asked for a phone number or account number.", "deduction_value": 20},
-                    {"name": "Probing", "description": "Rate PASS ONLY if the agent asked multiple effective diagnostic questions to isolate the root cause. Rate FAIL if the agent jumped to a solution without asking probing questions.", "deduction_value": 15},
-                    {"name": "Set proper expectations", "description": "Rate PASS ONLY if the agent explicitly provided an accurate timeline or clear expectation of what would happen next (e.g., 'This will take 3 minutes to reboot'). Rate FAIL if the agent left the customer waiting blindly.", "deduction_value": 10},
-                    {"name": "Provided the appropriate solution", "description": "Rate PASS ONLY if the agent successfully identified and communicated the correct resolution to the customer's core issue. Rate FAIL if the agent provided a wrong solution or gave up.", "deduction_value": 25},
-                    {"name": "Took ownership of the problem", "description": "Rate PASS ONLY if the agent exhausted their own resources before transferring the call or escalating. Rate FAIL if the agent immediately transferred or blamed another department.", "deduction_value": 10},
-                    {"name": "Active listening", "description": "Rate PASS ONLY if the agent remembered details the customer already stated. Rate FAIL if the agent asked the customer to repeat information they had already provided (e.g., asking for an account number twice).", "deduction_value": 10}
+                    {"name": "Paraphrasing", "description": "Must paraphrase the customer's core technical issue to reconfirm understanding.", "deduction_value": 10},
+                    {"name": "Verified customer", "description": "Rate PASS ONLY if the agent explicitly validated secure account details (e.g., an account PIN, full address, or security question). Asking for an account number alone triggers an automatic FAIL.", "deduction_value": 20},
+                    {"name": "Probing", "description": "Agent must ask logical, clarifying diagnostic questions to isolate root cause before prescribing steps.", "deduction_value": 15},
+                    {"name": "Set proper expectations", "description": "Rate FAIL if the agent starts any action taking more than a few seconds — reboot, driver change, hold — without saying how long it will take, even if other next steps are communicated well.", "deduction_value": 10},
+                    {"name": "Provided the appropriate solution", "description": "Rate PASS if the actions eventually solved the core issue. ONLY rate FAIL if they gave completely incorrect instructions leaving it broken.", "deduction_value": 25},
+                    {"name": "Took ownership of the problem", "description": "Exhaust all available resources and perform active troubleshooting without blaming others.", "deduction_value": 10},
+                    {"name": "Active listening", "description": "Avoid asking the customer for information they already provided earlier. Repeated requests for identical information triggers a FAIL.", "deduction_value": 10}
                 ]
             }
         ]

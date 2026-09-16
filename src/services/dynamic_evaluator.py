@@ -259,7 +259,7 @@ def evaluate_interaction(
             chunk = failed_items[i:i + batch_size]
             r = chunk[0]
             try:
-                c_prompt = f"""<TRANSCRIPT>\n{clean_transcript}\n</TRANSCRIPT>\n\n<INSTRUCTIONS>\nYou are an expert QA Coach evaluating a {channel} interaction.\nThe agent FAILED the following QA criteria: '{r['name']}'\n\nWrite a brief coaching tip (EXPLICITLY 1 to 2 sentences MAX) on how the agent can improve.\nCRITICAL: Output ONLY a valid JSON object. Do not output reasons, arrays, or conversational text.\n\nJSON FORMAT:\n{{\n  "coaching": "..."\n}}\n</INSTRUCTIONS>"""
+                c_prompt = f"""<TRANSCRIPT>\n{clean_transcript}\n</TRANSCRIPT>\n\n<INSTRUCTIONS>\nYou are an expert QA Coach evaluating a {channel} interaction.\nThe agent FAILED the following QA criteria: '{r['name']}'\nCriteria definition: {r.get('description', '')}\n\nWrite a brief coaching tip (EXPLICITLY 1 to 2 sentences MAX) on how the agent can improve on this specific criterion.\nCRITICAL: Output ONLY a valid JSON object. Do not output reasons, arrays, or conversational text.\n\nJSON FORMAT:\n{{\n  "coaching": "..."\n}}\n</INSTRUCTIONS>"""
                 c_reply = query_llm(c_prompt, label="coaching", timeout=300, format="json")
                 print(f"==== COACHING REPLY ({r['name']}) ====\n", c_reply, "\n========================")
                 
@@ -473,6 +473,7 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
             ratings.append({
                 "category": cat_name,
                 "name": name,
+                "description": item.get("description", ""),
                 "rating": rating,
                 "score": score,
                 "deduction_value": deduction_value,
