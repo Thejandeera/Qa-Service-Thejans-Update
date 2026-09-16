@@ -10,22 +10,25 @@ COMPANY AUTO-FAIL ZERO-TOLERANCE CIRCUIT BREAKERS (Instant 0 Score):
 {auto_fail_str}
 
 RATING CRITERIA:
-- PASS: Agent met all requirements, was polite, helpful, and followed required spiels/policies.
-- FAIL: Agent was rude, unhelpful, failed policy, refused to help, or missed a required spiel.
+- You must judge the agent strictly against the provided description for EACH individual item.
+- Do NOT rate 'PASS' just because the agent was generally polite.
+- If the required behavior described in the line item is ABSENT from the transcript, you MUST rate it 'FAIL'.
 
 OUTPUT INSTRUCTIONS:
 For each line item provided, evaluate if the agent successfully fulfilled it based on the transcript.
-You MUST reply with a valid JSON object matching this exact structure. Do not output any conversational text or reasoning.
+You MUST reply with a valid JSON object matching this exact structure. For each item, you must write one short sentence of evidence from the transcript BEFORE providing your verdict.
 
 ```json
 {{
   "evaluations": [
     {{
       "item_name": "<Copy exact item name here>",
+      "evidence_found": "<Write exactly what the agent said or failed to say here>",
       "rating": "PASS"
     }},
     {{
       "item_name": "<Copy next item name here>",
+      "evidence_found": "<Write exactly what the agent said or failed to say here>",
       "rating": "FAIL"
     }}
   ]

@@ -1,0 +1,365 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:00]",
+      "end_time": "[00:11]",
+      "text": "Thank you for calling S-Net technical support, my name is Alex. May I please have the account number on the line so I can pull up the record?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:13]",
+      "end_time": "[00:21]",
+      "text": "Hi Alex. Yeah, the account number is 884-291-002. The name on the account is Marcus Delgado, if that helps."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:22]",
+      "end_time": "[00:36]",
+      "text": "Perfect, thank you Marcus. I've got the account pulled up here on my screen. I'm showing gigabit fiber at the service address, installed about fourteen months ago. What can I help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:37]",
+      "end_time": "[01:19]",
+      "text": "Okay, so, I'll be honest with you, I'm incredibly frustrated at this point. I've got your gigabit internet plan, and about two weeks ago I bought a new mesh Wi-Fi system because the single router wasn't covering the back half of the house. Ever since then, and especially over the last three days, the connection just randomly drops completely for about thirty seconds, roughly once an hour. And it always seems to happen in the middle of a call. I got kicked out of a client presentation yesterday afternoon and I had to dial back in on my phone hotspot, which was embarrassing."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:21]",
+      "end_time": "[01:58]",
+      "text": "Marcus, I am so sorry to hear that, and I want you to know that getting kicked out of a client presentation is exactly the kind of thing that should not be happening on a gigabit connection. I can completely understand how disruptive and honestly how stressful that is, especially when you're working from home and your income depends on those calls being stable. I'm going to take ownership of this one personally, and we are going to work through it together until we understand exactly what is causing those disconnects."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:59]",
+      "end_time": "[02:14]",
+      "text": "I appreciate that, I really do. I've called in twice before about slowness and both times I got bounced around, so I'm hoping today is different. I just need this actually fixed, not a ticket number."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:15]",
+      "end_time": "[02:35]",
+      "text": "That's fair, and I hear you. No ticket numbers and no transfers today if I can help it. Let me start by making sure I've got the full picture correct before I touch anything on the line, because I don't want to change settings based on a wrong assumption."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:37]",
+      "end_time": "[02:41]",
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:42]",
+      "end_time": "[03:12]",
+      "text": "So, to make sure I understand the scope of this properly: you're using the S-Net fiber modem we installed, but you've now added your own third-party mesh Wi-Fi system behind it. The entire network \u00e2\u20ac\u201d not one device, but everything in the house \u00e2\u20ac\u201d loses internet access for roughly thirty seconds at a time, about once an hour, and this started around the time the mesh system went in. Is that an accurate summary?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:13]",
+      "end_time": "[03:25]",
+      "text": "Yes, that's exactly right. And it's the whole house, because when it happens my wife's laptop downstairs drops too, and the smart TV buffers. So it's not just my office."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:27]",
+      "end_time": "[03:43]",
+      "text": "That is a very useful detail, because it tells me this is almost certainly not a single-device or single-room problem. When the drop happens, does anything change visually on the equipment? A light changing color, anything like that?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:44]",
+      "end_time": "[03:58]",
+      "text": "Yeah, actually. The light on the main mesh node turns red when it happens. Then after maybe thirty seconds it goes back to white and everything reconnects on its own without me doing anything."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:59]",
+      "end_time": "[04:11]",
+      "text": "Red to white, and it self-recovers. Okay. And when that main mesh node turns red, does the light on our S-Net modem change at all, or does it stay solid?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:13]",
+      "end_time": "[04:22]",
+      "text": "Honestly I've never checked. The modem's in the utility closet off the garage and I'm always at my desk when it happens."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:23]",
+      "end_time": "[04:43]",
+      "text": "No problem at all. Would you be able to walk over there now? I'd like to know what the modem is showing while we're on the line, because that single data point tells us whether the problem is upstream from the modem or between the modem and your mesh system."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:44]",
+      "end_time": "[04:51]",
+      "text": "Sure, give me just a moment. I'm going to put you on speaker and walk over."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:53]",
+      "end_time": "[04:57]",
+      "text": "Take your time, Marcus, I'm right here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:58]",
+      "end_time": "[05:07]",
+      "text": "Okay, I'm in the closet now. The modem has four lights and they're all solid green. Nothing blinking, nothing red, nothing amber."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:08]",
+      "end_time": "[05:36]",
+      "text": "That is genuinely helpful. Four solid greens means the fiber signal coming in from the street to the modem is locked and stable, and the modem is authenticated with our network. If the problem were on our side of the wall, I'd expect at least one of those lights to be cycling or amber. So the fault is very likely sitting between the modem and your new mesh router."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:38]",
+      "end_time": "[05:43]",
+      "text": "Huh. But they're plugged directly into each other, there's nothing in between."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:44]",
+      "end_time": "[05:59]",
+      "text": "Understood, and that's actually a good thing \u00e2\u20ac\u201d fewer variables. Can you describe the cable that's running between the modem and the mesh router? Is it the yellow ethernet cable our technician left, or a different one?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:00]",
+      "end_time": "[06:12]",
+      "text": "It's a flat black one. It came in the box with the mesh system. I used that one because I wanted it to look cleaner running along the baseboard."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:14]",
+      "end_time": "[06:40]",
+      "text": "Totally understandable, and those flat cables usually work fine. But since we're here, let's rule it out. Could you unplug it from both the modem and the router, take a quick look at the gold pins inside each connector to make sure none of them are bent or pushed in, and then plug both ends back in firmly until you hear a click?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:41]",
+      "end_time": "[06:58]",
+      "text": "Yep, doing it now. Unplugging from the router end... pins look fine, all eight of them are lined up. Unplugging from the modem end... that one looks fine too. Okay, plugging both back in. I heard the click on both ends."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:59]",
+      "end_time": "[07:15]",
+      "text": "Great. Now, because we just interrupted that link, the mesh router is going to need a moment to re-establish. While we wait on that, can you tell me the exact brand and model of the mesh system you bought?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:17]",
+      "end_time": "[07:27]",
+      "text": "It's a Netgear Orbi. The model number on the bottom is RBK752. It came as a three pack, so one main router and two satellites."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:28]",
+      "end_time": "[07:39]",
+      "text": "Okay, the RBK752. That's a solid system, I have no concerns about the hardware quality itself. Marcus, are you seeing the mesh light come back yet?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:40]",
+      "end_time": "[07:46]",
+      "text": "It's pulsing white right now. Still pulsing. Hang on... okay, now it's solid white."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:48]",
+      "end_time": "[08:35]",
+      "text": "Perfect. Now I want to explain something that I think may be at the root of this, because I'd rather you understand what's happening than just have me flip switches silently. There's a condition called Double NAT. Our S-Net modem has a router built into it, and your Orbi is also a full router. So you've got two devices in a row, both trying to hand out IP addresses and both trying to manage the same traffic. Most of the time they tolerate each other, but every so often they disagree about who owns a connection, and when they do, the downstream device drops everything and rebuilds the table. That rebuild takes about thirty seconds."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:36]",
+      "end_time": "[08:43]",
+      "text": "Okay, that actually lines up scarily well with what I'm seeing. Thirty seconds is exactly it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:11]",
+      "end_time": "[22:15]",
+      "text": "I appreciate you saying that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:16]",
+      "end_time": "[22:29]",
+      "text": "Marcus, I'm going to put you on a short hold one more time while I add detailed notes to your account and flag the line for monitoring on our end. Is that alright?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:31]",
+      "end_time": "[22:35]",
+      "text": "Yeah, that's fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:09]",
+      "end_time": "[23:36]",
+      "text": "Thank you for waiting. I've documented the bridge mode change, the firmware issue, and the satellite placement recommendation on the account, so if you ever do need to call back, the next agent will see exactly what we did today instead of starting from zero. I've also flagged your line so our system will alert us automatically if it sees repeated session drops over the next week."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:37]",
+      "end_time": "[23:46]",
+      "text": "Okay, that's reassuring. Update just finished, by the way. Both satellites say up to date and the main light is pulsing white."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:48]",
+      "end_time": "[23:52]",
+      "text": "Perfect. Let it settle until that light goes solid."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:53]",
+      "end_time": "[24:02]",
+      "text": "Still pulsing... still pulsing... okay, it's solid white now. And satellite one just went solid blue, which I think is good."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:03]",
+      "end_time": "[24:23]",
+      "text": "Solid blue on an Orbi satellite means a strong backhaul link to the main router, so that's exactly what we want to see. Let's do a final round of verification. First, can you load a couple of different websites on the laptop and tell me how they feel?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:25]",
+      "end_time": "[24:33]",
+      "text": "Let me check... YouTube loaded instantly. A news site loaded instantly. Everything feels snappy, honestly snappier than it did before."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:34]",
+      "end_time": "[24:51]",
+      "text": "Good. Now let's test the thing you actually care about, which is call stability. Could you start a video call \u00e2\u20ac\u201d even just a test meeting with yourself \u00e2\u20ac\u201d and leave it running for a minute or two while we talk?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:52]",
+      "end_time": "[25:00]",
+      "text": "Yeah, starting one now... okay I'm in a meeting room by myself. Video's up, it says my connection is strong."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:02]",
+      "end_time": "[25:10]",
+      "text": "Let's give that a moment while it holds. In the meantime, can I confirm the account number for the notes?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:11]",
+      "end_time": "[25:16]",
+      "text": "Alex, that's the third thing I've given you twice now. It's 884-291-002."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:17]",
+      "end_time": "[25:26]",
+      "text": "You're right, my apologies, I should have had that in front of me. 884-291-002, thank you, and I won't ask again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:28]",
+      "end_time": "[25:35]",
+      "text": "It's alright. The meeting's still running, by the way, no drop. Connection indicator is still green."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:36]",
+      "end_time": "[26:06]",
+      "text": "That's a good sign, though I want to be straight with you rather than overselling it: a couple of minutes without a drop doesn't prove it on its own, given your pattern was roughly once an hour. What I can tell you with confidence is that we removed two known causes \u00e2\u20ac\u201d the Double NAT conflict and the outdated mesh firmware \u00e2\u20ac\u201d and either one of those alone could produce exactly your symptom."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:07]",
+      "end_time": "[26:11]",
+      "text": "That's fair. So what do I do if it happens again?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:13]",
+      "end_time": "[26:47]",
+      "text": "Here's what I'd like you to do. Move that garage satellite off the metal shelf today. Then over the next few days, if you do get another drop, note the time and check whether the downstairs TV drops at the same moment. If everything drops together, it's the main router or the modem link, and we'll go down a hardware path. If only your office drops, it's the hallway satellite's backhaul, and we'll look at placement or adding a wired connection to it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:48]",
+      "end_time": "[26:52]",
+      "text": "Okay, that's actually a clear plan. I can do that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:53]",
+      "end_time": "[27:04]",
+      "text": "And because your line is flagged for monitoring now, if our system sees repeated drops we may reach out to you before you even call us."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[27:06]",
+      "end_time": "[27:10]",
+      "text": "That'd be a first, honestly, in a good way."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[27:11]",
+      "end_time": "[27:15]",
+      "text": "Let's hope we don't need it. How's that meeting holding up?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[27:16]",
+      "end_time": "[27:27]",
+      "text": "Still connected. Five minutes or so now with no interruption, and normally I'd have seen at least one by now given how often it's been happening."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[27:29]",
+      "end_time": "[27:54]",
+      "text": "Good. So, Marcus, just to confirm before I let you go \u00e2\u20ac\u201d as things stand right now, your internet is up, your speeds are back where they should be for the plan you're paying for, your mesh system is on current firmware, and the meeting you're in has stayed connected. Are you satisfied that the issue you called about is resolved?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[27:55]",
+      "end_time": "[28:07]",
+      "text": "Yes. As far as I can tell right now, it's resolved. And I know what to look for if it comes back, which is honestly more than I had before."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[28:08]",
+      "end_time": "[28:23]",
+      "text": "That's exactly what I was hoping to hear. I really appreciate you walking out to that closet and doing the hands-on parts with me \u00e2\u20ac\u201d that's what made this solvable in one call instead of three."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[28:25]",
+      "end_time": "[28:33]",
+      "text": "Well, I appreciate you actually explaining what was going on. The last two times I called, nobody told me anything."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[28:34]",
+      "end_time": "[28:45]",
+      "text": "I'm glad today was different. Before I let you go, is there absolutely anything else at all I can help you with on the account today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[28:46]",
+      "end_time": "[28:50]",
+      "text": "No, I think we're all good. You've been extremely helpful."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[28:52]",
+      "end_time": "[29:08]",
+      "text": "Thank you so much, Marcus. We do value your feedback, so please stay on the line for a brief one-question survey about my service today. Thank you for choosing S-Net, and have a wonderful rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}
