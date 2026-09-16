@@ -231,7 +231,7 @@ def evaluate_interaction(
             
             # REUSE KV CACHE FOR EACH CHUNK
             label = f"scorecard_{chunk[0].get('name', 'cat')[:10]}"
-            reply = query_llm_with_state(transcript_kv_state, chunk_suffix, label=label)
+            reply = query_llm_with_state(transcript_kv_state, chunk_suffix, label=label, format="json")
             llm_reply_parts.append(reply)
             
         llm_reply = "\n\n".join(llm_reply_parts)
@@ -427,14 +427,17 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
     reply = re.sub(r'<thinking>.*?</thinking>', '', reply, flags=re.DOTALL)
     
     extracted_ratings = []
-    for line in reply.splitlines():
-        match = re.search(r"\b(PASS|FAIL|PASSED|FAILED|YES|NO)\b\s*[^a-zA-Z0-9]*$", line, re.IGNORECASE)
-        if match:
-            rating = match.group(1).upper()
-            if rating == "PASSED": rating = "PASS"
-            if rating == "FAILED": rating = "FAIL"
-            extracted_ratings.append({"raw_line": line.lower(), "rating": rating})
-
+    
+    # 1. Try extracting from JSON format
+    items = re.finditer(r'"item_name"\s*:\s*"([^"]+)"\s*,\s*"rating"\s*:\s*"([^"]+)"', reply, re.IGNORECASE)
+    for match in items:
+        extracted_ratings.append({
+            "raw_name": match.group(1).lower(),
+            "rating": match.group(2).upper()
+        })
+        
+    lines = reply.splitlines()
+    
     ratings = []
     for cat in categories:
         cat_name = cat.get("name", "Category")
@@ -443,24 +446,29 @@ def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[
             deduction_value = item.get("deduction_value", 10)
             rating = "NOT_RATED"
             
-            matched = False
+            name_words = set(re.findall(r'\w+', name.lower()))
+            
+            # First check JSON extracted items
             for ext in extracted_ratings:
-                if name.lower() in ext["raw_line"]:
+                ext_words = set(re.findall(r'\w+', ext["raw_name"]))
+                if name.lower() in ext["raw_name"] or len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
                     rating = ext["rating"]
-                    matched = True
-                    extracted_ratings.remove(ext)
                     break
                     
-            if not matched:
-                name_words = set(re.findall(r'\w+', name.lower()))
-                for ext in extracted_ratings:
-                    ext_words = set(re.findall(r'\w+', ext["raw_line"]))
-                    if len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
-                        rating = ext["rating"]
-                        matched = True
-                        extracted_ratings.remove(ext)
-                        break
-
+            # If still NOT_RATED, fallback to line-based scan (for non-JSON text)
+            if rating == "NOT_RATED":
+                for line in lines:
+                    line_lower = line.lower()
+                    ext_words = set(re.findall(r'\w+', line_lower))
+                    
+                    if name.lower() in line_lower or len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
+                        if re.search(r'\b(pass|passed|yes)\b', line_lower):
+                            rating = "PASS"
+                            break
+                        elif re.search(r'\b(fail|failed|no)\b', line_lower):
+                            rating = "FAIL"
+                            break
+                        
             score = RATING_SCORES.get(rating, 0)
             ratings.append({
                 "category": cat_name,

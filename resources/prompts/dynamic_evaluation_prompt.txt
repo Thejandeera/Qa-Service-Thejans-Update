@@ -15,11 +15,22 @@ RATING CRITERIA:
 
 OUTPUT INSTRUCTIONS:
 For each line item provided, evaluate if the agent successfully fulfilled it based on the transcript.
-Reply with exactly "PASS" or "FAIL". Do not provide reasoning.
+You MUST reply with a valid JSON object matching this exact structure. Do not output any conversational text or reasoning.
 
-Example:
-Line Item Name: FAIL
-Another Item: PASS
+```json
+{{
+  "evaluations": [
+    {{
+      "item_name": "<Copy exact item name here>",
+      "rating": "PASS"
+    }},
+    {{
+      "item_name": "<Copy next item name here>",
+      "rating": "FAIL"
+    }}
+  ]
+}}
+```
 
 EVALUATION LINE ITEMS TO RATE (Evaluate ONLY these items):
 {criteria_str}

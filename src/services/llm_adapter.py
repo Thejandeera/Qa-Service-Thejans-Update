@@ -16,7 +16,7 @@ class OllamaAdapter(BaseLLMAdapter):
     def generate(self, prompt: str, **kwargs) -> str:
         temperature = kwargs.get('temperature', 0.1)
         num_predict = kwargs.get('num_predict', 320)
-        num_ctx = kwargs.get('num_ctx', 32768)  # Large default to prevent truncation
+        num_ctx = kwargs.get('num_ctx', 8192)  # Max memory without crashing
         timeout = kwargs.get('timeout', 1800)
         
         payload_dict = {
