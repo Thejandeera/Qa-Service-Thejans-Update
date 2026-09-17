@@ -10,7 +10,7 @@ against dynamic company criteria schemas.
 import re
 from typing import Dict, Any, List, Optional
 from src.services.llm_adapter import query_llm, cache_prompt_prefix, query_llm_with_state, get_embedding
-from src.services.summary_generator import generate_scalable_summary
+from src.services.qa_summary import generate_scalable_summary
 from src.services.response_time import (
     leading_time_seconds, response_delays, response_time_score,
 )
@@ -385,8 +385,11 @@ def evaluate_interaction(
     if approx_tokens > 25000:
         raise ValueError(f"Transcript is too large ({approx_tokens} estimated tokens). Maximum allowed is 25000 tokens.")
 
-    # 4. Inject Rule Engine Fixed Outcomes (Branding & Dead Air) into the scorecard
-    ratings = rule_ratings + ratings
+    # 4. Inject Rule Engine Fixed Outcomes and filter out LLM dupes/NOT_RATED
+    rule_rating_names = {r["name"].lower() for r in rule_ratings}
+    filtered_ratings = [r for r in ratings if r["name"].lower() not in rule_rating_names]
+    ratings = rule_ratings + filtered_ratings
+    
     intense_moments = []
     harsh_agent_lines = harsh_lines
 

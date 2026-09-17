@@ -2,6 +2,34 @@
 
 This document provides a comprehensive, exhaustive technical specification of the **Gemma QA Analysis System**. It details the end-to-end execution lifecycle, decoupled microservices topology, deterministic timing algorithms, LLM prompting strategies, and mathematical scoring formulas down to the exact decimal.
 
+## Master Blueprint Cascade Pipeline
+This system evaluates call center transcripts using a highly optimized, hybrid architectural approach designed to maximize the reliability of the local Llama 3.1 (8B) model while minimizing hallucinations. 
+
+The evaluation process flows through 4 distinct phases:
+
+### Phase 1: Deterministic Python Rule Engine (Zero-Latency)
+Instead of relying on the LLM to count words or timestamps, strict technical rules are evaluated via pure Python logic in `src/services/rule_engine.py`:
+- **Hold Time & Dead Air**: Scans timestamps for periods of silence >30s.
+- **Branding & Intro/Outro**: Checks the first/last few turns for mandatory scripts (e.g., "Thank you for calling").
+- **Empathy & Acknowledgment (3-Tier)**: Calculates word counts of empathy phrases versus customer frustration.
+- **Verified Customer**: Scans the first 4 minutes (240s) for verification keywords. *(NOTE: Currently hardcoded to PIN/Address/Security Question. MUST be moved to a tenant-configurable DB table in the future).*
+
+### Phase 2: Vector Context Engine (Embeddings)
+To avoid the LLM failing on complex paraphrasing checks, we use Ollama Embeddings:
+1. Extract the "Ground Truth Problem" from the Full Transcript.
+2. Extract the "Agent Understood Problem" from an Agent-Only Transcript.
+3. Calculate Cosine Similarity. A score >= 0.52 triggers an automatic PASS for Paraphrasing.
+
+### Phase 3: Cascading LLM Pipeline (Micro-Batches)
+The LLM evaluates the remaining subjective criteria using micro-batches (max 3 items) and targeted contexts:
+- **Batch 1 (Soft Skills)**: Uses an *Agent-Only Transcript* to prevent the LLM from being confused by hostile customer dialogue.
+- **Batch 2 (Probing/Expectations)**: If Paraphrasing passed in Phase 2, Probing is automatically passed without wasting LLM tokens. The Ground Truth Problem is injected into the context.
+- **Batch 3 (Solution)**: The Ground Truth Problem is injected into the context to ensure the agent solved the actual issue.
+- **Batch 4 (Vibe Check)**: Ownership and Active Listening are evaluated on the full transcript, with specifically down-weighted deduction values (5 pts) to protect against hallucination.
+
+### Phase 4: Mathematical Scoring Engine
+The pipeline intercepts the LLM's raw output, filters out items handled by the Rule Engine, dynamically requests 1-2 sentence coaching tips for failed items, checks Auto-Fail triggers, and calculates the blended weighted score.
+
 ---
 
 ## Table of Contents
