@@ -9,8 +9,8 @@ against dynamic company criteria schemas.
 
 import re
 from typing import Dict, Any, List, Optional
-from src.services.llm_adapter import query_llm, cache_prompt_prefix, query_llm_with_state
-from src.services.qa_summary import SUMMARY_PROMPT, generate_scalable_summary
+from src.services.llm_adapter import query_llm, cache_prompt_prefix, query_llm_with_state, get_embedding
+from src.services.summary_generator import generate_scalable_summary
 from src.services.response_time import (
     leading_time_seconds, response_delays, response_time_score,
 )
@@ -86,8 +86,88 @@ def preview_evaluation_prompt(
         "tenant_id": tenant_id
     }
 
-
 from typing import Union
+
+def cosine_similarity(v1, v2):
+    import math
+    if not v1 or not v2: return 0.0
+    dot = sum(a*b for a, b in zip(v1, v2))
+    norm_a = math.sqrt(sum(a*a for a in v1))
+    norm_b = math.sqrt(sum(b*b for b in v2))
+    if norm_a == 0 or norm_b == 0: return 0.0
+    return dot / (norm_a * norm_b)
+
+def evaluate_paraphrasing_and_summary(full_transcript: str, agent_transcript: str) -> tuple[dict, str, str]:
+    prompt_a = f"""
+    <TRANSCRIPT>
+    {full_transcript}
+    </TRANSCRIPT>
+    You are an auditor. Read the full transcript.
+    Reply with a valid JSON object matching exactly this structure:
+    {{
+        "customer_problem": "<In one short sentence, describe the exact problem the customer reported>",
+        "overall_summary": "<Summarize the entire call in 60 characters>"
+    }}
+    Do not output any conversational text.
+    """
+    
+    prompt_b = f"""
+    <TRANSCRIPT>
+    {agent_transcript}
+    </TRANSCRIPT>
+    You are an auditor. Read ONLY the agent's side of the transcript.
+    Based ONLY on what the agent said, try to deduce what the customer's problem was.
+    Reply with a valid JSON object matching exactly this structure:
+    {{
+        "customer_problem": "<In one short sentence, describe the exact problem the customer reported based ONLY on the agent's context>"
+    }}
+    Do not output any conversational text.
+    """
+    
+    import json
+    import re
+    
+    # Prompt A Call
+    resp_a = query_llm(prompt_a, label="paraphrasing_truth", format="json")
+    try:
+        data_a = json.loads(resp_a)
+    except:
+        match = re.search(r'\{.*\}', resp_a, re.DOTALL)
+        data_a = json.loads(match.group(0)) if match else {"customer_problem": "Unknown", "overall_summary": "Summary not generated"}
+    
+    # Prompt B Call
+    resp_b = query_llm(prompt_b, label="paraphrasing_agent", format="json")
+    try:
+        data_b = json.loads(resp_b)
+    except:
+        match = re.search(r'\{.*\}', resp_b, re.DOTALL)
+        data_b = json.loads(match.group(0)) if match else {"customer_problem": "Unknown"}
+        
+    truth_prob = data_a.get("customer_problem", "")
+    agent_prob = data_b.get("customer_problem", "")
+    
+    embed_truth = get_embedding(truth_prob)
+    embed_agent = get_embedding(agent_prob)
+    
+    sim = cosine_similarity(embed_truth, embed_agent)
+    
+    if sim >= 0.52:
+        rating = "PASS"
+        coaching = ""
+    else:
+        rating = "FAIL"
+        coaching = f"Vector similarity check failed ({sim:.2f} < 0.52). Agent likely failed to explicitly paraphrase or state the problem. True problem: '{truth_prob}'. Agent context problem: '{agent_prob}'."
+        
+    paraphrasing_result = {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": rating,
+        "score": 100 if rating == "PASS" else 0,
+        "deduction_value": 15,
+        "coaching": coaching
+    }
+    
+    return paraphrasing_result, data_a.get("overall_summary", "Summary not generated"), truth_prob
 
 def evaluate_interaction(
     transcript_data: Union[str, List[Dict[str, Any]]],
@@ -146,11 +226,13 @@ def evaluate_interaction(
 
     matched_policies = []
     
-    # 4. Deterministic Python Rule Engine (Branding & SLA Checks)
-    from src.services.rule_engine import evaluate_branding, evaluate_hold_and_dead_air
+    # 4. Deterministic Python Rule Engine (Branding, SLAs & Empathy)
+    from src.services.rule_engine import evaluate_branding, evaluate_hold_and_dead_air, evaluate_empathy, evaluate_verified_customer
     rule_ratings = [
         evaluate_branding(turns),
-        evaluate_hold_and_dead_air(turns, parsed_times)
+        evaluate_hold_and_dead_air(turns, parsed_times),
+        evaluate_empathy(turns),
+        evaluate_verified_customer(turns, parsed_times)
     ]
     harsh_lines = []
 
@@ -195,43 +277,104 @@ def evaluate_interaction(
         ]
         category_weights = {"Soft Skills": 0.333, "Technical Knowledge": 0.667, "Auto Fail Category": 0.0}
 
-    # 6. LLM Evaluation (Grouped Map-Reduce)
+    # 6. LLM Evaluation (Grouped Map-Reduce with Micro-Batching)
     if custom_prompt:
         llm_reply = query_llm(custom_prompt, label="dynamic_scorecard")
     else:
         llm_reply_parts = []
-        # Chunk categories to save LLM calls but ensure accuracy.
-        # We now chunk dynamically: one category per prompt for maximum focus and accuracy.
-        chunks = [[c] for c in categories]
         
-        # Build the exact same prefix for all chunks (includes the massive transcript)
-        # We pass an empty criteria list just to get the prefix text
-        base_prefix, _ = build_dynamic_prompt(
-            transcript_text=clean_transcript,
-            categories=[],
-            auto_fail_rules=auto_fail_rules,
-            matched_policies=matched_policies,
-            channel=channel,
-            harsh_lines=harsh_lines
-        )
-        
-        # INGEST KV CACHE ONLY ONCE
-        transcript_kv_state = cache_prompt_prefix(base_prefix)
+        # Flatten and filter handled line items
+        all_items = []
+        for cat in categories:
+            for item in cat.get("line_items", []):
+                lower_name = item.get("name", "").lower()
+                if "empathy" in lower_name or "paraphrasing" in lower_name or "verified customer" in lower_name:
+                    continue
+                all_items.append((cat["name"], item))
+                
+        # Build an Agent-Only version of the transcript for Soft Skills and Paraphrasing
+        agent_only_lines = [f"Agent: {txt}" for spk, txt in turns if spk.lower() == "agent"]
+        agent_only_transcript = "\n".join(agent_only_lines)
 
-        for chunk in chunks:
+        # Prompt 4: Generate Paraphrasing score and Call Summary via Vector Similarity Engine
+        paraphrasing_rating, call_summary, truth_prob = evaluate_paraphrasing_and_summary(clean_transcript, agent_only_transcript)
+        rule_ratings.append(paraphrasing_rating)
+
+        # Cascade Batching Logic
+        batch_1_soft = []
+        batch_2_probe = []
+        batch_3_solution = []
+        batch_4_vibe = []
+        
+        for cat, item in all_items:
+            lower_name = item["name"].lower()
+            if "soft skills" in cat.lower():
+                batch_1_soft.append((cat, item))
+            elif "probing" in lower_name or "expectations" in lower_name:
+                batch_2_probe.append((cat, item))
+            elif "solution" in lower_name:
+                batch_3_solution.append((cat, item))
+            else:
+                # Ownership, Active listening, Escalation, Non-FCR
+                batch_4_vibe.append((cat, item))
+                
+        # Cascade Shortcut: Auto-Pass Probing if Paraphrasing Passed
+        if paraphrasing_rating["rating"] == "PASS":
+            new_batch_2 = []
+            for cat, item in batch_2_probe:
+                if "probing" in item["name"].lower():
+                    rule_ratings.append({
+                        "category": cat,
+                        "name": item["name"],
+                        "rating": "PASS",
+                        "score": 100,
+                        "deduction_value": item.get("deduction_value", 15),
+                        "coaching": ""
+                    })
+                else:
+                    new_batch_2.append((cat, item))
+            batch_2_probe = new_batch_2
+
+        item_batches = [b for b in [batch_1_soft, batch_2_probe, batch_3_solution, batch_4_vibe] if b]
+                
+        def create_category_chunk(batch_items):
+            grouped = {}
+            for cat_name, item in batch_items:
+                if cat_name not in grouped:
+                    grouped[cat_name] = {"name": cat_name, "line_items": []}
+                grouped[cat_name]["line_items"].append(item)
+            return list(grouped.values())
+
+        chunks = [create_category_chunk(batch) for batch in item_batches]
+        
+        for idx, chunk in enumerate(chunks):
             if not chunk: continue
-            _, chunk_suffix = build_dynamic_prompt(
-                transcript_text=clean_transcript,
+            
+            # Map chunk back to the batch logic to determine the right transcript
+            # Soft Skills (0), Probing (1), Solution (2) use Agent-Only. Vibe (3) uses Full.
+            # However, if batch_2 or batch_1 is empty, indices shift. Let's dynamically check content.
+            chunk_str = str(chunk).lower()
+            if "soft skills" in chunk_str or "probing" in chunk_str or "expectations" in chunk_str or "solution" in chunk_str:
+                current_transcript = agent_only_transcript
+            else:
+                current_transcript = clean_transcript
+                
+            # Inject ground truth problem into context for Probing and Solution batches
+            context_injection = f"\nGROUND TRUTH PROBLEM: {truth_prob}\n" if ("probing" in chunk_str or "expectations" in chunk_str or "solution" in chunk_str) else ""
+
+            prefix, chunk_suffix = build_dynamic_prompt(
+                transcript_text=current_transcript,
                 categories=chunk,
                 auto_fail_rules=auto_fail_rules,
                 matched_policies=matched_policies,
                 channel=channel,
-                harsh_lines=harsh_lines
+                harsh_lines=harsh_lines,
+                summary_str=(call_summary + context_injection) if call_summary else context_injection
             )
             
-            # REUSE KV CACHE FOR EACH CHUNK
-            label = f"scorecard_{chunk[0].get('name', 'cat')[:10]}"
-            reply = query_llm_with_state(transcript_kv_state, chunk_suffix, label=label, format="json")
+            # The "state" is just the prefix string. Ollama handles the caching internally.
+            label = f"scorecard_batch_{idx+1}"
+            reply = query_llm_with_state(prefix, chunk_suffix, label=label, format="json")
             llm_reply_parts.append(reply)
             
         llm_reply = "\n\n".join(llm_reply_parts)
@@ -286,18 +429,8 @@ def evaluate_interaction(
         if r.get("rating") == "NOT_RATED":
             raise ValueError(f"Parsing failed for criterion: {r['name']}. Transcript may have been truncated or LLM failed to answer.")
 
-    # 8. Dynamic Summary (Aware of failures)
-    audit_context_lines = []
-    if is_auto_fail:
-        audit_context_lines.append(f"CRITICAL AUTO-FAIL TRIGGERED: {auto_fail_reason}")
-    for r in ratings:
-        if r["rating"] in ["NO", "FAIL"]:
-            tip = r.get("coaching") or "Failed criteria check."
-            audit_context_lines.append(f"FAILED CHECK - {r['name']}: {tip}")
-    
-    evaluation_context_str = "\n".join(audit_context_lines) if audit_context_lines else "No critical failures identified. The agent passed all checks."
-    
-    summary = generate_scalable_summary(clean_transcript, evaluation_context=evaluation_context_str)
+    # 8. Final Payload Prep (Use self-generated summary from Prompt 4)
+    final_summary = call_summary if call_summary else "Summary could not be generated."
 
     # Clean scorecard for client (remove internal score calculation field and reason)
     clean_scorecard = [
@@ -316,7 +449,7 @@ def evaluate_interaction(
         "auto_fail_reason": auto_fail_reason,
         "category_scores": category_scores,
         "scorecard": clean_scorecard,
-        "summary": summary
+        "summary": final_summary
     }
 
 def parse_llm_intensity(reply: str) -> (List[Dict[str, Any]], List[Dict[str, Any]]):
@@ -355,7 +488,8 @@ def build_dynamic_prompt(
     auto_fail_rules: List[Dict[str, Any]],
     matched_policies: List[Dict[str, Any]],
     channel: str,
-    harsh_lines: List[Dict[str, Any]] = None
+    harsh_lines: List[Dict[str, Any]] = None,
+    summary_str: str = ""
 ) -> str:
     """Construct dynamic LLM prompt tailored to tenant criteria with sanitized formatting."""
     if harsh_lines is None:
@@ -395,6 +529,8 @@ def build_dynamic_prompt(
     harsh_lines_str = "\n".join(
         f"Agent: \"{h['text']}\"" for h in harsh_lines
     ) if harsh_lines else "None detected."
+    
+    summary_injection = f"\nCALL SUMMARY:\n{summary_str}\n" if summary_str else ""
 
     import os
     _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -409,7 +545,8 @@ def build_dynamic_prompt(
         policies_str=policies_str,
         criteria_str=criteria_str,
         harsh_lines_str=harsh_lines_str,
-        transcript_text=transcript_text
+        transcript_text=transcript_text,
+        summary_str=summary_injection
     )
     
     # Split prompt into prefix (transcript) and suffix (criteria)

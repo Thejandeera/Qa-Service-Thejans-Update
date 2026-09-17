@@ -6,6 +6,7 @@
 You are a Call Quality Assurance Auditor evaluating a {channel} interaction.
 Your task is to judge the AGENT against each specific evaluation line item.
 
+{summary_str}
 RATING CRITERIA:
 - Follow the explicit grading logic provided in the description of each line item.
 - Some items require explicit positive evidence to PASS.
@@ -13,7 +14,7 @@ RATING CRITERIA:
 
 OUTPUT INSTRUCTIONS:
 For each line item provided, evaluate if the agent successfully fulfilled it based on the transcript.
-You MUST reply with a valid JSON object matching this exact structure. Do not output any conversational text or reasoning.
+First, write a brief step-by-step reasoning inside <thinking>...</thinking> tags. Then, you MUST reply with a valid JSON object matching this exact structure.
 
 ```json
 {{

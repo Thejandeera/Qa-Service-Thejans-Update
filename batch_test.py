@@ -13,7 +13,7 @@ OUTPUT_DIR = "inputs/Test (results)"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def main():
-    json_files = ["real_15min_mid_v2.json"]
+    json_files = [f for f in sorted(os.listdir(INPUT_DIR)) if f.endswith('.json')]
     
     if not json_files:
         print(f"No JSON files found in '{INPUT_DIR}' directory.")

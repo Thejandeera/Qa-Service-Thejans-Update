@@ -368,3 +368,6 @@ Celery stores execution states and serialized scorecard payloads in Redis using 
 | `src/services/orchestrator_worker.py` | Celery task entry point (`orchestrate_evaluation`). |
 | `resources/prompts/` | Prompt templates for dynamic evaluation, coaching tips, and summaries. |
 | `tests/payloads/` | Standardized 30-minute test datasets (`perfect_call_payload.json`, `mediocre_call_payload.json`, `catastrophic_call_payload.json`). |
+U p d a t i n g   A R C H I T E C T U R E . m d  
+ -   V e r i f i e d   C u s t o m e r   i s   h a r d c o d e d   t o   P I N / A d d r e s s .   M U S T   m o v e   t o   t e n a n t   D B .  
+ 

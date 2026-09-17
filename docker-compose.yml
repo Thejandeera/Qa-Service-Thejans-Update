@@ -23,10 +23,6 @@ services:
     environment:
       - REDIS_URL=redis://redis:6379/0
 
-
-
-
-
   orchestrator-worker:
     build:
       context: .

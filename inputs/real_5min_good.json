@@ -1,0 +1,173 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:11]",
+      "text": "Thank you for calling S-Net technical support, my name is Wei. Could I get your account number and PIN to pull up your account?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:12]",
+      "end_time": "[00:17]",
+      "text": "Hi Wei, sure, account is 396-518-742, PIN 4405. This is Diane Foster."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:19]",
+      "end_time": "[00:24]",
+      "text": "Thanks Diane, that matches, you're verified. How's your day going so far?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:25]",
+      "end_time": "[00:32]",
+      "text": "Pretty good, just trying to get this new gadget set up before I head out."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:33]",
+      "end_time": "[00:39]",
+      "text": "Let's get that sorted quickly for you then. What can I help with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:40]",
+      "end_time": "[00:50]",
+      "text": "I just got a smart plug and I can't get it to connect in the app, it keeps failing to find my WiFi."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:52]",
+      "end_time": "[01:13]",
+      "text": "Got it, so the new smart plug isn't showing up or connecting when you try to add it in the app. Let's figure out why. Quick question first: when you're setting it up, are you connecting it to your regular WiFi network, or do you have a separate 5 gigahertz network listed too?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:14]",
+      "end_time": "[01:21]",
+      "text": "I think I've been picking the 5 gigahertz one actually, since that's usually the faster one."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:23]",
+      "end_time": "[01:38]",
+      "text": "That's actually the likely cause, a lot of smart home devices like plugs and bulbs only support the 2.4 gigahertz band, they can't join a 5 gigahertz network at all, so it just fails silently like you're seeing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:40]",
+      "end_time": "[01:45]",
+      "text": "Oh, I had no idea there was a difference for something like this."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:47]",
+      "end_time": "[01:59]",
+      "text": "It's a common mix-up. Let's get it connected on the 2.4 gigahertz network instead, that should take about two minutes. Can you open the app and start the setup again?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:00]",
+      "end_time": "[02:03]",
+      "text": "Sure, starting it now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:05]",
+      "end_time": "[02:15]",
+      "text": "When it asks you to pick a network, look for the one without '5G' or '5GHz' in the name, that'll be the 2.4 gigahertz one."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:27]",
+      "end_time": "[02:30]",
+      "text": "Okay, found it, selecting that one now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:31]",
+      "end_time": "[02:35]",
+      "text": "It's connecting... okay, it just showed as added successfully."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:37]",
+      "end_time": "[02:44]",
+      "text": "That's great, let's confirm it's actually online. Can you try turning it on and off from the app?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:50]",
+      "end_time": "[02:53]",
+      "text": "Sure, trying now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:54]",
+      "end_time": "[03:01]",
+      "text": "Yep, the light on the plug just switched off and back on when I tapped it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:03]",
+      "end_time": "[03:16]",
+      "text": "Perfect, that confirms it's fully connected and responding. So to recap, the plug only supports 2.4 gigahertz, and picking the 5 gigahertz network was what caused the setup to fail each time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:17]",
+      "end_time": "[03:22]",
+      "text": "That makes total sense, thank you for catching that so quickly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:23]",
+      "end_time": "[03:30]",
+      "text": "If I get more of these plugs later, should I expect the same thing?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:31]",
+      "end_time": "[03:43]",
+      "text": "Most smart plugs and similar devices are 2.4 gigahertz only, so yes, worth picking that network by default when you're setting up any new smart home device going forward."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:44]",
+      "end_time": "[03:48]",
+      "text": "Good to know, that'll save me some frustration next time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:50]",
+      "end_time": "[03:57]",
+      "text": "Does this affect my other WiFi devices at all, or is it just specific to the plug?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:59]",
+      "end_time": "[04:09]",
+      "text": "No impact on anything else, your laptop and phone can still use either band, it's really just simpler smart home devices limited to 2.4 gigahertz."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:10]",
+      "end_time": "[04:15]",
+      "text": "Glad that helps. Anything else I can help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:16]",
+      "end_time": "[04:20]",
+      "text": "No, that's it, thank you so much Wei."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:21]",
+      "end_time": "[04:35]",
+      "text": "Thank you so much, Diane. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a great rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

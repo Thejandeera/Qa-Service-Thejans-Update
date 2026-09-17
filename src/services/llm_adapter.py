@@ -41,6 +41,27 @@ class OllamaAdapter(BaseLLMAdapter):
         except (urllib.error.URLError, TimeoutError) as exc:
             return f"Error reaching Ollama: {exc}"
 
+    def get_embedding(self, text: str, **kwargs) -> list[float]:
+        url = f"{self.host.rstrip('/')}/api/embeddings"
+        timeout = kwargs.get('timeout', 1800)
+        
+        payload_dict = {
+            "model": self.model,
+            "prompt": text
+        }
+        
+        payload = json.dumps(payload_dict).encode("utf-8")
+        req = urllib.request.Request(
+            url, data=payload, headers={"Content-Type": "application/json"}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                data = json.loads(resp.read())
+                return data.get("embedding", [])
+        except Exception as exc:
+            print(f"Embedding error: {exc}")
+            return []
+
 def get_llm() -> BaseLLMAdapter:
     # We could check env vars here to return different adapters (e.g., vLLMAdapter)
     return OllamaAdapter()
@@ -48,6 +69,9 @@ def get_llm() -> BaseLLMAdapter:
 
 def query_llm(prompt, **kwargs):
     return get_llm().generate(prompt, **kwargs)
+
+def get_embedding(text: str, **kwargs) -> list[float]:
+    return get_llm().get_embedding(text, **kwargs)
 
 def cache_prompt_prefix(prefix, **kwargs):
     return prefix
