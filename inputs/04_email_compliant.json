@@ -1,8 +1,0 @@
-{
-  "id": "email_compliant_04",
-  "title": "Email: 10m SLA & Template Compliant",
-  "channel": "Email",
-  "agent_name": "Sarah / S-NET Support Team",
-  "description": "Agent responds within 10-minute SLA, verifies account, explains ARE resolution, and provides tracking ticket.",
-  "transcript": "[10:00] Customer Email:\nTo: support@snet.com\nSubject: Cannot access Zoho integration from office location\n\nHi Support,\nOur team cannot connect to the Zoho phone integration since this morning. Error code 403.\nAccount: Acme Corp, Location: Chicago Office.\nContact: Sarah Miller (sarah@acme.com, 555-3211)\n\n[10:08] Agent Response Email:\nDear Sarah Miller,\n\nThank you for reaching out to S-NET Communications Support.\n\nI understand that your Chicago office team is unable to connect to the Zoho phone integration and is encountering Error 403. I have verified your account and location in our system.\n\nI have refreshed your API token and whitelisted your Chicago office IP range per our standard ARE process. Please ask your team to restart the Zoho integration widget.\n\nTicket #SNET-88492 has been generated for tracking. We will follow up within 2 hours to ensure full resolution.\n\nThank you for Choosing S-NET and have a great day!\n\nBest regards,\nS-NET Technical Support Team"
-}

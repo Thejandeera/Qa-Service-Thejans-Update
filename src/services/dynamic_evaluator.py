@@ -252,7 +252,7 @@ def evaluate_interaction(
 
     # 7. Mathematical Scoring Engine
     # Phase 2: Generate Coaching for FAILs
-    failed_items = [r for r in ratings if r["rating"] in ["FAIL", "NO"] and "dead air" not in r["name"].lower()]
+    failed_items = [r for r in ratings if r["rating"] in ["FAIL", "NO"] and "dead air" not in r["name"].lower() and "branding" not in r["name"].lower()]
     if failed_items:
         batch_size = 1
         for i in range(0, len(failed_items), batch_size):

@@ -1,8 +1,0 @@
-{
-  "id": "call_compliant_01",
-  "title": "Call: 100% Compliant (Verbatim Spiels & SLA)",
-  "channel": "Call",
-  "agent_name": "Alex",
-  "description": "Full compliance with greeting, hold expectation, ARE troubleshooting, closing, and survey IVR spiel.",
-  "transcript": "[00:00] Client: Hello, my internet connection is completely down and I work from home!\n[00:04] Agent: Thank you for calling S-NET Communications. My name is Alex, how can I help you today?\n[00:10] Client: The internet light on my router is blinking red. My account is John Doe, Acme Corp at 104 North Avenue.\n[00:18] Agent: Thank you for verifying your name and account details, John. I understand your internet is down and you have a blinking red light on the router. Let me run a line diagnostic right now.\n[00:28] Agent: Please allow me 2 minutes to run a stability test on your line. May I put you on hold?\n[00:32] Client: Sure, go ahead.\n[00:35] [Hold: 1m 20s]\n[01:55] Agent: Thank you for patiently waiting on the line. I found a line fault on our exchange side. Since you rent the router from S-NET, I will dispatch a technician at no cost to you today between 2 PM and 4 PM.\n[02:15] Client: That is very fast and helpful, thank you so much!\n[02:20] Agent: You are very welcome. I will transfer you to our brief 1-question survey regarding your call experience today. Thank you for Choosing S-NET and have a great day."
-}

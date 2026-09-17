@@ -1,0 +1,467 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:11]",
+      "text": "Thank you for calling S-Net technical support, my name is Maya. Could I get your account number and PIN to pull up your account?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:12]",
+      "end_time": "[00:17]",
+      "text": "Hi Maya, sure, account is 245-810-963, PIN 7724. This is Ben Torres."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:19]",
+      "end_time": "[00:24]",
+      "text": "Thanks Ben, that matches, you're verified. What can I help with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:25]",
+      "end_time": "[00:43]",
+      "text": "Our VoIP desk phone at the front desk, extension 102, has been crackling and sometimes dropping calls entirely, started about three days ago. It's the one my receptionist uses to take client calls, so it's a pretty visible problem for us."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:44]",
+      "end_time": "[01:00]",
+      "text": "Got it, so extension 102 at the front desk has had crackling audio and occasional full drops for about three days now, and it's client-facing so it's been noticeable. That's frustrating when it's the phone people actually hear you on."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:02]",
+      "end_time": "[01:08]",
+      "text": "Exactly, we've had two clients mention it sounded like we were breaking up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:09]",
+      "end_time": "[01:19]",
+      "text": "That's the kind of thing that sticks with a client, understandably. How long have you had that phone system set up with us, roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:20]",
+      "end_time": "[01:25]",
+      "text": "About eight months now, it's been solid until this week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:26]",
+      "end_time": "[01:32]",
+      "text": "Good to know, so this is a new problem, not something that's always been there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:34]",
+      "end_time": "[01:42]",
+      "text": "We do have a backup line, but it's honestly not set up for the call volume we get some days."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:44]",
+      "end_time": "[01:56]",
+      "text": "That makes sense, so with most of the volume running through this one line, any hiccup on it is going to be felt right away by the whole front desk."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:57]",
+      "end_time": "[02:00]",
+      "text": "Exactly, that's kind of the frustrating part."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:02]",
+      "end_time": "[02:11]",
+      "text": "Understood, let's get this sorted then. I'm going to have you reboot that phone first, that usually clears up intermittent audio issues like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:13]",
+      "end_time": "[02:18]",
+      "text": "Okay, how long should I expect it to be offline for?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:19]",
+      "end_time": "[02:22]",
+      "text": "It shouldn't take too long."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:44]",
+      "end_time": "[02:47]",
+      "text": "Alright, unplugging it now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:49]",
+      "end_time": "[02:52]",
+      "text": "Okay, it's booted back up, showing registered again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:54]",
+      "end_time": "[02:59]",
+      "text": "Good, can you make a quick test call and see how the audio sounds?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:11]",
+      "end_time": "[03:14]",
+      "text": "Sure, calling my cell now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:16]",
+      "end_time": "[03:21]",
+      "text": "Hmm, still a bit of crackling actually, not as bad but still there."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:23]",
+      "end_time": "[03:34]",
+      "text": "Okay, that tells us it's probably not just a phone-side glitch. Let's check the network side. Is that phone on WiFi or plugged in directly with an ethernet cable?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:36]",
+      "end_time": "[03:39]",
+      "text": "It's on ethernet, plugged straight into our switch."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:41]",
+      "end_time": "[03:47]",
+      "text": "Good, that rules out WiFi interference. How many other devices are on that same switch, roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:49]",
+      "end_time": "[03:56]",
+      "text": "Maybe six or seven, a couple of computers, another phone, a printer, and our card reader."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:57]",
+      "end_time": "[04:06]",
+      "text": "Okay, and has anything changed recently on the network, new equipment added, anything like that, around when this started three days ago?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:08]",
+      "end_time": "[04:15]",
+      "text": "Actually yes, we added a second WiFi access point around then for better coverage in the back office."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:17]",
+      "end_time": "[04:23]",
+      "text": "That's a useful data point, when exactly was that installed relative to when the crackling started?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:25]",
+      "end_time": "[04:30]",
+      "text": "I think it was the day before, so pretty close together timing-wise."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:32]",
+      "end_time": "[04:38]",
+      "text": "That's a strong lead then. Is that access point plugged into the same switch as the phone?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:40]",
+      "end_time": "[04:43]",
+      "text": "Yeah, same switch as everything else."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:44]",
+      "end_time": "[04:58]",
+      "text": "Okay, let's check something called QoS, or quality of service, on the router, it prioritizes voice traffic so calls don't get crowded out by other network activity. Can you check if that's enabled?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:59]",
+      "end_time": "[05:06]",
+      "text": "Let me look... I don't see anything obviously labeled QoS in the settings I have access to."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:15]",
+      "end_time": "[05:24]",
+      "text": "That's alright, I can check it from our side since it's our equipment. Give me a moment to pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:25]",
+      "end_time": "[05:39]",
+      "text": "I can see QoS is currently off on your router. Enabling it and prioritizing the VoIP traffic specifically should stop other devices, especially that new access point, from crowding out your call audio."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:40]",
+      "end_time": "[05:46]",
+      "text": "Oh, that makes sense actually, right around when we added the new access point."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:48]",
+      "end_time": "[05:59]",
+      "text": "Exactly, extra devices competing for bandwidth is a really common cause of exactly this kind of crackling. Let me enable QoS now and set voice traffic as the priority."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:01]",
+      "end_time": "[06:04]",
+      "text": "Okay, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:05]",
+      "end_time": "[06:10]",
+      "text": "Done, that's applied. Let's test again, can you make another call?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:25]",
+      "end_time": "[06:28]",
+      "text": "Sure, calling now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:29]",
+      "end_time": "[06:33]",
+      "text": "That sounds completely clear now, no crackling at all."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:35]",
+      "end_time": "[06:52]",
+      "text": "That's great to hear. So the fix was two parts really, the phone reboot cleared any lingering session issue, and enabling QoS with voice prioritized should prevent the new access point or anything else on that switch from crowding out call audio going forward."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:54]",
+      "end_time": "[07:02]",
+      "text": "That makes a lot of sense, appreciate you actually tracking down why instead of just having me reboot things blindly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:04]",
+      "end_time": "[07:14]",
+      "text": "Is QoS something I could have turned on myself if I'd known to look for it, or is that only accessible on your end?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:16]",
+      "end_time": "[07:33]",
+      "text": "It's actually on the router's admin page, so you could access it, but the specific voice-priority configuration we just did is a bit more particular, easy to get wrong if you're not familiar with it, so I'd recommend calling in for that part specifically."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:35]",
+      "end_time": "[07:42]",
+      "text": "Fair enough, good to know it's there if I ever want to peek at it though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:43]",
+      "end_time": "[07:49]",
+      "text": "For sure, happy to walk you through the settings page anytime if you're curious."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:50]",
+      "end_time": "[08:00]",
+      "text": "Of course, that's what I'm here for. Now, what extension did you say was affected again, just so I log it properly on the ticket?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:02]",
+      "end_time": "[08:09]",
+      "text": "It's extension 102, the front desk one, same as I mentioned at the start of the call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:11]",
+      "end_time": "[08:14]",
+      "text": "Right, sorry, I've got that noted, extension 102."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:16]",
+      "end_time": "[08:26]",
+      "text": "No worries. Should I keep an eye on it for a while just to be sure, or is this pretty much confirmed fixed now?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:27]",
+      "end_time": "[08:40]",
+      "text": "I'd keep half an eye on it for the rest of today just to be safe, but the QoS change directly addresses the cause we found, so I'd expect it to hold."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:42]",
+      "end_time": "[08:48]",
+      "text": "Sounds good, I'll check in with my receptionist later and see how it's been."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:49]",
+      "end_time": "[09:00]",
+      "text": "Perfect. If it does act up again, mention the QoS change was already made today so whoever you reach doesn't have to start from scratch diagnosing it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:02]",
+      "end_time": "[09:13]",
+      "text": "Will do, that's a good tip. Is there anything else I should watch for with the new access point, or was this really just the one setting?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:15]",
+      "end_time": "[09:29]",
+      "text": "This was really just the one setting for this particular symptom. If you add more devices to that switch in the future, it's worth checking QoS priorities again, but for now this should hold."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:30]",
+      "end_time": "[09:34]",
+      "text": "Got it, that's good to know for planning ahead."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:35]",
+      "end_time": "[09:43]",
+      "text": "Would the QoS change affect anything else on that switch, like the computers or the card reader?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:44]",
+      "end_time": "[10:00]",
+      "text": "Good question, it shouldn't slow those down in any noticeable way, we only bumped voice traffic ahead in priority, everything else still gets normal bandwidth, it just won't get to jump the line ahead of a call anymore."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:01]",
+      "end_time": "[10:07]",
+      "text": "Okay, that's good, wouldn't want to fix one thing and slow something else down."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:09]",
+      "end_time": "[10:23]",
+      "text": "Makes sense to ask. While I have you, want me to check if your router's firmware is up to date? That can sometimes contribute to network hiccups too, and it's a quick check from here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:24]",
+      "end_time": "[10:27]",
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:35]",
+      "end_time": "[10:39]",
+      "text": "Give me about twenty seconds to pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:40]",
+      "end_time": "[10:46]",
+      "text": "Good news, it's already on the current version, so that's not a factor here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:47]",
+      "end_time": "[10:51]",
+      "text": "Good to know, one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:53]",
+      "end_time": "[11:02]",
+      "text": "Does the other phone on that switch ever have this issue, or has it really just been the front desk one?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:03]",
+      "end_time": "[11:20]",
+      "text": "From what you've described it sounds like just the front desk extension so far, but if the other one starts acting up too, the same QoS fix should already be covering it since it's applied at the router level, not per phone."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:22]",
+      "end_time": "[11:29]",
+      "text": "Oh good, so we wouldn't have to redo this if it shows up on the other line."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:31]",
+      "end_time": "[11:37]",
+      "text": "Right, this one change covers voice traffic for the whole office, not just extension 102."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:38]",
+      "end_time": "[11:43]",
+      "text": "That's reassuring, that was actually going to be my next question."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:44]",
+      "end_time": "[11:57]",
+      "text": "One more thing, is there a way to get an alert if call quality drops again, or would we only find out from a client mentioning it like this time?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:59]",
+      "end_time": "[12:08]",
+      "text": "Unfortunately nothing automatic on our end for that specifically, you'd notice it the way you did this time, through a call sounding off."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:10]",
+      "end_time": "[12:16]",
+      "text": "Okay, fair enough, at least we know what to check now if it happens again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:18]",
+      "end_time": "[12:24]",
+      "text": "Exactly, and the account notes will have today's fix documented, so it'll be quick to reference."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:25]",
+      "end_time": "[12:30]",
+      "text": "Good to know. I think that covers it for today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:31]",
+      "end_time": "[12:34]",
+      "text": "Anything else I can help with?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:36]",
+      "end_time": "[12:39]",
+      "text": "No, that's everything, thank you Maya."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:40]",
+      "end_time": "[12:54]",
+      "text": "Thank you so much, Ben. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a great rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

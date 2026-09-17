@@ -1,8 +1,0 @@
-{
-  "id": "chat_compliant_05",
-  "title": "Chat: Fast Response & Verification",
-  "channel": "Chat",
-  "agent_name": "Sam",
-  "description": "Agent responds within 18 seconds (<30s SLA), captures 4 contact details, and resolves call forwarding issue.",
-  "transcript": "[00:00] Customer: Hi, our desk phones are not receiving incoming calls.\n[00:18] Agent: Thank you for contacting S-NET Communications. My name is Sam, how can I assist you today?\n[00:26] Customer: We are TechCorp, account #4992. I am David Brown (david@techcorp.com).\n[00:40] Agent: Hello David, thank you for confirming TechCorp and your contact details. I understand your desk phones are not receiving inbound calls. Let me check the call forwarding rules right now.\n[01:10] Agent: I found that call forwarding was accidentally toggled on to an inactive extension. I have restored standard routing. Could you test an inbound call now?\n[01:35] Customer: Tested now and it rings on all desk phones! Thanks!\n[01:45] Agent: Excellent! I will email your ticket reference #SNET-94812 shortly. Thank you for Choosing S-NET and have a great day!"
-}

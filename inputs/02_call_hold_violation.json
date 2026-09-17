@@ -1,8 +1,0 @@
-{
-  "id": "call_hold_violation_02",
-  "title": "Call: Hold & Dead Air Violation",
-  "channel": "Call",
-  "agent_name": "Jordan",
-  "description": "Agent leaves caller on un-refreshed hold for over 4.5 minutes and exhibits 35 seconds of dead air.",
-  "transcript": "[00:00] Client: Hi, I need help with my phone bill.\n[00:08] Agent: What is your number?\n[00:12] Client: It is 555-0199.\n[00:15] Agent: Hold on.\n[00:20] [Hold: 4m 45s without any refresh or update]\n[05:05] Agent: Okay, your bill is $95.\n[05:10] [Dead Air: 35 seconds]\n[05:45] Client: Hello? Are you still there?\n[05:50] Agent: Yeah, you have to pay by Friday. Bye."
-}

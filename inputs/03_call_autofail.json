@@ -1,8 +1,0 @@
-{
-  "id": "call_autofail_03",
-  "title": "Call: Auto-Fail Breach (Discourtesy & Escalation Refusal)",
-  "channel": "Call",
-  "agent_name": "BadAgent",
-  "description": "Agent exhibits rudeness, discourtesy, refuses customer request for supervisor, and prematurely ends call.",
-  "transcript": "[00:00] Client: Why was I charged an extra $75 fee on my S-NET bill this month?\n[00:05] Agent: You clearly didn't read your contract terms.\n[00:10] Client: Excuse me? That is completely unacceptable. I want to speak to your supervisor right now!\n[00:16] Agent: Supervisors do not take these calls, and asking for a manager will not change anything.\n[00:24] Client: I am going to cancel my entire company subscription.\n[00:29] Agent: Whatever, get lost then. I don't have time for this."
-}

@@ -89,7 +89,7 @@ The evaluation pipeline is built as a non-blocking, asynchronous pipeline. Below
 
 ## 2. Microservices Topology & Container Ecosystem
 
-The application environment comprises 6 decoupled containerized services defined in `docker-compose.yml`:
+The application environment comprises 5 decoupled containerized services defined in `docker-compose.yml`:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -100,22 +100,20 @@ The application environment comprises 6 decoupled containerized services defined
 │  └───────────┬────────────┘                   └──────────────────────┘  │
 │              │                                                          │
 │              ▼ (Redis Protocol :6379)                                   │
-│  ┌────────────────────────┐                                             │
-│  │         redis          │                                             │
-│  └───────────▲────────────┘                                             │
+│  ┌────────────────────────┐                   ┌──────────────────────┐  │
+│  │         redis          │◄─────────────────►│      config-db       │  │
+│  └───────────▲────────────┘                   └──────────────────────┘  │
 │              │                                                          │
 │              ▼                                                          │
 │  ┌────────────────────────┐                   ┌──────────────────────┐  │
 │  │  orchestrator-worker   ├────(HTTP :11434)─►│        ollama        │  │
 │  └────────────────────────┘                   └──────────┬───────────┘  │
 │                                                          │              │
-│  ┌────────────────────────┐                              ▼              │
-│  │       llm-worker       │                     ┌──────────────────┐    │
-│  └────────────────────────┘                     │   ollama_data    │    │
+│                                                          ▼              │
+│                                                 ┌──────────────────┐    │
+│                                                 │   ollama_data    │    │
 │                                                 │ (Docker Volume)  │    │
-│  ┌────────────────────────┐                     └──────────────────┘    │
-│  │      logic-worker      │                                             │
-│  └────────────────────────┘                                             │
+│                                                 └──────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -125,10 +123,9 @@ The application environment comprises 6 decoupled containerized services defined
 |---|---|---|---|---|
 | **`gateway`** | `python:3.11-slim` | `8000` | `8000` | FastAPI ASGI web server running via Uvicorn. Handles ingestion, payload validation, Redis task dispatching, and status polling. |
 | **`redis`** | `redis:alpine` | `6379` | `6379` | In-memory message broker (Celery default queue) and Celery result persistence backend (database `0`). |
+| **`config-db`** | `python:3.11-slim` | N/A | N/A | Provides criteria logic and configuration (e.g., hybrid evidence-based grading rules). |
 | **`ollama`** | `ollama/ollama:latest` | `11434` | `11434` | Local LLM inference server. Mounts persistent volume `ollama_data` at `/root/.ollama` where model weights (`llama3.1:latest`, ~4.7 GB) reside. |
-| **`orchestrator-worker`** | `python:3.11-slim` | N/A | N/A | Celery worker listening on queue `celery`. Executes `evaluate_interaction`, coordinates rule engine, dispatches Ollama calls, generates coaching tips, and computes blended scores. |
-| **`logic-worker`** | `python:3.11-slim` | N/A | N/A | Celery worker listening on queue `logic_queue`. Reserved for isolated high-frequency deterministic rule checks. |
-| **`llm-worker`** | `python:3.11-slim` | N/A | N/A | Celery worker listening on queue `llm_queue`. Reserved for distributed LLM inference workloads. |
+| **`orchestrator-worker`** | `python:3.11-slim` | N/A | N/A | Celery worker listening on queue `celery`. Executes `evaluate_interaction`, executes logic synchronously, dispatches Ollama calls, generates coaching tips, and computes blended scores. |
 
 ---
 
@@ -216,9 +213,9 @@ The system grades transcripts against 15 distinct line items organized into thre
 3. **`Personalized the call/ticket appropriately`** *(LLM)*:
    * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly addressed the caller by their verified name (e.g., "John") at least once. Rate FAIL if the agent never used the caller's name.
 4. **`Empathy & Acknowledgment Statement`** *(LLM)*:
-   * *Prompt Directive:* Must acknowledge customer frustration or urgency empathetically (e.g., "I understand how frustrating this is") rather than being blunt or robotic.
+   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is blunt or robotic instead of empathetically acknowledging customer frustration or urgency.
 5. **`Build rapport and observed professionalism`** *(LLM)*:
-   * *Prompt Directive:* Agent must be courteous, respectful, adapt to the caller's technical pacing, and avoid interrupting or making unprofessional sounds.
+   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is discourteous, disrespectful, interrupts, or makes unprofessional sounds.
 
 #### Category 2: Technical Knowledge (Category Weight: 66.7% / 0.667)
 6. **`Paraphrasing`** *(LLM)*:
@@ -226,13 +223,13 @@ The system grades transcripts against 15 distinct line items organized into thre
 7. **`Verified customer`** *(LLM)*:
    * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly validated secure account details (e.g., an account PIN, full address, or security question). Asking for an account number alone triggers an automatic FAIL.
 8. **`Probing`** *(LLM)*:
-   * *Prompt Directive:* Agent must ask logical, clarifying diagnostic questions to isolate the root cause before prescribing steps.
+   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent prescribes steps without asking logical, clarifying diagnostic questions to isolate the root cause.
 9. **`Set proper expectations`** *(LLM)*:
    * *Prompt Directive:* Clearly communicate estimated resolution timeframes, hold durations, and next steps before initiating actions.
 10. **`Provided the appropriate solution`** *(LLM)*:
     * *Strict Prompt Directive:* Rate PASS if the agent's actions eventually solved the core issue (confirmed by customer). ONLY rate FAIL if the agent gave completely incorrect instructions that left the issue broken.
 11. **`Took ownership of the problem`** *(LLM)*:
-    * *Prompt Directive:* Exhaust all available resources, perform active troubleshooting, and take personal responsibility without blaming other departments (e.g., sales or external IT).
+    * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent deflects blame onto other departments (e.g., sales or external IT) instead of performing active troubleshooting.
 12. **`Active listening`** *(LLM)*:
     * *Strict Prompt Directive:* Avoid asking the customer for information they already provided earlier in the call. Repeated requests for identical information (2+ times) triggers a FAIL.
 13. **`Confirmed the issue is resolved`** *(LLM)*:
@@ -244,8 +241,8 @@ The system grades transcripts against 15 distinct line items organized into thre
 15. **`Non-First Call Resolution`** *(LLM)*:
     * *Strict Prompt Directive:* Rate PASS if the customer's technical issue was resolved by the conclusion of the call. ONLY rate FAIL if the customer was hung up on, told to call back later, or left with an active outage.
 
-### 5.2 Grouped Map-Reduce Chunking
-To prevent context overflow and attention degradation across long transcripts (up to 30 minutes / ~4,000 words), `dynamic_evaluator.py` chunks criteria evaluations by category. Each chunk loads the transcript alongside only its relevant category items, keeping inference focused and eliminating token cross-contamination.
+### 5.2 Chunked 4-prompt System
+To prevent context overflow and attention degradation across long transcripts (up to 30 minutes / ~4,000 words), we do not use a single strict CoT prompt anymore. `llm_adapter.py` breaks the transcript into a cached prefix and then queries the LLM in separate category chunks sequentially to avoid context fog. Each chunk loads the transcript alongside only its relevant category items, keeping inference focused and eliminating token cross-contamination.
 
 ### 5.3 Rating Parser Algorithm (`parse_dynamic_ratings`)
 1. Strips any internal reasoning tokens (`<thinking>...</thinking>`).
@@ -261,7 +258,7 @@ To prevent context overflow and attention degradation across long transcripts (u
 When an agent fails any LLM-evaluated criteria line item, the system automatically triggers a targeted coaching generation sub-routine.
 
 ### Execution Flow:
-1. **Filter Failed Items:** Identifies all scorecard entries where $\text{rating} \in [\text{"FAIL"}, \text{"NO"}]$ (excluding deterministic dead air, which already provides an exact mathematical reason).
+1. **Filter Failed Items:** Identifies all scorecard entries where $\text{rating} \in [\text{"FAIL"}, \text{"NO"}]$ (excluding both 'dead air' AND 'branding' failures because the Python Rule Engine automatically injects deterministic coaching text for them).
 2. **Targeted Prompting:** Constructs an isolated, single-item coaching prompt:
    ```
    <TRANSCRIPT>
@@ -362,8 +359,6 @@ Celery stores execution states and serialized scorecard payloads in Redis using 
 | `docker-compose.yml` | Multi-container composition, network definitions, ports, volume bindings. |
 | `Dockerfile.gateway` | Container recipe for FastAPI web service. |
 | `Dockerfile.orchestrator`| Container recipe for primary Celery evaluation coordinator. |
-| `Dockerfile.logic` | Container recipe for deterministic rule worker. |
-| `Dockerfile.llm` | Container recipe for isolated LLM worker. |
 | `src/api/web_app.py` | FastAPI application, endpoints (`/api/evaluate`, `/api/status`, `/api/preview-prompt`), Pydantic models. |
 | `src/services/dynamic_evaluator.py` | Core evaluation orchestrator: sanitization, category looping, scoring aggregation, circuit breakers, dynamic coaching. |
 | `src/services/rule_engine.py` | Pure Python deterministic algorithms for verbatim branding and mathematical Dead Air SLA checks. |

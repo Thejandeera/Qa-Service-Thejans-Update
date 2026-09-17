@@ -59,9 +59,9 @@ The system runs completely detached from third-party cloud APIs to guarantee pri
 ### Microservices Breakdown
 * **`gateway` (FastAPI, Port 8000):** Non-blocking HTTP entry point. Validates requests via Pydantic, dispatches asynchronous tasks to Redis, and queries task completion statuses.
 * **`redis` (Redis Alpine, Port 6379):** High-throughput message broker and Celery result backend.
+* **`config-db`:** Provides criteria logic and configuration (e.g., hybrid evidence-based grading rules) for the orchestrator.
 * **`ollama` (Ollama Engine, Port 11434):** Hosts and executes local quantized models (`llama3.1:latest`).
-* **`orchestrator-worker` (Celery Worker):** Coordinates the end-to-end evaluation pipeline: splits timing data, calls the rule engine, chunks LLM evaluation categories, triggers coaching inference on failures, and computes blended scores.
-* **`llm-worker` / `logic-worker`:** Dedicated Celery workers prepped for horizontal scaling across separate queues.
+* **`orchestrator-worker` (Celery Worker):** Coordinates the end-to-end evaluation pipeline: splits timing data, calls the rule engine synchronously, chunks LLM evaluation categories, triggers coaching inference on failures, and computes blended scores.
 
 ---
 
@@ -93,11 +93,10 @@ Verify that all services are healthy and running:
 ```bash
 docker ps
 ```
-You should see 6 active containers:
+You should see 5 active containers:
 * `gemma-qa-analysis-gateway-1`
 * `gemma-qa-analysis-orchestrator-worker-1`
-* `gemma-qa-analysis-logic-worker-1`
-* `gemma-qa-analysis-llm-worker-1`
+* `gemma-qa-analysis-config-db-1`
 * `gemma-qa-analysis-redis-1`
 * `gemma-qa-analysis-ollama-1`
 
@@ -237,9 +236,9 @@ The system evaluates agents across 15 rigorous criteria categorized into three o
 3. **Personalized the call/ticket appropriately (LLM):**
    * *Rule:* Rate PASS ONLY if the agent explicitly addresses the customer by their verified name (e.g., "John") during the conversation. Rate FAIL if the agent never refers to the customer by name.
 4. **Empathy & Acknowledgment Statement (LLM):**
-   * *Rule:* Must provide empathy statements acknowledging frustration or stress (e.g., "I understand how frustrating this is") without being blunt or dismissive.
+   * *Rule:* Default to PASS. Rate FAIL ONLY if the agent is blunt or dismissive instead of providing empathy statements acknowledging frustration or stress.
 5. **Build rapport and observed professionalism (LLM):**
-   * *Rule:* Agent must remain courteous, adapt to technical pacing, avoid interrupting, and avoid unprofessional sounds or slang.
+   * *Rule:* Default to PASS. Rate FAIL ONLY if the agent is discourteous, interrupts, or uses unprofessional sounds or slang.
 
 ### Category 2: Technical Knowledge (Weight: 66.7%)
 6. **Paraphrasing (LLM):**
@@ -247,13 +246,13 @@ The system evaluates agents across 15 rigorous criteria categorized into three o
 7. **Verified customer (LLM):**
    * *Rule:* Rate PASS ONLY if the agent explicitly validates secure account credentials (e.g., account PIN, billing address, security questions). Requesting an account number alone triggers an automatic FAIL.
 8. **Probing (LLM):**
-   * *Rule:* Uses effective, open-ended probing questions to identify the root cause before prescribing steps.
+   * *Rule:* Default to PASS. Rate FAIL ONLY if the agent prescribes steps without using effective, open-ended probing questions to identify the root cause.
 9. **Set proper expectations (LLM):**
    * *Rule:* Explicitly communicates expected wait times, troubleshooting duration, and updates before taking actions or initiating holds.
 10. **Provided the appropriate solution (LLM):**
     * *Rule:* Rate PASS if the agent's actions eventually solved the customer's technical issue (verified by customer confirmation). Rate FAIL only if instructions were invalid or left the customer broken.
 11. **Took ownership of the problem (LLM):**
-    * *Rule:* Takes personal responsibility for the resolution without deflecting blame onto other departments (e.g., sales, IT, or field techs).
+    * *Rule:* Default to PASS. Rate FAIL ONLY if the agent deflects blame onto other departments (e.g., sales, IT, or field techs) instead of taking personal responsibility.
 12. **Active listening (LLM):**
     * *Rule:* Avoids asking the caller for information already provided. Asking for repeated information 2 or more times triggers a FAIL.
 13. **Confirmed the issue is resolved (LLM):**
@@ -315,7 +314,7 @@ Three pre-calibrated test payloads spanning **30 minutes of call duration** are 
 Because the Celery workers and FastAPI run inside isolated Docker containers without live volume mount overrides on production containers, **any code or prompt modifications requires a container rebuild**:
 
 ```bash
-docker-compose up -d --build gateway orchestrator-worker logic-worker llm-worker
+docker-compose up -d --build gateway orchestrator-worker config-db
 ```
 
 ### Checking Worker Logs:
