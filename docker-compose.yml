@@ -23,25 +23,9 @@ services:
     environment:
       - REDIS_URL=redis://redis:6379/0
 
-  llm-worker:
-    build:
-      context: .
-      dockerfile: Dockerfile.llm
-    depends_on:
-      - redis
-      - ollama
-    environment:
-      - REDIS_URL=redis://redis:6379/0
-      - OLLAMA_HOST=http://ollama:11434
 
-  logic-worker:
-    build:
-      context: .
-      dockerfile: Dockerfile.logic
-    depends_on:
-      - redis
-    environment:
-      - REDIS_URL=redis://redis:6379/0
+
+
 
   orchestrator-worker:
     build:
@@ -63,4 +47,5 @@ services:
 
 volumes:
   ollama_data:
+
 
