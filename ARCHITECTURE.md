@@ -47,73 +47,52 @@ The pipeline intercepts the LLM's raw output, filters out items handled by the R
 
 ## 1. End-to-End System Execution Lifecycle
 
-The evaluation pipeline is built as a non-blocking, asynchronous pipeline. Below is the sequential execution flow from ingress to final scorecard retrieval:
+The evaluation pipeline is built as a non-blocking, asynchronous pipeline. Below is the sequential execution flow from ingress to final scorecard retrieval, strictly designed to minimize LLM token usage and KV cache flushes via 6 hyper-optimized phases:
 
 ```
 [Client / Postman]
-       │
-       │  1. HTTP POST /api/evaluate (JSON Payload)
-       ▼
-[API Gateway (FastAPI)]
-       │
-       │  2. Validate Pydantic Schema (List[Turn] or raw string)
-       │  3. Celery.send_task('orchestrate_evaluation', args=[...])
-       │  4. Return HTTP 200 { "job_id": UUID, "status": "processing" }
-       ▼
-[Redis Message Broker (Queue: 'celery')]
-       │
-       │  5. Dequeue Task
-       ▼
-[Orchestrator Worker (Celery / Python 3.11)]
-       │
-       ├─────────────────────────────────────────┐
-       │ Step A: Data Sanitization               │ Step B: Parallel Deterministic Engine
-       │ • Extract timestamps into seconds       │ • Run evaluate_branding(turns)
-       │ • Strip timestamps from text dialogue   │ • Run evaluate_hold_and_dead_air(parsed_times)
-       ▼                                         ▼
-[Clean Transcript Built]                   [Rule Results Generated]
-       │                                         │
-       ├─────────────────────────────────────────┘
-       │
-       │ Step C: Dynamic Criteria Extraction
-       │ • Load 15 criteria across 3 categories
-       │
-       │ Step D: Map-Reduce LLM Evaluation
-       ▼
-[Ollama Service (Port 11434 / llama3.1:8b)]
-       │ • Send Category Evaluation Prompt
-       │ • Parse PASS / FAIL ratings via regex
-       ▼
-[Scorecard Ratings Extracted]
-       │
-       │ Step E: Check Auto-Fail Circuit Breakers
-       │ • Check profanity blacklist
-       │ • Check harsh lines threshold (>= 3)
-       │ • Check Auto Fail Category failures (Escalation / Non-FCR)
-       │
-       │ Step F: Dynamic Coaching Phase (if any line item FAILED)
-       ▼
-[Ollama Service (Port 11434 / JSON Mode)]
-       │ • Prompt LLM per failed item: 1-2 sentence coaching tip
-       │ • Inject coaching into scorecard coaching field
-       ▼
-[Step G: Mathematical Scoring Engine]
-       │ • Compute Category Means: sum(scores) / count
-       │ • Apply Category Weights: Soft Skills (33.3%), Tech (66.7%), Auto-Fail (0.0%)
-       │ • If Auto-Fail triggered: Override all category scores & final score to 0.0
-       ▼
-[Step H: Semantic Summary Generation]
-       │ • Generate context-aware 60-70 char summary
-       ▼
-[Redis Result Backend]
-       │ • Store final JSON scorecard under task ID
-       ▼
-[Client / Postman Polling]
-       │  6. HTTP GET /api/status/{job_id}
-       ▲  7. Return HTTP 200 { "status": "completed", "result": {...} }
+       |
+       |  1. HTTP POST /api/evaluate (JSON Payload with RoBERTa Scores)
+       v
+[API Gateway (FastAPI)] -> [Redis Queue] -> [Orchestrator Worker]
+       |
+       |  Phase 1: Deterministic Engine & Searchlights (Zero LLM)
+       |  - Python evaluates Branding, Dead Air, Personalized Call, Verified Customer
+       |  - Empathy Searchlight: Extract <Empathy Snippet> if RoBERTa flags Negative
+       |  - Active Listening Searchlight: Extract <Repeated Snippet> via TF-IDF
+       |
+       v
+       |  Phase 2: Vector Paraphrasing & Context
+       |  - Extract First 10 Turns for Agent/Customer -> Embed & Cosine Sim
+       |  - Save First 10 Customer Turns as <CUSTOMER_PROBLEM_CONTEXT>
+       |
+       v
+       |  Phase 3: Micro-Snippet LLM Verifications (Sub-second LLM calls)
+       |  - Verify Empathy on 3-turn snippet (Output exactly 1 word)
+       |  - Verify Active Listening on 2-turn snippet (Output exactly 1 word)
+       |
+       v
+       |  Phase 4: Agent-Only LLM Batch
+       |  - Context: Agent-Only Transcript + <CUSTOMER_PROBLEM_CONTEXT>
+       |  - Evaluate: Rapport, Probing, Ownership
+       |
+       v
+       |  Phase 5: Wrap-Up LLM Batch
+       |  - Context: ONLY Last 30% of Transcript
+       |  - Evaluate: Confirmed Issue is Resolved
+       |
+       v
+       |  Phase 6: Full-Context LLM Batch
+       |  - Context: Full 100% Transcript
+       |  - Evaluate: Escalation, Hostility (Auto-Fails)
+       |
+       v
+       |  Phase 7: Batched Coaching Loop
+       |  - Gather all FAILs from Phases 1-6 -> Request single JSON dictionary of tips
+       |
+       v
+[Redis Result Backend] -> [Client Polling GET /api/status]
 ```
-
----
 
 ## 2. Microservices Topology & Container Ecosystem
 
@@ -229,57 +208,41 @@ $$\text{gap}_i = \text{start\_time}_i - \text{end\_time}_{i-1}$$
 
 ## 5. LLM Evaluation Pipeline & Prompt Engineering
 
-Complex behavioral metrics are evaluated by querying Llama 3.1 via the `OllamaAdapter` (`src/services/llm_adapter.py`).
+Complex behavioral metrics are evaluated by querying Llama 3.1 via the `OllamaAdapter`.
+To prevent token explosion and 9-minute generation times, the prompts aggressively mandate that all internal reasoning (`<thinking>`) must be restricted to a MAXIMUM of 2 sentences per item.
 
-### 5.1 The 15 Standard Evaluation Criteria
+### 5.1 The Standard Evaluation Criteria
 
-The system grades transcripts against 15 distinct line items organized into three categories:
+The system grades transcripts against distinct line items organized into three categories:
 
 #### Category 1: Soft Skills (Category Weight: 33.3% / 0.333)
 1. **`Branding and Survey Check`** *(Evaluated by Rule Engine)*: Verbatim open and close script matching.
 2. **`Hold time and Dead Air`** *(Evaluated by Rule Engine)*: Strict threshold check on silence intervals.
-3. **`Personalized the call/ticket appropriately`** *(LLM)*:
-   * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly addressed the caller by their verified name (e.g., "John") at least once. Rate FAIL if the agent never used the caller's name.
-4. **`Empathy & Acknowledgment Statement`** *(Evaluated by Rule Engine)*:
-   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is blunt or robotic instead of empathetically acknowledging customer frustration or urgency.
-5. **`Build rapport and observed professionalism`** *(LLM)*:
-   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is discourteous, disrespectful, interrupts, or makes unprofessional sounds.
+3. **`Personalized the call/ticket appropriately`** *(Evaluated by Rule Engine)*: Checks if the verified `customer_name` appears in the Agent's transcript.
+4. **`Empathy & Acknowledgment Statement`** *(Hybrid: RoBERTa + Snippet LLM)*: 
+   * Python scans for RoBERTa negative sentiment. If negative, an isolated 3-turn snippet is sent to the LLM to verify if the agent was rude or empathetic.
+5. **`Build rapport and observed professionalism`** *(Agent-Only LLM)*:
+   * Checked against the Agent's dialogue only to avoid confusion from hostile customer phrasing.
 
 #### Category 2: Technical Knowledge (Category Weight: 66.7% / 0.667)
 6. **`Paraphrasing`** *(Evaluated by Vector Embeddings)*:
-   * *Prompt Directive:* Must paraphrase the customer's core technical issue at the onset of the call or upon statement of the request to reconfirm understanding.
+   * Compares the first 10 Customer turns against the first 10 Agent turns using cosine similarity (threshold 0.30).
 7. **`Verified customer`** *(Evaluated by Rule Engine)*:
-   * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly validated secure account details (e.g., an account PIN, full address, or security question). Asking for an account number alone triggers an automatic FAIL.
-8. **`Probing`** *(LLM)*:
-   * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent prescribes steps without asking logical, clarifying diagnostic questions to isolate the root cause.
-9. **`Set proper expectations`** *(LLM)*:
-   * *Prompt Directive:* Clearly communicate estimated resolution timeframes, hold durations, and next steps before initiating actions.
-10. **`Provided the appropriate solution`** *(LLM)*:
-    * *Strict Prompt Directive:* Rate PASS if the agent's actions eventually solved the core issue (confirmed by customer). ONLY rate FAIL if the agent gave completely incorrect instructions that left the issue broken.
-11. **`Took ownership of the problem`** *(LLM)*:
-    * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent deflects blame onto other departments (e.g., sales or external IT) instead of performing active troubleshooting.
-12. **`Active listening`** *(LLM)*:
-    * *Strict Prompt Directive:* Avoid asking the customer for information they already provided earlier in the call. Repeated requests for identical information (2+ times) triggers a FAIL.
-13. **`Confirmed the issue is resolved`** *(LLM)*:
-    * *Prompt Directive:* Gain explicit verbal confirmation that the issue is resolved, prompt the user to test the fix, and provide a wrap-up summary.
+   * Regex verification checking for explicit word boundaries (`\b(pin|address)\b`) in the first 4 minutes.
+8. **`Probing`** *(Agent-Only LLM)*:
+   * Injected with `<CUSTOMER_PROBLEM_CONTEXT>` to verify the agent asked clarifying questions specific to the core issue.
+9. **`Took ownership of the problem`** *(Agent-Only LLM)*:
+   * Checks if the agent actively troubleshot the `<CUSTOMER_PROBLEM_CONTEXT>` instead of blindly transferring.
+10. **`Active listening`** *(Hybrid: Python + Snippet LLM)*:
+    * Python searches for highly similar repeated agent questions. If found, a 2-turn snippet is sent to the LLM to verify if they unnecessarily repeated themselves.
+11. **`Confirmed the issue is resolved`** *(Sliced LLM)*:
+    * Evaluated *exclusively* on the last 30% of the transcript context to save tokens and prevent mid-call hallucination.
 
-#### Category 3: Auto Fail Category (Category Weight: 0.0% / Circuit Breakers)
-14. **`Escalation`** *(LLM)*:
-    * *Strict Prompt Directive:* ONLY rate FAIL if the customer explicitly requested a supervisor/manager OR threatened to cancel AND the agent refused or failed to transfer them. Do NOT fail simply because the customer was upset or the call was lengthy.
-15. **`Non-First Call Resolution`** *(LLM)*:
-    * *Strict Prompt Directive:* Rate PASS if the customer's technical issue was resolved by the conclusion of the call. ONLY rate FAIL if the customer was hung up on, told to call back later, or left with an active outage.
+#### Category 3: Auto Fail Category (Circuit Breakers)
+12. **`Escalation`** *(Full-Context LLM)*: Evaluates if the customer asked for a manager and the agent refused.
+13. **`Hostility`** *(Full-Context LLM)*: Evaluates extreme hostility from the agent.
 
-### 5.2 Chunked 4-prompt System
-To prevent context overflow and attention degradation across long transcripts (up to 30 minutes / ~4,000 words), we do not use a single strict CoT prompt anymore. `llm_adapter.py` breaks the transcript into a cached prefix and then queries the LLM in separate category chunks sequentially to avoid context fog. Each chunk loads the transcript alongside only its relevant category items, keeping inference focused and eliminating token cross-contamination.
-
-### 5.3 Rating Parser Algorithm (`parse_dynamic_ratings`)
-1. Strips any internal reasoning tokens (`<thinking>...</thinking>`).
-2. Iterates over line output using end-of-line regex:
-   $$\text{Regex: } \verb|\b(PASS|FAIL|PASSED|FAILED|YES|NO)\b\s*[^a-zA-Z0-9]*$|$$
-3. Normalizes ratings (`PASSED` $\to$ `PASS`, `NO` $\to$ `FAIL`).
-4. Maps string ratings to numerical values via lookup: `RATING_SCORES = {"PASS": 100, "FAIL": 0}`.
-
----
+*(Note: `Set Proper Expectations`, `Provided the Appropriate Solution`, and `Non-First Call Resolution` have been permanently deleted from the architecture).*
 
 ## 6. Dynamic Coaching Generation Subsystem
 
