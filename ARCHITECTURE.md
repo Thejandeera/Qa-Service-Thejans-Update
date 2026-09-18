@@ -220,7 +220,7 @@ The system grades transcripts against distinct line items organized into three c
 2. **`Hold time and Dead Air`** *(Evaluated by Rule Engine)*: Strict threshold check on silence intervals.
 3. **`Personalized the call/ticket appropriately`** *(Evaluated by Rule Engine)*: Checks if the verified `customer_name` appears in the Agent's transcript.
 4. **`Empathy & Acknowledgment Statement`** *(Hybrid: RoBERTa + Snippet LLM)*: 
-   * Python scans for RoBERTa negative sentiment. If negative, an isolated 3-turn snippet is sent to the LLM to verify if the agent was rude or empathetic.
+   * Python tracks RoBERTa sentiment trajectories turn-by-turn. If any turn drops by 6.0 points or more compared to the previous turn (indicating sudden friction), an isolated 3-turn snippet is immediately extracted and sent to the LLM to verify if the agent was rude or empathetic.
 5. **`Build rapport and observed professionalism`** *(Agent-Only LLM)*:
    * Checked against the Agent's dialogue only to avoid confusion from hostile customer phrasing.
 
@@ -234,7 +234,7 @@ The system grades transcripts against distinct line items organized into three c
 9. **`Took ownership of the problem`** *(Agent-Only LLM)*:
    * Checks if the agent actively troubleshot the `<CUSTOMER_PROBLEM_CONTEXT>` instead of blindly transferring.
 10. **`Active listening`** *(Hybrid: Python + Snippet LLM)*:
-    * Python searches for highly similar repeated agent questions. If found, a 2-turn snippet is sent to the LLM to verify if they unnecessarily repeated themselves.
+    * Python searches for repeated agent questions using a strict hybrid check: difflib (ratio > 0.60) AND Vector Embeddings (Cosine Similarity > 0.70). If both pass, a 2-turn snippet is sent to the LLM to verify.
 11. **`Confirmed the issue is resolved`** *(Sliced LLM)*:
     * Evaluated *exclusively* on the last 30% of the transcript context to save tokens and prevent mid-call hallucination.
 
