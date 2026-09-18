@@ -172,10 +172,7 @@ def evaluate_interaction(
     emp_rating = {"category": "Soft Skills", "name": "Empathy & Acknowledgment Statement", "rating": "PASS", "score": 100, "deduction_value": 35, "coaching": "Failed to show empathy to customer's frustration."}
     if empathy_snippet:
         emp_rating["rating"] = "FAIL"
-        p_emp = f"<SNIPPET>
-{empathy_snippet}
-</SNIPPET>
-Read this snippet. Was the agent empathetic to the customer's frustration, or were they rude/dismissive? CRITICAL INSTRUCTION: Output EXACTLY ONE WORD. Do not explain. Reply ONLY with PASS (if empathetic) or FAIL (if rude)."
+        p_emp = f"<SNIPPET>\n{empathy_snippet}\n</SNIPPET>\nRead this snippet. Was the agent empathetic to the customer's frustration, or were they rude/dismissive? CRITICAL INSTRUCTION: Output EXACTLY ONE WORD. Do not explain. Reply ONLY with PASS (if empathetic) or FAIL (if rude)."
         r_emp = query_llm(p_emp, label="verify_empathy", format=None)
         if "PASS" in r_emp.upper():
             emp_rating["rating"] = "PASS"
