@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 79.0,
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "category_scores": {
+      "Soft Skills": 70.0,
+      "Technical Knowledge": 85.0
+    },
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment",
+        "rating": "FAIL",
+        "coaching": "To improve on Empathy & Acknowledgment, the agent should actively acknowledge the customer's emotions and concerns, and respond with empathetic phrases, such as 'I understand how frustrating that must be' or 'I'm happy to help you resolve this issue'."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "FAIL",
+        "coaching": "To improve paraphrasing, the agent should rephrase the customer's question or statement in their own words, rather than simply repeating it back, to demonstrate understanding and ensure clarity."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Set proper expectations",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Provided the appropriate solution",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      }
+    ],
+    "summary": "Customer resolved smart plug WiFi connection issue due to 2.4GHz network selection",
+    "evaluation_id": "4f7d762c-7d9e-4e63-93bc-32c523647852"
+  }
+}

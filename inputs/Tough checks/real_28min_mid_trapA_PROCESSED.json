@@ -1,0 +1,1007 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:10]",
+      "text": "Thank you for calling S-Net technical support, my name is Owen. Could I get your account number to pull up your account?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:11]",
+      "end_time": "[00:15]",
+      "text": "Hi Owen, sure, it's 719-345-882. This is Derek Voss."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:17]",
+      "end_time": "[00:23]",
+      "text": "Thanks Derek, I've got your account pulled up here. What can I help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:25]",
+      "end_time": "[00:40]",
+      "text": "My SentryCam system, the whole thing, three cameras and the hub, keeps going offline randomly. I'm missing alerts, sometimes for hours at a time, and I only find out when I check the app myself."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:41]",
+      "end_time": "[00:56]",
+      "text": "Got it, so all three cameras and the hub are dropping offline intermittently, and you're missing alerts during those windows without any warning. That's the kind of thing you really want reliable for a security system."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:57]",
+      "end_time": "[01:05]",
+      "text": "Exactly, that's the whole point of having it. If it's not catching things reliably, it's not doing its job."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:07]",
+      "end_time": "[01:12]",
+      "text": "It's been about a week now, started pretty suddenly out of nowhere."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:14]",
+      "end_time": "[01:24]",
+      "text": "Okay, about a week, good to know. And does it seem to happen more at a certain time of day, or is it totally random?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:25]",
+      "end_time": "[01:30]",
+      "text": "Pretty random honestly, sometimes in the morning, sometimes late at night."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:38]",
+      "end_time": "[01:47]",
+      "text": "Totally fair, let's get this addressed properly for you. Let me pinpoint what's happening on our end here, give me one second."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:48]",
+      "end_time": "[01:59]",
+      "text": "Okay, I don't see an outage flagged on our side. Let's start with a reboot of the camera hub, that usually clears up connectivity issues like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:01]",
+      "end_time": "[02:04]",
+      "text": "Okay, how long is that going to take?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:06]",
+      "end_time": "[02:09]",
+      "text": "It shouldn't take too long."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:10]",
+      "end_time": "[02:13]",
+      "text": "Alright, unplugging the hub now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:46]",
+      "end_time": "[02:50]",
+      "text": "Unplugged, waiting for it to come back up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:51]",
+      "end_time": "[02:57]",
+      "text": "Okay, it's back online, all three cameras showing connected again in the app."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:58]",
+      "end_time": "[03:03]",
+      "text": "Good, let's give it a bit and see if it holds this time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:05]",
+      "end_time": "[03:08]",
+      "text": "Sure, I'll keep an eye on it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:09]",
+      "end_time": "[03:18]",
+      "text": "While we wait on that, has anything changed with your home network recently, any new devices, router changes, anything like that?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:19]",
+      "end_time": "[03:32]",
+      "text": "Actually yeah, I changed my WiFi password last week. Got a notice that my old one had been the default for way too long, so I finally updated it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:33]",
+      "end_time": "[03:43]",
+      "text": "That's actually a really important detail, thank you for mentioning that. When exactly did the offline issues start relative to that password change?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:44]",
+      "end_time": "[03:49]",
+      "text": "I think it was the next day, so pretty much right after."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:51]",
+      "end_time": "[04:02]",
+      "text": "That timing lines up closely, that's a strong lead. Real quick, how many cameras total are connected to the hub, just so I have the full picture?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:03]",
+      "end_time": "[04:08]",
+      "text": "Three, like I said, two outdoor and one on the front porch."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:10]",
+      "end_time": "[04:19]",
+      "text": "Got it, thank you. And when you say two outdoor, are those both on the same side of the house, or opposite sides?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:21]",
+      "end_time": "[04:26]",
+      "text": "Opposite sides actually, one covers the driveway, the other covers the backyard."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:27]",
+      "end_time": "[04:35]",
+      "text": "Got it, and just to confirm, both of those have been installed for a while now, nothing newly added recently?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:37]",
+      "end_time": "[04:42]",
+      "text": "Both been up for about a year now, nothing new there."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:43]",
+      "end_time": "[04:51]",
+      "text": "Okay, that's useful, that means they're likely at different distances from the router too, which is worth keeping in mind."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:53]",
+      "end_time": "[05:01]",
+      "text": "Got it, thank you. And is the hub itself connected by ethernet to your router, or is it on WiFi too?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:02]",
+      "end_time": "[05:06]",
+      "text": "It's on WiFi, same as the cameras."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:07]",
+      "end_time": "[05:16]",
+      "text": "Okay, that's useful. And when you changed the password, did you update it on the SentryCam app itself, or just on the router?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:18]",
+      "end_time": "[05:25]",
+      "text": "Just on the router, honestly I didn't even think about needing to update it anywhere else."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:26]",
+      "end_time": "[05:43]",
+      "text": "Okay, that's a really useful detail, let's keep digging a bit before I jump to conclusions though. Do all three cameras drop at the exact same time, or does it seem more staggered, like one goes down, then another a bit later?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:44]",
+      "end_time": "[05:55]",
+      "text": "Now that you mention it, it does seem staggered, not all at once. Sometimes it's just the front porch one, sometimes it's two of them."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:57]",
+      "end_time": "[06:15]",
+      "text": "That's a helpful distinction, a simultaneous full outage usually points to the hub itself, but staggered drops across different cameras points more toward something with the connection each camera maintains individually. Are any of the cameras battery powered, or are they all wired for power?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:16]",
+      "end_time": "[06:22]",
+      "text": "The two outdoor ones are battery powered, the porch one is wired."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:23]",
+      "end_time": "[06:32]",
+      "text": "Wait, sorry, now that I think about it, actually the porch one might have gone down too a couple times."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:33]",
+      "end_time": "[06:50]",
+      "text": "That's alright, good to know all three are capable of dropping rather than it being isolated to just the battery-powered ones, that helps rule out a battery-drain explanation. Can you check the signal strength shown for each camera in the app right now?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:52]",
+      "end_time": "[06:58]",
+      "text": "Let me look... porch camera shows strong, the two outdoor ones show medium."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:59]",
+      "end_time": "[07:09]",
+      "text": "Okay, and just to double check, is that medium reading consistent for both outdoor cameras, or does one look noticeably weaker than the other?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:10]",
+      "end_time": "[07:15]",
+      "text": "Pretty consistent actually, both show the same two-bar medium reading."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:16]",
+      "end_time": "[07:25]",
+      "text": "Good to know, consistent medium across both suggests it's more about distance from the router than a problem specific to one camera."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:26]",
+      "end_time": "[07:47]",
+      "text": "Okay, medium signal on the outdoor two isn't unusual just from being further from the router, and since even the strong-signal porch camera has dropped too, I don't think weak signal alone explains this. Has there been any construction, new furniture, or anything metal added between the router and the cameras recently?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:49]",
+      "end_time": "[07:54]",
+      "text": "No, nothing like that, the house layout's been the same for years."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:55]",
+      "end_time": "[08:05]",
+      "text": "Okay, good, and just one more on this, is the router in the same spot it's always been, nothing moved or blocked recently?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:06]",
+      "end_time": "[08:10]",
+      "text": "Same spot, nothing in front of it, same as always."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:12]",
+      "end_time": "[08:26]",
+      "text": "Okay, that rules that out too. One more thing, does the hub itself have any kind of event log or history you can see in the app, something that might show exactly when each drop happened?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:28]",
+      "end_time": "[08:40]",
+      "text": "There's a 'Device History' tab, let me check... yeah, it's showing a bunch of 'Reconnected' events, one for each camera, spread out over the last several days."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:41]",
+      "end_time": "[08:47]",
+      "text": "Can you tell roughly how many reconnect events there are total, just a rough count?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:49]",
+      "end_time": "[08:55]",
+      "text": "Looks like somewhere around a dozen or so across all three over the week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:56]",
+      "end_time": "[09:06]",
+      "text": "That's a meaningful number, a dozen reconnects in a week for what should normally be a handful at most really supports the credentials theory."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:07]",
+      "end_time": "[09:27]",
+      "text": "That's actually really useful, repeated reconnect events rather than a single continuous outage strongly suggests each device is losing its session and having to reauthenticate over and over, rather than a hardware failure or a true outage. That pattern is very consistent with a credentials mismatch rather than anything physical."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:29]",
+      "end_time": "[09:33]",
+      "text": "Okay, that makes sense when you put it that way."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:35]",
+      "end_time": "[09:46]",
+      "text": "Let's check one more thing to be thorough, has your internet plan or router itself changed recently, not just the password, but the actual router or modem hardware?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:47]",
+      "end_time": "[09:51]",
+      "text": "No, same router, just the password update I mentioned."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:53]",
+      "end_time": "[10:30]",
+      "text": "Good, that keeps things simple, it really does point back to that password change as the trigger. I think that's actually really common, and I believe that's very likely our root cause here. The camera hub caches your WiFi credentials internally, so if the router's password changed but the hub was never told about it, it'll keep trying to reconnect with the old password, succeed for a little while on a cached session, and then drop off once that session expires, which would explain the random, intermittent pattern instead of a total outage."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:31]",
+      "end_time": "[10:39]",
+      "text": "Oh, that actually makes a lot of sense, it has been kind of random rather than constantly down."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:41]",
+      "end_time": "[10:51]",
+      "text": "Exactly that pattern fits. Let's go ahead and re-pair the hub with the new password directly so it's not relying on a stale cached session anymore."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:53]",
+      "end_time": "[10:56]",
+      "text": "Okay, how do I do that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:57]",
+      "end_time": "[11:06]",
+      "text": "Open the SentryCam app, go to hub settings, and there should be an option that says 'Update Network'. Do you see that?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:07]",
+      "end_time": "[11:10]",
+      "text": "Let me look... yeah, found it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:12]",
+      "end_time": "[11:21]",
+      "text": "Tap that, and it'll ask you to select your network and enter the password again, go ahead and enter the new one."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:35]",
+      "end_time": "[11:38]",
+      "text": "Okay, entering it now... done, it says connecting."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:40]",
+      "end_time": "[11:47]",
+      "text": "Okay, it's showing connected now, and all three cameras just came back green in the app too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:49]",
+      "end_time": "[12:06]",
+      "text": "That's a great sign, that means the hub successfully picked up the fresh credentials and pushed the update down to the cameras. Let's confirm it's stable, can you check your alert history and see if anything's come through in the last few minutes?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:07]",
+      "end_time": "[12:16]",
+      "text": "Yeah, actually, motion was just detected on the front porch camera and I got the push notification right away."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:17]",
+      "end_time": "[12:23]",
+      "text": "Perfect, that's exactly what we want to see, alerts coming through in real time again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:25]",
+      "end_time": "[12:32]",
+      "text": "That's a relief honestly, I was starting to think I'd need to replace the whole system."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:33]",
+      "end_time": "[12:40]",
+      "text": "Glad we caught it before that, this was really just a credentials mismatch rather than a hardware problem."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:42]",
+      "end_time": "[12:49]",
+      "text": "How long would you recommend I keep an eye on it before considering it fully resolved?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:50]",
+      "end_time": "[13:01]",
+      "text": "I'd say give it through the rest of today and maybe tomorrow, if all three stay connected and alerts keep coming through normally, you're in good shape."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:02]",
+      "end_time": "[13:08]",
+      "text": "Okay, I'll check back in throughout the day just to be safe."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:09]",
+      "end_time": "[13:20]",
+      "text": "That's a good approach, and again, if anything does come up, the notes on the account will make it a quick fix for whoever you reach."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:21]",
+      "end_time": "[13:24]",
+      "text": "Appreciate that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:26]",
+      "end_time": "[13:36]",
+      "text": "That makes sense. Is there anything I need to do differently going forward, like if I change the password again down the line?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:37]",
+      "end_time": "[13:50]",
+      "text": "Good question, anytime you update your WiFi password, just remember to also update it in the SentryCam app under hub settings so the hub doesn't fall out of sync again like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:51]",
+      "end_time": "[13:55]",
+      "text": "Got it, I'll remember that for next time."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:56]",
+      "end_time": "[14:07]",
+      "text": "I'll also add a note to your account documenting this fix, so if it ever comes up again, whoever you reach will have the context immediately."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:08]",
+      "end_time": "[14:11]",
+      "text": "That's great, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:13]",
+      "end_time": "[14:25]",
+      "text": "Out of curiosity, is there a way for the system to warn me automatically if a camera drops offline, instead of me having to notice it myself?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:26]",
+      "end_time": "[14:37]",
+      "text": "There is actually, under notification settings there's a toggle called 'Device Offline Alerts', it's off by default for some reason. Want me to walk you through enabling it?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:39]",
+      "end_time": "[14:44]",
+      "text": "Yes, please, that would've saved me a lot of worry this week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:45]",
+      "end_time": "[14:53]",
+      "text": "Go to the app's main settings, then Notifications, then you should see 'Device Offline Alerts' near the bottom."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:54]",
+      "end_time": "[14:57]",
+      "text": "Found it, turning it on now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:59]",
+      "end_time": "[15:02]",
+      "text": "Okay, it's on."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:03]",
+      "end_time": "[15:12]",
+      "text": "Great, now if any device drops for more than a couple minutes, you'll get a push notification immediately instead of finding out later."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:14]",
+      "end_time": "[15:21]",
+      "text": "That's really helpful, I wish I'd known that setting existed when I first set this up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:22]",
+      "end_time": "[15:28]",
+      "text": "It's a pretty buried setting, you're definitely not the first person to have missed it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:30]",
+      "end_time": "[15:44]",
+      "text": "Good to know it's not just me. Since the porch camera is wired and the other two are battery, does the battery drain faster when they're constantly trying to reconnect like this?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:45]",
+      "end_time": "[16:00]",
+      "text": "Actually yes, that's a great question, repeated reconnect attempts do use noticeably more battery than a stable connection, so this issue may have also been quietly draining your two outdoor cameras faster than normal this past week."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:02]",
+      "end_time": "[16:09]",
+      "text": "Oh, that would explain why I had to charge one of them a lot sooner than I expected."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:11]",
+      "end_time": "[16:20]",
+      "text": "That lines up, now that the hub is back on a stable, correctly authenticated connection, battery drain on those two should return to normal."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:22]",
+      "end_time": "[16:28]",
+      "text": "Good to know, I was starting to think the battery itself was just going bad."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:30]",
+      "end_time": "[16:41]",
+      "text": "Nope, should be totally fine now. Do you want me to check the current battery percentage on both while I have you, just so you have a baseline?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:43]",
+      "end_time": "[16:46]",
+      "text": "Sure, that'd be helpful."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:54]",
+      "end_time": "[16:57]",
+      "text": "Give me a moment to pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:58]",
+      "end_time": "[17:10]",
+      "text": "Looks like 61 percent and 74 percent on the two outdoor cameras, nothing alarming, just worth keeping an eye on over the next week to confirm drain slows back down."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:12]",
+      "end_time": "[17:17]",
+      "text": "Okay, I'll check back in on that myself in a few days."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:19]",
+      "end_time": "[17:26]",
+      "text": "While I've got you, is there a limit to how many cameras I can add to one hub?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:28]",
+      "end_time": "[17:38]",
+      "text": "For your hub model, it supports up to six cameras total, so you'd have room to add three more if you ever wanted to expand."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:39]",
+      "end_time": "[17:45]",
+      "text": "Good to know, I've actually been thinking about adding one for the backyard."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:47]",
+      "end_time": "[17:56]",
+      "text": "If you do, just make sure it's paired while the hub is on the current, correct password, and it should be a smooth setup."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:58]",
+      "end_time": "[18:01]",
+      "text": "Will do, appreciate the tip."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:02]",
+      "end_time": "[18:09]",
+      "text": "One more thing, does the app store footage locally or in the cloud? I've always wondered."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:11]",
+      "end_time": "[18:21]",
+      "text": "It depends on your plan, but by default it's cloud storage with a seven day rolling history, unless you've added a local storage card to the hub."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:23]",
+      "end_time": "[18:30]",
+      "text": "Ah, I don't think I have the local card, so it must just be cloud then."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:31]",
+      "end_time": "[18:36]",
+      "text": "That would track, and that's a perfectly fine default for most households."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:38]",
+      "end_time": "[18:47]",
+      "text": "Good to know. Can I share access to the cameras with my wife, or does she need her own separate account?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:48]",
+      "end_time": "[19:00]",
+      "text": "You can actually invite her as a secondary user right from the app, under Household Members, she'd get her own login but see the same cameras and alerts you do."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:02]",
+      "end_time": "[19:10]",
+      "text": "Oh perfect, I've been meaning to set that up, I just never got around to finding the setting."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:11]",
+      "end_time": "[19:19]",
+      "text": "It's under the main settings menu, should be pretty straightforward, just her email address and she'll get an invite."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:20]",
+      "end_time": "[19:28]",
+      "text": "Great, I'll do that after this call. Does she get her own notification toggles, or does it copy mine?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:30]",
+      "end_time": "[19:35]",
+      "text": "Her own, actually, each household member can customize their own alert preferences independently."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:37]",
+      "end_time": "[19:42]",
+      "text": "Good, she probably doesn't want every single motion alert like I do."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:43]",
+      "end_time": "[19:48]",
+      "text": "That's exactly the kind of thing that setup handles well then."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:49]",
+      "end_time": "[19:57]",
+      "text": "One more, does the porch camera have two-way audio? I feel like I've seen that mentioned somewhere."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:58]",
+      "end_time": "[20:08]",
+      "text": "Yes, actually, if you tap the camera feed there should be a microphone icon, holding that down lets you talk through the camera's speaker."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:09]",
+      "end_time": "[20:15]",
+      "text": "Oh nice, I had no idea, that could be handy for package deliveries."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:16]",
+      "end_time": "[20:22]",
+      "text": "Exactly the kind of use case it's built for, works well for that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:23]",
+      "end_time": "[20:33]",
+      "text": "Last one, I promise, is there a way to check the camera firmware version, just so I know it's current after all this?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:35]",
+      "end_time": "[20:43]",
+      "text": "Sure, under each camera's individual settings there's a 'Device Info' section that lists the firmware version and whether an update is pending."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:45]",
+      "end_time": "[20:49]",
+      "text": "Let me check... all three say up to date, good."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:51]",
+      "end_time": "[20:54]",
+      "text": "Perfect, that's one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:55]",
+      "end_time": "[21:09]",
+      "text": "Going back to what you mentioned earlier about medium signal on the outdoor cameras, is that something I should be worried about long term, even outside of this whole password issue?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:10]",
+      "end_time": "[21:25]",
+      "text": "It's not urgent, but if you ever want to strengthen it, a mesh extender placed roughly halfway between the router and the back of the house would bring both outdoor cameras up to a stronger signal."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:26]",
+      "end_time": "[21:32]",
+      "text": "Is that something you all sell, or would I need to buy that separately?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:34]",
+      "end_time": "[21:44]",
+      "text": "We do offer a compatible mesh extender as an add-on, or you're welcome to use a third-party one, either works fine with the system."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:45]",
+      "end_time": "[21:53]",
+      "text": "Good to know, I might look into that at some point, not urgent though since things are working now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:55]",
+      "end_time": "[22:03]",
+      "text": "Totally reasonable, no rush on that one, medium signal is still perfectly functional, it would just be a nice-to-have improvement."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:04]",
+      "end_time": "[22:14]",
+      "text": "Makes sense. Since this was on your end essentially, is there any kind of credit for the week it wasn't working properly?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:24]",
+      "end_time": "[22:29]",
+      "text": "That's a fair question, let me check what's available given the circumstances."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:30]",
+      "end_time": "[22:37]",
+      "text": "I can apply a service credit for the affected period, I'll go ahead and put that through now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:39]",
+      "end_time": "[22:42]",
+      "text": "That's appreciated, thank you."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:43]",
+      "end_time": "[22:48]",
+      "text": "Of course, happy to make that right given the circumstances here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:49]",
+      "end_time": "[23:00]",
+      "text": "One last thing, you mentioned the seven day rolling cloud storage earlier, is there an option to extend that if I wanted a longer history?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:02]",
+      "end_time": "[23:10]",
+      "text": "Yes, there's a thirty day extended history add-on available if you ever want more than the default week of footage retained."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:12]",
+      "end_time": "[23:20]",
+      "text": "Good to know, I'll think about whether I actually need that or if a week is enough for my purposes."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:22]",
+      "end_time": "[23:31]",
+      "text": "Totally your call, a week is plenty for most households unless you're trying to keep a longer archive for some specific reason."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:32]",
+      "end_time": "[23:42]",
+      "text": "Fair enough. Would it be worth scheduling a quick follow-up call in a week or so, just to confirm everything's still holding steady?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:44]",
+      "end_time": "[23:58]",
+      "text": "That's not something we'd normally schedule proactively, but you're always welcome to call back in if anything comes up, and like I mentioned, the notes on your account will make that quick for whoever you reach."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:59]",
+      "end_time": "[24:02]",
+      "text": "Fair enough, that works for me too."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:04]",
+      "end_time": "[24:15]",
+      "text": "Is there a best time of day to reach support if I did need to call back, or is it the same wait either way?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:16]",
+      "end_time": "[24:25]",
+      "text": "Mid-morning on weekdays tends to be quieter, but we're staffed throughout the day so any time should get you through reasonably quickly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:27]",
+      "end_time": "[24:30]",
+      "text": "Good to know, I'll keep that in mind."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:32]",
+      "end_time": "[24:44]",
+      "text": "Also, is my email on file the best way to reach me if there's ever a known outage in my area, or do you use text messages too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:45]",
+      "end_time": "[24:54]",
+      "text": "We can do either, actually, would you like me to check which one is currently set as your preferred contact method?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:55]",
+      "end_time": "[24:58]",
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:00]",
+      "end_time": "[25:05]",
+      "text": "Looks like email is currently set as preferred, text isn't enabled yet."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:06]",
+      "end_time": "[25:13]",
+      "text": "Oh, I'd actually prefer text for anything urgent like an outage, email I don't check as often."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:15]",
+      "end_time": "[25:21]",
+      "text": "No problem, I can enable text notifications for outage alerts specifically right now if you'd like."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:23]",
+      "end_time": "[25:26]",
+      "text": "Yes, please, that'd be great."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:27]",
+      "end_time": "[25:34]",
+      "text": "Done, text alerts for area outages are now enabled on your account in addition to email."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:35]",
+      "end_time": "[25:38]",
+      "text": "Perfect, thank you for catching that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:40]",
+      "end_time": "[25:43]",
+      "text": "Of course, glad it came up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:44]",
+      "end_time": "[25:49]",
+      "text": "Fair enough. I think that answers everything on my end for now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:51]",
+      "end_time": "[26:01]",
+      "text": "Before I let you go, just to make sure I've logged this properly, how many cameras did you say were on the account again?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:02]",
+      "end_time": "[26:07]",
+      "text": "Three, like I mentioned earlier, two outdoor and the front porch one."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:09]",
+      "end_time": "[26:12]",
+      "text": "Right, sorry, got that noted now, three cameras."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:13]",
+      "end_time": "[26:17]",
+      "text": "No worries. I think that's everything, thank you Owen."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:19]",
+      "end_time": "[26:23]",
+      "text": "Of course, glad we got that sorted out for you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:24]",
+      "end_time": "[26:34]",
+      "text": "Actually wait, one more thing, should I be worried this could happen again with a firmware update or something similar down the line?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:36]",
+      "end_time": "[26:52]",
+      "text": "It's possible with any network change, but now that you know to update the password in the app whenever it changes on the router, that specific cause shouldn't repeat. Firmware updates are usually handled automatically and wouldn't cause this same issue."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:54]",
+      "end_time": "[26:57]",
+      "text": "Okay, that's reassuring, thank you for explaining that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:59]",
+      "end_time": "[27:02]",
+      "text": "Anytime. Anything else I can help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[27:04]",
+      "end_time": "[27:08]",
+      "text": "No, I think that covers it, thanks again Owen."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[27:09]",
+      "end_time": "[27:23]",
+      "text": "Thank you so much, Derek. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a great rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

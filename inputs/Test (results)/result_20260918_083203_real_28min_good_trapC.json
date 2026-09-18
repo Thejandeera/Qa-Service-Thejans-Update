@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 100.0,
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "category_scores": {
+      "Soft Skills": 100.0,
+      "Technical Knowledge": 100.0
+    },
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Set proper expectations",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Provided the appropriate solution",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      }
+    ],
+    "summary": "Customer's smart thermostat issue resolved by addressing sun exposure and adjusting settings.",
+    "evaluation_id": "e9e3d8a9-ee93-4b43-9df7-2cf7c190d6ba"
+  }
+}

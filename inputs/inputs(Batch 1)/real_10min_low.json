@@ -1,0 +1,425 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:04]",
+      "text": "Tech support, go ahead."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:06]",
+      "end_time": "[00:16]",
+      "text": "Hi, my modem's completely down, no internet at all. I work from home so this is a pretty big deal right now. Account number's 883-247-051."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:18]",
+      "end_time": "[00:21]",
+      "text": "Okay. Lights on the modem?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:22]",
+      "end_time": "[00:28]",
+      "text": "Yeah, power light's on but the internet light is just blinking red."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:29]",
+      "end_time": "[00:32]",
+      "text": "Blinking red, just reboot it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:34]",
+      "end_time": "[00:41]",
+      "text": "I already tried that twice before calling. It comes back for a bit then goes red again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:42]",
+      "end_time": "[00:45]",
+      "text": "Try it again anyway."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:47]",
+      "end_time": "[00:55]",
+      "text": "I really did already try that more than once. Is there something you can check from your end first?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:57]",
+      "end_time": "[01:00]",
+      "text": "Rebooting's usually the fix, just try it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:35]",
+      "end_time": "[01:38]",
+      "text": "Alright, fine."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:39]",
+      "end_time": "[01:43]",
+      "text": "Okay, same thing, red again after about a minute."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:45]",
+      "end_time": "[01:48]",
+      "text": "Huh."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:49]",
+      "end_time": "[01:55]",
+      "text": "Is there anything showing on your end, like an outage in my area?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:09]",
+      "end_time": "[02:12]",
+      "text": "Let me check."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:13]",
+      "end_time": "[02:17]",
+      "text": "Nothing showing, so it's probably something on your side."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:18]",
+      "end_time": "[02:29]",
+      "text": "Nothing's changed on my end though, it was fine yesterday. I've got a meeting in twenty minutes and no way to join it right now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:31]",
+      "end_time": "[02:34]",
+      "text": "Yeah, that happens sometimes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:35]",
+      "end_time": "[02:41]",
+      "text": "Okay... is there a next step, like a line test you can run?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:21]",
+      "end_time": "[03:24]",
+      "text": "I can check, hold on."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:25]",
+      "end_time": "[03:28]",
+      "text": "Hello? Still there?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:30]",
+      "end_time": "[03:33]",
+      "text": "Yeah, was checking."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:34]",
+      "end_time": "[03:37]",
+      "text": "Okay, what'd you find?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:39]",
+      "end_time": "[03:42]",
+      "text": "Nothing unusual, line looks fine."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:43]",
+      "end_time": "[03:51]",
+      "text": "But it's clearly not fine, I have zero internet. Can someone come out and actually look at it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:53]",
+      "end_time": "[03:57]",
+      "text": "That's usually only for confirmed outages, and I'm not seeing one."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:59]",
+      "end_time": "[04:04]",
+      "text": "It's confirmed from where I'm sitting, that's about as confirmed as it gets."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:06]",
+      "end_time": "[04:11]",
+      "text": "I get that, but the system just goes off what it sees."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:12]",
+      "end_time": "[04:18]",
+      "text": "So the system's word matters more than what I'm actually experiencing right now?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:19]",
+      "end_time": "[04:23]",
+      "text": "Pretty much, that's what I've got to work with."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:24]",
+      "end_time": "[04:31]",
+      "text": "So what am I supposed to do, I have a meeting in fifteen minutes now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:32]",
+      "end_time": "[04:38]",
+      "text": "Could try a different outlet for the modem, might be a power thing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:39]",
+      "end_time": "[04:47]",
+      "text": "Okay, I'll try that. Can I get your name for my records, in case I need to call back?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:49]",
+      "end_time": "[04:52]",
+      "text": "It's fine, you don't need that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:53]",
+      "end_time": "[04:56]",
+      "text": "I'd still like it, please."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:58]",
+      "end_time": "[05:01]",
+      "text": "Chris."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:19]",
+      "end_time": "[05:22]",
+      "text": "Thanks, Chris. Trying a different outlet now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:23]",
+      "end_time": "[05:27]",
+      "text": "Okay, tried a different outlet, still blinking red."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:28]",
+      "end_time": "[05:34]",
+      "text": "Well, could just be the modem's old and dying, those things don't last forever."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:35]",
+      "end_time": "[05:41]",
+      "text": "It's under a year old, I got it when I signed up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:42]",
+      "end_time": "[05:45]",
+      "text": "Still, hardware fails sometimes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:47]",
+      "end_time": "[05:53]",
+      "text": "Okay, but if that's it, what's the fix, a replacement? Can you send one?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:54]",
+      "end_time": "[05:59]",
+      "text": "That's a separate request, not something I handle on this call."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:00]",
+      "end_time": "[06:04]",
+      "text": "So who do I talk to for that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:05]",
+      "end_time": "[06:09]",
+      "text": "You'd call back in and ask for equipment, different queue."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:11]",
+      "end_time": "[06:18]",
+      "text": "Could you just transfer me now instead of me calling back and explaining this all over again?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:20]",
+      "end_time": "[06:23]",
+      "text": "Not from this line, different system."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:24]",
+      "end_time": "[06:35]",
+      "text": "That seems like an odd limitation, but okay. What's my account number again, do you even have it pulled up? I gave it at the start."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:37]",
+      "end_time": "[06:40]",
+      "text": "What was it again?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:41]",
+      "end_time": "[06:45]",
+      "text": "883-247-051, same as I said when I called."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:46]",
+      "end_time": "[06:49]",
+      "text": "Right, got it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:51]",
+      "end_time": "[07:02]",
+      "text": "Shouldn't you be asking me for a PIN or something to verify who I am? Feels like anyone could call in with just a number."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:03]",
+      "end_time": "[07:06]",
+      "text": "It's fine for a call like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:08]",
+      "end_time": "[07:13]",
+      "text": "Okay. So is there literally nothing else that can be done right now?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:15]",
+      "end_time": "[07:21]",
+      "text": "Not really. Keep trying the reboot over the next hour, sometimes it just sorts itself out."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:23]",
+      "end_time": "[07:30]",
+      "text": "That's not really something I can work with, I have a job that depends on this."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:31]",
+      "end_time": "[07:37]",
+      "text": "I hear you, but there's not much more on my end without an outage flag."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:39]",
+      "end_time": "[07:44]",
+      "text": "Can I speak to a supervisor, someone who might have more options?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:45]",
+      "end_time": "[07:48]",
+      "text": "They'd tell you the same thing honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:50]",
+      "end_time": "[07:53]",
+      "text": "I'd still like to try, if that's alright."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:55]",
+      "end_time": "[08:00]",
+      "text": "I can put in a note, nobody's available right this second though."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:01]",
+      "end_time": "[08:05]",
+      "text": "Okay, so where does that actually leave me, today?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:07]",
+      "end_time": "[08:15]",
+      "text": "Keep trying the reboot, try different outlets, if it's still out tomorrow call back and they can look at a replacement."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:17]",
+      "end_time": "[08:20]",
+      "text": "Tomorrow. So I just lose today's work entirely."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:21]",
+      "end_time": "[08:25]",
+      "text": "That's kind of out of my hands at this point."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:27]",
+      "end_time": "[08:35]",
+      "text": "Alright. Is there a reference number for this call at least, so I'm not starting from zero tomorrow?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:36]",
+      "end_time": "[08:40]",
+      "text": "No reference number, it'll just be on the account."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:41]",
+      "end_time": "[08:49]",
+      "text": "Okay, I'll trust that. I really don't feel like anything got resolved here, just so that's clear."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:50]",
+      "end_time": "[08:53]",
+      "text": "Understood. Anything else?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:55]",
+      "end_time": "[08:59]",
+      "text": "No, I guess not, I'll keep trying on my end."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:01]",
+      "end_time": "[09:04]",
+      "text": "Alright."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

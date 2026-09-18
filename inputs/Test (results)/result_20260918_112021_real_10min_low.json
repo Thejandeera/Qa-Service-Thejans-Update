@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 42.0,
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "category_scores": {
+      "Soft Skills": 75.0,
+      "Technical Knowledge": 20.0
+    },
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "FAIL",
+        "coaching": "Agent missed verbatim scripts for: Greeting, Closing"
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "FAIL",
+        "coaching": "Dead Air Breach: Agent had 2 occurrences of >30s dead air (max gap 40s)."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "FAIL",
+        "coaching": "Verify the customer's identity by asking for a PIN or other verification method, especially when the customer is reporting a critical issue like a complete loss of internet service."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "FAIL",
+        "coaching": "Paraphrase the customer's concerns and summarize the issue in your own words to ensure understanding and show empathy."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "NO",
+        "coaching": "The agent should have asked more diagnostic questions to probe the problem, such as 'Have you checked the physical connection to the modem?' or 'Have you tried resetting the router?' to better understand the issue and potentially resolve it."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Set proper expectations",
+        "rating": "NO",
+        "coaching": "Clearly communicate the expected outcome and timeline of the troubleshooting process to the customer, and regularly check-in to update them on the progress."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Provided the appropriate solution",
+        "rating": "NO",
+        "coaching": "The agent should have escalated the issue to a supervisor or a specialist who can investigate further and provide a more effective solution, rather than relying solely on rebooting and troubleshooting steps."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "FAIL",
+        "coaching": "Take ownership of the issue by acknowledging the customer's frustration and expressing a willingness to help resolve the problem, rather than simply following a script or blaming the system."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      }
+    ],
+    "summary": "Customer reports modem issue, agent tries reboot and troubleshooting, but no resolution is reached.",
+    "evaluation_id": "f878a991-4878-4fb2-88c0-abe9e6f19d2e"
+  }
+}

@@ -240,15 +240,15 @@ The system grades transcripts against 15 distinct line items organized into thre
 2. **`Hold time and Dead Air`** *(Evaluated by Rule Engine)*: Strict threshold check on silence intervals.
 3. **`Personalized the call/ticket appropriately`** *(LLM)*:
    * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly addressed the caller by their verified name (e.g., "John") at least once. Rate FAIL if the agent never used the caller's name.
-4. **`Empathy & Acknowledgment Statement`** *(LLM)*:
+4. **`Empathy & Acknowledgment Statement`** *(Evaluated by Rule Engine)*:
    * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is blunt or robotic instead of empathetically acknowledging customer frustration or urgency.
 5. **`Build rapport and observed professionalism`** *(LLM)*:
    * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent is discourteous, disrespectful, interrupts, or makes unprofessional sounds.
 
 #### Category 2: Technical Knowledge (Category Weight: 66.7% / 0.667)
-6. **`Paraphrasing`** *(LLM)*:
+6. **`Paraphrasing`** *(Evaluated by Vector Embeddings)*:
    * *Prompt Directive:* Must paraphrase the customer's core technical issue at the onset of the call or upon statement of the request to reconfirm understanding.
-7. **`Verified customer`** *(LLM)*:
+7. **`Verified customer`** *(Evaluated by Rule Engine)*:
    * *Strict Prompt Directive:* Rate PASS ONLY if the agent explicitly validated secure account details (e.g., an account PIN, full address, or security question). Asking for an account number alone triggers an automatic FAIL.
 8. **`Probing`** *(LLM)*:
    * *Prompt Directive:* Default to PASS. Rate FAIL ONLY if the agent prescribes steps without asking logical, clarifying diagnostic questions to isolate the root cause.
@@ -396,6 +396,8 @@ Celery stores execution states and serialized scorecard payloads in Redis using 
 | `src/services/orchestrator_worker.py` | Celery task entry point (`orchestrate_evaluation`). |
 | `resources/prompts/` | Prompt templates for dynamic evaluation, coaching tips, and summaries. |
 | `tests/payloads/` | Standardized 30-minute test datasets (`perfect_call_payload.json`, `mediocre_call_payload.json`, `catastrophic_call_payload.json`). |
-U p d a t i n g   A R C H I T E C T U R E . m d  
- -   V e r i f i e d   C u s t o m e r   i s   h a r d c o d e d   t o   P I N / A d d r e s s .   M U S T   m o v e   t o   t e n a n t   D B .  
+U p d a t i n g   A R C H I T E C T U R E . m d 
+ 
+ -   V e r i f i e d   C u s t o m e r   i s   h a r d c o d e d   t o   P I N / A d d r e s s .   M U S T   m o v e   t o   t e n a n t   D B . 
+ 
  

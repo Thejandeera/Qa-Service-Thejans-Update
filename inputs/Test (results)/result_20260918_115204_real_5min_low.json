@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 39.0,
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "category_scores": {
+      "Soft Skills": 45.0,
+      "Technical Knowledge": 35.0
+    },
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "FAIL",
+        "coaching": "Agent missed verbatim scripts for: Greeting, Closing"
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "FAIL",
+        "coaching": "Dead Air Breach: Agent had 2 occurrences of >30s dead air (max gap 36s)."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment",
+        "rating": "FAIL",
+        "coaching": "The agent should acknowledge the customer's frustration and show understanding of their situation, e.g., 'I apologize for the inconvenience this is causing' or 'I can imagine how frustrating this must be for you'."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "FAIL",
+        "coaching": "Verify the customer's account information and confirm it matches the company's records to ensure accurate troubleshooting and resolution."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "FAIL",
+        "coaching": "To improve paraphrasing, the agent should rephrase the customer's concerns and questions in their own words, ensuring understanding and clarity, e.g., 'Just to confirm, you're saying your internet has been slow all morning and you've already rebooted the router?'"
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "NO",
+        "coaching": "Ask more diagnostic questions to probe the problem, such as 'Can you describe the issue in more detail?' or 'Have you noticed any specific error messages?' to better understand the root cause of the issue."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Set proper expectations",
+        "rating": "NO",
+        "coaching": "Set clear expectations for the customer regarding the resolution time and any subsequent actions, e.g., 'I'll check on the outage and get back to you within the next 10 minutes'."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Provided the appropriate solution",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "FAIL",
+        "coaching": "Take ownership of the issue by acknowledging the customer's frustration and expressing a commitment to resolving the problem, rather than simply stating 'it's probably something with your setup'."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      }
+    ],
+    "summary": "Customer reports slow internet, agent suggests rebooting and waiting",
+    "evaluation_id": "44be800a-f960-49c6-8de7-188c0998254c"
+  }
+}

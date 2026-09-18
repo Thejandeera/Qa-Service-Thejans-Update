@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 75.0,
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "category_scores": {
+      "Soft Skills": 75.0,
+      "Technical Knowledge": 75.0
+    },
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "FAIL",
+        "coaching": "Agent missed verbatim scripts for: Greeting, Closing"
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "FAIL",
+        "coaching": "Dead Air Breach: Agent had 2 occurrences of >30s dead air (max gap 40s)."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "YES",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Set proper expectations",
+        "rating": "NO",
+        "coaching": "Clearly communicate the expected resolution time and steps to the customer, e.g., 'I'll check the system and get back to you within 2 minutes.'"
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Provided the appropriate solution",
+        "rating": "NO",
+        "coaching": "Instead of repeatedly suggesting a reboot, the agent should have explored other possible causes, such as checking the modem's firmware or suggesting a different internet service provider."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      }
+    ],
+    "summary": "Customer reports modem issue, agent suggests reboot and troubleshooting",
+    "evaluation_id": "deb7a081-d33d-4ea2-8e0f-2b188cf44983"
+  }
+}

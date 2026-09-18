@@ -10,7 +10,6 @@ against dynamic company criteria schemas.
 import re
 from typing import Dict, Any, List, Optional
 from src.services.llm_adapter import query_llm, cache_prompt_prefix, query_llm_with_state, get_embedding
-from src.services.qa_summary import generate_scalable_summary
 from src.services.response_time import (
     leading_time_seconds, response_delays, response_time_score,
 )
@@ -44,8 +43,8 @@ def preview_evaluation_prompt(
         turns = [("Agent", transcript_text)]
         clean_transcript = transcript_text
 
-    # 2. Vector RAG Policy Search via LLM Summary
-    summary = generate_scalable_summary(clean_transcript)
+    # 2. Vector RAG Policy Search via LLM Summary (REMOVED TO MATCH EVALUATE_INTERACTION)
+    # summary = generate_scalable_summary(clean_transcript)
     matched_policies = []
 
     # 3. Extract Criteria Line Items and Weights
@@ -220,9 +219,9 @@ def evaluate_interaction(
             parsed_times = [(0, 10)]
             clean_transcript = transcript_data
 
-    # 2. Extract Topics using Lightweight LLM (LLM3:1b)
-    from src.services.qa_summary import generate_scalable_summary
-    topic_keywords = generate_scalable_summary(clean_transcript)
+    # 2. Extract Topics using Lightweight LLM (LLM3:1b) (REMOVED TO PREVENT CACHE THRASHING)
+    # from src.services.qa_summary import generate_scalable_summary
+    # topic_keywords = generate_scalable_summary(clean_transcript)
 
     matched_policies = []
     
@@ -398,31 +397,28 @@ def evaluate_interaction(
 
     # 7. Mathematical Scoring Engine
     # Phase 2: Generate Coaching for FAILs
+    # Phase 2: Generate Coaching for FAILs
     failed_items = [r for r in ratings if r["rating"] in ["FAIL", "NO"] and "dead air" not in r["name"].lower() and "branding" not in r["name"].lower()]
     if failed_items:
-        batch_size = 1
-        for i in range(0, len(failed_items), batch_size):
-            chunk = failed_items[i:i + batch_size]
-            r = chunk[0]
+        failed_names_and_desc = "\n".join([f"- {r['name']}: {r.get('description', '')}" for r in failed_items])
+        try:
+            c_prompt = f"""<TRANSCRIPT>\n{clean_transcript}\n</TRANSCRIPT>\n\n<INSTRUCTIONS>\nYou are an expert QA Coach evaluating a {channel} interaction.\nThe agent FAILED the following QA criteria:\n{failed_names_and_desc}\n\nWrite a brief coaching tip (EXPLICITLY 1 to 2 sentences MAX) on how the agent can improve on EACH specific criterion.\nCRITICAL: Output ONLY a valid JSON object mapping the exact criterion name to its coaching tip. Do not output reasons, arrays, or conversational text.\n\nJSON FORMAT:\n{{\n  "Criterion Name 1": "Coaching tip...",\n  "Criterion Name 2": "Coaching tip..."\n}}\n</INSTRUCTIONS>"""
+            c_reply = query_llm(c_prompt, label="coaching_batched", timeout=300, format="json")
+            
+            cj = {}
             try:
-                c_prompt = f"""<TRANSCRIPT>\n{clean_transcript}\n</TRANSCRIPT>\n\n<INSTRUCTIONS>\nYou are an expert QA Coach evaluating a {channel} interaction.\nThe agent FAILED the following QA criteria: '{r['name']}'\nCriteria definition: {r.get('description', '')}\n\nWrite a brief coaching tip (EXPLICITLY 1 to 2 sentences MAX) on how the agent can improve on this specific criterion.\nCRITICAL: Output ONLY a valid JSON object. Do not output reasons, arrays, or conversational text.\n\nJSON FORMAT:\n{{\n  "coaching": "..."\n}}\n</INSTRUCTIONS>"""
-                c_reply = query_llm(c_prompt, label="coaching", timeout=300, format="json")
-                print(f"==== COACHING REPLY ({r['name']}) ====\n", c_reply, "\n========================")
-                
-                cj = {}
-                try:
-                    c_reply = c_reply.strip()
-                    parsed = json.loads(c_reply)
-                    if isinstance(parsed, list) and len(parsed) > 0:
-                        cj = parsed[0]
-                    elif isinstance(parsed, dict):
-                        cj = parsed
-                except Exception as e:
-                    print("JSON parse error:", e)
-                
-                r["coaching"] = cj.get("coaching", "Review transcript.")
+                c_reply = c_reply.strip()
+                parsed = json.loads(c_reply)
+                if isinstance(parsed, dict):
+                    cj = parsed
             except Exception as e:
-                print(f"Coaching generation failed for {r['name']}:", e)
+                print("JSON parse error:", e)
+            
+            for r in failed_items:
+                r["coaching"] = cj.get(r['name'], "Review transcript.")
+        except Exception as e:
+            print("Batched coaching generation failed:", e)
+            for r in failed_items:
                 r["coaching"] = "Review transcript."
                 
     category_scores, blended_score = calculate_category_scores(ratings, category_weights, is_auto_fail)

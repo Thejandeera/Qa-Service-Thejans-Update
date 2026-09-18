@@ -1,0 +1,1031 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:11]",
+      "text": "Thank you for calling S-Net technical support, my name is Dana. Could I get your account number and PIN to pull up your account?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:12]",
+      "end_time": "[00:17]",
+      "text": "Hi Dana, sure, account is 552-903-417, PIN 8810. This is Marcus Feldman."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:19]",
+      "end_time": "[00:24]",
+      "text": "Thanks Marcus, that matches, you're verified. What can I help with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:25]",
+      "end_time": "[00:42]",
+      "text": "My mesh WiFi system, I've got three nodes set up, keeps dropping devices randomly. It's been a real problem this week specifically because I'm on video calls for work most of the day and it keeps cutting out mid-meeting."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:44]",
+      "end_time": "[00:58]",
+      "text": "Got it, so the three-node mesh system is dropping devices at random, and it's been especially disruptive this week because of back-to-back work video calls. Let's dig into this properly. When exactly did this start?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:59]",
+      "end_time": "[01:03]",
+      "text": "About five days ago, so basically all week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:04]",
+      "end_time": "[01:11]",
+      "text": "Okay, five days. Does it happen on all devices, or mainly the one you're using for calls?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:12]",
+      "end_time": "[01:18]",
+      "text": "Mainly my work laptop honestly, my phone and the TV seem mostly fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:20]",
+      "end_time": "[01:23]",
+      "text": "That's a useful distinction, narrows things down."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:24]",
+      "end_time": "[01:33]",
+      "text": "Yeah, my phone and the TV have been totally fine through all of this, it's really isolated to the laptop."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:34]",
+      "end_time": "[01:46]",
+      "text": "Good, that focuses things nicely. Is your laptop usually connected to the same mesh node, or does it roam between nodes depending on where you are in the house?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:47]",
+      "end_time": "[01:55]",
+      "text": "I mostly work from my home office, so it should be sticking to the node in that room."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:57]",
+      "end_time": "[02:04]",
+      "text": "Yeah so what happens is I'll be mid-call and then out of nowhere the whole connection just\u2014"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:06]",
+      "end_time": "[02:19]",
+      "text": "Right, it drops entirely for a few seconds and then comes back, yeah, that's a pretty classic sign of the mesh handing your laptop off between nodes even when it doesn't need to."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:20]",
+      "end_time": "[02:29]",
+      "text": "That's actually exactly it, that's really frustrating because it happens at the worst possible moments, like right when I'm presenting something."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:31]",
+      "end_time": "[02:37]",
+      "text": "Okay, let's check the node placement then. How far apart are your three nodes roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:38]",
+      "end_time": "[02:45]",
+      "text": "One's in the living room, one's in my office, and one's upstairs in the bedroom."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:46]",
+      "end_time": "[02:56]",
+      "text": "Honestly this has been such an issue this week because I've had to apologize to coworkers mid-meeting more than once, it's embarrassing."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:57]",
+      "end_time": "[03:08]",
+      "text": "Let's check the signal overlap between the office node and the living room node then, since those are probably the two closest to where you actually work."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:10]",
+      "end_time": "[03:13]",
+      "text": "Okay, how do I check that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:14]",
+      "end_time": "[03:25]",
+      "text": "Open the mesh app, tap on your laptop under connected devices, and it should show a signal strength bar along with which node it's currently attached to."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:27]",
+      "end_time": "[03:35]",
+      "text": "Let me look... it says attached to the living room node right now, even though I'm sitting in my office."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:37]",
+      "end_time": "[03:52]",
+      "text": "That actually explains a lot, if it's latched onto the living room node instead of the much closer office node, you're going to get weaker signal and more frequent handoff attempts as it tries to decide whether to switch."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:54]",
+      "end_time": "[04:00]",
+      "text": "Okay, that makes sense I guess, why would it pick the farther one though?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:01]",
+      "end_time": "[04:17]",
+      "text": "Mesh systems sometimes get sticky, once a device connects to a node it can be slow to hand off even when a closer node would be better, especially if the signal from the current node is still technically usable."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:19]",
+      "end_time": "[04:24]",
+      "text": "Got it. Is there a way to force it onto the closer node?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:26]",
+      "end_time": "[04:37]",
+      "text": "Yes, we can do that. First, can you check if your mesh system has a setting called 'Client Steering' or 'Band Steering' enabled? It's usually under advanced network settings."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:39]",
+      "end_time": "[04:44]",
+      "text": "Checking... I see a toggle called 'Smart Connect', is that the same thing?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:46]",
+      "end_time": "[04:53]",
+      "text": "That's likely it, most mesh brands bundle client steering and band steering under one umbrella setting like that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:55]",
+      "end_time": "[05:16]",
+      "text": "Actually wait, before we go further, I want to mention this whole week has just been a real problem for my work, I've had three calls drop completely, not just glitch, fully drop, and I had to call back in each time which looked pretty unprofessional on my end."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:17]",
+      "end_time": "[05:24]",
+      "text": "Okay, let's check that Smart Connect setting, can you tell me if it's currently on or off?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:26]",
+      "end_time": "[05:29]",
+      "text": "It's on."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:30]",
+      "end_time": "[05:44]",
+      "text": "Alright, let's try turning that off temporarily, sometimes Smart Connect is actually the thing causing the stickiness rather than preventing it, since it's trying to manage the handoff logic itself and can get it wrong."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:46]",
+      "end_time": "[05:49]",
+      "text": "Okay, turning it off now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:50]",
+      "end_time": "[05:53]",
+      "text": "Done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:55]",
+      "end_time": "[06:02]",
+      "text": "Now let's manually disconnect and reconnect your laptop to WiFi so it re-evaluates which node to join fresh."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:14]",
+      "end_time": "[06:17]",
+      "text": "Okay, disconnecting and reconnecting now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:18]",
+      "end_time": "[06:23]",
+      "text": "Okay, reconnected, and now it shows attached to the office node."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:25]",
+      "end_time": "[06:40]",
+      "text": "Perfect, that's exactly what we wanted to see. Let's test it, can you do a quick video call test, even just to yourself or a test meeting link, and see how it holds for a few minutes?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:00]",
+      "end_time": "[07:03]",
+      "text": "Sure, let me start one."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:04]",
+      "end_time": "[07:10]",
+      "text": "Okay, that ran for a couple minutes with no drops, seems stable so far."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:12]",
+      "end_time": "[07:19]",
+      "text": "How did the audio and video quality look throughout, any stutter or freezing even without a full drop?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:20]",
+      "end_time": "[07:26]",
+      "text": "No, actually really smooth the whole time, noticeably better than earlier this week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:27]",
+      "end_time": "[07:35]",
+      "text": "That's a great sign, that means it's not just staying connected but staying connected with good quality too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:36]",
+      "end_time": "[07:57]",
+      "text": "That's a great sign. So to summarize, your laptop was stuck connected to the living room node instead of the much closer office node, and Smart Connect's own handoff logic was likely making that stickiness worse instead of better. Turning it off and forcing a fresh reconnect got it onto the right node."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:59]",
+      "end_time": "[08:05]",
+      "text": "That actually makes a lot of sense when you explain it that way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:06]",
+      "end_time": "[08:16]",
+      "text": "I do want to say this has been a genuinely frustrating week, I nearly considered switching providers over this before calling in today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:25]",
+      "end_time": "[08:33]",
+      "text": "Let's check your plan speed real quick too, just to rule out bandwidth as a contributing factor alongside the node issue."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:35]",
+      "end_time": "[08:47]",
+      "text": "Your plan supports plenty of speed for video calls even with several devices active, so that's not a factor here, this really was the node placement and Smart Connect combination."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:48]",
+      "end_time": "[08:51]",
+      "text": "Good to rule that out completely."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:53]",
+      "end_time": "[09:02]",
+      "text": "My partner also works from home some days, should I check which node their laptop is on too, just in case?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:04]",
+      "end_time": "[09:10]",
+      "text": "That would be a good idea, especially if they're ever in the office with you or nearby."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:12]",
+      "end_time": "[09:17]",
+      "text": "They're usually in the bedroom upstairs actually, different room from me."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:18]",
+      "end_time": "[09:30]",
+      "text": "Okay, then it's worth a quick check on their end too, but since they're near the upstairs node directly, they're less likely to have the same stickiness problem you had."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:32]",
+      "end_time": "[09:37]",
+      "text": "That makes sense, I'll ask them to check anyway just to be safe."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:39]",
+      "end_time": "[09:42]",
+      "text": "Good call, better to confirm than assume."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:43]",
+      "end_time": "[09:52]",
+      "text": "Should I be worried about how old the mesh hardware itself is? We've had it a couple years now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:53]",
+      "end_time": "[10:07]",
+      "text": "A couple years is still well within normal lifespan for mesh hardware, and since firmware's current and the issue traced back to a software setting rather than the hardware itself, I wouldn't worry about age here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:09]",
+      "end_time": "[10:15]",
+      "text": "Good, wasn't looking forward to replacing the whole system if that was the case."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:17]",
+      "end_time": "[10:20]",
+      "text": "Understandable, and thankfully that's not where this landed."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:21]",
+      "end_time": "[10:32]",
+      "text": "Let's also check if this same stickiness could affect your phone or the TV down the line, even though they seem fine right now, just so we're thorough."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:34]",
+      "end_time": "[10:37]",
+      "text": "Sure, go ahead."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:38]",
+      "end_time": "[10:43]",
+      "text": "Can you check what node your phone is currently attached to?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:44]",
+      "end_time": "[10:49]",
+      "text": "It shows the office node too, so that one's fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:50]",
+      "end_time": "[10:53]",
+      "text": "Good, and the TV?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:55]",
+      "end_time": "[11:01]",
+      "text": "Living room node, but that makes sense since the TV's actually in the living room."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:03]",
+      "end_time": "[11:06]",
+      "text": "Right, that one's correctly placed then, no issue there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:08]",
+      "end_time": "[11:13]",
+      "text": "Should I turn Smart Connect back on now, or leave it off?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:15]",
+      "end_time": "[11:28]",
+      "text": "I'd leave it off for now, at least for a few days, just to confirm the improvement holds without it. If everything's stable, you can decide later whether you want to try re-enabling it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:30]",
+      "end_time": "[11:37]",
+      "text": "Okay, I'll leave it off then. How will I know if it's actually fixed versus just lucky today?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:39]",
+      "end_time": "[11:57]",
+      "text": "Good question, I'd say if you get through a full work day of calls tomorrow with no drops, that's a strong signal. If it happens again, calling back in and mentioning we already ruled out Smart Connect and node placement will save a lot of time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:59]",
+      "end_time": "[12:04]",
+      "text": "That's a fair way to think about it, I'll keep track tomorrow."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:06]",
+      "end_time": "[12:18]",
+      "text": "Yeah so like I mentioned, the worst part was during a call with my director on Tuesday where the whole thing just cut out completely and I had to\u2014"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:20]",
+      "end_time": "[12:30]",
+      "text": "Scramble to call back in and explain what happened, yeah, that's a rough spot to be in mid-meeting, especially with someone senior on the call."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:31]",
+      "end_time": "[12:36]",
+      "text": "Exactly, it's just been a stressful week because of this honestly."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:37]",
+      "end_time": "[12:51]",
+      "text": "Let's make sure we've covered everything on the technical side then. Are there any other devices in the house that seem to have connectivity issues, or is it really just been the laptop this week?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:53]",
+      "end_time": "[12:57]",
+      "text": "Really just been the laptop, everything else has been fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:59]",
+      "end_time": "[13:07]",
+      "text": "Good, that's consistent with the node-stickiness theory then, since your laptop was the one on the wrong node the whole time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:09]",
+      "end_time": "[13:15]",
+      "text": "Makes sense. Is there anything I should watch for with the other devices going forward?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:17]",
+      "end_time": "[13:30]",
+      "text": "Not particularly, but if you ever add a new device or move furniture around, it's worth spot-checking which node things land on, just so nothing else gets stuck on a suboptimal one."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:31]",
+      "end_time": "[13:34]",
+      "text": "Good tip, I'll keep that in mind."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:36]",
+      "end_time": "[13:42]",
+      "text": "Should I check the other devices' node assignments periodically going forward, or is that overkill?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:44]",
+      "end_time": "[13:55]",
+      "text": "I wouldn't say it's necessary regularly, maybe just a quick glance every few months or whenever you notice something acting up, similar to what happened with your laptop."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:56]",
+      "end_time": "[14:01]",
+      "text": "That seems reasonable, I can build that into a habit."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:02]",
+      "end_time": "[14:07]",
+      "text": "That should be plenty to catch anything early if it ever happens again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:09]",
+      "end_time": "[14:20]",
+      "text": "Out of curiosity, is there a way to just manually assign a device to a specific node instead of relying on it figuring it out automatically?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:29]",
+      "end_time": "[14:34]",
+      "text": "Some mesh systems support that, let me check your specific model."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:35]",
+      "end_time": "[14:49]",
+      "text": "Yours doesn't support manual node pinning unfortunately, it's fully automatic, but the fix we just did, disabling Smart Connect and forcing a reconnect, should be enough to keep it on the right node without that feature."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:51]",
+      "end_time": "[14:54]",
+      "text": "Okay, good to know either way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:55]",
+      "end_time": "[15:04]",
+      "text": "Is there a firmware update I should check for on the mesh system, just to rule that out too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:12]",
+      "end_time": "[15:15]",
+      "text": "Good thought, let's check."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:16]",
+      "end_time": "[15:21]",
+      "text": "All three nodes are showing current firmware, so that's not a factor here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:23]",
+      "end_time": "[15:26]",
+      "text": "Good, one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:27]",
+      "end_time": "[15:37]",
+      "text": "This has genuinely been one of the more frustrating tech issues I've dealt with, just because of the timing with work."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:38]",
+      "end_time": "[15:48]",
+      "text": "Let's also set a reminder on the account to check back on this in a week, just so it's tracked properly on our side."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:49]",
+      "end_time": "[15:52]",
+      "text": "Sure, that works."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:54]",
+      "end_time": "[16:00]",
+      "text": "Done, I've noted the node-stickiness fix and the plan to leave Smart Connect off for now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:02]",
+      "end_time": "[16:08]",
+      "text": "Appreciate that. Should I be concerned this could happen with a different node next time?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:10]",
+      "end_time": "[16:27]",
+      "text": "It's possible in theory if a device roams and gets sticky again, but now you know exactly what to check, which node a device is on and whether Smart Connect is contributing, so it'll be a much faster fix if it ever recurs."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:28]",
+      "end_time": "[16:33]",
+      "text": "That's reassuring, thank you for walking through all of that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:34]",
+      "end_time": "[16:42]",
+      "text": "One more thing, does a full mesh reboot ever help versus just the single device reconnect we did?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:43]",
+      "end_time": "[16:57]",
+      "text": "It can, especially if multiple devices are affected, but since this was isolated to just your laptop, the targeted reconnect was the more precise fix, no need for a full system reboot this time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:59]",
+      "end_time": "[17:02]",
+      "text": "Good to know the difference for next time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:04]",
+      "end_time": "[17:14]",
+      "text": "Is there a limit to how many devices can be on the mesh at once? I've been adding a lot of smart home stuff lately."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:16]",
+      "end_time": "[17:25]",
+      "text": "Your model supports up to fifty connected devices across all three nodes, so you've got plenty of headroom for more smart home additions."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:27]",
+      "end_time": "[17:31]",
+      "text": "Good, I've been adding one every few months it feels like."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:33]",
+      "end_time": "[17:40]",
+      "text": "That's pretty normal these days, the system should handle it fine as long as node placement stays reasonable."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:42]",
+      "end_time": "[17:50]",
+      "text": "Speaking of smart home stuff, could any of those devices have contributed to the stickiness issue in the first place?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:52]",
+      "end_time": "[18:05]",
+      "text": "It's possible in general, more devices can add some background chatter, but in your case the timing and pattern really pointed specifically to the node handoff and Smart Connect setting rather than device count."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:07]",
+      "end_time": "[18:11]",
+      "text": "Okay, good to have that confirmed rather than just guessing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:13]",
+      "end_time": "[18:22]",
+      "text": "Do you recommend spacing out where I add new smart devices, or does it not really matter which node they connect to?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:24]",
+      "end_time": "[18:33]",
+      "text": "Generally it's fine, most smart home devices are low-bandwidth, it's really primarily video-heavy devices like laptops and streaming boxes where node placement matters most."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:35]",
+      "end_time": "[18:39]",
+      "text": "That's helpful context, I was overthinking that a bit."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:40]",
+      "end_time": "[18:44]",
+      "text": "Totally understandable given the week you've had with this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:45]",
+      "end_time": "[18:55]",
+      "text": "Since we're on the topic, would it be worth adding a fourth node for better coverage, given how spread out the house is?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:57]",
+      "end_time": "[19:10]",
+      "text": "It could help with overall coverage, but I wouldn't say it's necessary just for this specific issue, since the real problem was the stickiness and Smart Connect setting, not a coverage gap."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:11]",
+      "end_time": "[19:18]",
+      "text": "Fair enough, I don't want to spend money on something that wouldn't actually fix anything."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:19]",
+      "end_time": "[19:26]",
+      "text": "Exactly, I'd hold off on that unless you start noticing actual dead zones somewhere in the house."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:28]",
+      "end_time": "[19:32]",
+      "text": "Good advice, I'll keep an eye out for that separately."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:33]",
+      "end_time": "[19:43]",
+      "text": "Is there any kind of priority setting I could put on my laptop specifically, since it's the one used for work calls?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:44]",
+      "end_time": "[19:52]",
+      "text": "Yes actually, most mesh systems have a Quality of Service or device priority setting, let's check if yours has that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:54]",
+      "end_time": "[19:57]",
+      "text": "Okay, checking... yeah, there's a 'Device Priority' section."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:59]",
+      "end_time": "[20:10]",
+      "text": "Perfect, go ahead and add your laptop there and set it to high priority, that'll help make sure it gets bandwidth preference over other devices during video calls."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:12]",
+      "end_time": "[20:15]",
+      "text": "Okay, added it and set to high."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:16]",
+      "end_time": "[20:23]",
+      "text": "Great, that's a nice extra layer of protection on top of the node fix we already made."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:24]",
+      "end_time": "[20:29]",
+      "text": "That makes me feel a lot better about tomorrow's calls honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:31]",
+      "end_time": "[20:39]",
+      "text": "Does that priority setting affect other people in the house if they're streaming or gaming while I'm on a call?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:41]",
+      "end_time": "[20:53]",
+      "text": "It can give your laptop preference during contention, but it's not an aggressive cap on others, they'd just yield a bit of bandwidth during your call windows if things get busy."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:55]",
+      "end_time": "[20:58]",
+      "text": "Okay, that seems like a reasonable trade-off."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:59]",
+      "end_time": "[21:05]",
+      "text": "Exactly, it's meant to be a light touch, not a hard restriction on everyone else."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:07]",
+      "end_time": "[21:15]",
+      "text": "Good to know. Is this priority setting something I could have found myself, or was that pretty buried too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:17]",
+      "end_time": "[21:24]",
+      "text": "It's a little buried, most people don't dig into that menu unless they're specifically troubleshooting something like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:25]",
+      "end_time": "[21:30]",
+      "text": "Makes sense, wouldn't have thought to look there on my own."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:32]",
+      "end_time": "[21:42]",
+      "text": "Does the mesh system log which devices used the most bandwidth, in case I want to see what else might be competing with my calls?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:44]",
+      "end_time": "[21:52]",
+      "text": "Yes, there's a usage breakdown under the main dashboard, it'll show relative bandwidth by device over the last 24 hours."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:53]",
+      "end_time": "[21:57]",
+      "text": "Oh that's actually useful, I'll check that out later."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:59]",
+      "end_time": "[22:05]",
+      "text": "It's a good way to spot anything unexpectedly hogging bandwidth if this ever comes up again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:07]",
+      "end_time": "[22:10]",
+      "text": "Good tip, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:11]",
+      "end_time": "[22:20]",
+      "text": "While I've got you, does the mesh system support a separate guest network? I've been meaning to set one up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:22]",
+      "end_time": "[22:31]",
+      "text": "Yes, under network settings there should be a 'Guest Network' toggle, it creates an isolated network so guests can't see your other devices."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:32]",
+      "end_time": "[22:37]",
+      "text": "Oh nice, let me check... found it, turning it on now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:38]",
+      "end_time": "[22:42]",
+      "text": "Done, it's on with a separate password."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:43]",
+      "end_time": "[22:49]",
+      "text": "Perfect, that's a nice added layer of security for anyone visiting who needs WiFi."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:50]",
+      "end_time": "[22:54]",
+      "text": "Good, I've been meaning to do that for a while."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:56]",
+      "end_time": "[23:02]",
+      "text": "Does the guest network share the same bandwidth pool, or is it separate?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:03]",
+      "end_time": "[23:12]",
+      "text": "Same pool, but it's isolated at the device level, so it won't interfere with the priority setting we just put on your laptop."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:14]",
+      "end_time": "[23:18]",
+      "text": "Good, that's exactly what I was hoping to hear."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:19]",
+      "end_time": "[23:28]",
+      "text": "One more, is there a way to get notified if the mesh system itself goes down, not just individual devices?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:29]",
+      "end_time": "[23:37]",
+      "text": "Yes, under notifications there's a 'System Health Alerts' toggle, want me to walk you through turning that on?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:38]",
+      "end_time": "[23:41]",
+      "text": "Yes, please."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:43]",
+      "end_time": "[23:48]",
+      "text": "Go to app settings, then Notifications, then System Health Alerts near the top."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:49]",
+      "end_time": "[23:52]",
+      "text": "Found it, turning it on."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:54]",
+      "end_time": "[23:57]",
+      "text": "Done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:58]",
+      "end_time": "[24:06]",
+      "text": "Great, now if any node goes fully offline you'll get a push notification instead of just noticing devices dropping."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:07]",
+      "end_time": "[24:12]",
+      "text": "That's really helpful, wish I'd had that on this week honestly."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:14]",
+      "end_time": "[24:17]",
+      "text": "Good thing we're getting it set up now then."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:19]",
+      "end_time": "[24:24]",
+      "text": "Does that notification also cover WiFi password changes or anything security related?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:26]",
+      "end_time": "[24:37]",
+      "text": "It's specifically for node connectivity and system health, password changes would show as a separate confirmation when you make them yourself, not really something that needs a push alert."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:39]",
+      "end_time": "[24:42]",
+      "text": "Fair enough, that makes sense."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:43]",
+      "end_time": "[24:51]",
+      "text": "Is there a way to see historical uptime for the whole mesh system, like a percentage over the month?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:59]",
+      "end_time": "[25:06]",
+      "text": "Yes, under the dashboard there's an uptime stat, let's check what it's showing for this month."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:07]",
+      "end_time": "[25:17]",
+      "text": "Looks like 97 percent this month, which reflects the drops from this week, should trend back up now that the fix is in place."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:18]",
+      "end_time": "[25:24]",
+      "text": "Good, that's a nice concrete way to track whether this actually holds."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:25]",
+      "end_time": "[25:32]",
+      "text": "Exactly, feel free to check back on that number in a few weeks to confirm the improvement."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:33]",
+      "end_time": "[25:37]",
+      "text": "Will do, thank you for all of this, genuinely."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:39]",
+      "end_time": "[25:43]",
+      "text": "Makes sense. I think that covers the technical side."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:44]",
+      "end_time": "[25:53]",
+      "text": "Before we wrap up, is there anything else going on with the network, or was this really just the laptop this week?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:55]",
+      "end_time": "[25:58]",
+      "text": "Just the laptop, everything else has been solid."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:00]",
+      "end_time": "[26:03]",
+      "text": "Perfect. Anything else I can help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[26:05]",
+      "end_time": "[26:08]",
+      "text": "No, I think that's everything, thank you Dana."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[26:10]",
+      "end_time": "[26:24]",
+      "text": "Thank you so much, Marcus. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a great rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

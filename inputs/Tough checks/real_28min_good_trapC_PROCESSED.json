@@ -1,0 +1,959 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:15]",
+      "text": "Thank you for calling S-Net technical support, my name is Farah. Could I get your account number, PIN, and the security answer on file so I can fully verify you before we get started?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:16]",
+      "end_time": "[00:25]",
+      "text": "Hi Farah, sure. Account is 604-228-971, PIN 3357, and the security answer is Halifax, that's the city I was born in."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:27]",
+      "end_time": "[00:33]",
+      "text": "Perfect, Julian, that all matches, you're fully verified. Before we dive in, how's your day going?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:35]",
+      "end_time": "[00:42]",
+      "text": "Honestly a bit sweaty, literally. My house has been all over the place temperature-wise this week."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:43]",
+      "end_time": "[00:50]",
+      "text": "That doesn't sound fun at all, let's get that figured out for you. What's going on exactly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:51]",
+      "end_time": "[01:11]",
+      "text": "My smart thermostat is just being weird. My house feels like a sauna one minute and then a freezer the next, and on top of that my electric bill is through the roof this month. It's like the AC just can't make up its mind."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:12]",
+      "end_time": "[01:34]",
+      "text": "That sounds genuinely uncomfortable to live with, especially on top of a higher bill. So just to confirm I've got the full picture: the thermostat isn't holding a consistent setpoint, it's swinging well above and then well below your target temperature, and that's also driving your energy usage up noticeably. Is that an accurate summary?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:36]",
+      "end_time": "[01:41]",
+      "text": "Yeah, that's exactly it actually, you put it better than I did."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:43]",
+      "end_time": "[01:50]",
+      "text": "Let's dig into it properly then, a few questions before we touch anything. When did this start, roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:51]",
+      "end_time": "[01:56]",
+      "text": "About two weeks ago, it was totally fine before that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:57]",
+      "end_time": "[02:04]",
+      "text": "Okay, two weeks. Does the swinging happen at a particular time of day, or does it seem random?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:06]",
+      "end_time": "[02:15]",
+      "text": "Now that you mention it, it does seem worse in the afternoons, like from around 1pm to 4pm or so."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:16]",
+      "end_time": "[02:23]",
+      "text": "That's a really useful pattern to know. Where is the thermostat physically mounted in the house?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:24]",
+      "end_time": "[02:28]",
+      "text": "It's in the hallway, right outside the living room."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:29]",
+      "end_time": "[02:37]",
+      "text": "Is there a window near it, or any direct light that might hit it at certain times of day?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:39]",
+      "end_time": "[02:51]",
+      "text": "Actually yeah, there's a window at the end of that hallway, and now that I think about it, the afternoon sun does come through pretty strong around that time."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:53]",
+      "end_time": "[03:02]",
+      "text": "That's a very strong lead. Has anything changed recently, furniture moved, blinds removed, anything that might have changed how much sun reaches that hallway?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:04]",
+      "end_time": "[03:14]",
+      "text": "We did take down some old curtains in that hallway about two and a half weeks ago actually, right around when this started."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:15]",
+      "end_time": "[03:37]",
+      "text": "That timing lines up almost perfectly with when the issue began. Direct sunlight hitting a thermostat's sensor can make it read the room as significantly warmer than it actually is, which would cause exactly the pattern you're describing, the AC over-cycling in the afternoon because the thermostat thinks it's hotter than it really is."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:38]",
+      "end_time": "[03:43]",
+      "text": "Oh wow, I never would have connected the curtains to this."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:45]",
+      "end_time": "[04:00]",
+      "text": "It's a surprisingly common cause, thermostats are more sensitive to that than people expect. Let's confirm before we act on it though. Do you have a way to check the actual room temperature independently, like a separate thermometer?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:01]",
+      "end_time": "[04:09]",
+      "text": "I've got a small one in the living room, let me check that against what the thermostat says."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:11]",
+      "end_time": "[04:16]",
+      "text": "Okay, the separate thermometer says 71, but the thermostat display says 76."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:17]",
+      "end_time": "[04:32]",
+      "text": "That's a five degree discrepancy, that's significant and strongly supports the sun-exposure theory, a thermostat that thinks it's five degrees hotter than reality will absolutely over-cycle the AC trying to chase a temperature that isn't real."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:33]",
+      "end_time": "[04:44]",
+      "text": "That makes complete sense now, I was so confused why it felt cold in the evening even though the thermostat said it was working overtime."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:46]",
+      "end_time": "[05:04]",
+      "text": "Exactly, once the sun moves off the hallway in the evening, the false high reading drops, the thermostat thinks it overshot, and it may even trigger cooling to correct for a problem that was never really there, which explains the freezer feeling later in the day."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:06]",
+      "end_time": "[05:11]",
+      "text": "That's exactly the pattern, wow, okay that actually makes a lot of sense."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:13]",
+      "end_time": "[05:27]",
+      "text": "Before we move to fixing it, let me ask a couple more things just to be thorough. Do other rooms in the house seem to hold a stable temperature, or is this affecting the whole house evenly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:29]",
+      "end_time": "[05:39]",
+      "text": "Actually now that you ask, the bedrooms seem fine, it's really just felt worst in the living room and kitchen area near that hallway."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:41]",
+      "end_time": "[06:03]",
+      "text": "That's actually a really important detail, that supports the sun-exposure theory even more, since the AC is responding to one bad reading from the hallway thermostat but that reading gets applied to the whole system, so rooms further from the actual sun exposure would feel the mismatch differently depending on their distance from vents."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:04]",
+      "end_time": "[06:10]",
+      "text": "That makes sense, the bedrooms are on the other side of the house."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:11]",
+      "end_time": "[06:18]",
+      "text": "Exactly. How old is your HVAC system itself, just so I can rule out an aging-unit explanation too?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:20]",
+      "end_time": "[06:26]",
+      "text": "We had it replaced about three years ago, so it's still pretty new."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:27]",
+      "end_time": "[06:33]",
+      "text": "Good, that makes an aging-hardware explanation unlikely. When's the last time the air filter was changed?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:35]",
+      "end_time": "[06:40]",
+      "text": "Honestly, probably about two months ago, so it should be fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:41]",
+      "end_time": "[06:52]",
+      "text": "That's a reasonable interval, I wouldn't expect that to be a factor here either. Does the system make any unusual noise when it's cycling more than usual?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:54]",
+      "end_time": "[07:01]",
+      "text": "No, actually it sounds totally normal, it's just running a lot more often than it used to."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:02]",
+      "end_time": "[07:15]",
+      "text": "That's consistent with the sensor theory too, a system running more frequently but otherwise sounding normal points to it being told to run more often, rather than something being mechanically wrong."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:16]",
+      "end_time": "[07:21]",
+      "text": "Okay, that's reassuring, wasn't looking forward to a whole system diagnosis."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:23]",
+      "end_time": "[07:29]",
+      "text": "Understandable, and I don't think that's where this is heading at all based on everything you've described."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:31]",
+      "end_time": "[07:38]",
+      "text": "Let's fix this a couple of ways. First, does your thermostat model support an external remote sensor?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:39]",
+      "end_time": "[07:43]",
+      "text": "I'm not sure, how would I check that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:44]",
+      "end_time": "[07:52]",
+      "text": "Open the thermostat's app, go to Settings, then Sensors, and see if there's an option to add a remote sensor."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:54]",
+      "end_time": "[07:58]",
+      "text": "Let me check... yes, it says 'Add Sensor' right there."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:00]",
+      "end_time": "[08:20]",
+      "text": "Great, your model does support it. If you have a spare sensor from the box, or want to order one, placing it somewhere shaded like the living room instead of the sun-exposed hallway would give a much more accurate reading. In the meantime, let's also address the sun exposure directly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:21]",
+      "end_time": "[08:26]",
+      "text": "Yeah, I don't think I have a spare sensor on hand."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:27]",
+      "end_time": "[08:39]",
+      "text": "That's fine, we can still meaningfully improve things today. Do you have any way to block that direct sun in the hallway, even temporarily, like a blind or curtain again?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:41]",
+      "end_time": "[08:47]",
+      "text": "We do have some blinds we took down, I could put those back up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:48]",
+      "end_time": "[09:08]",
+      "text": "That would help a lot immediately. In the meantime, let's also adjust the thermostat's temperature swing setting, some models let you widen the tolerance so it doesn't over-correct as aggressively even if the reading is briefly off. Can you check under Settings for something called 'Temperature Swing' or 'Cycle Rate'?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:10]",
+      "end_time": "[09:14]",
+      "text": "Checking... yeah, there's 'Temperature Swing' set to 0.5 degrees."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:15]",
+      "end_time": "[09:28]",
+      "text": "That's quite tight, let's widen that to 1.5 degrees for now, that'll reduce how aggressively it reacts to small or false temperature changes while we get the sun exposure sorted properly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:29]",
+      "end_time": "[09:32]",
+      "text": "Okay, changing it to 1.5 now... done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:34]",
+      "end_time": "[09:56]",
+      "text": "Perfect. So here's the plan: put the blinds back up to reduce direct sun on the sensor, I've had you widen the temperature swing tolerance to reduce over-correction, and if you want the most accurate long-term fix, ordering that remote sensor for the living room would eliminate the sun issue entirely. Does that all make sense?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:58]",
+      "end_time": "[10:03]",
+      "text": "Yeah, that's really clear actually, thank you for laying it out like that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:05]",
+      "end_time": "[10:09]",
+      "text": "How soon should I expect to notice a difference?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:10]",
+      "end_time": "[10:29]",
+      "text": "The swing setting change takes effect immediately, so you should notice less aggressive cycling starting this afternoon. Putting the blinds back up will help as soon as they're up, ideally before the sun hits that window again around 1pm. I'd expect a noticeably more stable temperature by tomorrow."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:31]",
+      "end_time": "[10:35]",
+      "text": "That's a really specific and helpful timeline, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:00]",
+      "end_time": "[11:05]",
+      "text": "Let me put the blinds up right now actually, one second."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:06]",
+      "end_time": "[11:09]",
+      "text": "Okay, blinds are back up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:11]",
+      "end_time": "[11:15]",
+      "text": "Perfect, that alone should make a real difference starting this afternoon."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:16]",
+      "end_time": "[11:22]",
+      "text": "Should I watch the thermostat this afternoon to see if it's actually working?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:24]",
+      "end_time": "[11:33]",
+      "text": "That would be great, specifically check around 1 to 4pm since that's when you said the sun was strongest and the swinging was worst."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:35]",
+      "end_time": "[11:41]",
+      "text": "Will do, I'll keep an eye on it and compare against the little thermometer too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:43]",
+      "end_time": "[11:48]",
+      "text": "That's a great way to verify it objectively rather than just going by feel."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:50]",
+      "end_time": "[12:00]",
+      "text": "This actually explains so much, I really appreciate you tracking down an actual cause instead of just telling me to reset the thermostat."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:01]",
+      "end_time": "[12:09]",
+      "text": "Of course, a reset wouldn't have touched the real cause here at all, so I'm glad we found it properly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:11]",
+      "end_time": "[12:18]",
+      "text": "Do you think this also explains the higher electric bill, or could that be something separate?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:19]",
+      "end_time": "[12:30]",
+      "text": "It very likely explains most of it, over-cycling the AC unnecessarily throughout the afternoon for two weeks would absolutely show up as extra usage on your bill."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:32]",
+      "end_time": "[12:39]",
+      "text": "That's a relief honestly, I was worried something else was wrong with the AC unit itself."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:40]",
+      "end_time": "[12:48]",
+      "text": "Understandable concern, but everything you've described points specifically to the thermostat's sensor reading being thrown off, not the AC hardware itself."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:50]",
+      "end_time": "[12:56]",
+      "text": "Good to know. Should I expect next month's bill to go back to normal then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:58]",
+      "end_time": "[13:10]",
+      "text": "I'd expect it to trend back down assuming the fix holds, though it may take a full billing cycle to fully reflect since you're partway through this one already."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:11]",
+      "end_time": "[13:15]",
+      "text": "That makes sense, I'll keep an eye on that too."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:17]",
+      "end_time": "[13:26]",
+      "text": "If the blinds and swing setting aren't enough on their own, is the remote sensor something I'd need to buy separately?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:28]",
+      "end_time": "[13:41]",
+      "text": "Yes, it would be a separate purchase, but I wouldn't jump to that yet, let's see how much the blinds and swing adjustment help first since those are already done today at no cost."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:43]",
+      "end_time": "[13:48]",
+      "text": "Good plan, I appreciate you not just upselling me on equipment right away."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:50]",
+      "end_time": "[13:55]",
+      "text": "Of course, no reason to add a purchase before confirming it's actually needed."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:57]",
+      "end_time": "[14:06]",
+      "text": "If I do end up needing the sensor later, would I need another appointment, or could I just order it myself?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:07]",
+      "end_time": "[14:17]",
+      "text": "You could order it directly through the thermostat manufacturer's site or app, it's a simple self-install, clips into a wall outlet, no appointment needed."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:18]",
+      "end_time": "[14:21]",
+      "text": "Oh that's easy then, good to know."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:23]",
+      "end_time": "[14:36]",
+      "text": "I'll add detailed notes to your account with everything we covered, the sun exposure theory, the blinds, the swing setting change, and the sensor option, so if you do call back it's all documented."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:38]",
+      "end_time": "[14:43]",
+      "text": "That's great, I really appreciate how thorough this call has been."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:44]",
+      "end_time": "[14:51]",
+      "text": "Is the thermostat still under warranty, by any chance? I don't actually remember the terms."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:59]",
+      "end_time": "[15:02]",
+      "text": "Let me check that for you."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:03]",
+      "end_time": "[15:10]",
+      "text": "Looks like you're still covered, warranty runs through about a year and a half from now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:11]",
+      "end_time": "[15:19]",
+      "text": "Oh good, wasn't sure if this issue would count against that anyway, but good to know regardless."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:20]",
+      "end_time": "[15:30]",
+      "text": "For what it's worth, this wouldn't have been a warranty issue anyway since it wasn't a hardware defect, but good to have that confirmed either way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:32]",
+      "end_time": "[15:45]",
+      "text": "Makes sense. This has honestly been a much better experience than I expected, most calls like this just tell me to restart the device and hope for the best."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:46]",
+      "end_time": "[15:55]",
+      "text": "That really means a lot, thank you for saying that. I always think it's worth finding the actual cause instead of guessing."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:56]",
+      "end_time": "[16:08]",
+      "text": "One more thing while I have you, want me to check if your thermostat's firmware is current? Outdated firmware occasionally affects sensor calibration too, and it's a quick check."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:09]",
+      "end_time": "[16:12]",
+      "text": "Sure, that'd be good to know."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:21]",
+      "end_time": "[16:25]",
+      "text": "Give me about twenty seconds to pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:27]",
+      "end_time": "[16:32]",
+      "text": "Good news, it's already on the latest version, so that's not contributing here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:33]",
+      "end_time": "[16:36]",
+      "text": "Good, one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:38]",
+      "end_time": "[16:46]",
+      "text": "Does the app ever push firmware updates automatically, or do I need to check manually like we just did?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:48]",
+      "end_time": "[16:57]",
+      "text": "It pushes them automatically by default, what we just did was more of a manual confirmation, not something you'd normally need to do yourself."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:59]",
+      "end_time": "[17:02]",
+      "text": "Ah good, one less thing to remember then."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:04]",
+      "end_time": "[17:08]",
+      "text": "Exactly, it's designed to stay current on its own in the background."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:10]",
+      "end_time": "[17:21]",
+      "text": "Is there a way to set up an alert if the temperature swings too far again in the future, so I catch it earlier next time?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:23]",
+      "end_time": "[17:30]",
+      "text": "Yes actually, under Notifications there should be a 'Temperature Alert' option where you can set upper and lower bounds."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:32]",
+      "end_time": "[17:39]",
+      "text": "Let me check... found it, setting it to alert if it goes above 74 or below 68."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:41]",
+      "end_time": "[17:44]",
+      "text": "Done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:45]",
+      "end_time": "[17:54]",
+      "text": "That's a smart setup, that way you'll know quickly if something similar happens again rather than only noticing once the bill comes in."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:56]",
+      "end_time": "[17:59]",
+      "text": "Exactly what I was hoping for, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:01]",
+      "end_time": "[18:10]",
+      "text": "One more question, does humidity factor into any of this at all, or is this purely a temperature sensor issue?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:11]",
+      "end_time": "[18:25]",
+      "text": "Good question, humidity is tracked separately by most of these thermostats and wouldn't be affected by the sun exposure the same way temperature reading is, so I wouldn't expect this to have impacted your humidity readings."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:27]",
+      "end_time": "[18:32]",
+      "text": "Okay, good, hadn't noticed anything odd there anyway, just wanted to ask."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:34]",
+      "end_time": "[18:38]",
+      "text": "Totally fair to check, always better to ask than assume."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:39]",
+      "end_time": "[18:51]",
+      "text": "Does this thermostat connect to any other smart home devices, like could it talk to smart blinds if I ever got those, to automate this kind of thing?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:53]",
+      "end_time": "[19:08]",
+      "text": "It actually can, if you ever add smart blinds from a compatible brand, you could set up an automation where the blinds close automatically during peak sun hours, which would solve this permanently without you needing to remember it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:10]",
+      "end_time": "[19:16]",
+      "text": "Oh that's a really elegant solution, I hadn't thought of automating the blinds themselves."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:18]",
+      "end_time": "[19:29]",
+      "text": "It's a nice long-term option if you ever want to go that route, though the manual blinds and swing setting should hold you over well in the meantime."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:30]",
+      "end_time": "[19:36]",
+      "text": "That's good to know for the future, I might actually look into that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:37]",
+      "end_time": "[19:46]",
+      "text": "Is there a specific brand of smart blinds you'd recommend for compatibility, or does it work with most of them?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:48]",
+      "end_time": "[19:59]",
+      "text": "It works with most major smart home ecosystems at this point, I'd just double check the specific model supports the same platform your thermostat is on before buying."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:00]",
+      "end_time": "[20:06]",
+      "text": "Good tip, I'll research that when I'm ready to go down that path."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:07]",
+      "end_time": "[20:17]",
+      "text": "Is there a way to see historical temperature data, so I can look back and confirm the pattern matches what you described?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:19]",
+      "end_time": "[20:25]",
+      "text": "Yes, under the app's History tab there should be a temperature graph over the last two weeks."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:27]",
+      "end_time": "[20:38]",
+      "text": "Let me check... yeah, wow, I can actually see the spikes in the afternoon exactly like you described, that's kind of wild to see visually."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:39]",
+      "end_time": "[20:45]",
+      "text": "That's a great confirmation, seeing that pattern laid out really validates the sun exposure theory."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:47]",
+      "end_time": "[20:54]",
+      "text": "This has been incredibly helpful, thank you so much for walking through all of this with me."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:56]",
+      "end_time": "[21:02]",
+      "text": "Absolutely, happy to help, and I think this should make a real difference starting today."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:03]",
+      "end_time": "[21:13]",
+      "text": "Since we're already deep into the settings, does the thermostat have a scheduling feature I should be using to save more on energy?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:15]",
+      "end_time": "[21:25]",
+      "text": "It does, under the Schedule tab you can set different target temperatures for different times of day, which can help avoid unnecessary cycling when nobody's home."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:26]",
+      "end_time": "[21:33]",
+      "text": "Oh I've never set that up, I just leave it on one constant setting."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:34]",
+      "end_time": "[21:40]",
+      "text": "Want me to walk you through a basic schedule now while I have you?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:41]",
+      "end_time": "[21:44]",
+      "text": "Yes, that would be great actually."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:46]",
+      "end_time": "[21:51]",
+      "text": "Tap Schedule, then Add Period. What time do you usually leave for work, roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:53]",
+      "end_time": "[21:56]",
+      "text": "Around 8am most days."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:57]",
+      "end_time": "[22:00]",
+      "text": "And what time are you usually back?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:02]",
+      "end_time": "[22:05]",
+      "text": "Usually around 6pm."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:06]",
+      "end_time": "[22:18]",
+      "text": "Okay, set a slightly less aggressive temperature for the 8am to 6pm window, since nobody's home to notice, and then have it return to your preferred comfort setting by 6pm."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:20]",
+      "end_time": "[22:25]",
+      "text": "Okay, setting 8am to 76 and then back to 71 by 6pm... done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:27]",
+      "end_time": "[22:34]",
+      "text": "Perfect, that alone can meaningfully reduce unnecessary cycling during the day, on top of the sun exposure fix."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:36]",
+      "end_time": "[22:43]",
+      "text": "This is great, I didn't realize how much I wasn't using this thing to its full potential."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[22:44]",
+      "end_time": "[22:53]",
+      "text": "It's a really common thing, most people just leave it on one constant setting without realizing the scheduling feature is there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[22:54]",
+      "end_time": "[23:01]",
+      "text": "Does the schedule override automatically on weekends, or would I need a separate one for that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:03]",
+      "end_time": "[23:12]",
+      "text": "Good catch, you can actually set a separate weekend schedule, or leave weekends on the constant setting if you're usually home then."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:13]",
+      "end_time": "[23:19]",
+      "text": "I am usually home weekends, so I'll leave that as is for now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:20]",
+      "end_time": "[23:25]",
+      "text": "That works fine, you can always adjust later if your routine changes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:27]",
+      "end_time": "[23:35]",
+      "text": "Does the app show me an energy usage estimate anywhere, so I can see if these changes are actually helping?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:37]",
+      "end_time": "[23:45]",
+      "text": "Yes, under the Energy tab there's a usage history and estimated savings section that updates based on your schedule and settings."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[23:47]",
+      "end_time": "[23:52]",
+      "text": "Let me check... yeah, I can see daily runtime hours listed there."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[23:53]",
+      "end_time": "[24:03]",
+      "text": "That's a great way to track whether today's changes are making a real difference, I'd check back on that in a few days."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:04]",
+      "end_time": "[24:08]",
+      "text": "Will do, this is honestly really satisfying to finally understand."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:10]",
+      "end_time": "[24:20]",
+      "text": "Can my spouse also access the thermostat controls from her own phone, or does it need to be on my account only?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:21]",
+      "end_time": "[24:30]",
+      "text": "She can be added as a secondary user under Household Members in the app, she'd get full access from her own device."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:31]",
+      "end_time": "[24:36]",
+      "text": "Oh good, she's mentioned wanting to adjust it herself sometimes."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:37]",
+      "end_time": "[24:42]",
+      "text": "That setting will let her do that without needing your phone."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[24:43]",
+      "end_time": "[24:51]",
+      "text": "I'll set that up after this call. Is there a limit to how many household members I can add?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[24:53]",
+      "end_time": "[24:58]",
+      "text": "Up to five for your account tier, so you've got plenty of room there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:00]",
+      "end_time": "[25:03]",
+      "text": "Good to know, more than enough for us."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:05]",
+      "end_time": "[25:12]",
+      "text": "Is there anything else I should be doing on my end, or have we covered everything?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:13]",
+      "end_time": "[25:23]",
+      "text": "I think we've covered everything thoroughly, blinds up, swing setting widened, alerts configured, and a clear next step with the remote sensor if needed later."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:25]",
+      "end_time": "[25:34]",
+      "text": "Perfect, I feel like I actually understand what happened now, which is more than I expected going into this call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:35]",
+      "end_time": "[25:39]",
+      "text": "That's exactly the goal, glad it landed that way."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:40]",
+      "end_time": "[25:43]",
+      "text": "Anything else I can help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[25:45]",
+      "end_time": "[25:50]",
+      "text": "No, I think that covers everything, thank you so much Farah."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[25:51]",
+      "end_time": "[26:05]",
+      "text": "Thank you so much, Julian. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a wonderful rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}
