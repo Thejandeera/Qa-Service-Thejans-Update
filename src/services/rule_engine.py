@@ -235,7 +235,7 @@ def extract_empathy_snippets(turns: List[Tuple[str, str]], sentiment_scores: Lis
         if speaker.lower() == 'customer':
             is_negative = False
             if sentiment_scores and i < len(sentiment_scores):
-                is_negative = sentiment_scores[i] < -0.2
+                is_negative = sentiment_scores[i] < -20.0
             else:
                 is_negative = any(word in text.lower() for word in frustration_words)
                 
