@@ -14,7 +14,7 @@ RATING CRITERIA:
 
 OUTPUT INSTRUCTIONS:
 For each line item provided, evaluate if the agent successfully fulfilled it based on the transcript.
-First, write a brief step-by-step reasoning inside <thinking>...</thinking> tags. Then, you MUST reply with a valid JSON object matching this exact structure.
+First, write extremely brief reasoning inside <thinking>...</thinking> tags (MAXIMUM 2 sentences per item). Then, you MUST reply with a valid JSON object matching this exact structure.
 
 ```json
 {{

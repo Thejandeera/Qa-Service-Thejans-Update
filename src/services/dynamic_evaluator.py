@@ -169,7 +169,7 @@ def evaluate_interaction(
     
     emp_rating = evaluate_empathy(turns)
     if emp_rating["rating"] == "FAIL" and empathy_snippet:
-        p_emp = f"<SNIPPET>\n{empathy_snippet}\n</SNIPPET>\nRead this snippet. Was the agent empathetic to the customer's frustration, or were they rude/dismissive? Reply ONLY with PASS (if empathetic) or FAIL (if rude)."
+        p_emp = f"<SNIPPET>\n{empathy_snippet}\n</SNIPPET>\nRead this snippet. Was the agent empathetic to the customer's frustration, or were they rude/dismissive? CRITICAL INSTRUCTION: Output EXACTLY ONE WORD. Do not explain. Reply ONLY with PASS (if empathetic) or FAIL (if rude)."
         r_emp = query_llm(p_emp, label="verify_empathy", format=None)
         if "PASS" in r_emp.upper():
             emp_rating["rating"] = "PASS"
@@ -190,7 +190,7 @@ def evaluate_interaction(
     # Active Listening pre-check
     al_rating = "PASS"
     if al_snippet:
-        p_al = f"<SNIPPET>\n{al_snippet}\n</SNIPPET>\nDid the agent unnecessarily repeat themselves because they weren't listening? Reply ONLY with PASS (no) or FAIL (yes)."
+        p_al = f"<SNIPPET>\n{al_snippet}\n</SNIPPET>\nDid the agent unnecessarily repeat themselves because they weren't listening? CRITICAL INSTRUCTION: Output EXACTLY ONE WORD. Do not explain. Reply ONLY with PASS (no) or FAIL (yes)."
         r_al = query_llm(p_al, label="verify_al", format=None)
         if "FAIL" in r_al.upper(): al_rating = "FAIL"
     rule_ratings.append({
@@ -247,7 +247,7 @@ def evaluate_interaction(
     if failed_items:
         desc = "\n".join([f"- {r['name']}: {r.get('description', '')}" for r in failed_items])
         try:
-            c_prompt = f"<INSTRUCTIONS>\nYou are an expert QA Coach.\nThe agent FAILED the following criteria:\n{desc}\nWrite a brief coaching tip (1 sentence MAX) on how they can improve on EACH criterion.\nCRITICAL: Output ONLY a valid JSON object mapping the exact criterion name to its tip.\n</INSTRUCTIONS>"
+            c_prompt = f"<INSTRUCTIONS>\nYou are an expert QA Coach.\nThe agent FAILED the following criteria:\n{desc}\nWrite a brief coaching tip (1 sentence MAX) on how they can improve on EACH criterion.\nCRITICAL: Output ONLY a valid JSON object mapping the exact criterion name to its tip. Do not write markdown, do not write explanations, and do not wrap in ```json.\n</INSTRUCTIONS>"
             c_reply = query_llm(c_prompt, label="coaching_batched", format="json")
             cj = json.loads(c_reply.strip())
             for r in failed_items: r["coaching"] = cj.get(r["name"], "Review transcript.")
