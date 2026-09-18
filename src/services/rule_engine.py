@@ -196,6 +196,10 @@ def evaluate_verified_customer(turns: List[Tuple[str, str]], parsed_times: List[
             "coaching": "Agent failed to ask for a PIN, address, or security question within the first 4 minutes of the call."
         }
 
+
+import difflib
+from typing import List, Tuple, Dict, Any
+
 def evaluate_personalized_call(turns: List[Tuple[str, str]], customer_name: str) -> Dict[str, Any]:
     if not customer_name or customer_name.strip() == "":
         return {"category": "Soft Skills", "name": "Personalized the call/ticket appropriately", "rating": "PASS", "score": 100, "coaching": ""}
@@ -210,37 +214,50 @@ def evaluate_personalized_call(turns: List[Tuple[str, str]], customer_name: str)
         "name": "Personalized the call/ticket appropriately",
         "rating": "FAIL",
         "score": 0,
-        "deduction_value": 10,
+        "deduction_value": 15,
         "coaching": f"Agent failed to use the customer's verified name '{customer_name}' during the call."
     }
 
-
 def extract_active_listening_snippets(turns: List[Tuple[str, str]]) -> str:
+    from src.services.llm_adapter import get_embedding
+    import math
+    def cos_sim(v1, v2):
+        if not v1 or not v2: return 0.0
+        dot = sum(a*b for a, b in zip(v1, v2))
+        return dot / (math.sqrt(sum(a*a for a in v1)) * math.sqrt(sum(b*b for b in v2)) or 1)
+
     agent_questions = [(i, txt) for i, (spk, txt) in enumerate(turns) if spk.lower() == 'agent' and '?' in txt]
     snippets = []
     for idx1, (i1, q1) in enumerate(agent_questions):
         for idx2 in range(idx1 + 1, len(agent_questions)):
             i2, q2 = agent_questions[idx2]
-            if difflib.SequenceMatcher(None, q1.lower(), q2.lower()).ratio() > 0.85:
-                snippets.append(f'Turn {i1}: {q1} ... Turn {i2}: {q2}')
-    return '\n'.join(snippets)
+            # Lower difflib to 60%, and use cosine sim > 0.70
+            if difflib.SequenceMatcher(None, q1.lower(), q2.lower()).ratio() > 0.60:
+                e1 = get_embedding(q1)
+                e2 = get_embedding(q2)
+                if cos_sim(e1, e2) > 0.70:
+                    snippets.append(f"Turn {i1}: {q1}\n... Turn {i2}: {q2}")
+    return "\n".join(snippets)
 
 def extract_empathy_snippets(turns: List[Tuple[str, str]], sentiment_scores: List[float]) -> str:
     snippets = []
-    frustration_words = ['broken', 'issue', 'problem', 'frustrat', 'angry', 'unacceptable', 'cancel', 'outage']
     for i, (speaker, text) in enumerate(turns):
         if speaker.lower() == 'customer':
             is_negative = False
-            if sentiment_scores and i < len(sentiment_scores):
-                is_negative = sentiment_scores[i] < -20.0
-            else:
-                is_negative = any(word in text.lower() for word in frustration_words)
+            # Trajectory check: Drop of 6 or more points from the previous turn
+            if sentiment_scores and i < len(sentiment_scores) and i > 0:
+                if sentiment_scores[i] <= sentiment_scores[i-1] - 6.0:
+                    is_negative = True
+            
+            # Fallback if drop is extremely low absolutely
+            if sentiment_scores and i < len(sentiment_scores) and sentiment_scores[i] < -20.0:
+                is_negative = True
                 
             if is_negative:
-                snippet = f'Customer: {text}\n'
+                snippet = f"Customer: {text}\n"
                 for j in range(i+1, min(i+3, len(turns))):
                     spk, txt = turns[j]
                     if spk.lower() == 'agent':
-                        snippet += f'Agent: {txt}\n'
+                        snippet += f"Agent: {txt}\n"
                 snippets.append(snippet)
-    return '\n---\n'.join(snippets)
+    return "\n---\n".join(snippets)

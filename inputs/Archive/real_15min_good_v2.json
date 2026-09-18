@@ -1,0 +1,419 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:15]",
+      "text": "Thank you for calling S-Net technical support, my name is Zara. Could I get your account number, PIN, and the security answer on file so I can fully verify you before we get started?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:16]",
+      "end_time": "[00:25]",
+      "text": "Hi Zara, sure. Account is 471-206-938, PIN 8842, and the security answer is Denver, the city I was born in."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:26]",
+      "end_time": "[00:33]",
+      "text": "Perfect, Tom, that all matches, you're fully verified. Before we dive in, how's your day going so far?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:35]",
+      "end_time": "[00:43]",
+      "text": "Been a bit of a rough morning honestly, trying to get online for work and it keeps cutting out."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:45]",
+      "end_time": "[00:55]",
+      "text": "That's a rough way to start the day, especially when work's depending on it. Let's get you sorted. What can I help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:56]",
+      "end_time": "[01:08]",
+      "text": "My mobile hotspot device has been losing signal randomly, and even when it's connected it feels really slow, like it's being throttled. Been happening the last two days."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:10]",
+      "end_time": "[01:26]",
+      "text": "That's really disruptive, especially for work. So to make sure I've got it right: the hotspot device is dropping signal intermittently, and even when connected the speed feels throttled, and this started about two days ago. Is that accurate?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:27]",
+      "end_time": "[01:30]",
+      "text": "Yes, exactly right."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:32]",
+      "end_time": "[01:45]",
+      "text": "Got it. A few quick questions before we start troubleshooting, just so we fix the actual cause rather than guessing. Is this happening in the same location each time, or does it vary?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:46]",
+      "end_time": "[01:52]",
+      "text": "Mostly at my apartment, I haven't really taken it elsewhere the last couple days."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:54]",
+      "end_time": "[02:01]",
+      "text": "Okay, and is the hotspot plugged in and charging while you use it, or running on battery?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:02]",
+      "end_time": "[02:09]",
+      "text": "Running on battery most of the time, I usually just leave it on my desk."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:10]",
+      "end_time": "[02:22]",
+      "text": "Good to know, that's worth checking since some of these devices throttle themselves at low battery to save power. About how much battery does it usually show when this happens?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:24]",
+      "end_time": "[02:28]",
+      "text": "Honestly I'm not totally sure, I don't check it that often."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:30]",
+      "end_time": "[02:42]",
+      "text": "That's alright, we can check that together in a moment. Has anything changed recently, new devices connected to it, a move, anything like that, around when this started two days ago?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:44]",
+      "end_time": "[02:52]",
+      "text": "Nothing that I changed, but I did notice my roommate's been using it too since their WiFi went down."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:54]",
+      "end_time": "[03:06]",
+      "text": "Good to mention, timing like that is worth checking even if it turns out unrelated. About when did your roommate start connecting to it relative to when the slowness started?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:07]",
+      "end_time": "[03:14]",
+      "text": "I think it was right around the same time, maybe a day before, so pretty close together."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:16]",
+      "end_time": "[03:21]",
+      "text": "That's a strong lead then, let's keep that in mind as we go."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:23]",
+      "end_time": "[03:30]",
+      "text": "How many devices total would you say are usually connected to the hotspot now, with your roommate added in?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:32]",
+      "end_time": "[03:38]",
+      "text": "Probably four or five, my laptop, my phone, and then their laptop and phone too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:40]",
+      "end_time": "[03:46]",
+      "text": "Okay, and is your roommate doing anything particularly heavy on it, video calls, large downloads, streaming?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:48]",
+      "end_time": "[03:54]",
+      "text": "Actually yeah, they've been on video calls most of the day for their own work."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:56]",
+      "end_time": "[04:09]",
+      "text": "That's really useful context, video calls use a steady, significant amount of data and bandwidth, so that combined with your own usage could easily be maxing out what the device can handle at once."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:11]",
+      "end_time": "[04:18]",
+      "text": "That would explain a lot actually, it always seems worse when they're clearly on a call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:19]",
+      "end_time": "[04:33]",
+      "text": "That timing lines up well. One more thing before we act on any of this: do you know what data plan is on that hotspot device, is it unlimited or a set data cap?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:34]",
+      "end_time": "[04:42]",
+      "text": "I believe it's a data plan with a cap, not unlimited, though I'm not sure exactly how much."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:50]",
+      "end_time": "[04:58]",
+      "text": "Okay, that's actually important, I'm going to check your account's data usage now, this will take about thirty seconds."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:59]",
+      "end_time": "[05:26]",
+      "text": "Okay, I can see you're actually very close to your monthly data cap already, likely from the combined usage the last couple of days. Once a plan hits the cap, it often gets throttled to a much slower speed for the rest of the billing cycle, which would explain both the slowness and, less directly, some of the drops if the device is struggling under the load."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:28]",
+      "end_time": "[05:33]",
+      "text": "Oh wow, I had no idea we were anywhere close to the cap."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:35]",
+      "end_time": "[05:43]",
+      "text": "Is there a way to see that usage myself going forward, so this doesn't catch me off guard again?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:45]",
+      "end_time": "[05:56]",
+      "text": "Yes, it's actually visible in the account app under usage, I'd recommend checking it every few days especially while you have a second person relying on the same device."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:58]",
+      "end_time": "[06:01]",
+      "text": "That's really helpful, I'll start checking that regularly."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:03]",
+      "end_time": "[06:18]",
+      "text": "Glad that helps. Now, for the signal dropping specifically, that's a separate thing from the throttling, let's check the battery and placement too so we're covering both symptoms. Can you check the battery level on the device right now?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:20]",
+      "end_time": "[06:23]",
+      "text": "Let me check... it's showing 34 percent."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:24]",
+      "end_time": "[06:42]",
+      "text": "Okay, that's on the lower side, some hotspot devices do reduce signal power to conserve battery below around 40 percent, which could explain the intermittent drops layered on top of the throttling. I'd recommend keeping it plugged in while it's getting this much use."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:43]",
+      "end_time": "[06:49]",
+      "text": "That actually makes sense, I usually only charge it once a day."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:50]",
+      "end_time": "[07:02]",
+      "text": "With two people relying on it steadily, keeping it plugged in during the day would help a lot. Let's do a few things: first, can you plug it in now?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:10]",
+      "end_time": "[07:13]",
+      "text": "Sure, plugging it in."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:15]",
+      "end_time": "[07:18]",
+      "text": "Okay, it's charging now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:19]",
+      "end_time": "[07:44]",
+      "text": "Great, that'll help with the battery-related drops going forward. For the throttling itself, since that's tied to the data cap, the options are either waiting for the billing cycle to reset, or I can check if a temporary data boost is available on your plan so you're not stuck at reduced speed the rest of the cycle. Want me to check that?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:45]",
+      "end_time": "[07:48]",
+      "text": "Yes, please, that would be great."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:58]",
+      "end_time": "[08:04]",
+      "text": "Give me about a minute to pull up the available add-ons for your plan."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:05]",
+      "end_time": "[08:22]",
+      "text": "Good news, there is a one-time data boost available that would lift the throttling for the rest of this billing cycle. I can add that now if you'd like, it would show up on your next bill as a separate line item."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:24]",
+      "end_time": "[08:29]",
+      "text": "Yes, let's do that, this is genuinely affecting my ability to work."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:35]",
+      "end_time": "[08:40]",
+      "text": "Understood, adding that now, this should take about fifteen seconds to apply."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:41]",
+      "end_time": "[08:57]",
+      "text": "That's applied on my end. It can take up to five minutes to fully reflect on the device, so let's test in a moment. In the meantime, is there anything else about the connection you've noticed, any other symptoms?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:58]",
+      "end_time": "[09:03]",
+      "text": "Not that I've noticed, just the dropping and the slowness really."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:18]",
+      "end_time": "[09:27]",
+      "text": "Good to know, that lines up with what we've already covered. Let's give it a few minutes to fully take effect."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:28]",
+      "end_time": "[09:32]",
+      "text": "Should be reflected by now, can you run a speed test?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:47]",
+      "end_time": "[09:50]",
+      "text": "Sure, running one now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:52]",
+      "end_time": "[09:58]",
+      "text": "Okay, that's way faster than before, and it's held steady while I watched it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:00]",
+      "end_time": "[10:22]",
+      "text": "That's a great sign. So to summarize, there were really two things stacked on top of each other: the data cap throttling, which the boost should resolve for the rest of this cycle, and the battery level combined with your roommate's video calls likely causing the intermittent drops, which keeping it plugged in should help with directly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:24]",
+      "end_time": "[10:33]",
+      "text": "That makes a lot of sense, I really appreciate you digging into both instead of just telling me to reboot it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:34]",
+      "end_time": "[10:44]",
+      "text": "Is there anything I should do differently long term, since my roommate's probably going to keep using it while their WiFi is down?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:46]",
+      "end_time": "[11:08]",
+      "text": "Good question. I'd suggest keeping it plugged in whenever both of you are online at once, and keeping an eye on the usage app so you're not caught off guard by the cap again. If this becomes a regular thing, it might also be worth looking at a plan with a higher data allowance."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:09]",
+      "end_time": "[11:17]",
+      "text": "That's a good point, I'll bring that up with my roommate since we're both relying on it now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:18]",
+      "end_time": "[11:32]",
+      "text": "Of course. I'll add detailed notes to your account with everything we covered today, the data cap and boost, the battery and roommate usage tie-in, so if you do call back it's all there already."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:34]",
+      "end_time": "[11:38]",
+      "text": "That's great, I really appreciate how thorough this was."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:39]",
+      "end_time": "[11:47]",
+      "text": "This was honestly a much better experience than I expected, most support calls I've had feel pretty scripted."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:49]",
+      "end_time": "[11:59]",
+      "text": "That really means a lot, thank you for saying that. I always find it's worth understanding the actual cause rather than running through a generic checklist."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:01]",
+      "end_time": "[12:13]",
+      "text": "One last thing while I have you, want me to check if the hotspot's firmware is current? Outdated firmware can sometimes contribute to connection instability too, and it's a quick check."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:14]",
+      "end_time": "[12:17]",
+      "text": "Sure, that'd be good to know."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:26]",
+      "end_time": "[12:30]",
+      "text": "Give me about twenty seconds to pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:32]",
+      "end_time": "[12:37]",
+      "text": "Good news, it's already on the latest version, so that's not a factor here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:39]",
+      "end_time": "[12:43]",
+      "text": "Good to know, one less thing to worry about."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:44]",
+      "end_time": "[12:48]",
+      "text": "Exactly. Is there anything else I can help you with today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:50]",
+      "end_time": "[12:54]",
+      "text": "No, that covers everything, thank you so much Zara."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:55]",
+      "end_time": "[13:09]",
+      "text": "Thank you so much, Tom. We do value your feedback, so please stay on the line after this call for a short survey. Thank you for choosing S-Net, have a wonderful rest of your day."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}

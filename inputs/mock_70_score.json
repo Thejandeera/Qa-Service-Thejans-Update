@@ -1,0 +1,38 @@
+{
+  "tenant_id": "tenant-001",
+  "customer_name": "John",
+  "sentiment_scores": [
+    0.0,
+    10.0,
+    0.0,
+    12.0,
+    0.0,
+    -25.0,
+    0.0,
+    -5.0,
+    0.0,
+    -15.0,
+    0.0,
+    20.0,
+    0.0,
+    30.0,
+    0.0
+  ],
+  "transcript": [
+    {"speaker": "Agent", "text": "Thank you for calling S-net, my name is Alex. May I have your name?", "start_time_sec": 0},
+    {"speaker": "Customer", "text": "Hi, I'm John. My internet is completely down.", "start_time_sec": 10},
+    {"speaker": "Agent", "text": "Hi John. To pull up your account, can you provide your account pin?", "start_time_sec": 20},
+    {"speaker": "Customer", "text": "Sure, it's 1234.", "start_time_sec": 30},
+    {"speaker": "Agent", "text": "Got it. So your internet is completely down. Let's get that fixed. What color are the lights on your router?", "start_time_sec": 40},
+    {"speaker": "Customer", "text": "They are blinking red. It's been like this all morning and I'm losing money on my business because of this!", "start_time_sec": 50},
+    {"speaker": "Agent", "text": "Let me send a reset signal. Please wait.", "start_time_sec": 60},
+    {"speaker": "Customer", "text": "Okay, I'll wait.", "start_time_sec": 70},
+    {"speaker": "Agent", "text": "I've sent the signal. By the way, what color are the lights on your router?", "start_time_sec": 80},
+    {"speaker": "Customer", "text": "I just told you, they are blinking red.", "start_time_sec": 90},
+    {"speaker": "Agent", "text": "Right. Okay, they should turn green now. Can you check?", "start_time_sec": 100},
+    {"speaker": "Customer", "text": "Ah, yes, they are green now. The internet is back.", "start_time_sec": 110},
+    {"speaker": "Agent", "text": "Great! Since the issue is resolved, is there anything else I can help with?", "start_time_sec": 120},
+    {"speaker": "Customer", "text": "No, that's it.", "start_time_sec": 130},
+    {"speaker": "Agent", "text": "Thank you for choosing S-net. Have a good day.", "start_time_sec": 140}
+  ]
+}

@@ -113,10 +113,12 @@ def evaluate_interaction(
     tenant_id: str,
     channel: str = "Call",
     times: Optional[List[Optional[int]]] = None,
-    custom_prompt: Optional[str] = None
+    custom_prompt: Optional[str] = None,
+    caller: Optional[str] = None,
+    sentiment_scores: Optional[List[float]] = None
 ) -> Dict[str, Any]:
     from src.services.rule_engine import (
-        evaluate_branding, evaluate_hold_and_dead_air, evaluate_empathy, 
+        evaluate_branding, evaluate_hold_and_dead_air, 
         evaluate_verified_customer, evaluate_personalized_call,
         extract_active_listening_snippets, extract_empathy_snippets
     )
@@ -127,8 +129,8 @@ def evaluate_interaction(
     clean_lines = []
     agent_lines = []
     customer_lines = []
-    customer_name = criteria_data.get("customer_name", "")
-    sentiment_scores = criteria_data.get("sentiment_scores", [])
+    customer_name = caller or ""
+    sentiment_scores = sentiment_scores or []
     
     if isinstance(transcript_data, list):
         for turn in transcript_data:
@@ -258,3 +260,203 @@ def evaluate_interaction(
     
     clean_scorecard = [{"category": r["category"], "name": r["name"], "rating": r["rating"], "coaching": r.get("coaching", "")} for r in ratings]
     return {"final_score": b_score, "scorecard": clean_scorecard, "is_auto_fail": is_auto_fail, "auto_fail_reason": reason}
+
+
+def build_dynamic_prompt(
+    transcript_text: str,
+    categories: List[Dict[str, Any]],
+    auto_fail_rules: List[Dict[str, Any]],
+    matched_policies: List[Dict[str, Any]],
+    channel: str,
+    harsh_lines: List[Dict[str, Any]] = None,
+    summary_str: str = ""
+) -> str:
+    """Construct dynamic LLM prompt tailored to tenant criteria with sanitized formatting."""
+    if harsh_lines is None:
+        harsh_lines = []
+        
+    # 1. Evaluation Line Items
+    items_list = []
+    for cat in categories:
+        cat_name = re.sub(r"<\s*br\s*/?\s*>", " ", cat.get("name", "Category"), flags=re.IGNORECASE).strip()
+        for item in cat.get("line_items", []):
+            name = re.sub(r"<\s*br\s*/?\s*>", " ", item.get("name", "Item"), flags=re.IGNORECASE).strip()
+            name = re.sub(r"\s+", " ", name)
+            desc = re.sub(r"<\s*br\s*/?\s*>", " ", item.get("description", ""), flags=re.IGNORECASE).strip()
+            desc = re.sub(r"\s+", " ", desc)
+            spiels = item.get("verbatim_spiels", [])
+            clean_spiels = [re.sub(r"<\s*br\s*/?\s*>", " ", s, flags=re.IGNORECASE).strip() for s in spiels]
+            spiel_txt = f" [Required Spiels: {', '.join(clean_spiels)}]" if clean_spiels else ""
+            items_list.append(f"- [{cat_name}] {name}: {desc}{spiel_txt}")
+
+    criteria_str = "\n".join(items_list)
+    
+    # 2. Auto-Fail Zero-Tolerance Rules Section
+    auto_fail_list = []
+    for r in auto_fail_rules:
+        r_name = re.sub(r"<\s*br\s*/?\s*>", " ", r.get("name", "Auto-Fail"), flags=re.IGNORECASE).strip()
+        r_desc = re.sub(r"<\s*br\s*/?\s*>", " ", r.get("description", r.get("trigger", "Immediate 0 score")), flags=re.IGNORECASE).strip()
+        auto_fail_list.append(f"ΓÇó {r_name}: {r_desc}")
+    auto_fail_str = "\n".join(auto_fail_list) if auto_fail_list else "ΓÇó Discourtesy / Rudeness: Immediate 0 score on profanity or policy abandonment."
+
+    clean_title = lambda p: re.sub(r'<\s*br\s*/?\s*>', ' ', p['title'], flags=re.IGNORECASE)
+    clean_content = lambda p: re.sub(r'<\s*br\s*/?\s*>', ' ', p['content'][:300], flags=re.IGNORECASE)
+    policies_str = "\n".join(
+        f"ΓÇó {clean_title(p)}: {clean_content(p)}" 
+        for p in matched_policies
+    ) or "ΓÇó No specific policy override found."
+    
+    harsh_lines_str = "\n".join(
+        f"Agent: \"{h['text']}\"" for h in harsh_lines
+    ) if harsh_lines else "None detected."
+    
+    summary_injection = f"\nCALL SUMMARY:\n{summary_str}\n" if summary_str else ""
+
+    import os
+    _ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    prompt_path = os.getenv("PROMPT_DYNAMIC_EVALUATION_PATH", "resources/prompts/dynamic_evaluation_prompt.txt")
+    full_path = os.path.join(_ROOT, prompt_path)
+    with open(full_path, "r", encoding="utf-8") as f:
+        template = f.read()
+        
+    full_prompt = template.format(
+        channel=channel,
+        auto_fail_str=auto_fail_str,
+        policies_str=policies_str,
+        criteria_str=criteria_str,
+        harsh_lines_str=harsh_lines_str,
+        transcript_text=transcript_text,
+        summary_str=summary_injection
+    )
+    
+    # Split prompt into prefix (transcript) and suffix (criteria)
+    # This allows us to load the massive transcript KV Cache only once
+    split_str = "EVALUATION LINE ITEMS TO RATE (Evaluate ONLY these items):"
+    parts = full_prompt.split(split_str)
+    prefix = parts[0]
+    suffix = split_str + parts[1]
+    
+    return prefix, suffix
+
+
+def parse_dynamic_ratings(reply: str, categories: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    # Safely strip out internal monologue for reasoning models
+    reply = re.sub(r'<thinking>.*?</thinking>', '', reply, flags=re.DOTALL)
+    
+    extracted_ratings = []
+    
+    # 1. Try extracting from JSON format
+    items = re.finditer(r'"item_name"\s*:\s*"([^"]+)"\s*,\s*"rating"\s*:\s*"([^"]+)"', reply, re.IGNORECASE)
+    for match in items:
+        extracted_ratings.append({
+            "raw_name": match.group(1).lower(),
+            "rating": match.group(2).upper()
+        })
+        
+    lines = reply.splitlines()
+    
+    ratings = []
+    for cat in categories:
+        cat_name = cat.get("name", "Category")
+        for item in cat.get("line_items", []):
+            name = item.get("name", "Item")
+            deduction_value = item.get("deduction_value", 10)
+            rating = "NOT_RATED"
+            
+            name_words = set(re.findall(r'\w+', name.lower()))
+            
+            # First check JSON extracted items
+            for ext in extracted_ratings:
+                ext_words = set(re.findall(r'\w+', ext["raw_name"]))
+                if name.lower() in ext["raw_name"] or len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
+                    rating = ext["rating"]
+                    break
+                    
+            # If still NOT_RATED, fallback to line-based scan (for non-JSON text)
+            if rating == "NOT_RATED":
+                for line in lines:
+                    line_lower = line.lower()
+                    ext_words = set(re.findall(r'\w+', line_lower))
+                    
+                    if name.lower() in line_lower or len(name_words.intersection(ext_words)) >= min(2, len(name_words)):
+                        if re.search(r'\b(pass|passed|yes)\b', line_lower):
+                            rating = "PASS"
+                            break
+                        elif re.search(r'\b(fail|failed|no)\b', line_lower):
+                            rating = "FAIL"
+                            break
+                        
+            score = RATING_SCORES.get(rating, 0)
+            ratings.append({
+                "category": cat_name,
+                "name": name,
+                "description": item.get("description", ""),
+                "rating": rating,
+                "score": score,
+                "deduction_value": deduction_value,
+                "coaching": ""
+            })
+    return ratings
+
+
+def check_auto_fail(
+    transcript: str,
+    harsh_lines: List[Dict[str, Any]],
+    auto_fail_rules: List[Dict[str, Any]],
+    ratings: List[Dict[str, Any]]
+) -> (bool, Optional[str]):
+    """Check for instant zero auto-fail breaches."""
+    lower_tx = transcript.lower()
+
+    # Profanity / extreme discourtesy check
+    profanities = ["fuck", "shut up", "idiot", "get lost", "stupid", "hang up"]
+    for word in profanities:
+        if word in lower_tx:
+            return True, f"Auto-Fail Triggered: Profanity/Discourtesy detected ('{word}')"
+
+    # Extreme harsh agent lines
+    if len(harsh_lines) >= 3:
+        return True, "Auto-Fail Triggered: Multiple highly hostile/harsh agent statements detected"
+        
+    # Check LLM scorecard for Auto Fail category failures
+    for r in ratings:
+        if "AUTO FAIL" in r["category"].upper() and r["rating"] in ["NO", "FAIL"]:
+            return True, f"Auto-Fail Triggered by Scorecard: {r['name']}"
+
+    return False, None
+
+
+def calculate_category_scores(
+    ratings: List[Dict[str, Any]],
+    category_weights: Dict[str, float],
+    is_auto_fail: bool
+) -> (Dict[str, float], float):
+    """Calculate weighted category scores and blended final score."""
+    if is_auto_fail:
+        return {cat: 0.0 for cat in category_weights}, 0.0
+
+    grouped = {}
+    for r in ratings:
+        cat = r.get("category", "General Handling")
+        grouped.setdefault(cat, []).append(r)
+
+    cat_scores = {}
+    for cat, items in grouped.items():
+        score = 100.0
+        for item in items:
+            if item.get("rating") in ["FAIL", "NO"]:
+                deduction = item.get("deduction_value", 10)
+                score -= deduction
+        
+        if score < 0:
+            score = 0.0
+            
+        cat_scores[cat] = float(score)
+
+    total_weight = sum(category_weights.values()) or 1.0
+    blended = sum(cat_scores.get(cat, 100.0) * (category_weights.get(cat, 1.0) / total_weight) for cat in category_weights)
+    
+    if not category_weights:
+        blended = sum(cat_scores.values()) / len(cat_scores) if cat_scores else 100.0
+
+    return cat_scores, round(blended, 1)

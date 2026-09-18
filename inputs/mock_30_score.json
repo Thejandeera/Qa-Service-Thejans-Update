@@ -1,0 +1,26 @@
+{
+  "tenant_id": "tenant-001",
+  "customer_name": "Sarah",
+  "sentiment_scores": [
+    0.0,
+    10.0,
+    0.0,
+    -10.0,
+    0.0,
+    -35.0,
+    0.0,
+    -40.0,
+    0.0
+  ],
+  "transcript": [
+    {"speaker": "Agent", "text": "Hello, tech support.", "start_time_sec": 0},
+    {"speaker": "Customer", "text": "Hi, my phone line has static.", "start_time_sec": 10},
+    {"speaker": "Agent", "text": "Okay, give me your phone number.", "start_time_sec": 20},
+    {"speaker": "Customer", "text": "It's 555-0199.", "start_time_sec": 30},
+    {"speaker": "Agent", "text": "Alright, so there's static on the line. I am sending a reboot command.", "start_time_sec": 40},
+    {"speaker": "Customer", "text": "This is ridiculous, this happens every week! I'm completely sick of paying for this garbage service!", "start_time_sec": 50},
+    {"speaker": "Agent", "text": "Listen, I just work here. You'll just have to wait for the reboot to finish.", "start_time_sec": 60},
+    {"speaker": "Customer", "text": "Wow, you're so unhelpful. Is it fixed yet?", "start_time_sec": 70},
+    {"speaker": "Agent", "text": "Yeah it's done. I'm disconnecting the call now. Bye.", "start_time_sec": 80}
+  ]
+}

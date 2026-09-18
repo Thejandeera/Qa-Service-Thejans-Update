@@ -1,0 +1,227 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:01]",
+      "end_time": "[00:04]",
+      "text": "Support, go ahead."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:06]",
+      "end_time": "[00:11]",
+      "text": "Hi, my internet's been crawling all morning, barely loads anything. Account is 209-664-317."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:13]",
+      "end_time": "[00:16]",
+      "text": "Okay, did you reboot the router?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:17]",
+      "end_time": "[00:20]",
+      "text": "Yeah, twice already before calling."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:22]",
+      "end_time": "[00:25]",
+      "text": "Try it once more, usually clears it up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:58]",
+      "end_time": "[01:01]",
+      "text": "Alright."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:02]",
+      "end_time": "[01:05]",
+      "text": "Okay, rebooted, still really slow."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:07]",
+      "end_time": "[01:10]",
+      "text": "Hm, weird."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:11]",
+      "end_time": "[01:17]",
+      "text": "Is there anything you can check on your end, an outage or something?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:53]",
+      "end_time": "[01:56]",
+      "text": "Let me look."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:58]",
+      "end_time": "[02:01]",
+      "text": "Still there?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:02]",
+      "end_time": "[02:05]",
+      "text": "Yeah, checking. Nothing showing up on my end."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:07]",
+      "end_time": "[02:10]",
+      "text": "So it's probably something with my setup then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:12]",
+      "end_time": "[02:15]",
+      "text": "Probably, yeah, that's usually how it goes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:16]",
+      "end_time": "[02:20]",
+      "text": "It was totally fine yesterday though, nothing's changed here."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:22]",
+      "end_time": "[02:25]",
+      "text": "Stuff just happens sometimes with older equipment."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:26]",
+      "end_time": "[02:30]",
+      "text": "My equipment isn't old, it's maybe six months in."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:32]",
+      "end_time": "[02:35]",
+      "text": "Still could be it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:36]",
+      "end_time": "[02:43]",
+      "text": "Okay, is there a speed test or line check you can run from your side?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:44]",
+      "end_time": "[02:49]",
+      "text": "Not really anything more to check without a flag on the account."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:50]",
+      "end_time": "[02:54]",
+      "text": "So what am I supposed to do right now?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:56]",
+      "end_time": "[03:01]",
+      "text": "Just give it some time, usually sorts itself out on its own."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:02]",
+      "end_time": "[03:08]",
+      "text": "That's not really an answer, I've got work I need to get done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:09]",
+      "end_time": "[03:15]",
+      "text": "I hear you, but that's really all I've got without more showing up here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:16]",
+      "end_time": "[03:22]",
+      "text": "Can I get your name, in case I need to call back about this?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:24]",
+      "end_time": "[03:27]",
+      "text": "Pat."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:28]",
+      "end_time": "[03:35]",
+      "text": "Thanks. What's my account number again on your screen, did you even pull it up?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:36]",
+      "end_time": "[03:39]",
+      "text": "What'd you say it was?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:41]",
+      "end_time": "[03:44]",
+      "text": "209-664-317, same as when I called."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:45]",
+      "end_time": "[03:48]",
+      "text": "Right, got it now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:50]",
+      "end_time": "[03:56]",
+      "text": "Is there any kind of credit for this, since it's been down basically all morning?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:58]",
+      "end_time": "[04:04]",
+      "text": "That's not something I can do from here, you'd have to call billing separately for that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:06]",
+      "end_time": "[04:09]",
+      "text": "Of course I would."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:10]",
+      "end_time": "[04:15]",
+      "text": "This really hasn't resolved anything for me, just so that's clear."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:17]",
+      "end_time": "[04:20]",
+      "text": "Understood. Anything else?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:21]",
+      "end_time": "[04:25]",
+      "text": "No, I'll just wait it out I guess."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:26]",
+      "end_time": "[04:29]",
+      "text": "Alright."
+    }
+  ],
+  "tenant_id": "tenant-abc"
+}
