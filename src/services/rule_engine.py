@@ -166,11 +166,7 @@ def evaluate_empathy(turns: List[Tuple[str, str]]) -> Dict[str, Any]:
         }
 
 def evaluate_verified_customer(turns: List[Tuple[str, str]], parsed_times: List[Tuple[int, int]]) -> Dict[str, Any]:
-    """
-    Scans the first 4 minutes (240 seconds) for verification keywords.
-    NOTE: These keywords and timeframes should be moved to a tenant-configurable dictionary in the future.
-    """
-    verification_keywords = ["pin", "address", "security question"]
+    import re
     agent_verified = False
     
     for i, (speaker, text) in enumerate(turns):
@@ -178,8 +174,7 @@ def evaluate_verified_customer(turns: List[Tuple[str, str]], parsed_times: List[
             # Check if this turn is within the first 4 minutes (240 seconds)
             start_time = parsed_times[i][0] if i < len(parsed_times) and parsed_times[i] and parsed_times[i][0] is not None else 0
             if start_time <= 240:
-                lower_text = text.lower()
-                if any(kw in lower_text for kw in verification_keywords):
+                if re.search(r'\b(pin|address|security question)\b', text, re.IGNORECASE):
                     agent_verified = True
                     break
                     
@@ -200,3 +195,59 @@ def evaluate_verified_customer(turns: List[Tuple[str, str]], parsed_times: List[
             "deduction_value": 20,
             "coaching": "Agent failed to ask for a PIN, address, or security question within the first 4 minutes of the call."
         }
+
+def evaluate_personalized_call(turns: List[Tuple[str, str]], customer_name: str) -> Dict[str, Any]:
+    if not customer_name or customer_name.strip() == "":
+        return {"category": "Soft Skills", "name": "Personalized the call/ticket appropriately", "rating": "PASS", "score": 100, "coaching": ""}
+    
+    name_lower = customer_name.lower().strip()
+    for spk, txt in turns:
+        if spk.lower() == "agent" and name_lower in txt.lower():
+            return {"category": "Soft Skills", "name": "Personalized the call/ticket appropriately", "rating": "PASS", "score": 100, "coaching": ""}
+            
+    return {
+        "category": "Soft Skills",
+        "name": "Personalized the call/ticket appropriately",
+        "rating": "FAIL",
+        "score": 0,
+        "deduction_value": 10,
+        "coaching": f"Agent failed to use the customer's verified name '{customer_name}' during the call."
+    }
+
+def extract_active_listening_snippets(turns: List[Tuple[str, str]]) -> str:
+    # Find identical or highly similar agent questions
+    agent_questions = [(i, txt) for i, (spk, txt) in enumerate(turns) if spk.lower() == 'agent' and '?' in txt]
+    snippets = []
+    for idx1, (i1, q1) in enumerate(agent_questions):
+        for idx2 in range(idx1 + 1, len(agent_questions)):
+            i2, q2 = agent_questions[idx2]
+            # Simple similarity check
+            if similar(q1.lower(), q2.lower()) > 0.85:
+                snippets.append(f'Turn {i1}: {q1} ... Turn {i2}: {q2}')
+    return '
+'.join(snippets)
+
+def extract_empathy_snippets(turns: List[Tuple[str, str]], sentiment_scores: List[float]) -> str:
+    snippets = []
+    # If no sentiment scores, fallback to frustration words
+    frustration_words = ['broken', 'issue', 'problem', 'frustrat', 'angry', 'unacceptable', 'cancel', 'outage']
+    for i, (speaker, text) in enumerate(turns):
+        if speaker.lower() == 'customer':
+            is_negative = False
+            if sentiment_scores and i < len(sentiment_scores):
+                is_negative = sentiment_scores[i] < -0.2
+            else:
+                is_negative = any(word in text.lower() for word in frustration_words)
+                
+            if is_negative:
+                snippet = f'Customer: {text}
+'
+                for j in range(i+1, min(i+3, len(turns))):
+                    spk, txt = turns[j]
+                    if spk.lower() == 'agent':
+                        snippet += f'Agent: {txt}
+'
+                snippets.append(snippet)
+    return '
+---
+'.join(snippets)
