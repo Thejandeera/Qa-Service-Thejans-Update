@@ -2,1096 +2,731 @@
   "transcript": [
     {
       "speaker": "Agent",
-      "start_time": "[00:00]",
-      "end_time": "[00:10]",
       "start_time_sec": 0,
-      "end_time_sec": 10,
-      "text": "Thank you for calling S-Net, my name is Elena, how can I help you today?"
+      "text": "Thank you for calling S-Net, my name is Elena, how can I help you today?",
+      "sentiment_score": 2.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[00:10]",
-      "end_time": "[00:20]",
       "start_time_sec": 10,
-      "end_time_sec": 20,
-      "text": "Hi Elena, my smart garage door opener has been really slow and inconsistent responding to the app, sometimes it takes thirty seconds or more, sometimes it doesn't respond at all and I have to force-close and reopen the app."
+      "text": "Hi Elena, my smart garage door opener has been really slow and inconsistent responding to the app, sometimes it takes thirty seconds or more, sometimes it doesn't respond at all and I have to force-close and reopen the app.",
+      "sentiment_score": 4.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[00:20]",
-      "end_time": "[00:30]",
       "start_time_sec": 20,
-      "end_time_sec": 30,
-      "text": "That sounds really inconvenient, especially if you're relying on it to get in and out. I'm sorry you've been dealing with that. Let's get it figured out. Can I get your account number, PIN, and the name on the account to pull things up?"
+      "text": "That sounds really inconvenient, especially if you're relying on it to get in and out. I'm sorry you've been dealing with that. Let's get it figured out. Can I get your account number, PIN, and the name on the account to pull things up?",
+      "sentiment_score": 6.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[00:30]",
-      "end_time": "[00:40]",
       "start_time_sec": 30,
-      "end_time_sec": 40,
-      "text": "Sure, it's 630-118-274, PIN 5509, name is James Carter."
+      "text": "Sure, it's 630-118-274, PIN 5509, name is James Carter.",
+      "sentiment_score": 8.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[00:40]",
-      "end_time": "[00:50]",
       "start_time_sec": 40,
-      "end_time_sec": 50,
-      "text": "Perfect, James, that all checks out, you're verified. So just to make sure I've got the full picture: the garage door app is either very slow to respond, sometimes thirty-plus seconds, or doesn't respond at all and needs a force-restart. Is that accurate?"
+      "text": "Perfect, James, that all checks out, you're verified. So just to make sure I've got the full picture: the garage door app is either very slow to respond, sometimes thirty-plus seconds, or doesn't respond at all and needs a force-restart. Is that accurate?",
+      "sentiment_score": 10.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[00:50]",
-      "end_time": "[01:00]",
       "start_time_sec": 50,
-      "end_time_sec": 60,
-      "text": "Yeah, that's exactly it."
+      "text": "Yeah, that's exactly it.",
+      "sentiment_score": 12.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[01:00]",
-      "end_time": "[01:10]",
       "start_time_sec": 60,
-      "end_time_sec": 70,
-      "text": "Got it, thank you for laying that out clearly. When did this start?"
+      "text": "Got it, thank you for laying that out clearly. When did this start?",
+      "sentiment_score": 14.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[01:10]",
-      "end_time": "[01:20]",
       "start_time_sec": 70,
-      "end_time_sec": 80,
-      "text": "About four or five days ago."
+      "text": "About four or five days ago.",
+      "sentiment_score": 16.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[01:20]",
-      "end_time": "[01:30]",
       "start_time_sec": 80,
-      "end_time_sec": 90,
-      "text": "Okay, and did anything change around that time, firmware update, router changes, new devices?"
+      "text": "Okay, and did anything change around that time, firmware update, router changes, new devices?",
+      "sentiment_score": 18.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[01:30]",
-      "end_time": "[01:40]",
       "start_time_sec": 90,
-      "end_time_sec": 100,
-      "text": "Actually now that you mention it, I think the app prompted me to update the garage door hub's firmware a few days before this started."
+      "text": "Actually now that you mention it, I think the app prompted me to update the garage door hub's firmware a few days before this started.",
+      "sentiment_score": 20.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[01:40]",
-      "end_time": "[01:50]",
       "start_time_sec": 100,
-      "end_time_sec": 110,
-      "text": "That's a really important detail, thank you for remembering that. Do you know if the update actually completed successfully at the time?"
+      "text": "That's a really important detail, thank you for remembering that. Do you know if the update actually completed successfully at the time?",
+      "sentiment_score": 22.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[01:50]",
-      "end_time": "[02:00]",
       "start_time_sec": 110,
-      "end_time_sec": 120,
-      "text": "Honestly I'm not sure, I just tapped update and didn't really watch it finish."
+      "text": "Honestly I'm not sure, I just tapped update and didn't really watch it finish.",
+      "sentiment_score": 24.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[02:00]",
-      "end_time": "[02:10]",
       "start_time_sec": 120,
-      "end_time_sec": 130,
-      "text": "That's completely understandable, most people don't sit and watch those. Let's check its current firmware status together. Can you open the app and go to the hub's device settings?"
+      "text": "That's completely understandable, most people don't sit and watch those. Let's check its current firmware status together. Can you open the app and go to the hub's device settings?",
+      "sentiment_score": 26.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[02:10]",
-      "end_time": "[02:20]",
       "start_time_sec": 130,
-      "end_time_sec": 140,
-      "text": "Okay, I'm there."
+      "text": "Okay, I'm there.",
+      "sentiment_score": 28.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[02:20]",
-      "end_time": "[02:30]",
       "start_time_sec": 140,
-      "end_time_sec": 150,
-      "text": "Does it show a firmware version number, and is there any pending update indicator?"
+      "text": "Does it show a firmware version number, and is there any pending update indicator?",
+      "sentiment_score": 30.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[02:30]",
-      "end_time": "[02:40]",
       "start_time_sec": 150,
-      "end_time_sec": 160,
-      "text": "It shows version 4.2.1, and there's no pending update showing."
+      "text": "It shows version 4.2.1, and there's no pending update showing.",
+      "sentiment_score": 32.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[02:40]",
-      "end_time": "[02:50]",
       "start_time_sec": 160,
-      "end_time_sec": 170,
-      "text": "Okay, so the update itself did go through. Sometimes though, even a successful update can leave the hub in a degraded WiFi state until it's power-cycled. Is the hub plugged into a wall outlet or hardwired?"
+      "text": "Okay, so the update itself did go through. Sometimes though, even a successful update can leave the hub in a degraded WiFi state until it's power-cycled. Is the hub plugged into a wall outlet or hardwired?",
+      "sentiment_score": 34.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[02:50]",
-      "end_time": "[03:00]",
       "start_time_sec": 170,
-      "end_time_sec": 180,
-      "text": "It's plugged into an outlet in the garage."
+      "text": "It's plugged into an outlet in the garage.",
+      "sentiment_score": 36.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[03:00]",
-      "end_time": "[03:10]",
       "start_time_sec": 180,
-      "end_time_sec": 190,
-      "text": "Let's try unplugging it for about fifteen seconds and plugging it back in, that forces a clean restart on the new firmware."
+      "text": "Let's try unplugging it for about fifteen seconds and plugging it back in, that forces a clean restart on the new firmware.",
+      "sentiment_score": 38.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[03:10]",
-      "end_time": "[03:20]",
       "start_time_sec": 190,
-      "end_time_sec": 200,
-      "text": "Okay, unplugging now."
+      "text": "Okay, unplugging now.",
+      "sentiment_score": 40.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[03:30]",
-      "end_time": "[03:40]",
       "start_time_sec": 210,
-      "end_time_sec": 220,
-      "text": "Alright, plugged back in, it's booting up."
+      "text": "Alright, plugged back in, it's booting up.",
+      "sentiment_score": 42.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[03:40]",
-      "end_time": "[03:50]",
       "start_time_sec": 220,
-      "end_time_sec": 230,
-      "text": "Okay, it's showing online again in the app."
+      "text": "Okay, it's showing online again in the app.",
+      "sentiment_score": 44.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[03:50]",
-      "end_time": "[04:00]",
       "start_time_sec": 230,
-      "end_time_sec": 240,
-      "text": "Good, let's test it, can you try opening the garage door from the app now?"
+      "text": "Good, let's test it, can you try opening the garage door from the app now?",
+      "sentiment_score": 46.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[04:00]",
-      "end_time": "[04:10]",
       "start_time_sec": 240,
-      "end_time_sec": 250,
-      "text": "Trying now... okay, that was actually pretty quick, maybe five seconds."
+      "text": "Trying now... okay, that was actually pretty quick, maybe five seconds.",
+      "sentiment_score": 48.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[04:10]",
-      "end_time": "[04:20]",
       "start_time_sec": 250,
-      "end_time_sec": 260,
-      "text": "That's a great sign, much better than thirty-plus. Let's test it once more just to make sure that wasn't a fluke, can you close it again from the app?"
+      "text": "That's a great sign, much better than thirty-plus. Let's test it once more just to make sure that wasn't a fluke, can you close it again from the app?",
+      "sentiment_score": 50.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[04:20]",
-      "end_time": "[04:30]",
       "start_time_sec": 260,
-      "end_time_sec": 270,
-      "text": "Sure... yeah, that was quick too, closed right away."
+      "text": "Sure... yeah, that was quick too, closed right away.",
+      "sentiment_score": 49.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[04:30]",
-      "end_time": "[04:40]",
       "start_time_sec": 270,
-      "end_time_sec": 280,
-      "text": "Excellent, two for two. My read on this is that the firmware update left the hub in a stale WiFi session, and the power cycle forced it to reconnect cleanly, which is a pretty common thing after hub firmware updates."
+      "text": "Excellent, two for two. My read on this is that the firmware update left the hub in a stale WiFi session, and the power cycle forced it to reconnect cleanly, which is a pretty common thing after hub firmware updates.",
+      "sentiment_score": 48.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[04:40]",
-      "end_time": "[04:50]",
       "start_time_sec": 280,
-      "end_time_sec": 290,
-      "text": "That makes a lot of sense, I wouldn't have thought to just unplug it."
+      "text": "That makes a lot of sense, I wouldn't have thought to just unplug it.",
+      "sentiment_score": 47.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[04:50]",
-      "end_time": "[05:00]",
       "start_time_sec": 290,
-      "end_time_sec": 300,
-      "text": "It's a really common fix that a lot of people don't think of, so no worries at all there. Going forward, if you ever get another firmware update prompt, it's worth power-cycling the hub afterward just as a precaution."
+      "text": "It's a really common fix that a lot of people don't think of, so no worries at all there. Going forward, if you ever get another firmware update prompt, it's worth power-cycling the hub afterward just as a precaution.",
+      "sentiment_score": 46.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[05:00]",
-      "end_time": "[05:10]",
       "start_time_sec": 300,
-      "end_time_sec": 310,
-      "text": "Good tip, I'll remember that for next time."
+      "text": "Good tip, I'll remember that for next time.",
+      "sentiment_score": 45.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[05:10]",
-      "end_time": "[05:20]",
       "start_time_sec": 310,
-      "end_time_sec": 320,
-      "text": "This has honestly been stressing me out all week, I was starting to think I'd need to replace the whole thing."
+      "text": "This has honestly been stressing me out all week, I was starting to think I'd need to replace the whole thing.",
+      "sentiment_score": 44.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[05:20]",
-      "end_time": "[05:30]",
       "start_time_sec": 320,
-      "end_time_sec": 330,
-      "text": "That's completely understandable, dealing with something you rely on every day acting unpredictably is genuinely stressful, and I'm really glad we found a straightforward cause instead of it being a hardware failure."
+      "text": "That's completely understandable, dealing with something you rely on every day acting unpredictably is genuinely stressful, and I'm really glad we found a straightforward cause instead of it being a hardware failure.",
+      "sentiment_score": 43.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[05:30]",
-      "end_time": "[05:40]",
       "start_time_sec": 330,
-      "end_time_sec": 340,
-      "text": "Yeah, this is a huge relief honestly."
+      "text": "Yeah, this is a huge relief honestly.",
+      "sentiment_score": 42.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[05:40]",
-      "end_time": "[05:50]",
       "start_time_sec": 340,
-      "end_time_sec": 350,
-      "text": "I'm glad we got there. While I have you, do you want me to check if there's a way to get notified automatically if the hub ever drops offline again, so you're not caught by surprise?"
+      "text": "I'm glad we got there. While I have you, do you want me to check if there's a way to get notified automatically if the hub ever drops offline again, so you're not caught by surprise?",
+      "sentiment_score": 41.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[05:50]",
-      "end_time": "[06:00]",
       "start_time_sec": 350,
-      "end_time_sec": 360,
-      "text": "Oh yeah, that'd be great actually."
+      "text": "Oh yeah, that'd be great actually.",
+      "sentiment_score": 40.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[06:00]",
-      "end_time": "[06:10]",
       "start_time_sec": 360,
-      "end_time_sec": 370,
-      "text": "Under Notifications in the app there should be a 'Device Offline Alert' toggle, let's check."
+      "text": "Under Notifications in the app there should be a 'Device Offline Alert' toggle, let's check.",
+      "sentiment_score": 39.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[06:10]",
-      "end_time": "[06:20]",
       "start_time_sec": 370,
-      "end_time_sec": 380,
-      "text": "Found it, it's off, turning it on now... done."
+      "text": "Found it, it's off, turning it on now... done.",
+      "sentiment_score": 38.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[06:20]",
-      "end_time": "[06:30]",
       "start_time_sec": 380,
-      "end_time_sec": 390,
-      "text": "Perfect, that'll give you a heads-up immediately if it ever happens again instead of you finding out the hard way."
+      "text": "Perfect, that'll give you a heads-up immediately if it ever happens again instead of you finding out the hard way.",
+      "sentiment_score": 37.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[06:30]",
-      "end_time": "[06:40]",
       "start_time_sec": 390,
-      "end_time_sec": 400,
-      "text": "That's really helpful, thank you for thinking of that."
+      "text": "That's really helpful, thank you for thinking of that.",
+      "sentiment_score": 36.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[06:40]",
-      "end_time": "[06:50]",
       "start_time_sec": 400,
-      "end_time_sec": 410,
-      "text": "Of course, happy to help set that up while we're already in there."
+      "text": "Of course, happy to help set that up while we're already in there.",
+      "sentiment_score": 35.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[06:50]",
-      "end_time": "[07:00]",
       "start_time_sec": 410,
-      "end_time_sec": 420,
-      "text": "Does the app log past connectivity issues anywhere, so I could look back if this happens again?"
+      "text": "Does the app log past connectivity issues anywhere, so I could look back if this happens again?",
+      "sentiment_score": 34.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[07:00]",
-      "end_time": "[07:10]",
       "start_time_sec": 420,
-      "end_time_sec": 430,
-      "text": "Yes, under Device History there should be a connection log with timestamps."
+      "text": "Yes, under Device History there should be a connection log with timestamps.",
+      "sentiment_score": 33.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[07:10]",
-      "end_time": "[07:20]",
       "start_time_sec": 430,
-      "end_time_sec": 440,
-      "text": "Let me check... yeah, I can see a bunch of disconnect events from the past few days, that matches what I was experiencing."
+      "text": "Let me check... yeah, I can see a bunch of disconnect events from the past few days, that matches what I was experiencing.",
+      "sentiment_score": 32.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[07:20]",
-      "end_time": "[07:30]",
       "start_time_sec": 440,
-      "end_time_sec": 450,
-      "text": "That's a good way to confirm the pattern, and going forward that log will help show whether today's fix is holding."
+      "text": "That's a good way to confirm the pattern, and going forward that log will help show whether today's fix is holding.",
+      "sentiment_score": 31.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[07:30]",
-      "end_time": "[07:40]",
       "start_time_sec": 450,
-      "end_time_sec": 460,
-      "text": "Good idea, I'll keep an eye on it."
+      "text": "Good idea, I'll keep an eye on it.",
+      "sentiment_score": 30.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[07:40]",
-      "end_time": "[07:50]",
       "start_time_sec": 460,
-      "end_time_sec": 470,
-      "text": "Out of curiosity, is there a way to add a second hub as a backup, in case this ever happens again?"
+      "text": "Out of curiosity, is there a way to add a second hub as a backup, in case this ever happens again?",
+      "sentiment_score": 29.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[07:50]",
-      "end_time": "[08:00]",
       "start_time_sec": 470,
-      "end_time_sec": 480,
-      "text": "Some garage door systems do support a secondary hub for redundancy, though it depends on your specific model, I'd have to check your device's compatibility list for that."
+      "text": "Some garage door systems do support a secondary hub for redundancy, though it depends on your specific model, I'd have to check your device's compatibility list for that.",
+      "sentiment_score": 28.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[08:00]",
-      "end_time": "[08:10]",
       "start_time_sec": 480,
-      "end_time_sec": 490,
-      "text": "No worries, just curious, not urgent."
+      "text": "No worries, just curious, not urgent.",
+      "sentiment_score": 27.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[08:10]",
-      "end_time": "[08:20]",
       "start_time_sec": 490,
-      "end_time_sec": 500,
-      "text": "Totally fair, if you ever want to look into it later just give us a call and we can check compatibility together."
+      "text": "Totally fair, if you ever want to look into it later just give us a call and we can check compatibility together.",
+      "sentiment_score": 26.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[08:20]",
-      "end_time": "[08:30]",
       "start_time_sec": 500,
-      "end_time_sec": 510,
-      "text": "Will do. Does the hub need any special maintenance going forward, or is it mostly set and forget?"
+      "text": "Will do. Does the hub need any special maintenance going forward, or is it mostly set and forget?",
+      "sentiment_score": 25.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[08:30]",
-      "end_time": "[08:40]",
       "start_time_sec": 510,
-      "end_time_sec": 520,
-      "text": "Mostly set and forget, just keeping it plugged in and letting firmware updates apply is usually all it needs."
+      "text": "Mostly set and forget, just keeping it plugged in and letting firmware updates apply is usually all it needs.",
+      "sentiment_score": 24.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[08:40]",
-      "end_time": "[08:50]",
       "start_time_sec": 520,
-      "end_time_sec": 530,
-      "text": "Good, simple enough."
+      "text": "Good, simple enough.",
+      "sentiment_score": 23.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[08:50]",
-      "end_time": "[09:00]",
       "start_time_sec": 530,
-      "end_time_sec": 540,
-      "text": "Is there a way to see the app version I'm running too, just to make sure that's current as well?"
+      "text": "Is there a way to see the app version I'm running too, just to make sure that's current as well?",
+      "sentiment_score": 22.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[09:00]",
-      "end_time": "[09:10]",
       "start_time_sec": 540,
-      "end_time_sec": 550,
-      "text": "Yes, under the app's main Settings menu there should be an 'About' section showing the version number."
+      "text": "Yes, under the app's main Settings menu there should be an 'About' section showing the version number.",
+      "sentiment_score": 21.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[09:10]",
-      "end_time": "[09:20]",
       "start_time_sec": 550,
-      "end_time_sec": 560,
-      "text": "Let me check... it says I'm on the latest version already."
+      "text": "Let me check... it says I'm on the latest version already.",
+      "sentiment_score": 20.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[09:20]",
-      "end_time": "[09:30]",
       "start_time_sec": 560,
-      "end_time_sec": 570,
-      "text": "Perfect, one less thing to worry about then."
+      "text": "Perfect, one less thing to worry about then.",
+      "sentiment_score": 19.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[09:30]",
-      "end_time": "[09:40]",
       "start_time_sec": 570,
-      "end_time_sec": 580,
-      "text": "Does the app support multiple users, like if my spouse wants to control the garage door from her phone too?"
+      "text": "Does the app support multiple users, like if my spouse wants to control the garage door from her phone too?",
+      "sentiment_score": 18.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[09:40]",
-      "end_time": "[09:50]",
       "start_time_sec": 580,
-      "end_time_sec": 590,
-      "text": "Yes, under Household Members you can invite her with her email and she'll get her own access from her own device."
+      "text": "Yes, under Household Members you can invite her with her email and she'll get her own access from her own device.",
+      "sentiment_score": 17.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[09:50]",
-      "end_time": "[10:00]",
       "start_time_sec": 590,
-      "end_time_sec": 600,
-      "text": "Oh good, she's been wanting that, I'll set it up after this call."
+      "text": "Oh good, she's been wanting that, I'll set it up after this call.",
+      "sentiment_score": 16.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[10:00]",
-      "end_time": "[10:10]",
       "start_time_sec": 600,
-      "end_time_sec": 610,
-      "text": "That's a quick setup, shouldn't take more than a minute or two."
+      "text": "That's a quick setup, shouldn't take more than a minute or two.",
+      "sentiment_score": 15.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[10:10]",
-      "end_time": "[10:20]",
       "start_time_sec": 610,
-      "end_time_sec": 620,
-      "text": "Great. Does she get her own notification settings too, or does it copy mine?"
+      "text": "Great. Does she get her own notification settings too, or does it copy mine?",
+      "sentiment_score": 14.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[10:20]",
-      "end_time": "[10:30]",
       "start_time_sec": 620,
-      "end_time_sec": 630,
-      "text": "Her own, each household member can customize their own alert preferences independently."
+      "text": "Her own, each household member can customize their own alert preferences independently.",
+      "sentiment_score": 17.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[10:30]",
-      "end_time": "[10:40]",
       "start_time_sec": 630,
-      "end_time_sec": 640,
-      "text": "Perfect, she doesn't need every single notification like I do."
+      "text": "Perfect, she doesn't need every single notification like I do.",
+      "sentiment_score": 20.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[10:40]",
-      "end_time": "[10:50]",
       "start_time_sec": 640,
-      "end_time_sec": 650,
-      "text": "Makes sense, that flexibility is there for exactly that reason."
+      "text": "Makes sense, that flexibility is there for exactly that reason.",
+      "sentiment_score": 23.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[10:50]",
-      "end_time": "[11:00]",
       "start_time_sec": 650,
-      "end_time_sec": 660,
-      "text": "While I've got you, does the garage door hub support voice assistant integration, like asking it to open through a smart speaker?"
+      "text": "While I've got you, does the garage door hub support voice assistant integration, like asking it to open through a smart speaker?",
+      "sentiment_score": 26.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[11:00]",
-      "end_time": "[11:10]",
       "start_time_sec": 660,
-      "end_time_sec": 670,
-      "text": "It does, under Integrations in the app you should see options for the major voice assistant platforms to link up."
+      "text": "It does, under Integrations in the app you should see options for the major voice assistant platforms to link up.",
+      "sentiment_score": 29.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[11:10]",
-      "end_time": "[11:20]",
       "start_time_sec": 670,
-      "end_time_sec": 680,
-      "text": "Oh nice, I didn't realize that was even possible, I'll look into setting that up."
+      "text": "Oh nice, I didn't realize that was even possible, I'll look into setting that up.",
+      "sentiment_score": 32.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[11:20]",
-      "end_time": "[11:30]",
       "start_time_sec": 680,
-      "end_time_sec": 690,
-      "text": "It's a nice convenience once it's linked, definitely worth trying."
+      "text": "It's a nice convenience once it's linked, definitely worth trying.",
+      "sentiment_score": 35.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[11:30]",
-      "end_time": "[11:40]",
       "start_time_sec": 690,
-      "end_time_sec": 700,
-      "text": "Is there a security concern with linking it to a voice assistant, like someone yelling 'open the garage' from outside?"
+      "text": "Is there a security concern with linking it to a voice assistant, like someone yelling 'open the garage' from outside?",
+      "sentiment_score": 38.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[11:40]",
-      "end_time": "[11:50]",
       "start_time_sec": 700,
-      "end_time_sec": 710,
-      "text": "Good question, most platforms let you require a PIN confirmation for security-sensitive actions like garage doors specifically, worth enabling that if you do link it."
+      "text": "Good question, most platforms let you require a PIN confirmation for security-sensitive actions like garage doors specifically, worth enabling that if you do link it.",
+      "sentiment_score": 41.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[11:50]",
-      "end_time": "[12:00]",
       "start_time_sec": 710,
-      "end_time_sec": 720,
-      "text": "Good to know, I'll make sure to turn that on if I set it up."
+      "text": "Good to know, I'll make sure to turn that on if I set it up.",
+      "sentiment_score": 44.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[12:00]",
-      "end_time": "[12:10]",
       "start_time_sec": 720,
-      "end_time_sec": 730,
-      "text": "Smart move, better safe than sorry with something like a garage door."
+      "text": "Smart move, better safe than sorry with something like a garage door.",
+      "sentiment_score": 47.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[12:10]",
-      "end_time": "[12:20]",
       "start_time_sec": 730,
-      "end_time_sec": 740,
-      "text": "Does the hub have a battery backup in case of a power outage, or does it just go offline?"
+      "text": "Does the hub have a battery backup in case of a power outage, or does it just go offline?",
+      "sentiment_score": 50.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[12:20]",
-      "end_time": "[12:30]",
       "start_time_sec": 740,
-      "end_time_sec": 750,
-      "text": "Depends on the specific model, some have a small backup battery for basic function, others don't, I'd need your exact model number to say for sure."
+      "text": "Depends on the specific model, some have a small backup battery for basic function, others don't, I'd need your exact model number to say for sure.",
+      "sentiment_score": 53.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[12:30]",
-      "end_time": "[12:40]",
       "start_time_sec": 750,
-      "end_time_sec": 760,
-      "text": "I can look that up later, not urgent right now."
+      "text": "I can look that up later, not urgent right now.",
+      "sentiment_score": 56.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[12:40]",
-      "end_time": "[12:50]",
       "start_time_sec": 760,
-      "end_time_sec": 770,
-      "text": "No rush at all, that's more of a nice-to-know than something you need today."
+      "text": "No rush at all, that's more of a nice-to-know than something you need today.",
+      "sentiment_score": 59.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[12:50]",
-      "end_time": "[13:00]",
       "start_time_sec": 770,
-      "end_time_sec": 780,
-      "text": "Does the app support scheduling, like auto-closing the garage door at a certain time every night?"
+      "text": "Does the app support scheduling, like auto-closing the garage door at a certain time every night?",
+      "sentiment_score": 62.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[13:00]",
-      "end_time": "[13:10]",
       "start_time_sec": 780,
-      "end_time_sec": 790,
-      "text": "Yes, under Automations you can set a scheduled close time, a lot of customers like that as a safety net for forgetting to close it manually."
+      "text": "Yes, under Automations you can set a scheduled close time, a lot of customers like that as a safety net for forgetting to close it manually.",
+      "sentiment_score": 65.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[13:10]",
-      "end_time": "[13:20]",
       "start_time_sec": 790,
-      "end_time_sec": 800,
-      "text": "Oh that's a great idea actually, let me set that up."
+      "text": "Oh that's a great idea actually, let me set that up.",
+      "sentiment_score": 68.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[13:20]",
-      "end_time": "[13:30]",
       "start_time_sec": 800,
-      "end_time_sec": 810,
-      "text": "Okay, setting it to auto-close at 10pm... done."
+      "text": "Okay, setting it to auto-close at 10pm... done.",
+      "sentiment_score": 71.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[13:30]",
-      "end_time": "[13:40]",
       "start_time_sec": 810,
-      "end_time_sec": 820,
-      "text": "Perfect, that's a nice extra layer of peace of mind on top of everything else."
+      "text": "Perfect, that's a nice extra layer of peace of mind on top of everything else.",
+      "sentiment_score": 74.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[13:40]",
-      "end_time": "[13:50]",
       "start_time_sec": 820,
-      "end_time_sec": 830,
-      "text": "Definitely. Does it send a notification when the scheduled close actually happens, so I know it worked?"
+      "text": "Definitely. Does it send a notification when the scheduled close actually happens, so I know it worked?",
+      "sentiment_score": 77.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[13:50]",
-      "end_time": "[14:00]",
       "start_time_sec": 830,
-      "end_time_sec": 840,
-      "text": "Yes, you'll get a push notification confirming it closed at the scheduled time."
+      "text": "Yes, you'll get a push notification confirming it closed at the scheduled time.",
+      "sentiment_score": 80.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[14:00]",
-      "end_time": "[14:10]",
       "start_time_sec": 840,
-      "end_time_sec": 850,
-      "text": "Great, that's reassuring."
+      "text": "Great, that's reassuring.",
+      "sentiment_score": 83.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[14:10]",
-      "end_time": "[14:20]",
       "start_time_sec": 850,
-      "end_time_sec": 860,
-      "text": "Is there a way to see a history of every time the door was opened or closed, like an activity log?"
+      "text": "Is there a way to see a history of every time the door was opened or closed, like an activity log?",
+      "sentiment_score": 86.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[14:20]",
-      "end_time": "[14:30]",
       "start_time_sec": 860,
-      "end_time_sec": 870,
-      "text": "Yes, under Activity History there's a full log of every open and close event with timestamps."
+      "text": "Yes, under Activity History there's a full log of every open and close event with timestamps.",
+      "sentiment_score": 89.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[14:30]",
-      "end_time": "[14:40]",
       "start_time_sec": 870,
-      "end_time_sec": 880,
-      "text": "That's useful, I'll check that occasionally."
+      "text": "That's useful, I'll check that occasionally.",
+      "sentiment_score": 92.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[14:40]",
-      "end_time": "[14:50]",
       "start_time_sec": 880,
-      "end_time_sec": 890,
-      "text": "It's a good habit, especially early on while you're keeping an eye on things after today."
+      "text": "It's a good habit, especially early on while you're keeping an eye on things after today.",
+      "sentiment_score": 95.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[14:50]",
-      "end_time": "[15:00]",
       "start_time_sec": 890,
-      "end_time_sec": 900,
-      "text": "Makes sense. Does the app let me set up geofencing, like auto-opening when my phone gets close to home?"
+      "text": "Makes sense. Does the app let me set up geofencing, like auto-opening when my phone gets close to home?",
+      "sentiment_score": 98.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[15:00]",
-      "end_time": "[15:10]",
       "start_time_sec": 900,
-      "end_time_sec": 910,
-      "text": "It does, under Automations there should be a Geofence option where you can set a radius around your home."
+      "text": "It does, under Automations there should be a Geofence option where you can set a radius around your home.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[15:10]",
-      "end_time": "[15:20]",
       "start_time_sec": 910,
-      "end_time_sec": 920,
-      "text": "Oh I've been wanting that for a while, let me set it up."
+      "text": "Oh I've been wanting that for a while, let me set it up.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[15:20]",
-      "end_time": "[15:30]",
       "start_time_sec": 920,
-      "end_time_sec": 930,
-      "text": "Okay, enabling geofencing now with a quarter mile radius... done."
+      "text": "Okay, enabling geofencing now with a quarter mile radius... done.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[15:30]",
-      "end_time": "[15:40]",
       "start_time_sec": 930,
-      "end_time_sec": 940,
-      "text": "Nice, that should make coming home a lot more convenient."
+      "text": "Nice, that should make coming home a lot more convenient.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[15:40]",
-      "end_time": "[15:50]",
       "start_time_sec": 940,
-      "end_time_sec": 950,
-      "text": "Definitely. Does geofencing drain phone battery much, I've heard that about some apps?"
+      "text": "Definitely. Does geofencing drain phone battery much, I've heard that about some apps?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[15:50]",
-      "end_time": "[16:00]",
       "start_time_sec": 950,
-      "end_time_sec": 960,
-      "text": "It uses some location services in the background, but most people don't notice a significant battery impact, it's pretty efficient these days."
+      "text": "It uses some location services in the background, but most people don't notice a significant battery impact, it's pretty efficient these days.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[16:00]",
-      "end_time": "[16:10]",
       "start_time_sec": 960,
-      "end_time_sec": 970,
-      "text": "Good to know, I'll keep an eye on it just in case."
+      "text": "Good to know, I'll keep an eye on it just in case.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[16:10]",
-      "end_time": "[16:20]",
       "start_time_sec": 970,
-      "end_time_sec": 980,
-      "text": "Does the hub support any other smart home platforms besides what we mentioned earlier for voice assistants?"
+      "text": "Does the hub support any other smart home platforms besides what we mentioned earlier for voice assistants?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[16:20]",
-      "end_time": "[16:30]",
       "start_time_sec": 980,
-      "end_time_sec": 990,
-      "text": "It integrates with most of the major smart home hubs too, if you use a central smart home app you can likely add it there as well."
+      "text": "It integrates with most of the major smart home hubs too, if you use a central smart home app you can likely add it there as well.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[16:30]",
-      "end_time": "[16:40]",
       "start_time_sec": 990,
-      "end_time_sec": 1000,
-      "text": "Oh that's helpful, I do use one for my lights, I'll add it there too."
+      "text": "Oh that's helpful, I do use one for my lights, I'll add it there too.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[16:40]",
-      "end_time": "[16:50]",
       "start_time_sec": 1000,
-      "end_time_sec": 1010,
-      "text": "That should give you one consolidated place to manage everything, definitely worth doing."
+      "text": "That should give you one consolidated place to manage everything, definitely worth doing.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[16:50]",
-      "end_time": "[17:00]",
       "start_time_sec": 1010,
-      "end_time_sec": 1020,
-      "text": "Good idea. Does linking it to another platform cause any conflicts with the S-Net app control?"
+      "text": "Good idea. Does linking it to another platform cause any conflicts with the S-Net app control?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[17:00]",
-      "end_time": "[17:10]",
       "start_time_sec": 1020,
-      "end_time_sec": 1030,
-      "text": "No, they can coexist fine, you'll just have two ways to control the same device, which some people actually prefer."
+      "text": "No, they can coexist fine, you'll just have two ways to control the same device, which some people actually prefer.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[17:10]",
-      "end_time": "[17:20]",
       "start_time_sec": 1030,
-      "end_time_sec": 1040,
-      "text": "Good, I like having options."
+      "text": "Good, I like having options.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[17:20]",
-      "end_time": "[17:30]",
       "start_time_sec": 1040,
-      "end_time_sec": 1050,
-      "text": "Is there a limit to how many automations I can set up total?"
+      "text": "Is there a limit to how many automations I can set up total?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[17:30]",
-      "end_time": "[17:40]",
       "start_time_sec": 1050,
-      "end_time_sec": 1060,
-      "text": "There's a fairly generous limit, most households never come close to hitting it even with several automations running."
+      "text": "There's a fairly generous limit, most households never come close to hitting it even with several automations running.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[17:40]",
-      "end_time": "[17:50]",
       "start_time_sec": 1060,
-      "end_time_sec": 1070,
-      "text": "Good, I might end up adding a few more over time."
+      "text": "Good, I might end up adding a few more over time.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[17:50]",
-      "end_time": "[18:00]",
       "start_time_sec": 1070,
-      "end_time_sec": 1080,
-      "text": "That's exactly what the feature's there for."
+      "text": "That's exactly what the feature's there for.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[18:00]",
-      "end_time": "[18:10]",
       "start_time_sec": 1080,
-      "end_time_sec": 1090,
-      "text": "This has genuinely been a great call, way more helpful than I expected honestly."
+      "text": "This has genuinely been a great call, way more helpful than I expected honestly.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[18:10]",
-      "end_time": "[18:20]",
       "start_time_sec": 1090,
-      "end_time_sec": 1100,
-      "text": "That really means a lot, thank you for saying so."
+      "text": "That really means a lot, thank you for saying so.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[18:20]",
-      "end_time": "[18:30]",
       "start_time_sec": 1100,
-      "end_time_sec": 1110,
-      "text": "Fair enough. I think that covers pretty much everything on my end for now, this has been really thorough, thank you."
+      "text": "Fair enough. I think that covers pretty much everything on my end for now, this has been really thorough, thank you.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[18:30]",
-      "end_time": "[18:40]",
       "start_time_sec": 1110,
-      "end_time_sec": 1120,
-      "text": "Glad I could help walk through all of it with you."
+      "text": "Glad I could help walk through all of it with you.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[18:40]",
-      "end_time": "[18:50]",
       "start_time_sec": 1120,
-      "end_time_sec": 1130,
-      "text": "Actually one more thing, is there a recommended interval for manually checking firmware, or does it always just prompt me?"
+      "text": "Actually one more thing, is there a recommended interval for manually checking firmware, or does it always just prompt me?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[18:50]",
-      "end_time": "[19:00]",
       "start_time_sec": 1130,
-      "end_time_sec": 1140,
-      "text": "It'll always prompt you automatically when an update's available, so you don't need to manually check, just remember to power-cycle afterward like we talked about."
+      "text": "It'll always prompt you automatically when an update's available, so you don't need to manually check, just remember to power-cycle afterward like we talked about.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[19:00]",
-      "end_time": "[19:10]",
       "start_time_sec": 1140,
-      "end_time_sec": 1150,
-      "text": "Got it, I'll remember that going forward."
+      "text": "Got it, I'll remember that going forward.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[19:10]",
-      "end_time": "[19:20]",
       "start_time_sec": 1150,
-      "end_time_sec": 1160,
-      "text": "Perfect. Anything else I can help you with today?"
+      "text": "Perfect. Anything else I can help you with today?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[19:20]",
-      "end_time": "[19:30]",
       "start_time_sec": 1160,
-      "end_time_sec": 1170,
-      "text": "Actually, does S-Net send reminders before future firmware updates, or do they just happen silently?"
+      "text": "Actually, does S-Net send reminders before future firmware updates, or do they just happen silently?",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[19:30]",
-      "end_time": "[19:40]",
       "start_time_sec": 1170,
-      "end_time_sec": 1180,
-      "text": "They typically show as an in-app prompt rather than happening silently, so you should see it before it applies."
+      "text": "They typically show as an in-app prompt rather than happening silently, so you should see it before it applies.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[19:40]",
-      "end_time": "[19:50]",
       "start_time_sec": 1180,
-      "end_time_sec": 1190,
-      "text": "Good, I'll watch for that and remember to power-cycle after."
+      "text": "Good, I'll watch for that and remember to power-cycle after.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[19:50]",
-      "end_time": "[20:00]",
       "start_time_sec": 1190,
-      "end_time_sec": 1200,
-      "text": "That'll keep you ahead of this kind of thing going forward."
+      "text": "That'll keep you ahead of this kind of thing going forward.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Customer",
-      "start_time": "[20:00]",
-      "end_time": "[20:10]",
       "start_time_sec": 1200,
-      "end_time_sec": 1210,
-      "text": "No, I think that's everything, thanks again Elena."
+      "text": "No, I think that's everything, thanks again Elena.",
+      "sentiment_score": 100.0
     },
     {
       "speaker": "Agent",
-      "start_time": "[20:10]",
-      "end_time": "[20:20]",
       "start_time_sec": 1210,
-      "end_time_sec": 1220,
-      "text": "Thank you for choosing S-Net."
+      "text": "Thank you for choosing S-Net.",
+      "sentiment_score": 100.0
     }
   ],
   "tenant_id": "tenant-abc",
-  "customer_name": "John",
-  "sentiment_scores": [
-    2.0,
-    4.0,
-    6.0,
-    8.0,
-    10.0,
-    12.0,
-    14.0,
-    16.0,
-    18.0,
-    20.0,
-    22.0,
-    24.0,
-    26.0,
-    28.0,
-    30.0,
-    32.0,
-    34.0,
-    36.0,
-    38.0,
-    40.0,
-    42.0,
-    44.0,
-    46.0,
-    48.0,
-    50.0,
-    49.0,
-    48.0,
-    47.0,
-    46.0,
-    45.0,
-    44.0,
-    43.0,
-    42.0,
-    41.0,
-    40.0,
-    39.0,
-    38.0,
-    37.0,
-    36.0,
-    35.0,
-    34.0,
-    33.0,
-    32.0,
-    31.0,
-    30.0,
-    29.0,
-    28.0,
-    27.0,
-    26.0,
-    25.0,
-    24.0,
-    23.0,
-    22.0,
-    21.0,
-    20.0,
-    19.0,
-    18.0,
-    17.0,
-    16.0,
-    15.0,
-    14.0,
-    17.0,
-    20.0,
-    23.0,
-    26.0,
-    29.0,
-    32.0,
-    35.0,
-    38.0,
-    41.0,
-    44.0,
-    47.0,
-    50.0,
-    53.0,
-    56.0,
-    59.0,
-    62.0,
-    65.0,
-    68.0,
-    71.0,
-    74.0,
-    77.0,
-    80.0,
-    83.0,
-    86.0,
-    89.0,
-    92.0,
-    95.0,
-    98.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0,
-    100.0
-  ]
+  "customer_name": "James"
 }

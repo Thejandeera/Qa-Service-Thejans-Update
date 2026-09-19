@@ -37,10 +37,8 @@ import requests
 class Turn(BaseModel):
     speaker: str
     text: str
-    start_time: Optional[str] = None
-    end_time: Optional[str] = None
     start_time_sec: Optional[int] = 0
-    end_time_sec: Optional[int] = 0
+    sentiment_score: Optional[float] = 0.0
 
 class EvaluateRequest(BaseModel):
     transcript: Union[List[Turn], str]
@@ -50,7 +48,6 @@ class EvaluateRequest(BaseModel):
     agent_name: Optional[str] = "Agent"
     custom_prompt: Optional[str] = None
     customer_name: Optional[str] = None
-    sentiment_scores: Optional[List[float]] = None
 
 @app.get("/api/samples")
 def list_sample_inputs():
@@ -93,8 +90,7 @@ def evaluate_tenant_transcript(req: EvaluateRequest):
         args=[transcript_payload, criteria_data, req.tenant_id, req.channel or "Call"],
         kwargs={
             "custom_prompt": req.custom_prompt,
-            "caller": req.customer_name,
-            "sentiment_scores": req.sentiment_scores
+            "caller": req.customer_name
         }
     )
 

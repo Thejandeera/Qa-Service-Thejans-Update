@@ -114,8 +114,7 @@ def evaluate_interaction(
     channel: str = "Call",
     times: Optional[List[Optional[int]]] = None,
     custom_prompt: Optional[str] = None,
-    caller: Optional[str] = None,
-    sentiment_scores: Optional[List[float]] = None
+    caller: Optional[str] = None
 ) -> Dict[str, Any]:
     from src.services.rule_engine import (
         evaluate_branding, evaluate_hold_and_dead_air, 
@@ -130,7 +129,7 @@ def evaluate_interaction(
     agent_lines = []
     customer_lines = []
     customer_name = caller or ""
-    sentiment_scores = sentiment_scores or []
+    sentiment_scores = [t.get('sentiment_score', 0.0) for t in transcript_data] if isinstance(transcript_data, list) else []
     
     if isinstance(transcript_data, list):
         for turn in transcript_data:
