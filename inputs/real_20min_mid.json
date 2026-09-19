@@ -1,0 +1,1169 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:00]",
+      "end_time": "[00:10]",
+      "start_time_sec": 0,
+      "end_time_sec": 10,
+      "text": "Thank you for calling S-Net, my name is Ravi, how can I help you today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:10]",
+      "end_time": "[00:20]",
+      "start_time_sec": 10,
+      "end_time_sec": 20,
+      "text": "Hi Ravi, I'm having trouble with my smart home devices, my light switches and my video doorbell keep going offline randomly, mostly in the evenings."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:20]",
+      "end_time": "[00:30]",
+      "start_time_sec": 20,
+      "end_time_sec": 30,
+      "text": "Sorry to hear that, let's get it sorted for you. Can I grab your account number, PIN, and the name on the account first?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:30]",
+      "end_time": "[00:40]",
+      "start_time_sec": 30,
+      "end_time_sec": 40,
+      "text": "Sure, account is 512-330-871, PIN is 6620, and it's under Priya Nair."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:40]",
+      "end_time": "[00:50]",
+      "start_time_sec": 40,
+      "end_time_sec": 50,
+      "text": "Perfect, Priya, that all matches, you're verified. So just to confirm what I'm hearing: your smart switches and doorbell camera are dropping off your WiFi network intermittently, and it seems to happen more in the evenings specifically, is that right?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:50]",
+      "end_time": "[01:00]",
+      "start_time_sec": 50,
+      "end_time_sec": 60,
+      "text": "Exactly right, yeah. During the day it's mostly fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:00]",
+      "end_time": "[01:10]",
+      "start_time_sec": 60,
+      "end_time_sec": 70,
+      "text": "Got it, that evening pattern is a useful clue. How long has this been going on?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:10]",
+      "end_time": "[01:20]",
+      "start_time_sec": 70,
+      "end_time_sec": 80,
+      "text": "About a week and a half now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:20]",
+      "end_time": "[01:30]",
+      "start_time_sec": 80,
+      "end_time_sec": 90,
+      "text": "Okay, and did anything change around when it started, new devices added, router moved, anything like that?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:30]",
+      "end_time": "[01:40]",
+      "start_time_sec": 90,
+      "end_time_sec": 100,
+      "text": "Actually yeah, we added a couple more smart plugs last weekend, right before it got worse."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:40]",
+      "end_time": "[01:50]",
+      "start_time_sec": 100,
+      "end_time_sec": 110,
+      "text": "That's a really useful detail. How many smart devices total are on your WiFi now, roughly?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:50]",
+      "end_time": "[02:00]",
+      "start_time_sec": 110,
+      "end_time_sec": 120,
+      "text": "Let me think... probably around fourteen now, between switches, plugs, the doorbell, and a couple of speakers."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:00]",
+      "end_time": "[02:10]",
+      "start_time_sec": 120,
+      "end_time_sec": 130,
+      "text": "Fourteen is a decent number. Are they all on the same WiFi network, or do you have a separate one for smart devices?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:10]",
+      "end_time": "[02:20]",
+      "start_time_sec": 130,
+      "end_time_sec": 140,
+      "text": "Just the one main network, everything's on it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:20]",
+      "end_time": "[02:30]",
+      "start_time_sec": 140,
+      "end_time_sec": 150,
+      "text": "Okay. And when it happens in the evening, is it all the devices at once, or does it seem more staggered?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:30]",
+      "end_time": "[02:40]",
+      "start_time_sec": 150,
+      "end_time_sec": 160,
+      "text": "More staggered actually, like one device drops, then a few minutes later a different one."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:40]",
+      "end_time": "[02:50]",
+      "start_time_sec": 160,
+      "end_time_sec": 170,
+      "text": "That staggered pattern combined with the evening timing and the added devices is pointing toward something specific. Does your household do a lot more WiFi usage in the evenings, streaming, gaming, video calls, that kind of thing?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:50]",
+      "end_time": "[03:00]",
+      "start_time_sec": 170,
+      "end_time_sec": 180,
+      "text": "Yeah actually, that's pretty much exactly when everyone's home streaming shows and my husband games online."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:00]",
+      "end_time": "[03:10]",
+      "start_time_sec": 180,
+      "end_time_sec": 190,
+      "text": "That lines up well. A lot of routers have a limit on how many simultaneous device connections they handle smoothly, and streaming plus gaming traffic competing with fourteen smart devices for airtime can cause exactly this kind of staggered dropout, especially on an older or entry-level router."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:10]",
+      "end_time": "[03:20]",
+      "start_time_sec": 190,
+      "end_time_sec": 200,
+      "text": "That actually makes a lot of sense, we never really thought about it that way."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:20]",
+      "end_time": "[03:30]",
+      "start_time_sec": 200,
+      "end_time_sec": 210,
+      "text": "How old is your current router, do you know?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:30]",
+      "end_time": "[03:40]",
+      "start_time_sec": 210,
+      "end_time_sec": 220,
+      "text": "It's the one you guys gave us, so probably three or four years old at this point."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:40]",
+      "end_time": "[03:50]",
+      "start_time_sec": 220,
+      "end_time_sec": 230,
+      "text": "Okay, that's a bit dated for handling this many devices plus heavy evening streaming and gaming. Let's check a couple of things before jumping to hardware though. Does the router have a 5 gigahertz band separate from the 2.4, and do you know which one the smart devices are on?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:50]",
+      "end_time": "[04:00]",
+      "start_time_sec": 230,
+      "end_time_sec": 240,
+      "text": "I think they're mostly on the 2.4 one, that's usually the default for smart home stuff isn't it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:00]",
+      "end_time": "[04:10]",
+      "start_time_sec": 240,
+      "end_time_sec": 250,
+      "text": "Right, most smart plugs and switches only support 2.4 gigahertz, which is also the band your phones and laptops often default to as well, so it gets congested fast with that many devices sharing it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:10]",
+      "end_time": "[04:20]",
+      "start_time_sec": 250,
+      "end_time_sec": 260,
+      "text": "So too many things crammed onto one band basically."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:20]",
+      "end_time": "[04:30]",
+      "start_time_sec": 260,
+      "end_time_sec": 270,
+      "text": "Exactly. Let's check the router's connected devices list if you can pull that up, do you have the app or the web login handy?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:30]",
+      "end_time": "[04:40]",
+      "start_time_sec": 270,
+      "end_time_sec": 280,
+      "text": "Yeah, let me open the app."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:40]",
+      "end_time": "[04:50]",
+      "start_time_sec": 280,
+      "end_time_sec": 290,
+      "text": "Okay, I'm in the connected devices screen."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:50]",
+      "end_time": "[05:00]",
+      "start_time_sec": 290,
+      "end_time_sec": 300,
+      "text": "Great, does it show a total count, and does it separate 2.4 versus 5 gigahertz connections?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:00]",
+      "end_time": "[05:10]",
+      "start_time_sec": 300,
+      "end_time_sec": 310,
+      "text": "It shows nineteen total connected devices, and yeah there's a band column, looks like fifteen are on 2.4."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:10]",
+      "end_time": "[05:20]",
+      "start_time_sec": 310,
+      "end_time_sec": 320,
+      "text": "Nineteen total with fifteen crowding the 2.4 band is genuinely a lot for an older router, that strongly supports the congestion theory, especially with the evening usage spike on top of it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:20]",
+      "end_time": "[05:30]",
+      "start_time_sec": 320,
+      "end_time_sec": 330,
+      "text": "Wow, I had no idea it was that crowded."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:30]",
+      "end_time": "[05:40]",
+      "start_time_sec": 330,
+      "end_time_sec": 340,
+      "text": "It sneaks up gradually as you add devices over time. Let's try a couple of things. First, can you check if there's a QoS or Quality of Service setting in the app?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:40]",
+      "end_time": "[05:50]",
+      "start_time_sec": 340,
+      "end_time_sec": 350,
+      "text": "Let me look... yeah, there's a QoS tab, it's currently off."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:50]",
+      "end_time": "[06:00]",
+      "start_time_sec": 350,
+      "end_time_sec": 360,
+      "text": "Let's turn that on, it prioritizes traffic so streaming and gaming don't completely starve out your smart devices' connections."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:00]",
+      "end_time": "[06:10]",
+      "start_time_sec": 360,
+      "end_time_sec": 370,
+      "text": "Okay, toggling it on now... done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:10]",
+      "end_time": "[06:20]",
+      "start_time_sec": 370,
+      "end_time_sec": 380,
+      "text": "Good. Next, is your video doorbell on battery or wired power?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:20]",
+      "end_time": "[06:30]",
+      "start_time_sec": 380,
+      "end_time_sec": 390,
+      "text": "Battery."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:30]",
+      "end_time": "[06:40]",
+      "start_time_sec": 390,
+      "end_time_sec": 400,
+      "text": "Battery-powered doorbells sometimes go into a deeper power-saving sleep between events, which can look like a dropout even when it's not really a WiFi problem specifically. Does the doorbell app show a low battery warning at all?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:40]",
+      "end_time": "[06:50]",
+      "start_time_sec": 400,
+      "end_time_sec": 410,
+      "text": "Let me check... no, it says seventy-eight percent, so that's probably not it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:50]",
+      "end_time": "[07:00]",
+      "start_time_sec": 410,
+      "end_time_sec": 420,
+      "text": "Good to rule that out then, so this really does look like it's the network congestion. One more thing, does the router support creating a separate WiFi network just for smart devices, sometimes called an IoT network?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:00]",
+      "end_time": "[07:10]",
+      "start_time_sec": 420,
+      "end_time_sec": 430,
+      "text": "I'm not sure, I've never looked for that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:10]",
+      "end_time": "[07:20]",
+      "start_time_sec": 430,
+      "end_time_sec": 440,
+      "text": "Let's check together, look under WiFi settings for something like 'Guest Network' or 'IoT Network'."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:20]",
+      "end_time": "[07:30]",
+      "start_time_sec": 440,
+      "end_time_sec": 450,
+      "text": "Found a Guest Network option, is that the same thing?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:30]",
+      "end_time": "[07:40]",
+      "start_time_sec": 450,
+      "end_time_sec": 460,
+      "text": "It can work similarly, some routers let you rename it as a smart-home network specifically. Go ahead and enable it if you can, then we can start moving your smart devices onto that instead of your main network."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:40]",
+      "end_time": "[07:50]",
+      "start_time_sec": 460,
+      "end_time_sec": 470,
+      "text": "Okay, enabling it now... done, it's asking me to set a name and password."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:50]",
+      "end_time": "[08:00]",
+      "start_time_sec": 470,
+      "end_time_sec": 480,
+      "text": "Go ahead and set those, then we'll walk through re-pairing a couple of your smart plugs onto it as a test."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:00]",
+      "end_time": "[08:10]",
+      "start_time_sec": 480,
+      "end_time_sec": 490,
+      "text": "Okay, named it and set a password, ready when you are."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:10]",
+      "end_time": "[08:20]",
+      "start_time_sec": 490,
+      "end_time_sec": 500,
+      "text": "Great, pick one smart plug and open its app, then look for 'Change WiFi Network' or similar in its settings."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:20]",
+      "end_time": "[08:30]",
+      "start_time_sec": 500,
+      "end_time_sec": 510,
+      "text": "Found it, changing to the new network now... okay, it says connected."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:30]",
+      "end_time": "[08:40]",
+      "start_time_sec": 510,
+      "end_time_sec": 520,
+      "text": "Perfect, that's exactly what we want to see. Over the next day or two, if you move the rest of your smart devices onto that dedicated network the same way, your main network will have a lot more room for streaming and gaming, and the smart devices won't be competing with them anymore."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:40]",
+      "end_time": "[08:50]",
+      "start_time_sec": 520,
+      "end_time_sec": 530,
+      "text": "That's honestly a really clear explanation, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:50]",
+      "end_time": "[09:00]",
+      "start_time_sec": 530,
+      "end_time_sec": 540,
+      "text": "This whole thing has been kind of a headache though, especially since it started right after I added new devices I paid good money for."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:00]",
+      "end_time": "[09:10]",
+      "start_time_sec": 540,
+      "end_time_sec": 550,
+      "text": "Well, adding a bunch of new gadgets and expecting the same router to just handle it forever isn't really realistic, that's kind of just how home networks work as you scale up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:10]",
+      "end_time": "[09:20]",
+      "start_time_sec": 550,
+      "end_time_sec": 560,
+      "text": "I mean, sure, but it would've been nice to know that before I bought them."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:20]",
+      "end_time": "[09:30]",
+      "start_time_sec": 560,
+      "end_time_sec": 570,
+      "text": "That's not really something we'd proactively tell customers honestly, it's more on the individual to research that kind of thing beforehand."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:30]",
+      "end_time": "[09:40]",
+      "start_time_sec": 570,
+      "end_time_sec": 580,
+      "text": "Okay, fair enough I guess."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:40]",
+      "end_time": "[09:50]",
+      "start_time_sec": 580,
+      "end_time_sec": 590,
+      "text": "Anyway, let's keep going, do you want me to walk you through moving the doorbell over to the new network too?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:50]",
+      "end_time": "[10:00]",
+      "start_time_sec": 590,
+      "end_time_sec": 600,
+      "text": "Sure, that'd be great."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:00]",
+      "end_time": "[10:10]",
+      "start_time_sec": 600,
+      "end_time_sec": 610,
+      "text": "Open the doorbell app, go to Device Settings, then WiFi, same idea as the plug."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:10]",
+      "end_time": "[10:20]",
+      "start_time_sec": 610,
+      "end_time_sec": 620,
+      "text": "Okay... it's asking to re-pair from scratch, is that normal?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:20]",
+      "end_time": "[10:30]",
+      "start_time_sec": 620,
+      "end_time_sec": 630,
+      "text": "Yes, doorbells often need a fresh pairing rather than a simple network switch, just follow the prompts, it usually takes about two minutes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:40]",
+      "end_time": "[10:50]",
+      "start_time_sec": 640,
+      "end_time_sec": 650,
+      "text": "Okay, going through the pairing steps now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:50]",
+      "end_time": "[11:00]",
+      "start_time_sec": 650,
+      "end_time_sec": 660,
+      "text": "Alright, it's showing connected and I can see live video again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:00]",
+      "end_time": "[11:10]",
+      "start_time_sec": 660,
+      "end_time_sec": 670,
+      "text": "Perfect, that's a good sign it picked up the new network cleanly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:10]",
+      "end_time": "[11:20]",
+      "start_time_sec": 670,
+      "end_time_sec": 680,
+      "text": "Should I move the light switches too, or leave those for now?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:20]",
+      "end_time": "[11:30]",
+      "start_time_sec": 680,
+      "end_time_sec": 690,
+      "text": "I'd recommend moving them over the next day or two as you have time, no rush, just prioritize whichever devices matter most to you first."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:30]",
+      "end_time": "[11:40]",
+      "start_time_sec": 690,
+      "end_time_sec": 700,
+      "text": "Makes sense, I'll probably do the doorbell and a couple of key switches tonight."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:40]",
+      "end_time": "[11:50]",
+      "start_time_sec": 700,
+      "end_time_sec": 710,
+      "text": "That's a good approach. While we're at it, do you want me to check if your account is eligible for a router upgrade, since this one is getting a bit old for your setup?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:50]",
+      "end_time": "[12:00]",
+      "start_time_sec": 710,
+      "end_time_sec": 720,
+      "text": "Yeah, that'd be helpful actually."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:58]",
+      "end_time": "[12:08]",
+      "start_time_sec": 718,
+      "end_time_sec": 728,
+      "text": "Let me pull that up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:08]",
+      "end_time": "[12:18]",
+      "start_time_sec": 728,
+      "end_time_sec": 738,
+      "text": "Looks like you're eligible for a free upgrade to a newer mesh-capable router given your account tenure."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:18]",
+      "end_time": "[12:28]",
+      "start_time_sec": 738,
+      "end_time_sec": 748,
+      "text": "Oh nice, would that help with this specific issue too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:28]",
+      "end_time": "[12:38]",
+      "start_time_sec": 748,
+      "end_time_sec": 758,
+      "text": "It would, a newer router handles a lot more simultaneous connections and has better band management built in, so it would reduce a lot of this congestion on its own even before the network split we just did."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:38]",
+      "end_time": "[12:48]",
+      "start_time_sec": 758,
+      "end_time_sec": 768,
+      "text": "That sounds great, how would I go about getting that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:48]",
+      "end_time": "[12:58]",
+      "start_time_sec": 768,
+      "end_time_sec": 778,
+      "text": "I can request the shipment for you right now if you'd like."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:58]",
+      "end_time": "[13:08]",
+      "start_time_sec": 778,
+      "end_time_sec": 788,
+      "text": "Yes please, let's do that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:08]",
+      "end_time": "[13:18]",
+      "start_time_sec": 788,
+      "end_time_sec": 798,
+      "text": "Requesting it now... done, you should see it in five to seven business days."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:18]",
+      "end_time": "[13:28]",
+      "start_time_sec": 798,
+      "end_time_sec": 808,
+      "text": "Perfect, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:28]",
+      "end_time": "[13:38]",
+      "start_time_sec": 808,
+      "end_time_sec": 818,
+      "text": "Is there a fee for that upgrade at all?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:38]",
+      "end_time": "[13:48]",
+      "start_time_sec": 818,
+      "end_time_sec": 828,
+      "text": "No, it's included with your current plan tier, no charge."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:48]",
+      "end_time": "[13:58]",
+      "start_time_sec": 828,
+      "end_time_sec": 838,
+      "text": "Great, one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:58]",
+      "end_time": "[14:08]",
+      "start_time_sec": 838,
+      "end_time_sec": 848,
+      "text": "Does the new router come pre-configured, or will I need to set everything up again from scratch?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:08]",
+      "end_time": "[14:18]",
+      "start_time_sec": 848,
+      "end_time_sec": 858,
+      "text": "You'll need to set your network name and password again, but I can send you a quick setup guide link after this call so it's straightforward."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:18]",
+      "end_time": "[14:28]",
+      "start_time_sec": 858,
+      "end_time_sec": 868,
+      "text": "That would be really helpful, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:28]",
+      "end_time": "[14:38]",
+      "start_time_sec": 868,
+      "end_time_sec": 878,
+      "text": "One more thing, should I keep the smart-device network separate even after the new router arrives?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:38]",
+      "end_time": "[14:48]",
+      "start_time_sec": 878,
+      "end_time_sec": 888,
+      "text": "Yes, I'd keep that separation going forward regardless, it's just generally a healthier setup for a home with this many connected devices."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:48]",
+      "end_time": "[14:58]",
+      "start_time_sec": 888,
+      "end_time_sec": 898,
+      "text": "Good to know, I'll keep it that way then."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:58]",
+      "end_time": "[15:08]",
+      "start_time_sec": 898,
+      "end_time_sec": 908,
+      "text": "Is there anything else I should be doing in the meantime while I wait for the new router?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:08]",
+      "end_time": "[15:18]",
+      "start_time_sec": 908,
+      "end_time_sec": 918,
+      "text": "Just keep moving devices over to the smart-home network as you get a chance, and leave QoS enabled, that combination should meaningfully cut down the evening dropouts even before the new router shows up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:18]",
+      "end_time": "[15:28]",
+      "start_time_sec": 918,
+      "end_time_sec": 928,
+      "text": "Okay, that's a solid plan, I appreciate you walking through all of this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:28]",
+      "end_time": "[15:38]",
+      "start_time_sec": 928,
+      "end_time_sec": 938,
+      "text": "This has actually restored some of my faith after that comment earlier about researching things myself."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:38]",
+      "end_time": "[15:48]",
+      "start_time_sec": 938,
+      "end_time_sec": 948,
+      "text": "Fair enough, let's just focus on getting you sorted."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:48]",
+      "end_time": "[15:58]",
+      "start_time_sec": 948,
+      "end_time_sec": 958,
+      "text": "Sounds good. Is there a way to see historical connection drops, so I can tell if tonight's actually better?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:58]",
+      "end_time": "[16:08]",
+      "start_time_sec": 958,
+      "end_time_sec": 968,
+      "text": "Under the app's Device History tab there should be a connectivity log you can check tomorrow morning to compare against tonight."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:08]",
+      "end_time": "[16:18]",
+      "start_time_sec": 968,
+      "end_time_sec": 978,
+      "text": "Perfect, I'll check that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:18]",
+      "end_time": "[16:28]",
+      "start_time_sec": 978,
+      "end_time_sec": 988,
+      "text": "Do you think fourteen smart devices is actually a lot, or is that pretty normal these days?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:28]",
+      "end_time": "[16:38]",
+      "start_time_sec": 988,
+      "end_time_sec": 998,
+      "text": "It's on the higher side for an older router but very normal for a newer mesh setup, so you're not doing anything unusual, the hardware just needed to catch up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:38]",
+      "end_time": "[16:48]",
+      "start_time_sec": 998,
+      "end_time_sec": 1008,
+      "text": "Good to know, wasn't sure if we'd gone overboard."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:48]",
+      "end_time": "[16:58]",
+      "start_time_sec": 1008,
+      "end_time_sec": 1018,
+      "text": "Not at all, smart home setups like yours are getting more common all the time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:58]",
+      "end_time": "[17:08]",
+      "start_time_sec": 1018,
+      "end_time_sec": 1028,
+      "text": "That's reassuring. Do the smart plugs need any special settings once they're on the new network, or is it plug and play?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:08]",
+      "end_time": "[17:18]",
+      "start_time_sec": 1028,
+      "end_time_sec": 1038,
+      "text": "Should be plug and play once you re-pair them, no special settings needed beyond picking the new network name."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:18]",
+      "end_time": "[17:28]",
+      "start_time_sec": 1038,
+      "end_time_sec": 1048,
+      "text": "Great, that simplifies things."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:28]",
+      "end_time": "[17:38]",
+      "start_time_sec": 1048,
+      "end_time_sec": 1058,
+      "text": "One last thing, is there a limit to how many devices that Guest or IoT network can support?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:38]",
+      "end_time": "[17:48]",
+      "start_time_sec": 1058,
+      "end_time_sec": 1068,
+      "text": "Typically similar limits to your main network, so you'll have plenty of headroom for your current fourteen devices and then some."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:48]",
+      "end_time": "[17:58]",
+      "start_time_sec": 1068,
+      "end_time_sec": 1078,
+      "text": "Perfect, that answers everything I think."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:58]",
+      "end_time": "[18:08]",
+      "start_time_sec": 1078,
+      "end_time_sec": 1088,
+      "text": "Actually, one more, does the mesh router come with more than one unit, or just the one base station?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:08]",
+      "end_time": "[18:18]",
+      "start_time_sec": 1088,
+      "end_time_sec": 1098,
+      "text": "For your plan tier it ships with one base unit, but you can add satellite nodes separately later if you ever need wider coverage."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:18]",
+      "end_time": "[18:28]",
+      "start_time_sec": 1098,
+      "end_time_sec": 1108,
+      "text": "Good to know, our house isn't too big so probably won't need that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:28]",
+      "end_time": "[18:38]",
+      "start_time_sec": 1108,
+      "end_time_sec": 1118,
+      "text": "That's usually the case for most single-story homes, one unit is typically plenty."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:38]",
+      "end_time": "[18:48]",
+      "start_time_sec": 1118,
+      "end_time_sec": 1128,
+      "text": "Does the setup guide you mentioned cover the smart-home network split too, or just basic setup?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:48]",
+      "end_time": "[18:58]",
+      "start_time_sec": 1128,
+      "end_time_sec": 1138,
+      "text": "It covers both, there's a dedicated section for setting up a secondary IoT network on the new router."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:58]",
+      "end_time": "[19:08]",
+      "start_time_sec": 1138,
+      "end_time_sec": 1148,
+      "text": "Perfect, that'll be really helpful when it arrives."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:08]",
+      "end_time": "[19:18]",
+      "start_time_sec": 1148,
+      "end_time_sec": 1158,
+      "text": "Should I expect any downtime when I swap routers over?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:18]",
+      "end_time": "[19:28]",
+      "start_time_sec": 1158,
+      "end_time_sec": 1168,
+      "text": "Just a few minutes while it reboots and devices reconnect, nothing major."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:28]",
+      "end_time": "[19:38]",
+      "start_time_sec": 1168,
+      "end_time_sec": 1178,
+      "text": "Good, I'll plan to do it on a weekend just in case."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:38]",
+      "end_time": "[19:48]",
+      "start_time_sec": 1178,
+      "end_time_sec": 1188,
+      "text": "That's a smart way to approach it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:48]",
+      "end_time": "[19:58]",
+      "start_time_sec": 1188,
+      "end_time_sec": 1198,
+      "text": "Is there a way to track the shipment once it's sent?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:58]",
+      "end_time": "[20:08]",
+      "start_time_sec": 1198,
+      "end_time_sec": 1208,
+      "text": "Yes, you'll get a tracking link by email once it ships, usually within a day or two."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:08]",
+      "end_time": "[20:18]",
+      "start_time_sec": 1208,
+      "end_time_sec": 1218,
+      "text": "Great, I'll keep an eye out for that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:18]",
+      "end_time": "[20:28]",
+      "start_time_sec": 1218,
+      "end_time_sec": 1228,
+      "text": "Last thing, does the doorbell need to be re-paired again once the new router arrives, or will it carry over?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:28]",
+      "end_time": "[20:38]",
+      "start_time_sec": 1228,
+      "end_time_sec": 1238,
+      "text": "You'll need to re-pair it once more to the new router's network, same quick process as today."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:38]",
+      "end_time": "[20:48]",
+      "start_time_sec": 1238,
+      "end_time_sec": 1248,
+      "text": "Okay, good to know ahead of time so it's not a surprise."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:48]",
+      "end_time": "[20:58]",
+      "start_time_sec": 1248,
+      "end_time_sec": 1258,
+      "text": "Exactly, I'd rather you know now than be caught off guard later."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:58]",
+      "end_time": "[21:08]",
+      "start_time_sec": 1258,
+      "end_time_sec": 1268,
+      "text": "I appreciate that, thanks again for all the help today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:08]",
+      "end_time": "[21:18]",
+      "start_time_sec": 1268,
+      "end_time_sec": 1278,
+      "text": "Of course, glad we got a good plan together."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:18]",
+      "end_time": "[21:28]",
+      "start_time_sec": 1278,
+      "end_time_sec": 1288,
+      "text": "Thanks so much for the thorough help, Ravi."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:28]",
+      "end_time": "[21:38]",
+      "start_time_sec": 1288,
+      "end_time_sec": 1298,
+      "text": "Thank you for choosing S-Net."
+    }
+  ],
+  "tenant_id": "tenant-abc",
+  "customer_name": "John",
+  "sentiment_scores": [
+    -3.0,
+    -6.0,
+    -9.0,
+    -12.0,
+    -15.0,
+    -18.0,
+    -21.0,
+    -24.0,
+    -27.0,
+    -30.0,
+    -33.0,
+    -36.0,
+    -39.0,
+    -42.0,
+    -45.0,
+    -48.0,
+    -51.0,
+    -54.0,
+    -57.0,
+    -60.0,
+    -63.0,
+    -66.0,
+    -69.0,
+    -72.0,
+    -75.0,
+    -78.0,
+    -81.0,
+    -84.0,
+    -87.0,
+    -90.0,
+    -93.0,
+    -96.0,
+    -99.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -99.0,
+    -98.0,
+    -97.0,
+    -96.0,
+    -95.0,
+    -94.0,
+    -93.0,
+    -92.0,
+    -91.0,
+    -90.0,
+    -89.0,
+    -88.0,
+    -87.0,
+    -86.0,
+    -85.0,
+    -84.0,
+    -83.0,
+    -82.0,
+    -81.0,
+    -80.0,
+    -79.0,
+    -78.0,
+    -77.0,
+    -76.0,
+    -75.0,
+    -74.0,
+    -73.0,
+    -72.0,
+    -71.0,
+    -70.0,
+    -69.0,
+    -68.0,
+    -67.0,
+    -66.0,
+    -65.0,
+    -64.0,
+    -63.0,
+    -62.0,
+    -61.0,
+    -59.0,
+    -57.0,
+    -55.0,
+    -53.0,
+    -51.0,
+    -49.0,
+    -47.0,
+    -45.0,
+    -43.0,
+    -41.0,
+    -39.0,
+    -37.0,
+    -35.0,
+    -33.0,
+    -31.0,
+    -29.0,
+    -27.0,
+    -25.0,
+    -23.0,
+    -21.0,
+    -19.0,
+    -17.0,
+    -15.0,
+    -13.0,
+    -11.0,
+    -9.0,
+    -7.0,
+    -5.0,
+    -3.0,
+    -1.0,
+    1.0,
+    3.0,
+    5.0,
+    7.0,
+    9.0,
+    11.0,
+    13.0,
+    15.0,
+    17.0,
+    19.0,
+    21.0,
+    23.0,
+    25.0,
+    27.0,
+    29.0,
+    31.0,
+    33.0,
+    35.0,
+    37.0,
+    39.0,
+    41.0
+  ]
+}

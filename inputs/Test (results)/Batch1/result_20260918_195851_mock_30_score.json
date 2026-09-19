@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 23.3,
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "FAIL",
+        "coaching": "Agent missed verbatim scripts for: Greeting, Closing"
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "FAIL",
+        "coaching": "Ask the customer to confirm their account information to ensure you're speaking with the correct person."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call/ticket appropriately",
+        "rating": "FAIL",
+        "coaching": "Use the customer's name and reference their specific issue to show you're addressing their unique concern."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment Statement",
+        "rating": "FAIL",
+        "coaching": "Start the call with a genuine expression of understanding and apology for the inconvenience they're experiencing."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "FAIL",
+        "coaching": "Repeat back what you've understood from the customer's issue to ensure you're on the right track and to show you're actively listening."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "FAIL",
+        "coaching": "Use polite language and a friendly tone to create a welcoming atmosphere and establish trust with the customer."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "NO",
+        "coaching": "Ask open-ended questions to gather more information about the issue and to clarify any unclear points."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "YES",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Confirmed the issue is resolved",
+        "rating": "NO",
+        "coaching": "Explicitly state that the issue has been resolved and ask the customer to confirm they're satisfied with the outcome."
+      }
+    ],
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "evaluation_id": "92ab8a7e-c940-419a-a007-cdfd529196f2"
+  }
+}

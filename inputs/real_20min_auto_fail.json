@@ -1,0 +1,1097 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:00]",
+      "end_time": "[00:10]",
+      "start_time_sec": 0,
+      "end_time_sec": 10,
+      "text": "Support, what do you need."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:10]",
+      "end_time": "[00:20]",
+      "start_time_sec": 10,
+      "end_time_sec": 20,
+      "text": "Hi, I'm looking at my bill and I'm being charged for a premium package I never signed up for, it's an extra forty dollars."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:20]",
+      "end_time": "[00:30]",
+      "start_time_sec": 20,
+      "end_time_sec": 30,
+      "text": "Okay, what's the account."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:30]",
+      "end_time": "[00:40]",
+      "start_time_sec": 30,
+      "end_time_sec": 40,
+      "text": "340-772-196."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:40]",
+      "end_time": "[00:50]",
+      "start_time_sec": 40,
+      "end_time_sec": 50,
+      "text": "And what's the charge exactly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:50]",
+      "end_time": "[01:00]",
+      "start_time_sec": 50,
+      "end_time_sec": 60,
+      "text": "It says 'Premium Sports Tier', forty dollars, I've never watched a sports channel in my life."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:00]",
+      "end_time": "[01:10]",
+      "start_time_sec": 60,
+      "end_time_sec": 70,
+      "text": "Sometimes those get added during promotions."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:10]",
+      "end_time": "[01:20]",
+      "start_time_sec": 70,
+      "end_time_sec": 80,
+      "text": "I never agreed to any promotion though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:20]",
+      "end_time": "[01:30]",
+      "start_time_sec": 80,
+      "end_time_sec": 90,
+      "text": "It happens automatically sometimes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:30]",
+      "end_time": "[01:40]",
+      "start_time_sec": 90,
+      "end_time_sec": 100,
+      "text": "That doesn't sound right, can you actually look into why it's on my account?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:40]",
+      "end_time": "[01:50]",
+      "start_time_sec": 100,
+      "end_time_sec": 110,
+      "text": "I mean it's just there, not much to look into really."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:50]",
+      "end_time": "[02:00]",
+      "start_time_sec": 110,
+      "end_time_sec": 120,
+      "text": "Something doesn't just appear on a bill for no reason."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:00]",
+      "end_time": "[02:10]",
+      "start_time_sec": 120,
+      "end_time_sec": 130,
+      "text": "Stuff happens, systems aren't perfect."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:10]",
+      "end_time": "[02:20]",
+      "start_time_sec": 130,
+      "end_time_sec": 140,
+      "text": "When exactly did this charge start showing up, do you have a date?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:20]",
+      "end_time": "[02:30]",
+      "start_time_sec": 140,
+      "end_time_sec": 150,
+      "text": "Says it started last billing cycle."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:30]",
+      "end_time": "[02:40]",
+      "start_time_sec": 150,
+      "end_time_sec": 160,
+      "text": "So about a month then. Is there any note on the account about why it was added?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:40]",
+      "end_time": "[02:50]",
+      "start_time_sec": 160,
+      "end_time_sec": 170,
+      "text": "Nothing specific showing here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:50]",
+      "end_time": "[03:00]",
+      "start_time_sec": 170,
+      "end_time_sec": 180,
+      "text": "That seems like something that should be logged somewhere."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:00]",
+      "end_time": "[03:10]",
+      "start_time_sec": 180,
+      "end_time_sec": 190,
+      "text": "Not always, depends on how it got added."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:10]",
+      "end_time": "[03:20]",
+      "start_time_sec": 190,
+      "end_time_sec": 200,
+      "text": "Can you at least tell me if it was something I clicked, or something added on your end?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:20]",
+      "end_time": "[03:30]",
+      "start_time_sec": 200,
+      "end_time_sec": 210,
+      "text": "Hard to say from here honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:30]",
+      "end_time": "[03:40]",
+      "start_time_sec": 210,
+      "end_time_sec": 220,
+      "text": "That's a pretty important thing not to know."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:40]",
+      "end_time": "[03:50]",
+      "start_time_sec": 220,
+      "end_time_sec": 230,
+      "text": "I just see what's on the screen, not the whole history."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:50]",
+      "end_time": "[04:00]",
+      "start_time_sec": 230,
+      "end_time_sec": 240,
+      "text": "Is there someone who can see the whole history then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:00]",
+      "end_time": "[04:10]",
+      "start_time_sec": 240,
+      "end_time_sec": 250,
+      "text": "Maybe billing, again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:10]",
+      "end_time": "[04:20]",
+      "start_time_sec": 250,
+      "end_time_sec": 260,
+      "text": "Everything keeps going back to billing."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:20]",
+      "end_time": "[04:30]",
+      "start_time_sec": 260,
+      "end_time_sec": 270,
+      "text": "That's kind of their department, yeah."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:30]",
+      "end_time": "[04:40]",
+      "start_time_sec": 270,
+      "end_time_sec": 280,
+      "text": "Are there any other charges on my account I should double check while we're at it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:40]",
+      "end_time": "[04:50]",
+      "start_time_sec": 280,
+      "end_time_sec": 290,
+      "text": "I mean I could read the whole bill to you if you want."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:50]",
+      "end_time": "[05:00]",
+      "start_time_sec": 290,
+      "end_time_sec": 300,
+      "text": "That would actually be helpful, yes."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:00]",
+      "end_time": "[05:10]",
+      "start_time_sec": 300,
+      "end_time_sec": 310,
+      "text": "Internet service, standard fee, premium sports tier forty dollars, equipment rental, taxes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:10]",
+      "end_time": "[05:20]",
+      "start_time_sec": 310,
+      "end_time_sec": 320,
+      "text": "Wait, equipment rental? I own my own router."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:20]",
+      "end_time": "[05:30]",
+      "start_time_sec": 320,
+      "end_time_sec": 330,
+      "text": "Says rental here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:30]",
+      "end_time": "[05:40]",
+      "start_time_sec": 330,
+      "end_time_sec": 340,
+      "text": "That's another charge I never agreed to then."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:40]",
+      "end_time": "[05:50]",
+      "start_time_sec": 340,
+      "end_time_sec": 350,
+      "text": "I mean it's just what the system shows."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:50]",
+      "end_time": "[06:00]",
+      "start_time_sec": 350,
+      "end_time_sec": 360,
+      "text": "So there might be two incorrect charges now, not just one."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:00]",
+      "end_time": "[06:10]",
+      "start_time_sec": 360,
+      "end_time_sec": 370,
+      "text": "Could be, not really my area to dig into why."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:10]",
+      "end_time": "[06:20]",
+      "start_time_sec": 370,
+      "end_time_sec": 380,
+      "text": "This is starting to feel like a pattern, not just one mistake."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:20]",
+      "end_time": "[06:30]",
+      "start_time_sec": 380,
+      "end_time_sec": 390,
+      "text": "I couldn't really say either way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:30]",
+      "end_time": "[06:40]",
+      "start_time_sec": 390,
+      "end_time_sec": 400,
+      "text": "Can you at least remove the equipment rental charge too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:40]",
+      "end_time": "[06:50]",
+      "start_time_sec": 400,
+      "end_time_sec": 410,
+      "text": "I can note it, same as the other one, but the removal and refund would still be a billing thing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:50]",
+      "end_time": "[07:00]",
+      "start_time_sec": 410,
+      "end_time_sec": 420,
+      "text": "So essentially you can't actually fix anything on this call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:00]",
+      "end_time": "[07:10]",
+      "start_time_sec": 420,
+      "end_time_sec": 430,
+      "text": "I can note things, that's about it from here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:10]",
+      "end_time": "[07:20]",
+      "start_time_sec": 430,
+      "end_time_sec": 440,
+      "text": "Can you remove it and refund the charge?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:20]",
+      "end_time": "[07:30]",
+      "start_time_sec": 440,
+      "end_time_sec": 450,
+      "text": "I can remove it going forward, refunds are a separate process."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:30]",
+      "end_time": "[07:40]",
+      "start_time_sec": 450,
+      "end_time_sec": 460,
+      "text": "So I just lose the forty dollars for something I never asked for?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:40]",
+      "end_time": "[07:50]",
+      "start_time_sec": 460,
+      "end_time_sec": 470,
+      "text": "That's kind of how it works unless you dispute it separately."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:50]",
+      "end_time": "[08:00]",
+      "start_time_sec": 470,
+      "end_time_sec": 480,
+      "text": "I am disputing it, right now, with you."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:00]",
+      "end_time": "[08:10]",
+      "start_time_sec": 480,
+      "end_time_sec": 490,
+      "text": "I can't personally issue refunds from this screen."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:10]",
+      "end_time": "[08:20]",
+      "start_time_sec": 490,
+      "end_time_sec": 500,
+      "text": "Then who can?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:20]",
+      "end_time": "[08:30]",
+      "start_time_sec": 500,
+      "end_time_sec": 510,
+      "text": "Billing department, different queue."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:30]",
+      "end_time": "[08:40]",
+      "start_time_sec": 510,
+      "end_time_sec": 520,
+      "text": "This is genuinely frustrating, I've been on hold for twenty minutes already before you even picked up."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:40]",
+      "end_time": "[08:50]",
+      "start_time_sec": 520,
+      "end_time_sec": 530,
+      "text": "Yeah call volume's high today."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:50]",
+      "end_time": "[09:00]",
+      "start_time_sec": 530,
+      "end_time_sec": 540,
+      "text": "That's not really addressing what I said."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:00]",
+      "end_time": "[09:10]",
+      "start_time_sec": 540,
+      "end_time_sec": 550,
+      "text": "What do you want me to say."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:10]",
+      "end_time": "[09:20]",
+      "start_time_sec": 550,
+      "end_time_sec": 560,
+      "text": "Some acknowledgment that this is a real problem would be nice."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:20]",
+      "end_time": "[09:30]",
+      "start_time_sec": 560,
+      "end_time_sec": 570,
+      "text": "Look, I hear you, but I can't do much more than remove it going forward."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:30]",
+      "end_time": "[09:40]",
+      "start_time_sec": 570,
+      "end_time_sec": 580,
+      "text": "Can you at least transfer me to billing then, without me having to call back and wait again?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:40]",
+      "end_time": "[09:50]",
+      "start_time_sec": 580,
+      "end_time_sec": 590,
+      "text": "Transfers can take a while too, might be faster to just call back."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:50]",
+      "end_time": "[10:00]",
+      "start_time_sec": 590,
+      "end_time_sec": 600,
+      "text": "That seems like a really unhelpful answer honestly."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:00]",
+      "end_time": "[10:10]",
+      "start_time_sec": 600,
+      "end_time_sec": 610,
+      "text": "It's just the reality of how the queues work."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:10]",
+      "end_time": "[10:20]",
+      "start_time_sec": 610,
+      "end_time_sec": 620,
+      "text": "Has this happened to other customers too, or is it just me?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:20]",
+      "end_time": "[10:30]",
+      "start_time_sec": 620,
+      "end_time_sec": 630,
+      "text": "No idea, I don't track that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:30]",
+      "end_time": "[10:40]",
+      "start_time_sec": 630,
+      "end_time_sec": 640,
+      "text": "It would be useful context if this is a known bug versus just my account."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:40]",
+      "end_time": "[10:50]",
+      "start_time_sec": 640,
+      "end_time_sec": 650,
+      "text": "I really wouldn't know either way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:50]",
+      "end_time": "[11:00]",
+      "start_time_sec": 650,
+      "end_time_sec": 660,
+      "text": "Is there anyone who would know that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:00]",
+      "end_time": "[11:10]",
+      "start_time_sec": 660,
+      "end_time_sec": 670,
+      "text": "Maybe a manager, maybe not even them honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:10]",
+      "end_time": "[11:20]",
+      "start_time_sec": 670,
+      "end_time_sec": 680,
+      "text": "This whole call just keeps circling back to 'I don't know'."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:20]",
+      "end_time": "[11:30]",
+      "start_time_sec": 680,
+      "end_time_sec": 690,
+      "text": "That's kind of what I've got today."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:30]",
+      "end_time": "[11:40]",
+      "start_time_sec": 690,
+      "end_time_sec": 700,
+      "text": "Can you check if my account has any credits available at least, for the inconvenience?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:40]",
+      "end_time": "[11:50]",
+      "start_time_sec": 700,
+      "end_time_sec": 710,
+      "text": "Not something I can apply from here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:50]",
+      "end_time": "[12:00]",
+      "start_time_sec": 710,
+      "end_time_sec": 720,
+      "text": "Who can apply that then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:00]",
+      "end_time": "[12:10]",
+      "start_time_sec": 720,
+      "end_time_sec": 730,
+      "text": "Probably billing, or a supervisor maybe."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:10]",
+      "end_time": "[12:20]",
+      "start_time_sec": 730,
+      "end_time_sec": 740,
+      "text": "Everything keeps needing someone else."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:20]",
+      "end_time": "[12:30]",
+      "start_time_sec": 740,
+      "end_time_sec": 750,
+      "text": "That's just how it's split up here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:30]",
+      "end_time": "[12:40]",
+      "start_time_sec": 750,
+      "end_time_sec": 760,
+      "text": "Can you send me something in writing confirming these two charges are disputed, at least?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:40]",
+      "end_time": "[12:50]",
+      "start_time_sec": 760,
+      "end_time_sec": 770,
+      "text": "I can add a note, not sure it generates anything you'd actually get emailed."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:50]",
+      "end_time": "[13:00]",
+      "start_time_sec": 770,
+      "end_time_sec": 780,
+      "text": "So I wouldn't even have proof this conversation happened."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:00]",
+      "end_time": "[13:10]",
+      "start_time_sec": 780,
+      "end_time_sec": 790,
+      "text": "There'd be a call log internally, just not something sent to you necessarily."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:10]",
+      "end_time": "[13:20]",
+      "start_time_sec": 790,
+      "end_time_sec": 800,
+      "text": "That's not very reassuring."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:20]",
+      "end_time": "[13:30]",
+      "start_time_sec": 800,
+      "end_time_sec": 810,
+      "text": "It's just how the system's set up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:30]",
+      "end_time": "[13:40]",
+      "start_time_sec": 810,
+      "end_time_sec": 820,
+      "text": "Is there a way to escalate this formally, like a case number or ticket?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:40]",
+      "end_time": "[13:50]",
+      "start_time_sec": 820,
+      "end_time_sec": 830,
+      "text": "Might generate one automatically, I'm not totally sure."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:50]",
+      "end_time": "[14:00]",
+      "start_time_sec": 830,
+      "end_time_sec": 840,
+      "text": "You don't seem sure about much on this call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:00]",
+      "end_time": "[14:10]",
+      "start_time_sec": 840,
+      "end_time_sec": 850,
+      "text": "I've answered what I can."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:10]",
+      "end_time": "[14:20]",
+      "start_time_sec": 850,
+      "end_time_sec": 860,
+      "text": "Is there a supervisor I could speak to about this instead?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:20]",
+      "end_time": "[14:30]",
+      "start_time_sec": 860,
+      "end_time_sec": 870,
+      "text": "They're going to tell you the same thing I'm telling you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:30]",
+      "end_time": "[14:40]",
+      "start_time_sec": 870,
+      "end_time_sec": 880,
+      "text": "I'd still like to ask, that's my right as a customer."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:40]",
+      "end_time": "[14:50]",
+      "start_time_sec": 880,
+      "end_time_sec": 890,
+      "text": "Sure, I can flag it, don't expect a fast response though."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:50]",
+      "end_time": "[15:00]",
+      "start_time_sec": 890,
+      "end_time_sec": 900,
+      "text": "Great, so nothing's actually getting resolved on this call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:00]",
+      "end_time": "[15:10]",
+      "start_time_sec": 900,
+      "end_time_sec": 910,
+      "text": "I removed the charge going forward, that's something."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:10]",
+      "end_time": "[15:20]",
+      "start_time_sec": 910,
+      "end_time_sec": 920,
+      "text": "Forty dollars I never agreed to is still just gone though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:20]",
+      "end_time": "[15:30]",
+      "start_time_sec": 920,
+      "end_time_sec": 930,
+      "text": "I already told you that's a billing thing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:30]",
+      "end_time": "[15:40]",
+      "start_time_sec": 930,
+      "end_time_sec": 940,
+      "text": "You keep saying that like it's my fault for asking."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:40]",
+      "end_time": "[15:50]",
+      "start_time_sec": 940,
+      "end_time_sec": 950,
+      "text": "I didn't say that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:50]",
+      "end_time": "[16:00]",
+      "start_time_sec": 950,
+      "end_time_sec": 960,
+      "text": "It kind of feels that way honestly, the way you're talking to me."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:00]",
+      "end_time": "[16:10]",
+      "start_time_sec": 960,
+      "end_time_sec": 970,
+      "text": "I'm just telling you how it is, not much else I can do about the tone."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:10]",
+      "end_time": "[16:20]",
+      "start_time_sec": 970,
+      "end_time_sec": 980,
+      "text": "You could at least sound like you care a little."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:20]",
+      "end_time": "[16:30]",
+      "start_time_sec": 980,
+      "end_time_sec": 990,
+      "text": "I've got a lot of calls today, not really the priority right now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:30]",
+      "end_time": "[16:40]",
+      "start_time_sec": 990,
+      "end_time_sec": 1000,
+      "text": "Wow, okay. That's a pretty bad thing to say to a paying customer."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:40]",
+      "end_time": "[16:50]",
+      "start_time_sec": 1000,
+      "end_time_sec": 1010,
+      "text": "It's just honest."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:50]",
+      "end_time": "[17:00]",
+      "start_time_sec": 1010,
+      "end_time_sec": 1020,
+      "text": "Can we please just focus on fixing this instead of you being dismissive?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:00]",
+      "end_time": "[17:10]",
+      "start_time_sec": 1020,
+      "end_time_sec": 1030,
+      "text": "I removed the charge, told you how to get the refund, what more do you want."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:10]",
+      "end_time": "[17:20]",
+      "start_time_sec": 1030,
+      "end_time_sec": 1040,
+      "text": "Some basic courtesy would be a start."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:20]",
+      "end_time": "[17:30]",
+      "start_time_sec": 1040,
+      "end_time_sec": 1050,
+      "text": "I don't really have time for a lecture on customer service right now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:30]",
+      "end_time": "[17:40]",
+      "start_time_sec": 1050,
+      "end_time_sec": 1060,
+      "text": "This is exactly the kind of thing that makes people cancel their service entirely."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:40]",
+      "end_time": "[17:50]",
+      "start_time_sec": 1060,
+      "end_time_sec": 1070,
+      "text": "Look, I've told you three times already what to do about the refund, if you don't like the answer, feel free to get lost and try a competitor."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:50]",
+      "end_time": "[18:00]",
+      "start_time_sec": 1070,
+      "end_time_sec": 1080,
+      "text": "Excuse me? That is completely unacceptable, I want your name and a supervisor right now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:00]",
+      "end_time": "[18:10]",
+      "start_time_sec": 1080,
+      "end_time_sec": 1090,
+      "text": "It's Blake, and like I said, someone will get back to you eventually."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:10]",
+      "end_time": "[18:20]",
+      "start_time_sec": 1090,
+      "end_time_sec": 1100,
+      "text": "This has been one of the worst customer service experiences I've ever had."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:20]",
+      "end_time": "[18:30]",
+      "start_time_sec": 1100,
+      "end_time_sec": 1110,
+      "text": "Noted. Anything else."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:30]",
+      "end_time": "[18:40]",
+      "start_time_sec": 1110,
+      "end_time_sec": 1120,
+      "text": "No, I'm done, I'll be filing a complaint about this entire call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:40]",
+      "end_time": "[18:50]",
+      "start_time_sec": 1120,
+      "end_time_sec": 1130,
+      "text": "Do what you need to do."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:50]",
+      "end_time": "[19:00]",
+      "start_time_sec": 1130,
+      "end_time_sec": 1140,
+      "text": "Unbelievable."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:00]",
+      "end_time": "[19:10]",
+      "start_time_sec": 1140,
+      "end_time_sec": 1150,
+      "text": "I want it on record that I was told to get lost by a support agent over a billing error."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:10]",
+      "end_time": "[19:20]",
+      "start_time_sec": 1150,
+      "end_time_sec": 1160,
+      "text": "It's on record, whatever that's worth to you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:20]",
+      "end_time": "[19:30]",
+      "start_time_sec": 1160,
+      "end_time_sec": 1170,
+      "text": "It should be worth quite a lot, honestly."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:30]",
+      "end_time": "[19:40]",
+      "start_time_sec": 1170,
+      "end_time_sec": 1180,
+      "text": "Sure. Anything else."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:40]",
+      "end_time": "[19:50]",
+      "start_time_sec": 1180,
+      "end_time_sec": 1190,
+      "text": "No. Goodbye."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:50]",
+      "end_time": "[20:00]",
+      "start_time_sec": 1190,
+      "end_time_sec": 1200,
+      "text": "Yep."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:00]",
+      "end_time": "[20:10]",
+      "start_time_sec": 1200,
+      "end_time_sec": 1210,
+      "text": "Thank you for choosing S-Net."
+    }
+  ],
+  "tenant_id": "tenant-abc",
+  "customer_name": "John",
+  "sentiment_scores": [
+    -2.0,
+    -4.0,
+    -6.0,
+    -8.0,
+    -10.0,
+    -12.0,
+    -14.0,
+    -16.0,
+    -18.0,
+    -20.0,
+    -22.0,
+    -24.0,
+    -26.0,
+    -30.0,
+    -34.0,
+    -38.0,
+    -42.0,
+    -46.0,
+    -50.0,
+    -54.0,
+    -58.0,
+    -62.0,
+    -66.0,
+    -70.0,
+    -74.0,
+    -78.0,
+    -82.0,
+    -86.0,
+    -90.0,
+    -94.0,
+    -98.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0
+  ]
+}

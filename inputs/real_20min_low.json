@@ -1,0 +1,1178 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:00]",
+      "end_time": "[00:10]",
+      "start_time_sec": 0,
+      "end_time_sec": 10,
+      "text": "Thank you for calling S-Net, go ahead."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:10]",
+      "end_time": "[00:20]",
+      "start_time_sec": 10,
+      "end_time_sec": 20,
+      "text": "Hi, yeah, my new streaming box keeps freezing and buffering every few minutes, it's basically unwatchable."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:20]",
+      "end_time": "[00:30]",
+      "start_time_sec": 20,
+      "end_time_sec": 30,
+      "text": "Can I get your account number?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:30]",
+      "end_time": "[00:40]",
+      "start_time_sec": 30,
+      "end_time_sec": 40,
+      "text": "774-201-558."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:40]",
+      "end_time": "[00:50]",
+      "start_time_sec": 40,
+      "end_time_sec": 50,
+      "text": "Got it. Is it wired or WiFi."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:50]",
+      "end_time": "[01:00]",
+      "start_time_sec": 50,
+      "end_time_sec": 60,
+      "text": "WiFi, same as my old one which worked fine."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:00]",
+      "end_time": "[01:10]",
+      "start_time_sec": 60,
+      "end_time_sec": 70,
+      "text": "New devices sometimes just do that at first."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:10]",
+      "end_time": "[01:20]",
+      "start_time_sec": 70,
+      "end_time_sec": 80,
+      "text": "It's been happening every single day for a week though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:20]",
+      "end_time": "[01:30]",
+      "start_time_sec": 80,
+      "end_time_sec": 90,
+      "text": "Yeah that happens."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:30]",
+      "end_time": "[01:40]",
+      "start_time_sec": 90,
+      "end_time_sec": 100,
+      "text": "Is there something specific you can check?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:40]",
+      "end_time": "[01:50]",
+      "start_time_sec": 100,
+      "end_time_sec": 110,
+      "text": "Try restarting it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:50]",
+      "end_time": "[02:00]",
+      "start_time_sec": 110,
+      "end_time_sec": 120,
+      "text": "I've restarted it probably ten times already."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:00]",
+      "end_time": "[02:10]",
+      "start_time_sec": 120,
+      "end_time_sec": 130,
+      "text": "Try again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:10]",
+      "end_time": "[02:20]",
+      "start_time_sec": 130,
+      "end_time_sec": 140,
+      "text": "Okay, restarting now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:20]",
+      "end_time": "[02:30]",
+      "start_time_sec": 140,
+      "end_time_sec": 150,
+      "text": "Alright, restarted, still buffering right away."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:30]",
+      "end_time": "[02:40]",
+      "start_time_sec": 150,
+      "end_time_sec": 160,
+      "text": "Huh."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:40]",
+      "end_time": "[02:50]",
+      "start_time_sec": 160,
+      "end_time_sec": 170,
+      "text": "Is my internet plan even fast enough for 4K? Nobody explained that when I bought this thing."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:50]",
+      "end_time": "[03:00]",
+      "start_time_sec": 170,
+      "end_time_sec": 180,
+      "text": "Should be fine, most plans are."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:00]",
+      "end_time": "[03:10]",
+      "start_time_sec": 180,
+      "end_time_sec": 190,
+      "text": "Can you actually check my plan speed instead of guessing?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:10]",
+      "end_time": "[03:20]",
+      "start_time_sec": 190,
+      "end_time_sec": 200,
+      "text": "I don't really have that pulled up right now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:20]",
+      "end_time": "[03:30]",
+      "start_time_sec": 200,
+      "end_time_sec": 210,
+      "text": "This is honestly pretty frustrating, I paid a lot for this box and it just doesn't work."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:30]",
+      "end_time": "[03:40]",
+      "start_time_sec": 210,
+      "end_time_sec": 220,
+      "text": "Yeah well new devices can be like that sometimes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:40]",
+      "end_time": "[03:50]",
+      "start_time_sec": 220,
+      "end_time_sec": 230,
+      "text": "That's not really addressing what I said."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:50]",
+      "end_time": "[04:00]",
+      "start_time_sec": 230,
+      "end_time_sec": 240,
+      "text": "I hear you. Anyway, is the box near the router or far?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:00]",
+      "end_time": "[04:10]",
+      "start_time_sec": 240,
+      "end_time_sec": 250,
+      "text": "It's in the living room, router's in the office, maybe twenty feet away, two walls."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:10]",
+      "end_time": "[04:20]",
+      "start_time_sec": 250,
+      "end_time_sec": 260,
+      "text": "That's probably it then, WiFi doesn't travel great through walls."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:20]",
+      "end_time": "[04:30]",
+      "start_time_sec": 260,
+      "end_time_sec": 270,
+      "text": "It never had this problem with my old box in the same spot though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:30]",
+      "end_time": "[04:40]",
+      "start_time_sec": 270,
+      "end_time_sec": 280,
+      "text": "Different devices, different antennas, that's normal."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:40]",
+      "end_time": "[04:50]",
+      "start_time_sec": 280,
+      "end_time_sec": 290,
+      "text": "Okay well what am I supposed to do about it then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:50]",
+      "end_time": "[05:00]",
+      "start_time_sec": 290,
+      "end_time_sec": 300,
+      "text": "You could move it closer I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:00]",
+      "end_time": "[05:10]",
+      "start_time_sec": 300,
+      "end_time_sec": 310,
+      "text": "The living room is where the TV is, I can't move the TV."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:10]",
+      "end_time": "[05:20]",
+      "start_time_sec": 310,
+      "end_time_sec": 320,
+      "text": "Then I don't really know what to tell you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:18]",
+      "end_time": "[05:28]",
+      "start_time_sec": 318,
+      "end_time_sec": 328,
+      "text": "Can you get your account number again, did you even pull up my account?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:28]",
+      "end_time": "[05:38]",
+      "start_time_sec": 328,
+      "end_time_sec": 338,
+      "text": "Can I get your account number again, sorry?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:38]",
+      "end_time": "[05:48]",
+      "start_time_sec": 338,
+      "end_time_sec": 348,
+      "text": "774-201-558, I already gave you that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:48]",
+      "end_time": "[05:58]",
+      "start_time_sec": 348,
+      "end_time_sec": 358,
+      "text": "Right, okay."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:58]",
+      "end_time": "[06:08]",
+      "start_time_sec": 358,
+      "end_time_sec": 368,
+      "text": "Is there a signal booster or extender you guys sell, something like that?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:08]",
+      "end_time": "[06:18]",
+      "start_time_sec": 368,
+      "end_time_sec": 378,
+      "text": "There might be, I'd have to check with sales, not really my department."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:18]",
+      "end_time": "[06:28]",
+      "start_time_sec": 378,
+      "end_time_sec": 388,
+      "text": "You're support though, can't you just look into it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:28]",
+      "end_time": "[06:38]",
+      "start_time_sec": 388,
+      "end_time_sec": 398,
+      "text": "That's more of a sales thing honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:38]",
+      "end_time": "[06:48]",
+      "start_time_sec": 398,
+      "end_time_sec": 408,
+      "text": "So you can't help with this at all?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:48]",
+      "end_time": "[06:58]",
+      "start_time_sec": 408,
+      "end_time_sec": 418,
+      "text": "Not really, no."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:58]",
+      "end_time": "[07:08]",
+      "start_time_sec": 418,
+      "end_time_sec": 428,
+      "text": "This is really not what I expected from a support call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:08]",
+      "end_time": "[07:18]",
+      "start_time_sec": 428,
+      "end_time_sec": 438,
+      "text": "Sorry you feel that way."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:18]",
+      "end_time": "[07:28]",
+      "start_time_sec": 438,
+      "end_time_sec": 448,
+      "text": "Is there literally anything else to try before I just give up?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:28]",
+      "end_time": "[07:38]",
+      "start_time_sec": 448,
+      "end_time_sec": 458,
+      "text": "You could try a wired connection if the box supports it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:38]",
+      "end_time": "[07:48]",
+      "start_time_sec": 458,
+      "end_time_sec": 468,
+      "text": "It does actually, let me check where the nearest ethernet jack is."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:48]",
+      "end_time": "[07:58]",
+      "start_time_sec": 468,
+      "end_time_sec": 478,
+      "text": "There isn't one in the living room, only in the office."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:58]",
+      "end_time": "[08:08]",
+      "start_time_sec": 478,
+      "end_time_sec": 488,
+      "text": "Then WiFi's your only option really."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:08]",
+      "end_time": "[08:18]",
+      "start_time_sec": 488,
+      "end_time_sec": 498,
+      "text": "So basically nothing can be done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:18]",
+      "end_time": "[08:28]",
+      "start_time_sec": 498,
+      "end_time_sec": 508,
+      "text": "Sounds like it, yeah."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:28]",
+      "end_time": "[08:38]",
+      "start_time_sec": 508,
+      "end_time_sec": 518,
+      "text": "Can you at least note on my account that this box has never worked properly since I got it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:38]",
+      "end_time": "[08:48]",
+      "start_time_sec": 518,
+      "end_time_sec": 528,
+      "text": "I can put something on there I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:48]",
+      "end_time": "[08:58]",
+      "start_time_sec": 528,
+      "end_time_sec": 538,
+      "text": "Please do, I don't want to have to explain all this again next time."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:58]",
+      "end_time": "[09:08]",
+      "start_time_sec": 538,
+      "end_time_sec": 548,
+      "text": "Fine, noting it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:08]",
+      "end_time": "[09:18]",
+      "start_time_sec": 548,
+      "end_time_sec": 558,
+      "text": "Is there a way to test if it's actually a bandwidth issue versus a device issue?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:18]",
+      "end_time": "[09:28]",
+      "start_time_sec": 558,
+      "end_time_sec": 568,
+      "text": "Not something I can really check from here."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:28]",
+      "end_time": "[09:38]",
+      "start_time_sec": 568,
+      "end_time_sec": 578,
+      "text": "What can you check exactly, at this point?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:38]",
+      "end_time": "[09:48]",
+      "start_time_sec": 578,
+      "end_time_sec": 588,
+      "text": "Just basic account stuff mostly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:48]",
+      "end_time": "[09:58]",
+      "start_time_sec": 588,
+      "end_time_sec": 598,
+      "text": "Okay, this whole call has been pretty useless honestly, no offense."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:58]",
+      "end_time": "[10:08]",
+      "start_time_sec": 598,
+      "end_time_sec": 608,
+      "text": "None taken I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:08]",
+      "end_time": "[10:18]",
+      "start_time_sec": 608,
+      "end_time_sec": 618,
+      "text": "Is there a supervisor or someone else who might actually know more about this?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:18]",
+      "end_time": "[10:28]",
+      "start_time_sec": 618,
+      "end_time_sec": 628,
+      "text": "You could call back another time maybe."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:28]",
+      "end_time": "[10:38]",
+      "start_time_sec": 628,
+      "end_time_sec": 638,
+      "text": "That's not really an answer either."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:38]",
+      "end_time": "[10:48]",
+      "start_time_sec": 638,
+      "end_time_sec": 648,
+      "text": "It's the best I've got."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:48]",
+      "end_time": "[10:58]",
+      "start_time_sec": 648,
+      "end_time_sec": 658,
+      "text": "Fine. Is there at least a signal strength number I could look at myself on the box?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:58]",
+      "end_time": "[11:08]",
+      "start_time_sec": 658,
+      "end_time_sec": 668,
+      "text": "Probably somewhere in its settings menu, I'm not totally sure where."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:08]",
+      "end_time": "[11:18]",
+      "start_time_sec": 668,
+      "end_time_sec": 678,
+      "text": "Okay, I'll poke around myself I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:18]",
+      "end_time": "[11:28]",
+      "start_time_sec": 678,
+      "end_time_sec": 688,
+      "text": "Found a network settings screen, it says signal strength fair, forty percent."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:28]",
+      "end_time": "[11:38]",
+      "start_time_sec": 688,
+      "end_time_sec": 698,
+      "text": "That's probably your issue then."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:38]",
+      "end_time": "[11:48]",
+      "start_time_sec": 698,
+      "end_time_sec": 708,
+      "text": "You said that about the wall distance already too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:48]",
+      "end_time": "[11:58]",
+      "start_time_sec": 708,
+      "end_time_sec": 718,
+      "text": "Could be both I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:58]",
+      "end_time": "[12:08]",
+      "start_time_sec": 718,
+      "end_time_sec": 728,
+      "text": "This isn't very reassuring."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:08]",
+      "end_time": "[12:18]",
+      "start_time_sec": 728,
+      "end_time_sec": 738,
+      "text": "It's just streaming, it's not the end of the world."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:18]",
+      "end_time": "[12:28]",
+      "start_time_sec": 738,
+      "end_time_sec": 748,
+      "text": "It's the end of the world that I paid for a service that doesn't work, yeah."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:28]",
+      "end_time": "[12:38]",
+      "start_time_sec": 748,
+      "end_time_sec": 758,
+      "text": "Fair enough I suppose."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:38]",
+      "end_time": "[12:48]",
+      "start_time_sec": 758,
+      "end_time_sec": 768,
+      "text": "Is there any kind of credit for the week this has been broken?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:48]",
+      "end_time": "[12:58]",
+      "start_time_sec": 768,
+      "end_time_sec": 778,
+      "text": "That's billing, not something I handle."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:58]",
+      "end_time": "[13:08]",
+      "start_time_sec": 778,
+      "end_time_sec": 788,
+      "text": "Can you transfer me then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:08]",
+      "end_time": "[13:18]",
+      "start_time_sec": 788,
+      "end_time_sec": 798,
+      "text": "You'd have to call that number separately."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:18]",
+      "end_time": "[13:28]",
+      "start_time_sec": 798,
+      "end_time_sec": 808,
+      "text": "Of course I would."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:28]",
+      "end_time": "[13:38]",
+      "start_time_sec": 808,
+      "end_time_sec": 818,
+      "text": "Honestly at this point I don't even know what to try next."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:38]",
+      "end_time": "[13:48]",
+      "start_time_sec": 818,
+      "end_time_sec": 828,
+      "text": "Maybe try a mesh WiFi setup down the road."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:48]",
+      "end_time": "[13:58]",
+      "start_time_sec": 828,
+      "end_time_sec": 838,
+      "text": "Is that something you all sell or install?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:58]",
+      "end_time": "[14:08]",
+      "start_time_sec": 838,
+      "end_time_sec": 848,
+      "text": "Might be, not sure, again more of a sales thing."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:08]",
+      "end_time": "[14:18]",
+      "start_time_sec": 848,
+      "end_time_sec": 858,
+      "text": "Everything's apparently a sales thing today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:18]",
+      "end_time": "[14:28]",
+      "start_time_sec": 858,
+      "end_time_sec": 868,
+      "text": "Pretty much."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:28]",
+      "end_time": "[14:38]",
+      "start_time_sec": 868,
+      "end_time_sec": 878,
+      "text": "Is the box itself even fully updated, could that be part of it?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:38]",
+      "end_time": "[14:48]",
+      "start_time_sec": 878,
+      "end_time_sec": 888,
+      "text": "Could be, I can't check firmware from my screen."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:48]",
+      "end_time": "[14:58]",
+      "start_time_sec": 888,
+      "end_time_sec": 898,
+      "text": "So basically you can't check anything today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:58]",
+      "end_time": "[15:08]",
+      "start_time_sec": 898,
+      "end_time_sec": 908,
+      "text": "Basically, yeah, sorry."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:08]",
+      "end_time": "[15:18]",
+      "start_time_sec": 908,
+      "end_time_sec": 918,
+      "text": "Alright. At this point I'll just deal with it myself I guess."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:18]",
+      "end_time": "[15:28]",
+      "start_time_sec": 918,
+      "end_time_sec": 928,
+      "text": "Probably for the best honestly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:28]",
+      "end_time": "[15:38]",
+      "start_time_sec": 928,
+      "end_time_sec": 938,
+      "text": "That's a weird thing for support to say but okay."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:38]",
+      "end_time": "[15:48]",
+      "start_time_sec": 938,
+      "end_time_sec": 948,
+      "text": "Just being real with you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:48]",
+      "end_time": "[15:58]",
+      "start_time_sec": 948,
+      "end_time_sec": 958,
+      "text": "Sure. Is there anything at all you can do before we end this call?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:58]",
+      "end_time": "[16:08]",
+      "start_time_sec": 958,
+      "end_time_sec": 968,
+      "text": "Not really, I've told you what I can."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:08]",
+      "end_time": "[16:18]",
+      "start_time_sec": 968,
+      "end_time_sec": 978,
+      "text": "Which wasn't much, but alright."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:18]",
+      "end_time": "[16:28]",
+      "start_time_sec": 978,
+      "end_time_sec": 988,
+      "text": "Noted, I guess."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:28]",
+      "end_time": "[16:38]",
+      "start_time_sec": 988,
+      "end_time_sec": 998,
+      "text": "Fine. I'll figure it out on my own then."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:38]",
+      "end_time": "[16:48]",
+      "start_time_sec": 998,
+      "end_time_sec": 1008,
+      "text": "Good luck with it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:48]",
+      "end_time": "[16:58]",
+      "start_time_sec": 1008,
+      "end_time_sec": 1018,
+      "text": "Thanks, I guess. That's everything on my end."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:58]",
+      "end_time": "[17:08]",
+      "start_time_sec": 1018,
+      "end_time_sec": 1028,
+      "text": "Actually wait, one more thing, does the box even have a warranty I could use instead?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:08]",
+      "end_time": "[17:18]",
+      "start_time_sec": 1028,
+      "end_time_sec": 1038,
+      "text": "Probably, not something I check."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:18]",
+      "end_time": "[17:28]",
+      "start_time_sec": 1038,
+      "end_time_sec": 1048,
+      "text": "Who would check that then?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:28]",
+      "end_time": "[17:38]",
+      "start_time_sec": 1048,
+      "end_time_sec": 1058,
+      "text": "Maybe the store you bought it from."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:38]",
+      "end_time": "[17:48]",
+      "start_time_sec": 1058,
+      "end_time_sec": 1068,
+      "text": "I bought it directly from you guys though."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:48]",
+      "end_time": "[17:58]",
+      "start_time_sec": 1068,
+      "end_time_sec": 1078,
+      "text": "Then maybe billing again."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:58]",
+      "end_time": "[18:08]",
+      "start_time_sec": 1078,
+      "end_time_sec": 1088,
+      "text": "Everything keeps going back to billing or sales today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:08]",
+      "end_time": "[18:18]",
+      "start_time_sec": 1088,
+      "end_time_sec": 1098,
+      "text": "That's kind of how the departments split up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:18]",
+      "end_time": "[18:28]",
+      "start_time_sec": 1098,
+      "end_time_sec": 1108,
+      "text": "Seems like support doesn't actually do much then."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:28]",
+      "end_time": "[18:38]",
+      "start_time_sec": 1108,
+      "end_time_sec": 1118,
+      "text": "We handle what we handle."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:38]",
+      "end_time": "[18:48]",
+      "start_time_sec": 1118,
+      "end_time_sec": 1128,
+      "text": "Is there at least a ticket number for this call so I'm not starting from zero next time?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:48]",
+      "end_time": "[18:58]",
+      "start_time_sec": 1128,
+      "end_time_sec": 1138,
+      "text": "Should generate one automatically."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:58]",
+      "end_time": "[19:08]",
+      "start_time_sec": 1138,
+      "end_time_sec": 1148,
+      "text": "Can you read it to me so I have it written down?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:08]",
+      "end_time": "[19:18]",
+      "start_time_sec": 1148,
+      "end_time_sec": 1158,
+      "text": "I don't see it on my screen yet, it usually shows up after."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:18]",
+      "end_time": "[19:28]",
+      "start_time_sec": 1158,
+      "end_time_sec": 1168,
+      "text": "Convenient."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:28]",
+      "end_time": "[19:38]",
+      "start_time_sec": 1168,
+      "end_time_sec": 1178,
+      "text": "Not really my system, just how it works."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:38]",
+      "end_time": "[19:48]",
+      "start_time_sec": 1178,
+      "end_time_sec": 1188,
+      "text": "Is there anything I should try tonight versus waiting for a callback?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:48]",
+      "end_time": "[19:58]",
+      "start_time_sec": 1188,
+      "end_time_sec": 1198,
+      "text": "Restarting again I guess, or the wired option if you ever get a jack run out there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:58]",
+      "end_time": "[20:08]",
+      "start_time_sec": 1198,
+      "end_time_sec": 1208,
+      "text": "Running a new ethernet line sounds like a whole project just to watch TV."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:08]",
+      "end_time": "[20:18]",
+      "start_time_sec": 1208,
+      "end_time_sec": 1218,
+      "text": "Yeah probably."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:18]",
+      "end_time": "[20:28]",
+      "start_time_sec": 1218,
+      "end_time_sec": 1228,
+      "text": "This has honestly been one of the most unhelpful calls I've had with any company."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:28]",
+      "end_time": "[20:38]",
+      "start_time_sec": 1228,
+      "end_time_sec": 1238,
+      "text": "Sorry you feel that way, some days are just like this."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:38]",
+      "end_time": "[20:48]",
+      "start_time_sec": 1238,
+      "end_time_sec": 1248,
+      "text": "That's not really on me though, is it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:48]",
+      "end_time": "[20:58]",
+      "start_time_sec": 1248,
+      "end_time_sec": 1258,
+      "text": "Didn't say it was."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[20:58]",
+      "end_time": "[21:08]",
+      "start_time_sec": 1258,
+      "end_time_sec": 1268,
+      "text": "Alright, I really do need to go at this point."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:08]",
+      "end_time": "[21:18]",
+      "start_time_sec": 1268,
+      "end_time_sec": 1278,
+      "text": "Sounds good."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[21:18]",
+      "end_time": "[21:28]",
+      "start_time_sec": 1278,
+      "end_time_sec": 1288,
+      "text": "Thanks, I guess. That's everything on my end."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[21:28]",
+      "end_time": "[21:38]",
+      "start_time_sec": 1288,
+      "end_time_sec": 1298,
+      "text": "Thank you for choosing S-Net."
+    }
+  ],
+  "tenant_id": "tenant-abc",
+  "customer_name": "John",
+  "sentiment_scores": [
+    -2.0,
+    -4.0,
+    -6.0,
+    -8.0,
+    -10.0,
+    -12.0,
+    -14.0,
+    -16.0,
+    -18.0,
+    -20.0,
+    -22.0,
+    -24.0,
+    -26.0,
+    -30.0,
+    -34.0,
+    -38.0,
+    -42.0,
+    -46.0,
+    -50.0,
+    -54.0,
+    -58.0,
+    -62.0,
+    -66.0,
+    -70.0,
+    -74.0,
+    -78.0,
+    -82.0,
+    -86.0,
+    -90.0,
+    -94.0,
+    -98.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0,
+    -100.0
+  ]
+}

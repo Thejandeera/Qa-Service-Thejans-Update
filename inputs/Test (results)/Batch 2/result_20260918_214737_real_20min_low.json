@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "result": {
+    "final_score": 16.7,
+    "scorecard": [
+      {
+        "category": "Soft Skills",
+        "name": "Branding and Survey Check",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Hold time and Dead Air",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Verified customer",
+        "rating": "FAIL",
+        "coaching": "Verify the customer's identity and confirm their account information to ensure you're speaking with the correct person."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Personalized the call/ticket appropriately",
+        "rating": "FAIL",
+        "coaching": "Tailor your communication to the customer's specific needs and preferences to build rapport and trust."
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Empathy & Acknowledgment Statement",
+        "rating": "FAIL",
+        "coaching": "Acknowledge the customer's frustration and show understanding of their situation to diffuse tension and build rapport."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Paraphrasing",
+        "rating": "FAIL",
+        "coaching": "Repeat back what you've understood from the customer's issue to ensure you're on the same page and to show you're actively listening."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Active listening",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Soft Skills",
+        "name": "Build rapport and observed professionalism",
+        "rating": "PASS",
+        "coaching": ""
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Probing",
+        "rating": "NO",
+        "coaching": "Ask diagnostic questions to clarify the customer's problem and gather more information to provide a more effective solution."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Took ownership of the problem",
+        "rating": "NO",
+        "coaching": "Take responsibility for resolving the issue and avoid blaming other departments or the customer to show accountability and professionalism."
+      },
+      {
+        "category": "Technical Knowledge",
+        "name": "Confirmed the issue is resolved",
+        "rating": "NO",
+        "coaching": "Explicitly confirm with the customer that the issue has been resolved to ensure they're satisfied and to prevent future escalations."
+      }
+    ],
+    "is_auto_fail": false,
+    "auto_fail_reason": null,
+    "evaluation_id": "1fb4b9ab-5449-435f-8252-da83039c1194"
+  }
+}

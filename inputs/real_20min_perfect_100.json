@@ -1,0 +1,1097 @@
+{
+  "transcript": [
+    {
+      "speaker": "Agent",
+      "start_time": "[00:00]",
+      "end_time": "[00:10]",
+      "start_time_sec": 0,
+      "end_time_sec": 10,
+      "text": "Thank you for calling S-Net, my name is Sofia, how can I help you today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:10]",
+      "end_time": "[00:20]",
+      "start_time_sec": 10,
+      "end_time_sec": 20,
+      "text": "Hi Sofia, my video doorbell notifications have been arriving really late, like three to five minutes after someone's actually at the door, which kind of defeats the purpose."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:20]",
+      "end_time": "[00:30]",
+      "start_time_sec": 20,
+      "end_time_sec": 30,
+      "text": "That's a great point, a delayed doorbell alert really doesn't do much good. Let's get that fixed for you. Can I get your account number, PIN, and the name on the account first?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:30]",
+      "end_time": "[00:40]",
+      "start_time_sec": 30,
+      "end_time_sec": 40,
+      "text": "Sure, account is 918-442-207, PIN 7734, name is Grace Bennett."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[00:40]",
+      "end_time": "[00:50]",
+      "start_time_sec": 40,
+      "end_time_sec": 50,
+      "text": "Perfect, Grace, that all matches, you're verified. Just to make sure I've got this exactly right: your doorbell notifications are arriving three to five minutes late instead of immediately, is that accurate?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[00:50]",
+      "end_time": "[01:00]",
+      "start_time_sec": 50,
+      "end_time_sec": 60,
+      "text": "Yes, that's exactly right."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:00]",
+      "end_time": "[01:10]",
+      "start_time_sec": 60,
+      "end_time_sec": 70,
+      "text": "Thank you for confirming. When did you first notice this delay?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:10]",
+      "end_time": "[01:20]",
+      "start_time_sec": 70,
+      "end_time_sec": 80,
+      "text": "Probably about five days ago."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:20]",
+      "end_time": "[01:30]",
+      "start_time_sec": 80,
+      "end_time_sec": 90,
+      "text": "Okay, and did anything change around that time, app update, new phone, home network changes?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:30]",
+      "end_time": "[01:40]",
+      "start_time_sec": 90,
+      "end_time_sec": 100,
+      "text": "Actually yes, I got a new phone about a week ago and set the app up fresh on it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[01:40]",
+      "end_time": "[01:50]",
+      "start_time_sec": 100,
+      "end_time_sec": 110,
+      "text": "That's a really useful detail, thank you. When you set up the app on the new phone, do you recall which region or country was selected during setup, or did it choose automatically?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[01:50]",
+      "end_time": "[02:00]",
+      "start_time_sec": 110,
+      "end_time_sec": 120,
+      "text": "It probably picked automatically, I didn't touch anything like that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:00]",
+      "end_time": "[02:10]",
+      "start_time_sec": 120,
+      "end_time_sec": 130,
+      "text": "Understood, that's actually a common source of this exact issue. Occasionally the notification server region gets auto-assigned incorrectly on a fresh install, which can add several minutes of delay since the notification is routing through a farther server. Let's check what region is currently set. Can you go to the app's Settings, then Notifications, then Advanced?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:10]",
+      "end_time": "[02:20]",
+      "start_time_sec": 130,
+      "end_time_sec": 140,
+      "text": "Okay, I'm there."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:20]",
+      "end_time": "[02:30]",
+      "start_time_sec": 140,
+      "end_time_sec": 150,
+      "text": "Does it show a 'Notification Region' or 'Server Region' field?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:30]",
+      "end_time": "[02:40]",
+      "start_time_sec": 150,
+      "end_time_sec": 160,
+      "text": "Yes, it says 'Auto (EU-West)'."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[02:40]",
+      "end_time": "[02:50]",
+      "start_time_sec": 160,
+      "end_time_sec": 170,
+      "text": "That confirms it, EU-West would explain the multi-minute delay if you're actually located elsewhere. What region are you in?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[02:50]",
+      "end_time": "[03:00]",
+      "start_time_sec": 170,
+      "end_time_sec": 180,
+      "text": "I'm in the US, Pacific time zone."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:00]",
+      "end_time": "[03:10]",
+      "start_time_sec": 180,
+      "end_time_sec": 190,
+      "text": "That lines up perfectly then, that region mismatch is almost certainly the entire cause. Let's manually set it to the correct region instead of leaving it on auto. Do you see an option to change it manually?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:10]",
+      "end_time": "[03:20]",
+      "start_time_sec": 190,
+      "end_time_sec": 200,
+      "text": "Yes, there's a dropdown, I can pick US-West."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:20]",
+      "end_time": "[03:30]",
+      "start_time_sec": 200,
+      "end_time_sec": 210,
+      "text": "Go ahead and select that, then the app may ask you to restart it for the change to apply."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:30]",
+      "end_time": "[03:40]",
+      "start_time_sec": 210,
+      "end_time_sec": 220,
+      "text": "Selected US-West... yes, it's asking me to restart the app now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[03:40]",
+      "end_time": "[03:50]",
+      "start_time_sec": 220,
+      "end_time_sec": 230,
+      "text": "Go ahead and restart it whenever you're ready."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[03:55]",
+      "end_time": "[04:05]",
+      "start_time_sec": 235,
+      "end_time_sec": 245,
+      "text": "Okay, restarting now."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:05]",
+      "end_time": "[04:15]",
+      "start_time_sec": 245,
+      "end_time_sec": 255,
+      "text": "Alright, it's back open and showing connected."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:15]",
+      "end_time": "[04:25]",
+      "start_time_sec": 255,
+      "end_time_sec": 265,
+      "text": "Great, let's test it to make sure the delay is actually gone. Do you have someone who could press the doorbell right now, or could you trigger a motion test from the app?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:25]",
+      "end_time": "[04:35]",
+      "start_time_sec": 265,
+      "end_time_sec": 275,
+      "text": "I can trigger a test motion event from the app settings."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:35]",
+      "end_time": "[04:45]",
+      "start_time_sec": 275,
+      "end_time_sec": 285,
+      "text": "Perfect, go ahead and do that, and let me know how long the notification takes to arrive."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[04:45]",
+      "end_time": "[04:55]",
+      "start_time_sec": 285,
+      "end_time_sec": 295,
+      "text": "Triggering it now... okay wow, that came through almost instantly, maybe one or two seconds."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[04:55]",
+      "end_time": "[05:05]",
+      "start_time_sec": 295,
+      "end_time_sec": 305,
+      "text": "That's exactly what we want to see, a night and day difference from three to five minutes. Let's do one more test just to be fully sure it wasn't a fluke, can you trigger it again?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:05]",
+      "end_time": "[05:15]",
+      "start_time_sec": 305,
+      "end_time_sec": 315,
+      "text": "Sure... yeah, instant again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:15]",
+      "end_time": "[05:25]",
+      "start_time_sec": 315,
+      "end_time_sec": 325,
+      "text": "Excellent, two for two, that region setting was definitely the root cause. I'm really glad we tracked that down rather than it being something more complicated."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:25]",
+      "end_time": "[05:35]",
+      "start_time_sec": 325,
+      "end_time_sec": 335,
+      "text": "Me too, honestly, this makes total sense now that you explain it."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:35]",
+      "end_time": "[05:45]",
+      "start_time_sec": 335,
+      "end_time_sec": 345,
+      "text": "Happy to walk through it. Since you mentioned this started with the new phone, is there anything else on that phone's setup you'd like me to double check while I have you, just to be thorough?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[05:45]",
+      "end_time": "[05:55]",
+      "start_time_sec": 345,
+      "end_time_sec": 355,
+      "text": "Actually yes, could you check if my notification sound and vibration settings carried over correctly too?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[05:55]",
+      "end_time": "[06:05]",
+      "start_time_sec": 355,
+      "end_time_sec": 365,
+      "text": "Sure, let's check, go to Notifications, then Sound and Vibration."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:05]",
+      "end_time": "[06:15]",
+      "start_time_sec": 365,
+      "end_time_sec": 375,
+      "text": "Okay, I'm there, sound is on, vibration is on, looks normal."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:15]",
+      "end_time": "[06:25]",
+      "start_time_sec": 375,
+      "end_time_sec": 385,
+      "text": "Good, those carried over fine then, no issue there."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:25]",
+      "end_time": "[06:35]",
+      "start_time_sec": 385,
+      "end_time_sec": 395,
+      "text": "Great, one less thing to worry about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:35]",
+      "end_time": "[06:45]",
+      "start_time_sec": 395,
+      "end_time_sec": 405,
+      "text": "Does the region setting ever reset itself automatically, like after another app update?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[06:45]",
+      "end_time": "[06:55]",
+      "start_time_sec": 405,
+      "end_time_sec": 415,
+      "text": "It shouldn't, since you've now set it manually rather than leaving it on auto, it should stick through future updates. If it ever does reset though, you now know exactly where to check and fix it."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[06:55]",
+      "end_time": "[07:05]",
+      "start_time_sec": 415,
+      "end_time_sec": 425,
+      "text": "Good to know, I feel a lot more confident handling it myself if it ever happens again."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:05]",
+      "end_time": "[07:15]",
+      "start_time_sec": 425,
+      "end_time_sec": 435,
+      "text": "That's exactly the goal. While we're in settings, do you want me to check if there's a way to see delivery timestamps for past notifications, just so you have a way to verify things are staying fast?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:15]",
+      "end_time": "[07:25]",
+      "start_time_sec": 435,
+      "end_time_sec": 445,
+      "text": "Oh yeah, that'd be useful."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:25]",
+      "end_time": "[07:35]",
+      "start_time_sec": 445,
+      "end_time_sec": 455,
+      "text": "Under Activity History there should be a log showing when each event happened and when the notification was sent."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:35]",
+      "end_time": "[07:45]",
+      "start_time_sec": 455,
+      "end_time_sec": 465,
+      "text": "Let me check... yes, I can see today's test events with matching timestamps now, that's helpful."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[07:45]",
+      "end_time": "[07:55]",
+      "start_time_sec": 465,
+      "end_time_sec": 475,
+      "text": "Perfect, that'll be a good way to spot-check things over the next few days if you want extra peace of mind."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[07:55]",
+      "end_time": "[08:05]",
+      "start_time_sec": 475,
+      "end_time_sec": 485,
+      "text": "I will, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:05]",
+      "end_time": "[08:15]",
+      "start_time_sec": 485,
+      "end_time_sec": 495,
+      "text": "Does this region setting affect anything else besides notifications, like live video streaming speed?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:15]",
+      "end_time": "[08:25]",
+      "start_time_sec": 495,
+      "end_time_sec": 505,
+      "text": "Good question, it can actually, live view latency is sometimes tied to the same regional routing, so you may notice the live feed loading a bit faster now too."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:25]",
+      "end_time": "[08:35]",
+      "start_time_sec": 505,
+      "end_time_sec": 515,
+      "text": "Oh, I hadn't even thought to check that, let me try."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:35]",
+      "end_time": "[08:45]",
+      "start_time_sec": 515,
+      "end_time_sec": 525,
+      "text": "Pulling up live view now... yeah, that loaded almost instantly, definitely faster than I remember it being before."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[08:45]",
+      "end_time": "[08:55]",
+      "start_time_sec": 525,
+      "end_time_sec": 535,
+      "text": "That's a great secondary confirmation that the fix addressed the root cause properly."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[08:55]",
+      "end_time": "[09:05]",
+      "start_time_sec": 535,
+      "end_time_sec": 545,
+      "text": "This has honestly been such a smooth call, thank you for being so thorough."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:05]",
+      "end_time": "[09:15]",
+      "start_time_sec": 545,
+      "end_time_sec": 555,
+      "text": "That really means a lot to hear, thank you. Is there anything else at all I can help you look into today?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:15]",
+      "end_time": "[09:25]",
+      "start_time_sec": 555,
+      "end_time_sec": 565,
+      "text": "Actually, one more, does the app support multiple doorbells if I ever add a second one, or would that need a separate account?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:25]",
+      "end_time": "[09:35]",
+      "start_time_sec": 565,
+      "end_time_sec": 575,
+      "text": "Same account, you can add as many compatible devices as you own, they'll all show up together in the same app."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:35]",
+      "end_time": "[09:45]",
+      "start_time_sec": 575,
+      "end_time_sec": 585,
+      "text": "Good to know, I've been considering a side-door camera too."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[09:45]",
+      "end_time": "[09:55]",
+      "start_time_sec": 585,
+      "end_time_sec": 595,
+      "text": "If you do add one later, just double check it picks up the same region setting we just fixed, sometimes new devices default back to auto."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[09:55]",
+      "end_time": "[10:05]",
+      "start_time_sec": 595,
+      "end_time_sec": 605,
+      "text": "Good tip, I'll definitely check that when the time comes."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:05]",
+      "end_time": "[10:15]",
+      "start_time_sec": 605,
+      "end_time_sec": 615,
+      "text": "Does the doorbell camera itself need a firmware check too, or is this purely an app-side fix?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:15]",
+      "end_time": "[10:25]",
+      "start_time_sec": 615,
+      "end_time_sec": 625,
+      "text": "Good question, let's check anyway just to be thorough, can you go to the doorbell's device page and look for firmware version?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:25]",
+      "end_time": "[10:35]",
+      "start_time_sec": 625,
+      "end_time_sec": 635,
+      "text": "Okay, checking... it says version 3.4.0, no pending update shown."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:35]",
+      "end_time": "[10:45]",
+      "start_time_sec": 635,
+      "end_time_sec": 645,
+      "text": "That's current, so no action needed there, this really was purely the app-side region setting."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[10:45]",
+      "end_time": "[10:55]",
+      "start_time_sec": 645,
+      "end_time_sec": 655,
+      "text": "Good, glad we double-checked anyway."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[10:55]",
+      "end_time": "[11:05]",
+      "start_time_sec": 655,
+      "end_time_sec": 665,
+      "text": "Always worth ruling things out fully rather than assuming."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:05]",
+      "end_time": "[11:15]",
+      "start_time_sec": 665,
+      "end_time_sec": 675,
+      "text": "Does the app store any video clips locally, or is it all cloud-based?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:15]",
+      "end_time": "[11:25]",
+      "start_time_sec": 675,
+      "end_time_sec": 685,
+      "text": "By default it's cloud-based with a rolling history, unless you've added a local storage card to the hub."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:25]",
+      "end_time": "[11:35]",
+      "start_time_sec": 685,
+      "end_time_sec": 695,
+      "text": "I don't think I have one, so cloud it is."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:35]",
+      "end_time": "[11:45]",
+      "start_time_sec": 695,
+      "end_time_sec": 705,
+      "text": "That's a perfectly fine default for most households."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[11:45]",
+      "end_time": "[11:55]",
+      "start_time_sec": 705,
+      "end_time_sec": 715,
+      "text": "How many days of cloud history do I get with my current plan?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[11:55]",
+      "end_time": "[12:05]",
+      "start_time_sec": 715,
+      "end_time_sec": 725,
+      "text": "Your plan includes a fourteen day rolling history."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:05]",
+      "end_time": "[12:15]",
+      "start_time_sec": 725,
+      "end_time_sec": 735,
+      "text": "Oh that's more generous than I expected, good to know."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:15]",
+      "end_time": "[12:25]",
+      "start_time_sec": 735,
+      "end_time_sec": 745,
+      "text": "Yeah, it's one of the better perks of that plan tier."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:25]",
+      "end_time": "[12:35]",
+      "start_time_sec": 745,
+      "end_time_sec": 755,
+      "text": "Is there an option to extend that further if I ever wanted a longer archive?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:35]",
+      "end_time": "[12:45]",
+      "start_time_sec": 755,
+      "end_time_sec": 765,
+      "text": "Yes, there's a sixty day extended history add-on available if you ever want more than the default two weeks."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[12:45]",
+      "end_time": "[12:55]",
+      "start_time_sec": 765,
+      "end_time_sec": 775,
+      "text": "Good to know, I'll think about whether I need that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[12:55]",
+      "end_time": "[13:05]",
+      "start_time_sec": 775,
+      "end_time_sec": 785,
+      "text": "No rush at all, the default fourteen days works well for most people."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:05]",
+      "end_time": "[13:15]",
+      "start_time_sec": 785,
+      "end_time_sec": 795,
+      "text": "Does the doorbell support two-way audio, so I can actually talk to whoever's at the door?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:15]",
+      "end_time": "[13:25]",
+      "start_time_sec": 795,
+      "end_time_sec": 805,
+      "text": "Yes, if you tap the live feed there should be a microphone icon, holding it down lets you speak through the doorbell's speaker."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:25]",
+      "end_time": "[13:35]",
+      "start_time_sec": 805,
+      "end_time_sec": 815,
+      "text": "Oh perfect, I didn't realize that, that'll be handy for deliveries."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:35]",
+      "end_time": "[13:45]",
+      "start_time_sec": 815,
+      "end_time_sec": 825,
+      "text": "Exactly the kind of situation it's built for."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[13:45]",
+      "end_time": "[13:55]",
+      "start_time_sec": 825,
+      "end_time_sec": 835,
+      "text": "Can my husband also get notifications on his phone, or does it need to go through my account only?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[13:55]",
+      "end_time": "[14:05]",
+      "start_time_sec": 835,
+      "end_time_sec": 845,
+      "text": "He can be added as a secondary user under Household Members, he'd get his own login and his own notifications from his own device."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:05]",
+      "end_time": "[14:15]",
+      "start_time_sec": 845,
+      "end_time_sec": 855,
+      "text": "Oh great, he's been wanting that, I'll set it up after this call."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:15]",
+      "end_time": "[14:25]",
+      "start_time_sec": 855,
+      "end_time_sec": 865,
+      "text": "That's a quick process, just his email address and he'll get an invite."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:25]",
+      "end_time": "[14:35]",
+      "start_time_sec": 865,
+      "end_time_sec": 875,
+      "text": "Perfect. Does he get to customize his own notification timing too, or does it copy my settings?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:35]",
+      "end_time": "[14:45]",
+      "start_time_sec": 875,
+      "end_time_sec": 885,
+      "text": "His own, each household member manages their preferences independently."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[14:45]",
+      "end_time": "[14:55]",
+      "start_time_sec": 885,
+      "end_time_sec": 895,
+      "text": "Good, he probably doesn't want every single motion alert like I do."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[14:55]",
+      "end_time": "[15:05]",
+      "start_time_sec": 895,
+      "end_time_sec": 905,
+      "text": "That flexibility is exactly there for situations like that."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:05]",
+      "end_time": "[15:15]",
+      "start_time_sec": 905,
+      "end_time_sec": 915,
+      "text": "Is there a way to set different notification behavior at different times of day, like quiet hours?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:15]",
+      "end_time": "[15:25]",
+      "start_time_sec": 915,
+      "end_time_sec": 925,
+      "text": "Yes, under Notifications there's a Quiet Hours option where you can set a time range to mute alerts, motion events still get logged, just without the push notification."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:25]",
+      "end_time": "[15:35]",
+      "start_time_sec": 925,
+      "end_time_sec": 935,
+      "text": "Oh that's great for late at night, let me set that up."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:35]",
+      "end_time": "[15:45]",
+      "start_time_sec": 935,
+      "end_time_sec": 945,
+      "text": "Setting quiet hours from 11pm to 6am... done."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[15:45]",
+      "end_time": "[15:55]",
+      "start_time_sec": 945,
+      "end_time_sec": 955,
+      "text": "Perfect, that should help with any late night notifications while still keeping a full record for the morning."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[15:55]",
+      "end_time": "[16:05]",
+      "start_time_sec": 955,
+      "end_time_sec": 965,
+      "text": "Exactly what I wanted, thank you."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:05]",
+      "end_time": "[16:15]",
+      "start_time_sec": 965,
+      "end_time_sec": 975,
+      "text": "Does the motion detection sensitivity get affected by the notification region setting at all, or are those separate?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:15]",
+      "end_time": "[16:25]",
+      "start_time_sec": 975,
+      "end_time_sec": 985,
+      "text": "Those are completely separate systems, sensitivity is a local camera setting, the region setting only affected how fast the alert traveled once triggered."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:25]",
+      "end_time": "[16:35]",
+      "start_time_sec": 985,
+      "end_time_sec": 995,
+      "text": "Good, that clears up my confusion on that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:35]",
+      "end_time": "[16:45]",
+      "start_time_sec": 995,
+      "end_time_sec": 1005,
+      "text": "Happy to clarify, that's a fair thing to wonder about."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[16:45]",
+      "end_time": "[16:55]",
+      "start_time_sec": 1005,
+      "end_time_sec": 1015,
+      "text": "Is there anything I should watch for over the next few days just to make sure this stays fixed?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[16:55]",
+      "end_time": "[17:05]",
+      "start_time_sec": 1015,
+      "end_time_sec": 1025,
+      "text": "Just keep an eye on notification timing for a day or two, but based on both tests coming back instant and the live view improving too, I'm confident this is fully resolved."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:05]",
+      "end_time": "[17:15]",
+      "start_time_sec": 1025,
+      "end_time_sec": 1035,
+      "text": "One more thing, does S-Net ever proactively flag region mismatches like this, or is it purely something a customer has to notice and call about?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:15]",
+      "end_time": "[17:25]",
+      "start_time_sec": 1035,
+      "end_time_sec": 1045,
+      "text": "That's a fair question, right now it's mostly customer-reported like today, though I'll make a note on your account about this pattern in case it helps flag something similar for others down the line."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:25]",
+      "end_time": "[17:35]",
+      "start_time_sec": 1045,
+      "end_time_sec": 1055,
+      "text": "That's a thoughtful thing to do, I appreciate that."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:35]",
+      "end_time": "[17:45]",
+      "start_time_sec": 1055,
+      "end_time_sec": 1065,
+      "text": "Happy to, feedback loops like that genuinely help improve things over time."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[17:45]",
+      "end_time": "[17:55]",
+      "start_time_sec": 1065,
+      "end_time_sec": 1075,
+      "text": "Does switching phones in the future risk this same region issue resetting again?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[17:55]",
+      "end_time": "[18:05]",
+      "start_time_sec": 1075,
+      "end_time_sec": 1085,
+      "text": "It's possible on a brand new install, so if you ever get another phone, it's worth checking that region setting proactively during setup."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:05]",
+      "end_time": "[18:15]",
+      "start_time_sec": 1085,
+      "end_time_sec": 1095,
+      "text": "Good to know, I'll remember to check that specifically next time."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:15]",
+      "end_time": "[18:25]",
+      "start_time_sec": 1095,
+      "end_time_sec": 1105,
+      "text": "That'll save you from having to troubleshoot this again from scratch."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:25]",
+      "end_time": "[18:35]",
+      "start_time_sec": 1105,
+      "end_time_sec": 1115,
+      "text": "That's reassuring, I really appreciate all the help today."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[18:35]",
+      "end_time": "[18:45]",
+      "start_time_sec": 1115,
+      "end_time_sec": 1125,
+      "text": "Of course. So just to close things out, can you confirm for me that the doorbell notifications are now working properly and this issue is fully resolved for you?"
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:45]",
+      "end_time": "[18:55]",
+      "start_time_sec": 1125,
+      "end_time_sec": 1135,
+      "text": "Yes, absolutely, everything's working instantly now, this is completely resolved. Thank you so much, Sofia."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[18:55]",
+      "end_time": "[19:05]",
+      "start_time_sec": 1135,
+      "end_time_sec": 1145,
+      "text": "Before you go, is there a direct line or reference number I should mention if I ever call back about this same account?"
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:05]",
+      "end_time": "[19:15]",
+      "start_time_sec": 1145,
+      "end_time_sec": 1155,
+      "text": "Your account number works fine for that, and I'm also adding detailed notes on this call so whoever you reach next will have the full context immediately."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:15]",
+      "end_time": "[19:25]",
+      "start_time_sec": 1155,
+      "end_time_sec": 1165,
+      "text": "That's great, saves me from re-explaining everything from scratch."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:25]",
+      "end_time": "[19:35]",
+      "start_time_sec": 1165,
+      "end_time_sec": 1175,
+      "text": "Exactly the idea, glad that's helpful."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:35]",
+      "end_time": "[19:45]",
+      "start_time_sec": 1175,
+      "end_time_sec": 1185,
+      "text": "Perfect, I think that's genuinely everything now."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[19:45]",
+      "end_time": "[19:55]",
+      "start_time_sec": 1185,
+      "end_time_sec": 1195,
+      "text": "Sounds good, thank you for being so patient and thorough with me while we worked through all of this today."
+    },
+    {
+      "speaker": "Customer",
+      "start_time": "[19:55]",
+      "end_time": "[20:05]",
+      "start_time_sec": 1195,
+      "end_time_sec": 1205,
+      "text": "Of course, this was a genuinely great experience, thank you Sofia."
+    },
+    {
+      "speaker": "Agent",
+      "start_time": "[20:05]",
+      "end_time": "[20:15]",
+      "start_time_sec": 1205,
+      "end_time_sec": 1215,
+      "text": "Wonderful, I'm really glad we got that sorted out for you today. Thank you for choosing S-Net."
+    }
+  ],
+  "tenant_id": "tenant-abc",
+  "customer_name": "John",
+  "sentiment_scores": [
+    2.0,
+    4.0,
+    6.0,
+    8.0,
+    10.0,
+    12.0,
+    14.0,
+    16.0,
+    18.0,
+    20.0,
+    22.0,
+    24.0,
+    26.0,
+    28.0,
+    30.0,
+    32.0,
+    34.0,
+    36.0,
+    38.0,
+    40.0,
+    42.0,
+    44.0,
+    46.0,
+    48.0,
+    50.0,
+    49.0,
+    48.0,
+    47.0,
+    46.0,
+    45.0,
+    44.0,
+    43.0,
+    42.0,
+    41.0,
+    40.0,
+    39.0,
+    38.0,
+    37.0,
+    36.0,
+    35.0,
+    34.0,
+    33.0,
+    32.0,
+    31.0,
+    30.0,
+    29.0,
+    28.0,
+    27.0,
+    26.0,
+    25.0,
+    24.0,
+    23.0,
+    22.0,
+    21.0,
+    20.0,
+    19.0,
+    18.0,
+    17.0,
+    16.0,
+    15.0,
+    14.0,
+    17.0,
+    20.0,
+    23.0,
+    26.0,
+    29.0,
+    32.0,
+    35.0,
+    38.0,
+    41.0,
+    44.0,
+    47.0,
+    50.0,
+    53.0,
+    56.0,
+    59.0,
+    62.0,
+    65.0,
+    68.0,
+    71.0,
+    74.0,
+    77.0,
+    80.0,
+    83.0,
+    86.0,
+    89.0,
+    92.0,
+    95.0,
+    98.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0
+  ]
+}

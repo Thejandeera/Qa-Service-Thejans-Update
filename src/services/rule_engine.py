@@ -200,6 +200,10 @@ def evaluate_verified_customer(turns: List[Tuple[str, str]], parsed_times: List[
 import difflib
 from typing import List, Tuple, Dict, Any
 
+
+import difflib
+from typing import List, Tuple, Dict, Any
+
 def evaluate_personalized_call(turns: List[Tuple[str, str]], customer_name: str) -> Dict[str, Any]:
     if not customer_name or customer_name.strip() == "":
         return {"category": "Soft Skills", "name": "Personalized the call/ticket appropriately", "rating": "PASS", "score": 100, "coaching": ""}
@@ -231,7 +235,6 @@ def extract_active_listening_snippets(turns: List[Tuple[str, str]]) -> str:
     for idx1, (i1, q1) in enumerate(agent_questions):
         for idx2 in range(idx1 + 1, len(agent_questions)):
             i2, q2 = agent_questions[idx2]
-            # Lower difflib to 60%, and use cosine sim > 0.70
             if difflib.SequenceMatcher(None, q1.lower(), q2.lower()).ratio() > 0.60:
                 e1 = get_embedding(q1)
                 e2 = get_embedding(q2)
@@ -244,14 +247,22 @@ def extract_empathy_snippets(turns: List[Tuple[str, str]], sentiment_scores: Lis
     for i, (speaker, text) in enumerate(turns):
         if speaker.lower() == 'customer':
             is_negative = False
-            # Trajectory check: Drop of 6 or more points from the previous turn
-            if sentiment_scores and i < len(sentiment_scores) and i > 0:
-                if sentiment_scores[i] <= sentiment_scores[i-1] - 6.0:
-                    is_negative = True
             
-            # Fallback if drop is extremely low absolutely
-            if sentiment_scores and i < len(sentiment_scores) and sentiment_scores[i] < -20.0:
-                is_negative = True
+            if sentiment_scores and i < len(sentiment_scores):
+                # Since the score decreases slowly (e.g. 0 -> -2 -> -5 -> -8),
+                # we track if it dropped significantly over a 3-turn window, OR if it hit an absolute threshold.
+                
+                # Check 1: Absolute threshold for sustained negativity
+                if sentiment_scores[i] <= -15.0:
+                    is_negative = True
+                
+                # Check 2: Gradual drop over the last 1 to 3 turns totaling >= 8.0 points
+                elif i >= 1 and sentiment_scores[i-1] - sentiment_scores[i] >= 8.0:
+                    is_negative = True
+                elif i >= 2 and sentiment_scores[i-2] - sentiment_scores[i] >= 8.0:
+                    is_negative = True
+                elif i >= 3 and sentiment_scores[i-3] - sentiment_scores[i] >= 8.0:
+                    is_negative = True
                 
             if is_negative:
                 snippet = f"Customer: {text}\n"
