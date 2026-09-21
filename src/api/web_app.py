@@ -14,13 +14,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List, Union, Dict, Any
-from celery import Celery
-from celery.result import AsyncResult
-
-from src.services.dynamic_evaluator import preview_evaluation_prompt
-
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
-celery_app = Celery('orchestrator', broker=REDIS_URL, backend=REDIS_URL)
+from src.services.dynamic_evaluator import preview_evaluation_prompt, evaluate_interaction
 
 app = FastAPI(title="Stateless QA Service API")
 
@@ -44,10 +38,12 @@ class EvaluateRequest(BaseModel):
     transcript: Union[List[Turn], str]
     criteria_data: Optional[Dict[str, Any]] = None
     tenant_id: Optional[str] = "default"
+    tenantId: Optional[str] = None
     channel: Optional[str] = "Call"
     agent_name: Optional[str] = "Agent"
     custom_prompt: Optional[str] = None
     customer_name: Optional[str] = None
+    caller: Optional[str] = None
 
 @app.get("/api/samples")
 def list_sample_inputs():
@@ -69,50 +65,40 @@ def list_sample_inputs():
 @app.post("/api/evaluate")
 def evaluate_tenant_transcript(req: EvaluateRequest):
     criteria_data = req.criteria_data
+    tenant_id = req.tenantId or req.tenant_id or "default"
+    customer_name = req.customer_name or req.caller
     
     if not criteria_data:
         config_url = os.getenv("CONFIG_API_URL", "http://config-db:8080/api/criteria/")
         try:
-            resp = requests.get(f"{config_url}{req.tenant_id}", timeout=5)
+            resp = requests.get(f"{config_url}{tenant_id}", timeout=5)
             if resp.status_code == 200:
                 criteria_data = resp.json()
             else:
                 criteria_data = {}
         except Exception as e:
-            print(f"Warning: Could not fetch config for {req.tenant_id}: {e}")
+            print(f"Warning: Could not fetch config for {tenant_id}: {e}")
             criteria_data = {}
 
     transcript_payload = [t.dict() for t in req.transcript] if isinstance(req.transcript, list) else req.transcript
 
-    # Dispatch async task
-    task = celery_app.send_task(
-        'orchestrate_evaluation',
-        args=[transcript_payload, criteria_data, req.tenant_id, req.channel or "Call"],
-        kwargs={
-            "custom_prompt": req.custom_prompt,
-            "caller": req.customer_name
-        }
+    # Execute evaluation directly in-process
+    result = evaluate_interaction(
+        transcript_data=transcript_payload,
+        criteria_data=criteria_data,
+        tenant_id=tenant_id,
+        channel=req.channel or "Call",
+        custom_prompt=req.custom_prompt,
+        caller=customer_name
     )
 
-    return {
-        "job_id": task.id,
-        "status": "processing",
-        "created_at": datetime.datetime.utcnow().isoformat()
-    }
+    eval_id = str(uuid.uuid4())
+    result["evaluation_id"] = eval_id
 
-@app.get("/api/status/{job_id}")
-def get_job_status(job_id: str):
-    task_result = AsyncResult(job_id, app=celery_app)
-    if task_result.state == 'PENDING':
-        return {"status": "processing"}
-    elif task_result.state == 'SUCCESS':
-        result = task_result.result
-        result["evaluation_id"] = job_id
-        return {"status": "completed", "result": result}
-    elif task_result.state == 'FAILURE':
-        return {"status": "failed", "error": str(task_result.info)}
-    else:
-        return {"status": task_result.state}
+    return {
+        "status": "completed",
+        "result": result
+    }
 
 @app.post("/api/preview-prompt")
 def preview_tenant_prompt(req: EvaluateRequest):

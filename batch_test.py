@@ -5,7 +5,6 @@ import requests
 from datetime import datetime
 
 API_EVALUATE_URL = "http://localhost:8000/api/evaluate"
-API_STATUS_URL = "http://localhost:8000/api/status/"
 
 INPUT_DIR = "inputs"
 OUTPUT_DIR = "inputs/Test (results)"
@@ -30,36 +29,11 @@ def main():
             with open(filepath, 'r', encoding='utf-8') as f:
                 payload = json.load(f)
                 
-            response = requests.post(API_EVALUATE_URL, json=payload)
+            response = requests.post(API_EVALUATE_URL, json=payload, timeout=600)
             response.raise_for_status()
             
-            job_data = response.json()
-            job_id = job_data.get('job_id')
-            
-            if not job_id:
-                print(f"  -> ERROR: No job_id returned. Response: {job_data}")
-                continue
-                
-            print(f"  -> Job ID: {job_id}")
-            print(f"  -> Waiting for completion ", end="", flush=True)
-            
-            status = "processing"
-            result_data = None
-            
-            while status == "processing" or status == "pending":
-                time.sleep(2)
-                print(".", end="", flush=True)
-                
-                status_response = requests.get(f"{API_STATUS_URL}{job_id}")
-                if status_response.status_code == 200:
-                    status_data = status_response.json()
-                    status = status_data.get('status', 'unknown')
-                    if status == "completed":
-                        result_data = status_data
-                else:
-                    print(f" [API ERROR {status_response.status_code}]")
-                    break
-                    
+            result_data = response.json()
+            status = result_data.get('status', 'completed')
             print(f" [{status.upper()}]")
             
             if status == "completed" and result_data:

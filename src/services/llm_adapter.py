@@ -12,6 +12,7 @@ class OllamaAdapter(BaseLLMAdapter):
         self.host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
         self.url = f"{self.host.rstrip('/')}/api/chat"
         self.model = os.getenv("LLM_MODEL", "llama3.1")
+        self.embedding_model = os.getenv("EMBEDDING_MODEL", "nomic-embed-text")
 
     def generate(self, prompt: str, **kwargs) -> str:
         temperature = kwargs.get('temperature', 0.1)
@@ -46,7 +47,7 @@ class OllamaAdapter(BaseLLMAdapter):
         timeout = kwargs.get('timeout', 1800)
         
         payload_dict = {
-            "model": self.model,
+            "model": self.embedding_model,
             "prompt": text
         }
         
