@@ -37,3 +37,8 @@ Thumbs.db
 # Runtime Overrides
 weights.json
 *.gguf
+
+# Logs
+Logs/
+logs/
+*.log

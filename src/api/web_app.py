@@ -10,11 +10,47 @@ for _path in [_ROOT, _SRC]:
     if _path not in sys.path:
         sys.path.insert(0, _path)
 
-from fastapi import FastAPI, HTTPException
+import logging
+import time
+from logging.handlers import TimedRotatingFileHandler
+import uvicorn
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List, Union, Dict, Any
 from src.services.dynamic_evaluator import preview_evaluation_prompt, evaluate_interaction
+
+LOGS_DIR = os.path.join(_ROOT, "Logs")
+os.makedirs(LOGS_DIR, exist_ok=True)
+LOG_FILE = os.path.join(LOGS_DIR, "app.log")
+
+class DailyRotatingFileHandler(TimedRotatingFileHandler):
+    """Daily rotating file handler that names backups with date: app_YYYY-MM-DD.log"""
+    def __init__(self, filename, **kwargs):
+        super().__init__(filename, when="midnight", interval=1, backupCount=kwargs.pop("backupCount", 30), encoding="utf-8", **kwargs)
+        self.suffix = "%Y-%m-%d"
+        self.namer = lambda name: name.replace("app.log.", "app_") + ".log"
+
+# Configure uvicorn loggers and file handler
+uvicorn.config.LOGGING_CONFIG["formatters"]["file_fmt"] = {
+    "format": "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s",
+    "datefmt": "%Y-%m-%d %H:%M:%S"
+}
+uvicorn.config.LOGGING_CONFIG["handlers"]["file"] = {
+    "()": DailyRotatingFileHandler,
+    "filename": LOG_FILE,
+    "formatter": "file_fmt"
+}
+if "file" not in uvicorn.config.LOGGING_CONFIG["loggers"]["uvicorn"]["handlers"]:
+    uvicorn.config.LOGGING_CONFIG["loggers"]["uvicorn"]["handlers"].append("file")
+if "file" not in uvicorn.config.LOGGING_CONFIG["loggers"]["uvicorn.access"]["handlers"]:
+    uvicorn.config.LOGGING_CONFIG["loggers"]["uvicorn.access"]["handlers"].append("file")
+
+logger = logging.getLogger("app")
+logger.setLevel(logging.INFO)
+_app_handler = DailyRotatingFileHandler(LOG_FILE)
+_app_handler.setFormatter(logging.Formatter("[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
+logger.addHandler(_app_handler)
 
 app = FastAPI(title="Stateless QA Service API")
 
@@ -25,6 +61,37 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.middleware("http")
+async def log_requests_middleware(request: Request, call_next):
+    req_id = str(uuid.uuid4())[:8]
+    start_time = time.time()
+    origin = request.headers.get("origin") or request.headers.get("host") or "unknown"
+    client_ip = request.client.host if request.client else "unknown"
+    
+    body_bytes = await request.body()
+    body_str = body_bytes.decode("utf-8", errors="replace") if body_bytes else "<empty>"
+    
+    logger.info(f"[INCOMING REQUEST] [{req_id}] {request.method} {request.url.path} | Origin: {origin} | Client: {client_ip} | Body: {body_str}")
+    
+    try:
+        response = await call_next(request)
+        res_body_bytes = b""
+        async for chunk in response.body_iterator:
+            res_body_bytes += chunk
+        res_body_str = res_body_bytes.decode("utf-8", errors="replace") if res_body_bytes else "<empty>"
+        duration = f"{(time.time() - start_time) * 1000:.2f}ms"
+        logger.info(f"[OUTGOING RESPONSE] [{req_id}] {request.method} {request.url.path} | Status: {response.status_code} | Duration: {duration} | Body: {res_body_str}")
+        return Response(
+            content=res_body_bytes,
+            status_code=response.status_code,
+            headers=dict(response.headers),
+            media_type=response.media_type,
+        )
+    except Exception as exc:
+        duration = f"{(time.time() - start_time) * 1000:.2f}ms"
+        logger.error(f"[REQUEST FAILED] [{req_id}] {request.method} {request.url.path} | Duration: {duration} | Error: {exc}", exc_info=True)
+        raise
 
 import requests
 
@@ -118,5 +185,8 @@ if __name__ == "__main__":
 
     host = os.getenv("SERVER_HOST", "0.0.0.0")
     port = int(os.getenv("SERVER_PORT", "8005"))
+    logger.info(f"Starting LLM QA Analysis Web Server on http://{host}:{port}...")
+    print(f"Starting LLM QA Analysis Web Server on http://{host}:{port}...")
     uvicorn.run(app, host=host, port=port)
+
 

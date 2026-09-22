@@ -20,6 +20,8 @@ if __name__ == "__main__":
     host = os.getenv("SERVER_HOST", "0.0.0.0")
     port = int(os.getenv("SERVER_PORT", 8005))
     
+    from api.web_app import app, logger
+    logger.info(f"Starting LLM QA Analysis Web Server on http://{host}:{port}...")
     print(f"Starting LLM QA Analysis Web Server on http://{host}:{port}...")
-    from api.web_app import app
     uvicorn.run(app, host=host, port=port)
+
