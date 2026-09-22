@@ -140,7 +140,7 @@ def evaluate_interaction(
             parsed_times.append((st_sec, st_sec+10))
             clean_lines.append(f"{spk}: {txt}")
             if spk.lower() == "agent": agent_lines.append(txt)
-            elif spk.lower() == "customer": customer_lines.append(txt)
+            elif spk.lower() in ["customer", "client", "caller"]: customer_lines.append(txt)
     else:
         for line in transcript_data.strip().splitlines():
             line = line.strip()
@@ -152,7 +152,7 @@ def evaluate_interaction(
                 turns.append((spk.strip(), txt.strip()))
                 parsed_times.append((0, 10))
                 if spk.strip().lower() == "agent": agent_lines.append(txt.strip())
-                elif spk.strip().lower() == "customer": customer_lines.append(txt.strip())
+                elif spk.strip().lower() in ["customer", "client", "caller"]: customer_lines.append(txt.strip())
 
     clean_transcript = "\n".join(clean_lines)
     agent_only_transcript = "\n".join([f"Agent: {x}" for x in agent_lines])

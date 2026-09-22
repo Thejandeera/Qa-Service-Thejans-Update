@@ -69,7 +69,7 @@ def evaluate_tenant_transcript(req: EvaluateRequest):
     customer_name = req.customer_name or req.caller
     
     if not criteria_data:
-        config_url = os.getenv("CONFIG_API_URL", "http://config-db:8080/api/criteria/")
+        config_url = os.getenv("CONFIG_API_URL", "http://localhost:8006/api/criteria/")
         try:
             resp = requests.get(f"{config_url}{tenant_id}", timeout=5)
             if resp.status_code == 200:
@@ -117,6 +117,6 @@ if __name__ == "__main__":
     load_dotenv()
 
     host = os.getenv("SERVER_HOST", "0.0.0.0")
-    port = int(os.getenv("SERVER_PORT", "8000"))
+    port = int(os.getenv("SERVER_PORT", "8005"))
     uvicorn.run(app, host=host, port=port)
 

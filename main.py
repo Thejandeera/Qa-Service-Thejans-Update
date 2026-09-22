@@ -18,7 +18,7 @@ if __name__ == "__main__":
     load_dotenv()
     
     host = os.getenv("SERVER_HOST", "0.0.0.0")
-    port = int(os.getenv("SERVER_PORT", 8000))
+    port = int(os.getenv("SERVER_PORT", 8005))
     
     print(f"Starting LLM QA Analysis Web Server on http://{host}:{port}...")
     from api.web_app import app

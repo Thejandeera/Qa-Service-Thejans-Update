@@ -43,4 +43,5 @@ def get_criteria(tenant_id: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    port = int(os.getenv("CONFIG_PORT", 8006))
+    uvicorn.run(app, host="0.0.0.0", port=port)

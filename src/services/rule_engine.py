@@ -109,7 +109,7 @@ def evaluate_empathy(turns: List[Tuple[str, str]]) -> Dict[str, Any]:
             for word in combined_nice_words:
                 global_nice_word_count += lower_text.count(word)
 
-        elif speaker.lower() == "customer":
+        elif speaker.lower() in ["customer", "client", "caller"]:
             # Tier 2 tracking: Check if customer expressed frustration
             if any(word in lower_text for word in frustration_words):
                 frustration_instances += 1
@@ -251,7 +251,7 @@ def extract_empathy_snippets(turns: List[Tuple[str, str]], sentiment_scores: Lis
     apology_keywords = ["sorry", "apologize", "understand", "frustrating", "apologies", "let me help"]
     
     for i, (speaker, text) in enumerate(turns):
-        if speaker.lower() == 'customer':
+        if speaker.lower() in ["customer", "client", "caller"]:
             is_negative = False
             
             if sentiment_scores and i < len(sentiment_scores):

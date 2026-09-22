@@ -4,7 +4,7 @@ import time
 import requests
 from datetime import datetime
 
-API_EVALUATE_URL = "http://localhost:8000/api/evaluate"
+API_EVALUATE_URL = "http://localhost:8005/api/evaluate"
 
 INPUT_DIR = "inputs"
 OUTPUT_DIR = "inputs/Test (results)"
