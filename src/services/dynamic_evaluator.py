@@ -8,13 +8,86 @@ against dynamic company criteria schemas.
 """
 
 import re
-from typing import Dict, Any, List, Optional
+import math
+from typing import Dict, Any, List, Optional, Tuple, Union
 from src.services.llm_adapter import query_llm, cache_prompt_prefix, query_llm_with_state, get_embedding
 from src.services.response_time import (
     leading_time_seconds, response_delays, response_time_score,
 )
 
 RATING_SCORES = {"PASS": 100,  "FAIL": 0, "YES": 100, "NO": 0}
+
+
+def parse_transcript_input(
+    transcript_data: Union[str, List[Dict[str, Any]]]
+) -> Tuple[List[Tuple[str, str]], List[Tuple[int, int]], List[str], List[str], List[str]]:
+    """Parse transcript from list-of-dicts or raw string (single-line or multiline, with or without timestamps)."""
+    turns = []
+    parsed_times = []
+    clean_lines = []
+    agent_lines = []
+    customer_lines = []
+
+    if isinstance(transcript_data, list):
+        for turn in transcript_data:
+            spk = turn.get("speaker", "Unknown")
+            txt = turn.get("text", "")
+            st_sec = turn.get("start_time_sec", 0)
+            turns.append((spk, txt))
+            parsed_times.append((st_sec, st_sec + 10))
+            clean_lines.append(f"{spk}: {txt}")
+            if spk.lower() == "agent":
+                agent_lines.append(txt)
+            elif spk.lower() in ["customer", "client", "caller"]:
+                customer_lines.append(txt)
+        return turns, parsed_times, clean_lines, agent_lines, customer_lines
+
+    text = (transcript_data or "").strip()
+    if not text:
+        return turns, parsed_times, clean_lines, agent_lines, customer_lines
+
+    if re.search(r"[\[\(]\s*(?:\d{1,2}:)?\d{1,2}:\d{2}\s*[\]\)]", text):
+        raw_chunks = re.split(r"(?=(?:^|\n|\s+)[\[\(]\s*(?:\d{1,2}:)?\d{1,2}:\d{2}\s*[\]\)])", text)
+    elif "\n" in text:
+        raw_chunks = text.splitlines()
+    elif re.search(r"(?i)(?:\b(?:Agent|Client|Customer|Caller|User|Support)\s*:)", text):
+        raw_chunks = re.split(r"(?=(?:^|\s+)(?:Agent|Client|Customer|Caller|User|Support)\s*:)", text, flags=re.IGNORECASE)
+    else:
+        raw_chunks = [text]
+
+    raw_chunks = [c.strip() for c in raw_chunks if c.strip()]
+    raw_items = []
+    for chunk in raw_chunks:
+        m = re.match(r"^[\[\(]\s*(?:(\d{1,2}):)?(\d{1,2}):(\d{2})\s*[\]\)]\s*", chunk)
+        st_sec = None
+        if m:
+            hours = int(m.group(1)) if m.group(1) else 0
+            mins = int(m.group(2))
+            secs = int(m.group(3))
+            st_sec = hours * 3600 + mins * 60 + secs
+            chunk = chunk[m.end():].strip()
+
+        if ":" in chunk:
+            spk, txt = chunk.split(":", 1)
+            raw_items.append((spk.strip(), txt.strip(), st_sec))
+        else:
+            raw_items.append(("Unknown", chunk, st_sec))
+
+    for i, (spk, txt, st_sec) in enumerate(raw_items):
+        turns.append((spk, txt))
+        clean_lines.append(f"{spk}: {txt}")
+        if spk.lower() == "agent":
+            agent_lines.append(txt)
+        elif spk.lower() in ["customer", "client", "caller"]:
+            customer_lines.append(txt)
+
+        if st_sec is not None:
+            next_start = raw_items[i + 1][2] if i + 1 < len(raw_items) and raw_items[i + 1][2] is not None else st_sec + 5
+            parsed_times.append((st_sec, next_start))
+        else:
+            parsed_times.append((i * 10, i * 10 + 10))
+
+    return turns, parsed_times, clean_lines, agent_lines, customer_lines
 
 
 def preview_evaluation_prompt(
@@ -24,19 +97,7 @@ def preview_evaluation_prompt(
     channel: str = "Call"
 ) -> Dict[str, Any]:
     """Construct and preview the exact LLM prompt without executing evaluation."""
-    # 1. Parse turns and clean timestamps
-    turns = []
-    clean_lines = []
-    for line in transcript_text.strip().splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        line = re.sub(r"^[\[\(]\s*\d{1,2}:\d{2}(?::\d{2})?\s*[\]\)]\s*", "", line)
-        clean_lines.append(line)
-        if ":" in line:
-            spk, txt = line.split(":", 1)
-            turns.append((spk.strip(), txt.strip()))
-
+    turns, _, clean_lines, _, _ = parse_transcript_input(transcript_text)
     clean_transcript = "\n".join(clean_lines)
 
     if not turns:
@@ -85,20 +146,6 @@ def preview_evaluation_prompt(
         "tenant_id": tenant_id
     }
 
-from typing import Union
-
-def cosine_similarity(v1, v2):
-    import math
-    if not v1 or not v2: return 0.0
-    dot = sum(a*b for a, b in zip(v1, v2))
-    norm_a = math.sqrt(sum(a*a for a in v1))
-    norm_b = math.sqrt(sum(b*b for b in v2))
-    if norm_a == 0 or norm_b == 0: return 0.0
-    return dot / (norm_a * norm_b)
-
-import json, re, math
-from typing import Union, List, Dict, Any, Optional
-
 def cosine_similarity(v1, v2):
     if not v1 or not v2: return 0.0
     dot = sum(a*b for a, b in zip(v1, v2))
@@ -123,36 +170,9 @@ def evaluate_interaction(
     )
     from src.services.llm_adapter import query_llm, query_llm_with_state, get_embedding
     
-    turns = []
-    parsed_times = []
-    clean_lines = []
-    agent_lines = []
-    customer_lines = []
+    turns, parsed_times, clean_lines, agent_lines, customer_lines = parse_transcript_input(transcript_data)
     customer_name = caller or ""
     sentiment_scores = [t.get('sentiment_score', 0.0) for t in transcript_data] if isinstance(transcript_data, list) else []
-    
-    if isinstance(transcript_data, list):
-        for turn in transcript_data:
-            spk = turn.get("speaker", "Unknown")
-            txt = turn.get("text", "")
-            st_sec = turn.get("start_time_sec", 0)
-            turns.append((spk, txt))
-            parsed_times.append((st_sec, st_sec+10))
-            clean_lines.append(f"{spk}: {txt}")
-            if spk.lower() == "agent": agent_lines.append(txt)
-            elif spk.lower() in ["customer", "client", "caller"]: customer_lines.append(txt)
-    else:
-        for line in transcript_data.strip().splitlines():
-            line = line.strip()
-            if not line: continue
-            line = re.sub(r"^[\[\(]\s*\d{1,2}:\d{2}(?::\d{2})?\s*[\]\)]\s*", "", line)
-            clean_lines.append(line)
-            if ":" in line:
-                spk, txt = line.split(":", 1)
-                turns.append((spk.strip(), txt.strip()))
-                parsed_times.append((0, 10))
-                if spk.strip().lower() == "agent": agent_lines.append(txt.strip())
-                elif spk.strip().lower() in ["customer", "client", "caller"]: customer_lines.append(txt.strip())
 
     clean_transcript = "\n".join(clean_lines)
     agent_only_transcript = "\n".join([f"Agent: {x}" for x in agent_lines])
